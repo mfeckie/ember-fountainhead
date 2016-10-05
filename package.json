@@ -1,5 +1,5 @@
 {
-  "name": "Ember Fountainhead",
+  "name": "ember-fountainhead",
   "version": "1.0.0",
   "description": "Robust interactive documentation for your Ember application's source code",
   "directories": {
@@ -32,6 +32,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-component-playground": "1.1.0",
     "ember-data": "^2.8.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
