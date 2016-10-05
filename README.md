@@ -1,10 +1,15 @@
-# Ember-fountainhead
+# Ember Fountainhead
 
-This README outlines the details of collaborating on this Ember addon.
+Ember Fountainhead is an in-app solution for rendering robust documentation for
+your Ember application's source code. Fountainhead uses YUIDoc to render your
+inline code documentation, with real, working examples of your component code
+that you can test and see functioning in the context of your docs.
+
+It Just Works™.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:healthsparq/ember-fountainhead.git` this repository
 * `cd ember-fountainhead`
 * `npm install`
 * `bower install`
