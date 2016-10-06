@@ -30,3 +30,26 @@ It Just Works™.
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+
+## THINGS TO GET DONE
+
+- [x] Scaffold primary component structure
+  - [ ] Build header
+    - [ ] Logo
+    - [ ] Repo link
+  - [ ] Build sidebar
+    - [ ] Sections
+    - [ ] Section headers
+    - [ ] Search bar
+    - [ ] Item groups
+  - [ ] Build Doc Page
+    - [ ] Title
+    - [ ] Attributes
+    - [ ] Live description
+    - [ ] Class Items
+    - [ ] Tab bar, tab components
+    - [ ] Status filters (inherited, protected, private, deprecated)
+    - [ ] Tab output
+- [ ] Build landing "page"
+- [ ] Set up routes
+- [ ] Write model hooks to fetch models as JSON from project file structure
