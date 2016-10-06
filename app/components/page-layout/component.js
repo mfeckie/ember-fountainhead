@@ -1,0 +1,1 @@
+export { default } from 'ember-fountainhead/components/page-layout/component';

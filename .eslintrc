@@ -2,9 +2,6 @@
   // This is the root config file for this project (config files per directory is possible)
   root: true,
 
-  // We're using babel parser? @todo: necessary?
-  parser: 'babel-eslint',
-
   // ES6 parser specifications
   parserOptions: {
     ecmaVersion: 6,
@@ -18,43 +15,6 @@
     es6: true,
     qunit: true,
     embertest: true
-  },
-
-  // Old globals
-  globals: {
-    Highcharts: false,
-    Foundation: false,
-    L: false
-  //   "$": false,
-  //   "addNumberCommas": false,
-  //   "andThen": false,
-  //   "AddressResolver": false,
-  //   "App": true,
-  //   "Cache": false,
-  //   "click": false,
-  //   "cloneObject": false,
-  //   "DEBUG": false,
-  //   "deparam": false,
-  //   "Em": true,
-  //   "Ember": false,
-  //   "equal": false,
-  //   "expect": false,
-  //   "fillIn": false,
-  //   "find": false,
-  //   "flattenArray": true,
-  //   "google": false,
-  //   "GoogleMaps": false,
-  //   "GoogleTagManager": false,
-  //   "hsq": true,
-  //   "InfoBoxTreatment": false,
-  //   "isFunction": false,
-  //   "jQuery": false,
-  //   "Modernizr": false,
-  //   "module": false,
-  //   "moduleFor": false,
-  //   "moduleForComponent": false,
-  //   "test": false,
-  //   "visit": false
   },
 
   rules: {
@@ -92,7 +52,7 @@
     'no-new-func': 1,
     'no-param-reassign': 0,
     'no-redeclare': 1,
-    'no-return-assign': 0,
+    'no-return-assign': [1, 'except-parens'],
     'no-sequences': 1,
     'no-unused-expressions': 1,
     'no-with': 1,
