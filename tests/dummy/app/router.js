@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import config from './config/environment';
+import fountainheadRoutes from 'ember-fountainhead/utils/route-setup';
 
 const Router = Ember.Router.extend({
   location: config.locationType,
@@ -7,6 +8,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  fountainheadRoutes(this);
 });
 
 export default Router;

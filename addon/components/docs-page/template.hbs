@@ -1,1 +1,11 @@
-{{yield}}
+{{docs-page.title-bar
+  title=content.name
+  classUrl=(concat content.file '#' content.line)}}
+
+{{docs-page.attributes itemAttributes=itemAttributes}}
+
+{{docs-page.live-description descriptionText=content.description}}
+
+{{#each content.classitems as |classItem|}}
+  {{docs-page.class-item item=classItem}}
+{{/each}}

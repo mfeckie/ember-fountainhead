@@ -34,22 +34,32 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 ## THINGS TO GET DONE
 
 - [x] Scaffold primary component structure
-  - [ ] Build header
-    - [ ] Logo
-    - [ ] Repo link
-  - [ ] Build sidebar
-    - [ ] Sections
-    - [ ] Section headers
+  - [x] Build header
+  - [x] Build sidebar
+    - [x] Sections
+    - [x] Section headers
     - [ ] Search bar
-    - [ ] Item groups
+    - [x] Item groups
   - [ ] Build Doc Page
-    - [ ] Title
-    - [ ] Attributes
-    - [ ] Live description
-    - [ ] Class Items
+    - [x] Title
+    - [x] Attributes
+    - [x] Live description
+    - [x] Class Items
     - [ ] Tab bar, tab components
     - [ ] Status filters (inherited, protected, private, deprecated)
     - [ ] Tab output
-- [ ] Build landing "page"
-- [ ] Set up routes
-- [ ] Write model hooks to fetch models as JSON from project file structure
+- [x] Build landing "page"
+- [x] Set up routes
+- [x] Write model hooks to fetch models as JSON from project file structure
+- [ ] App Styling
+  - [ ] General
+  - [ ] Header
+  - [ ] Sidebar
+  - [ ] Classes
+  - [ ] Class Items
+- [ ] README Documentation
+  - [ ] Install deps
+  - [ ] CLI Build Spells
+  - [ ] CLI Build theme specifications for code mirror
+  - [ ] Mounting doc routes
+  - [ ] Import addon styles

@@ -1,1 +1,19 @@
-{{yield}}
+{{#docs-sidebar.section sectionTitle="Search"}}
+  {{docs-sidebar.search-bar docsItems=docsItems onUpdate=(action "doFilter")}}
+{{/docs-sidebar.section}}
+
+{{#if docsItems.project.tag}}
+  {{docs-sidebar.section sectionTitle=(concat 'tag:' docsItems.project.tag)}}
+{{/if}}
+
+{{#if docsItems.modules}}
+  {{#docs-sidebar.section sectionTitle="Modules"}}
+    {{docs-sidebar.item-group items=docsItems.modules}}
+  {{/docs-sidebar.section}}
+{{/if}}
+
+{{#if docsItems.classes}}
+  {{#docs-sidebar.section sectionTitle="Classes"}}
+    {{docs-sidebar.item-group items=docsItems.classes}}
+  {{/docs-sidebar.section}}
+{{/if}}

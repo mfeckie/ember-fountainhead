@@ -1,10 +1,22 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+var Funnel = require('broccoli-funnel');
+var mergeTrees = require('broccoli-merge-trees');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    // Add options here
+    // Disable JSHint by telling ember-cli-qunit not to use the lintTree
+    'ember-cli-qunit': {
+      useLintTree: false
+    },
+    sassOptions: {
+      extension: 'scss'
+    },
+    codemirror: {
+      modes: ['handlebars'],
+      themes: ['monokai']
+    }
   });
 
   /*
@@ -14,5 +26,15 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  return app.toTree();
+  // Required to compile templates at runtime
+  app.import('bower_components/ember/ember-template-compiler.js');
+
+  // Pull public assets from core into the dummy app
+   var publicAssets = new Funnel('public/', {
+     srcDir: '/',
+     include: ['**/*'],
+     destDir: '/'
+   });
+
+  return mergeTrees([app.toTree(), publicAssets], { overwrite: true });
 };
