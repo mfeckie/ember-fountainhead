@@ -1,0 +1,1 @@
+export { default } from 'ember-fountainhead/components/docs-get-started/component';

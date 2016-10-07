@@ -9,47 +9,119 @@ It Just Works™.
 
 ## Installation
 
-* `git clone git@github.com:healthsparq/ember-fountainhead.git` this repository
-* `cd ember-fountainhead`
-* `npm install`
-* `bower install`
+### Dependencies
 
-## Running
+**The playground requires `ivy-codemirror` to generate the code editor.**
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+After installing this addon, run the following in your project:
 
-## Running Tests
+```
+ember install ember-component-playground
+ember install ivy-codemirror
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Then, update your project's `ember-cli-build` with this `import` statement to enable compilation templates at runtime:
 
-## Building
+```
+app.import('bower_components/ember/ember-template-compiler.js');
+```
 
-* `ember build`
+You're golden!
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+### Mounting Fountainhead's Routes
+
+In order to make use of Fountainhead's in-app documentation features, you will
+need to import and mount its routes so that they are available to you. We recommend
+doing this explicitly when developing in the context of a `development` environment,
+but you can of course choose to always mount Fountainhead's routes.
+
+If you wish to take advantage of environment-specific loading, you'll need to
+set up your `ember-cli-build.js` file to consume and store the environment argument:
+
+```javascript
+module.exports = function(environment) {
+  var ENV = {
+    environment: environment
+  };
+
+  return ENV;
+}
+```
+
+To mount the routes, make these additions in your app's `router.js`:
+
+```javascript
+import fountainheadRoutes from 'ember-fountainhead/utils/route-setup';
+import config from '../config/environment';
+
+Router.map(function() {
+  if (config.environment === 'development') {
+    fountainheadRoutes(this);
+  }
+});
+```
+
+### Styles
+
+If you want to use Fountainhead's built in styles, you'll need to install `ember-cli-sass`:
+
+```
+ember install ember-cli-sass
+```
+
+You'll then be able to import Fountainhead's styles into your app's css:
+
+```sass
+@import "ember-fountainhead/styles";
+```
+
+You can alternatively write your own custom CSS for Fountainhead as you see fit.
+
+## Configuration
+
+Codemirror comes bundled with many themes. To specify which you would like in
+your app, add the following to your `ember-cli-build.js` file inside of the
+callback for `new EmberApp`:
+
+```javascript
+  codemirror: {
+    modes: ['handlebars'],
+    themes: ['monokai']
+  }
+```
+
+Replace "`monokai`" with whichever theme you would like to use. Themes are available
+in the codemirror folder inside of `bower_components`.
 
 ## THINGS TO GET DONE
 
 - [x] Scaffold primary component structure
-  - [ ] Build header
-    - [ ] Logo
-    - [ ] Repo link
-  - [ ] Build sidebar
-    - [ ] Sections
-    - [ ] Section headers
+  - [x] Build header
+  - [x] Build sidebar
+    - [x] Sections
+    - [x] Section headers
     - [ ] Search bar
-    - [ ] Item groups
+    - [x] Item groups
   - [ ] Build Doc Page
-    - [ ] Title
-    - [ ] Attributes
-    - [ ] Live description
-    - [ ] Class Items
+    - [x] Title
+    - [x] Attributes
+    - [x] Live description
+    - [x] Class Items
     - [ ] Tab bar, tab components
     - [ ] Status filters (inherited, protected, private, deprecated)
     - [ ] Tab output
-- [ ] Build landing "page"
-- [ ] Set up routes
-- [ ] Write model hooks to fetch models as JSON from project file structure
+- [x] Build landing "page"
+- [x] Set up routes
+- [x] Write model hooks to fetch models as JSON from project file structure
+- [ ] App Styling
+  - [ ] General
+  - [ ] Header
+  - [ ] Sidebar
+  - [ ] Classes
+  - [ ] Class Items
+- [ ] README Documentation
+  - [x] Install deps
+  - [x] CLI Build Spells
+  - [x] CLI Build theme specifications for code mirror
+  - [x] Mounting doc routes
+  - [x] Import addon styles

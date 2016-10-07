@@ -1,1 +1,14 @@
-{{outlet}}
+{{docs-header projectName=model.project.name projectUrl=model.project.url}}
+
+<main>
+  <div class="sidebar">
+    {{#if model}}
+      {{docs-sidebar docsItems=model}}
+    {{/if}}
+  </div>
+  <div class="main-content">
+    {{outlet}}
+  </div>
+</main>
+
+{{docs-footer}}

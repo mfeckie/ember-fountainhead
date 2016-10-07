@@ -1,1 +1,38 @@
-{{yield}}
+<h4>
+  {{item.name}}
+  <span class="item-type">{{item.type}}</span>
+  {{#if item.params}}
+    <span>(
+      {{#each item.params as |param index|}}
+        {{if index ', '}}{{param.name}}
+      {{/each}}
+      )</span>
+  {{/if}}
+  {{#if item.access}}
+    <span class="item-access access-{{item.access}}">{{item.access}}</span>
+  {{/if}}
+</h4>
+
+{{#if item.inherited}}
+  <p class="small">Inherited from {{item.inherited}}</p>
+{{/if}}
+
+{{#if item.description}}
+  {{docs-page.live-description descriptionText=item.description}}
+{{/if}}
+
+{{#if item.params}}
+  <h5>Parameters</h5>
+  <ul>
+  {{#each item.params as |param|}}
+    <li>
+      <strong>{{param.name}} {{#if param.type}}- <span>{{param.type}}</span>{{/if}}</strong><br />
+      {{param.description}}
+    </li>
+  {{/each}}
+  </ul>
+{{/if}}
+
+{{#if item.default}}
+  <p><strong>Default: </strong> <code>{{item.default}}</code></p>
+{{/if}}

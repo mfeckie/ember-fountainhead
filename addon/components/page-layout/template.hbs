@@ -1,10 +1,12 @@
-{{docs-header}}
+{{docs-header projectName=model.projectName projectUrl=model.projectUrl}}
 
 <main>
   <div>
-    {{docs-sidebar}}
+    {{#if model}}
+      {{docs-sidebar docsItems=model}}
+    {{/if}}
   </div>
   <div>
-    {{docs-page}}
+    {{docs-page}} {{!-- @TODO: Figure out what to actually do with this 😑 --}}
   </div>
 </main>

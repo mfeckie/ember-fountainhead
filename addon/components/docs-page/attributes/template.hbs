@@ -1,1 +1,12 @@
-{{yield}}
+{{#if itemAttributes.extends}}
+  <li><span>Extends:</span> <a href="">{{itemAttributes.extends}}</a></li>
+{{/if}}
+{{#if itemAttributes.module}}
+  <li><span>module:</span> <a href="">{{itemAttributes.module}}</a></li>
+{{/if}}
+{{#if itemAttributes.definedIn}}
+  <li><span>Defined In:</span> <a href="">{{itemAttributes.definedIn}}</a></li>
+{{/if}}
+{{#if itemAttributes.constructor}}
+  <li><span>Constructor</span></li>
+{{/if}}

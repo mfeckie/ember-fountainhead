@@ -8,7 +8,7 @@
   "extension_for": [],
   "file": "addon/components/core-alert/component.js",
   "line": 6,
-  "description": "Multi-use alerts for in-page error messaging, pop-up alerts, notifications,\nand more. Foundation-free™ since 2015.\n\n#### Sample Usage:\n\nYou can place just about any content you like inside of a `{{core-alert}}`.\n\n```handlebars\n{{#uicore-alert brand=\"warning\" icon=\"warning-sign\" size=\"small\"}}\n  <p>You have smelly body parts? Smelly under your arms? In the armpits? Just… just put some vinegar on it! Why didn’t you think of that?</p>\n  <p>If you’re raking the leaves and it gets all over your driveway, just hose it off dummy.</p>\n{{/uicore-alert}}\n```\n\n#### Configuration Properties\n\n_See individual properties below for details. Options include:_\n\n- `canDismiss`: Pass false to make alert impossible to get rid of\n- `brand`: Pass brand\n- `icon`: Pass an id for `{{core-svg}}` to render an icon\n- `size`: Adds a class to root element for font size changes. **DEPRECATED** Values include:\n   - `small`\n   - `tiny` {{render-tester}}",
+  "description": "<p>Multi-use alerts for in-page error messaging, pop-up alerts, notifications, and more. Foundation-free™ since 2015.</p><h4>Sample Usage:</h4><p>You can place just about any content you like inside of a <pre>\\{{core-alert}}</pre>.</p><code>\\{{#uicore-alert brand=\"warning\" icon=\"warning-sign\" size=\"small\"}}<p>You have smelly body parts? Smelly under your arms? In the armpits? Just… just put some vinegar on it! Why didn’t you think of that?</p><p>If you’re raking the leaves and it gets all over your driveway, just hose it off dummy.</p>\\{{/uicore-alert}}</code><h4>Configuration Properties</h4><p><i>See individual properties below for details. Options include:</i></p><p><pre>canDismiss</pre>: Pass false to make alert impossible to get rid of</p><p><pre>brand</pre>: Pass brand</p><p><pre>icon</pre>: Pass an id for <pre>\\{{core-svg}}</pre> to render an icon</p><p><pre>size</pre>: Adds a class to root element for font size changes. **DEPRECATED** Values include:</p><ul><li><pre>small</pre></li><li><pre>tiny</pre></li></ul> {{component-playground code=\"{{real-boy-component}}\"}}",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "classitems": [
@@ -24,7 +24,7 @@
     {
         "file": "addon/components/core-alert/component.js",
         "line": 46,
-        "description": "Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.\n\n**Usage:**\nOverride by passing `false` into this param in your handlebars template:\n\n```handlebars\n{{#core-alert canDismiss=false}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
+        "description": "Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.\n\n**Usage:**\nOverride by passing `false` into this param in your handlebars template:\n\n```handlebars\n\\{{#core-alert canDismiss=false}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
         "itemtype": "property",
         "name": "canDismiss",
         "type": "{boolean}",
@@ -36,7 +36,7 @@
     {
         "file": "addon/components/core-alert/component.js",
         "line": 65,
-        "description": "Adds an icon to the left side of the component, and in doing so widens the\ncolored strip. Pass the id of an svg for the `core-svg` component to render\n\nAdds a class of `alert-icon` to the root element of the component, and an\naccompanying class matching the name of the icon you specified.\n\n**Usage:**\nPass a value into this param in your handlebars template:\n\n```handlebars\n{{#core-alert icon='info-ital'}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
+        "description": "Adds an icon to the left side of the component, and in doing so widens the\ncolored strip. Pass the id of an svg for the `core-svg` component to render\n\nAdds a class of `alert-icon` to the root element of the component, and an\naccompanying class matching the name of the icon you specified.\n\n**Usage:**\nPass a value into this param in your handlebars template:\n\n```handlebars\n\\{{#core-alert icon='info-ital'}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
         "itemtype": "property",
         "name": "iconName",
         "type": "{string}",
@@ -58,7 +58,7 @@
     {
         "file": "addon/components/core-alert/component.js",
         "line": 95,
-        "description": "Affects the font size of the content in the alert. Accepts a string\nrepresenting one of the following values:\n\n- `'small'`\n- `'tiny'`\n\nAdds a class to the root element of the component corresponding to the\nvalue you specified.\n\n**Usage:**\nPass a value into this param in your handlebars template:\n\n```handlebars\n{{#core-alert size='small'}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
+        "description": "Affects the font size of the content in the alert. Accepts a string\nrepresenting one of the following values:\n\n- `'small'`\n- `'tiny'`\n\nAdds a class to the root element of the component corresponding to the\nvalue you specified.\n\n**Usage:**\nPass a value into this param in your handlebars template:\n\n```handlebars\n\\{{#core-alert size='small'}}\n  {{! Standard template content goes here }}\n{{/core-alert}}\n```",
         "itemtype": "property",
         "name": "size",
         "type": "{string}",

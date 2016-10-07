@@ -1,1 +1,9 @@
-{{yield}}
+<div class="logo-home">
+  {{#link-to 'index'}}
+    <img src="/assets/img/ember-logo.png" alt="" title="" />
+    <span>{{if projectName projectName 'Ember Fountainhead'}}</span>
+  {{/link-to}}
+</div>
+<div class="project-link">
+  <a href="{{projectUrl}}" target="_blank" title="" class="project-source-link"></a>
+</div>

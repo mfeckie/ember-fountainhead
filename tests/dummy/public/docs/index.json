@@ -1,0 +1,32 @@
+{
+  "project": {
+    "tag": "v1.0.0",
+    "url": "https://github.com/healthsparq/ember-fountainhead"
+  },
+  "modules": [
+    {
+      "id": "module-brule",
+      "name": "Brule",
+      "type": "modules",
+      "subItems": [
+        {
+          "id": "module-steve",
+          "name": "Steve",
+          "type": "modules"
+        }
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "id": "class-some-item",
+      "name": "Some Item",
+      "type": "classes"
+    },
+    {
+      "id": "class-modal-header",
+      "name": "Modal Header",
+      "type": "classes"
+    }
+  ]
+}
