@@ -1,5 +1,6 @@
-{{#if model}}
+{{#if model.name}}
   {{docs-welcome}}
 {{else}}
+  {{! If the model doesn't have a name, documentation hasn't been generated }}
   {{docs-get-started}}
 {{/if}}

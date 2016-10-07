@@ -1,0 +1,106 @@
+// Typography
+// ========================================================
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+
+// Setup
+// -----------------------------------------------------------------------------
+
+html {
+  font-size: $base-font-size * 1px; // Sets application base font size
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-family;
+  color: $dark-gray;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: .5rem;
+  margin-top: .2rem;
+  text-rendering: optimizeLegibility;
+}
+
+// Headings
+// -----------------------------------------------------------------------------
+
+h1 { font-size: $h1-size * 1rem; line-height: 1.25; }
+h2 { font-size: $h2-size * 1rem; line-height: 1.333; }
+h3 { font-size: $h3-size * 1rem; line-height: 1.5; }
+h4 { font-size: $h4-size * 1rem; line-height: 1.166; }
+
+// Header weights
+h1,
+h2 { font-weight: 300; }
+h3 { font-weight: normal; }
+h4 { font-weight: bold }
+
+// Anchors
+// -----------------------------------------------------------------------------
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.link {
+  cursor: pointer;
+  font-weight: normal;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Paragraphs, Body Copy, Decorative Classes
+// -----------------------------------------------------------------------------
+
+p {
+  margin-bottom: 1.42857rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+// Overriding the user agent styles on this one because
+// why the hell would you make this italic
+address {
+  font-style: normal;
+}
+
+small,
+.small {
+  font-size: .85rem;
+  line-height: 1.15rem;
+}
+
+label {
+  cursor: default;
+}
+
+// Utility Classes
+// -----------------------------------------------------------------------------
+
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+
+.bold { font-weight: bold; }
+.normal { font-weight: normal; }
+
+.body-color,
+.body-color:hover {
+  color: $dark-gray;
+}
+
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+.align-left { text-align: left; }

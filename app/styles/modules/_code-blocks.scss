@@ -1,0 +1,30 @@
+// Code Sample Styles
+// =============================================
+
+code {
+  padding: 1px 3px;
+
+  background: #F9F9F9;
+  border: 1px solid #E8E8E8;
+
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace!important;
+  font-size: 0.8rem;
+  color: #CC2255;
+
+  white-space: normal;
+}
+
+// hljs === highlight js code blocks
+.hljs {
+  padding: 0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  pre {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    // Ember HLJS makes is add an extra line to the top of every code sample,
+    // offset here with margin
+    margin: -1rem 20px 1rem;
+  }
+}

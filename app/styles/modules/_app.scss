@@ -1,0 +1,15 @@
+// App Level Styles
+// =============================================
+
+// Flexbox spells for a sticky footer
+.fountainhead-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .container-fluid {
+    flex: 1;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

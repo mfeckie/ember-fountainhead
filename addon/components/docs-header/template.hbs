@@ -1,9 +1,11 @@
 <div class="logo-home">
   {{#link-to 'index'}}
-    <img src="/assets/img/ember-logo.png" alt="" title="" />
-    <span>{{if projectName projectName 'Ember Fountainhead'}}</span>
+    <img src="{{if logo logo "/assets/img/ember-logo.png"}}" class="docs-logo" alt="project logo" title="" />
   {{/link-to}}
 </div>
-<div class="project-link">
-  <a href="{{projectUrl}}" target="_blank" title="" class="project-source-link"></a>
-</div>
+
+{{#if repository}}
+  <div class="github-link">
+    <a href="{{projectUrl}}" target="_blank" title="" class="project-source-link"></a>
+  </div>
+{{/if}}

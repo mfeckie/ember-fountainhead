@@ -1,4 +1,19 @@
-@import "ember-component-playground/styles";
+// ========================================================
+// Fountainhead Application Styles
+// ========================================================
 
-// Modules
-@import "modules/class-items";
+// Base
+@import 'variables';
+@import 'colors';
+@import 'grid';
+
+// Addon Styles
+@import 'ember-component-playground/styles';
+
+// App Modules
+@import 'modules/app';
+@import 'modules/class-items';
+@import 'modules/code-blocks';
+@import 'modules/footer';
+@import 'modules/header';
+@import 'modules/typography';

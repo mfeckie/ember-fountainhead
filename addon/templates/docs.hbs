@@ -1,14 +1,19 @@
-{{docs-header projectName=model.project.name projectUrl=model.project.url}}
+<div class="fountainhead-wrapper">
+  {{docs-header projectName=model.project.name projectUrl=model.project.url}}
 
-<main>
-  <div class="sidebar">
-    {{#if model}}
-      {{docs-sidebar docsItems=model}}
-    {{/if}}
-  </div>
-  <div class="main-content">
-    {{outlet}}
-  </div>
-</main>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="sidebar col-sm-4">
+        {{! Check for a docs classes to know if data is available for sidebar }}
+        {{#if model.classes}}
+          {{docs-sidebar docsItems=model}}
+        {{/if}}
+      </div>
+      <div class="main-content col-sm-8">
+        {{outlet}}
+      </div>
+    </div>
+  </main>
 
-{{docs-footer}}
+  {{docs-footer}}
+</div>
