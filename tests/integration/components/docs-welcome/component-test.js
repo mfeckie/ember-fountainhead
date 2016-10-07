@@ -11,14 +11,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{docs-welcome}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#docs-welcome}}
-      template block text
-    {{/docs-welcome}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '),
+    'Welcome Browse to a module or class using the sidebar to view its API documentation. Keyboard Shortcuts Press s to focus the API search box. Use Up and Down to navigate search results. Use Enter to select a search result.');
 });

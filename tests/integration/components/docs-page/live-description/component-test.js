@@ -6,19 +6,9 @@ moduleForComponent('docs-page/live-description', 'Integration | Component | docs
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set('descriptionText', '<p>Fountainhead is neato!</p>');
 
-  this.render(hbs`{{docs-page/live-description}}`);
+  this.render(hbs`{{docs-page/live-description descriptionText=descriptionText}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#docs-page/live-description}}
-      template block text
-    {{/docs-page/live-description}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Fountainhead is neato!');
 });

@@ -1,12 +1,15 @@
-{{docs-header projectName=model.projectName projectUrl=model.projectUrl}}
+{{docs-header logo=model.logo repository=model.repository}}
 
 <main>
   <div>
-    {{#if model}}
+    {{! Check for a docs classes to know if data is available for sidebar }}
+    {{#if model.classes}}
       {{docs-sidebar docsItems=model}}
     {{/if}}
   </div>
   <div>
-    {{docs-page}} {{!-- @TODO: Figure out what to actually do with this 😑 --}}
+    {{#if model}}
+      {{docs-page content=model}} {{!-- @TODO: Figure out what to actually do with this 😑 --}}
+    {{/if}}
   </div>
 </main>

@@ -5,20 +5,15 @@ moduleForComponent('docs-page', 'Integration | Component | docs page', {
   integration: true
 });
 
+const docClass = {
+  value: {}
+};
+
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  // Docs page REQUIRES content
+  this.set('content', docClass);
 
-  this.render(hbs`{{docs-page}}`);
+  this.render(hbs`{{docs-page content=content}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#docs-page}}
-      template block text
-    {{/docs-page}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '), '[source] Defined In: undefined:undefined');
 });

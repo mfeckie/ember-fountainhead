@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{rootURL}}assets/dummy.css">
     <link rel="stylesheet" href="{{rootURL}}assets/test-support.css">
 
+    <!-- Fix app styles ruining our beautiful tests -->
+    <style>li{margin-bottom: 0;}</style>
+
     {{content-for "head-footer"}}
     {{content-for "test-head-footer"}}
   </head>

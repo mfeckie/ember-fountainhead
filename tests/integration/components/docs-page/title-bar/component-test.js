@@ -11,14 +11,5 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{docs-page/title-bar}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#docs-page/title-bar}}
-      template block text
-    {{/docs-page/title-bar}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), '[source]');
 });

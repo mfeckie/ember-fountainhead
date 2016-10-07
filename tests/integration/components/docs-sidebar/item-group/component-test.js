@@ -11,14 +11,5 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{docs-sidebar/item-group}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#docs-sidebar/item-group}}
-      template block text
-    {{/docs-sidebar/item-group}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Give me some items to display!');
 });

@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{real-boy-component}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'I\'M A REAL BOY!!');
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +20,5 @@ test('it renders', function(assert) {
     {{/real-boy-component}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '), 'I\'M A REAL BOY!! template block text');
 });
