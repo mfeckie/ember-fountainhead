@@ -2,8 +2,8 @@
   {{docs-sidebar.search-bar docsItems=docsItems onUpdate=(action "doFilter")}}
 {{/docs-sidebar.section}}
 
-{{#if docsItems.project.tag}}
-  {{docs-sidebar.section sectionTitle=(concat 'tag:' docsItems.project.tag)}}
+{{#if version}}
+  {{docs-sidebar.section sectionTitle=(concat 'tag:' version)}}
 {{/if}}
 
 {{#if docsItems.modules}}

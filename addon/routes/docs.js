@@ -19,7 +19,7 @@ export default Route.extend({
    * @return {Promise}
    */
   model() {
-    return $.ajax('/docs/index.json').then(
+    return $.ajax('/docs/meta.json').then(
       res => res,
       ex => ({ error: true, message: 'Meta fetch failed' })
     );
