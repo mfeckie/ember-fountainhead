@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "6"
 
-sudo: false
+sudo: required
 
 cache:
   directories:
@@ -31,8 +31,6 @@ before_install:
 install:
   - npm install
   - bower install
-  - ember install ember-component-playground
-  - ember install ivy-codemirror
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
