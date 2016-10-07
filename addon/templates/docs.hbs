@@ -1,12 +1,12 @@
 <div class="fountainhead-wrapper">
-  {{docs-header projectName=model.project.name projectUrl=model.project.url}}
+  {{docs-header logo=model.logo repository=model.repository}}
 
   <main class="container-fluid">
     <div class="row">
       <div class="sidebar col-sm-4">
         {{! Check for a docs classes to know if data is available for sidebar }}
         {{#if model.classes}}
-          {{docs-sidebar docsItems=model}}
+          {{docs-sidebar docsItems=model version=model.version}}
         {{/if}}
       </div>
       <div class="main-content col-sm-8">
@@ -14,6 +14,5 @@
       </div>
     </div>
   </main>
-
   {{docs-footer}}
 </div>
