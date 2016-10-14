@@ -11,19 +11,12 @@ It Just Works™.
 
 ### Dependencies
 
-**The playground requires `ivy-codemirror` to generate the code editor.**
-
-After installing this addon, run the following in your project:
+If you intend to use the `component-playground` to render interactive documentation,
+you need install the dependent addons first:
 
 ```
 ember install ember-component-playground
 ember install ivy-codemirror
-```
-
-Then, update your project's `ember-cli-build` with this `import` statement to enable compilation templates at runtime:
-
-```
-app.import('bower_components/ember/ember-template-compiler.js');
 ```
 
 You're golden!
@@ -69,9 +62,10 @@ If you want to use Fountainhead's built in styles, you'll need to install `ember
 ember install ember-cli-sass
 ```
 
-You'll then be able to import Fountainhead's styles into your app's css:
+You'll then be able to import styles for Fountainhead and Component-Playground into your app's css:
 
 ```sass
+@import 'ember-component-playground/styles';
 @import "ember-fountainhead/styles";
 ```
 
@@ -79,15 +73,18 @@ You can alternatively write your own custom CSS for Fountainhead as you see fit.
 
 ## Configuration
 
+The `ivy-codemirror` addon generates the in browser text editor used by the `component-playground`.
 Codemirror comes bundled with many themes. To specify which you would like in
 your app, add the following to your `ember-cli-build.js` file inside of the
 callback for `new EmberApp`:
 
 ```javascript
+var app = new EmberApp(defaults, {
   codemirror: {
-    modes: ['handlebars'],
-    themes: ['monokai']
+    modes: ['handlebars'], // 'handlebars' required
+    themes: ['monokai'] // 'monokai' looks great!
   }
+}
 ```
 
 Replace "`monokai`" with whichever theme you would like to use. Themes are available
