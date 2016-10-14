@@ -1,5 +1,6 @@
 import Ember from 'ember';
-import layout from './template';
+import hbs from 'htmlbars-inline-precompile';
+
 
 export default Ember.Component.extend({
 
@@ -10,6 +11,8 @@ export default Ember.Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-  layout
-
+  layout: hbs`
+    {{docs-sidebar.section.header sectionTitle=sectionTitle}}
+    {{yield}}
+  `
 });

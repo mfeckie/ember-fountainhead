@@ -1,19 +1,19 @@
 {{#docs-sidebar.section sectionTitle="Search"}}
-  {{docs-sidebar.search-bar docsItems=docsItems onUpdate=(action "doFilter")}}
+  {{docs-sidebar.search-bar docsItems=docsMeta onUpdate=(action "doFilter")}}
 {{/docs-sidebar.section}}
 
-{{#if version}}
-  {{docs-sidebar.section sectionTitle=(concat 'tag:' version)}}
+{{#if docsMeta.version}}
+  {{docs-sidebar.section sectionTitle=(concat 'tag:' docsMeta.version)}}
 {{/if}}
 
-{{#if docsItems.modules}}
+{{#if docsMeta.modules}}
   {{#docs-sidebar.section sectionTitle="Modules"}}
-    {{docs-sidebar.item-group items=docsItems.modules}}
+    {{docs-sidebar.item-group items=docsMeta.modules}}
   {{/docs-sidebar.section}}
 {{/if}}
 
-{{#if docsItems.classes}}
+{{#if docsMeta.classes}}
   {{#docs-sidebar.section sectionTitle="Classes"}}
-    {{docs-sidebar.item-group items=docsItems.classes}}
+    {{docs-sidebar.item-group items=docsMeta.classes}}
   {{/docs-sidebar.section}}
 {{/if}}

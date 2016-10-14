@@ -1,0 +1,22 @@
+// Sidebar
+// =============================================
+
+.docs-sidebar {
+  width: 230px;
+  min-height: 475px;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+
+  .section-header {
+    padding: 12px 12px 10px 12px;
+    border-top: 1px solid $border-color;
+  }
+
+  .item-group {
+    list-style: none;
+
+    .item-link {
+      padding: 6px 1em 6px 1em
+    }
+  }
+}
