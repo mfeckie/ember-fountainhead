@@ -3,10 +3,11 @@
 
   <main class="container-fluid">
     <div class="row">
-      <div class="sidebar col-sm-4">
+      <div class="col-sm-4">
         {{! Check for a docs classes to know if data is available for sidebar }}
+        {{! Can we update search bar to look good and show always even if there isn't data? }}
         {{#if model.classes}}
-          {{docs-sidebar docsItems=model version=model.version}}
+          {{docs-sidebar docsMeta=model}}
         {{/if}}
       </div>
       <div class="main-content col-sm-8">
