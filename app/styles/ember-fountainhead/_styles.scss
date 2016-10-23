@@ -9,9 +9,12 @@
 
 // App Modules
 @import 'modules/app';
-@import 'modules/class-items';
-@import 'modules/code-blocks';
+@import 'modules/typography';
 @import 'modules/footer';
 @import 'modules/header';
+// Sidebar
 @import 'modules/sidebar';
-@import 'modules/typography';
+@import 'modules/class-items';
+@import 'modules/code-blocks';
+// Doc
+@import 'modules/title-bar';
