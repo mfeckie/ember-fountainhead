@@ -13,5 +13,8 @@ export default Ember.Component.extend({
 
   classUrl: '',
 
-  layout
+  layout,
+
+  tagName: 'h2',
+  classNames: ['title-bar']
 });
