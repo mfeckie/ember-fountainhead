@@ -15,10 +15,24 @@ export default Ember.Component.extend({
   // ---------------------------------------------------------------------------
 
   layout,
-
+  /**
+   * Bind `docs-footer` class
+   * @property classNames
+   * @type {Array}
+   */
   classNames: ['docs-footer'],
+  /**
+   * Use `<footer>` element
+   * @property tagName
+   * @type {string}
+   */
   tagName: 'footer',
-
-  // @TODO: Make this dynamic (moment? prob not)
-  year: '2016'
+  /**
+   * Copyright year
+   * @TODO: Make this dynamic (moment? prob not)
+   * @property year
+   * @type {number}
+   * @default 2016
+   */
+  year: 2016
 });

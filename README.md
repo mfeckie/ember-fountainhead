@@ -92,6 +92,7 @@ in the codemirror folder inside of `bower_components`.
 
 ## THINGS TO GET DONE
 
+- [x] Handle multiple entry points
 - [x] Scaffold primary component structure
   - [x] Build header
   - [x] Build sidebar
