@@ -13,11 +13,13 @@ module.exports = {
     target.import('bower_components/ember/ember-template-compiler.js');
 
     // @TODO Is there a way to provide default codemirror options?
-  },
-
-  includedCommands: function() {
-    return {
-      'fountainhead-gendocs': require('./lib/index')
-    };
   }
+
+  // This appears to get called when the addon is installed, which is causing
+  // some weird behavior right now...
+  // includedCommands: function() {
+  //   return {
+  //     'fountainhead-gendocs': require('./lib/index')
+  //   };
+  // }
 };
