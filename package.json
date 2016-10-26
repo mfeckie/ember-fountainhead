@@ -13,9 +13,13 @@
   },
   "repository": "https://github.com/healthsparq/ember-fountainhead",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.0.0"
   },
-  "author": "",
+  "contributors": [
+    "Evan Rowe",
+    "Dan Hedgecock"
+  ],
+  "bin": "./lib/index.js",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -43,7 +47,9 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "documentation",
+    "yuidoc"
   ],
   "dependencies": {
     "case": "^1.4.1",
