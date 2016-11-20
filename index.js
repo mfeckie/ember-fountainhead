@@ -6,7 +6,7 @@ module.exports = {
 
   // Include hook used to pull in template compiler
   included: function(app, parentAddon) {
-    this._super(...arguments);
+    this._super.included.apply(this, arguments);
     var target = (app || parentAddon);
 
     // Required to compile templates at runtime

@@ -73,6 +73,8 @@ You can alternatively write your own custom CSS for Fountainhead as you see fit.
 
 ## Configuration
 
+##### Ember Project
+
 The `ivy-codemirror` addon generates the in browser text editor used by the `component-playground`.
 Codemirror comes bundled with many themes. To specify which you would like in
 your app, add the following to your `ember-cli-build.js` file inside of the
@@ -82,7 +84,7 @@ callback for `new EmberApp`:
 var app = new EmberApp(defaults, {
   codemirror: {
     modes: ['handlebars'], // 'handlebars' required
-    themes: ['monokai'] // 'monokai' looks great!
+    themes: ['panda-syntax'] // 'panda-syntax' looks great!!!
   }
 }
 ```
@@ -90,9 +92,20 @@ var app = new EmberApp(defaults, {
 Replace "`monokai`" with whichever theme you would like to use. Themes are available
 in the codemirror folder inside of `bower_components`.
 
+##### fountainhead.js
+Note that all paths are resolved using `path.resolve`, meaning that either a relative path or paths starting with `./` will resolve to your project's root directory.
+
+- entry: Can be a string, or array of strings.
+- output: Object
+  - path: Path for output files
+  - filename: Filename for documentation meta data file
+
+
 ## THINGS TO GET DONE
 
+
 - [x] Handle multiple entry points
+- [x] How to ignore public/docs to prevent rebuilding app on data files change (.watchmanconfig)
 - [x] Scaffold primary component structure
   - [x] Build header
   - [x] Build sidebar
@@ -117,9 +130,17 @@ in the codemirror folder inside of `bower_components`.
   - [ ] Sidebar
   - [ ] Classes
   - [ ] Class Items
+- [] Documentation Scripts
+  - [x] Safely read project configuration and package.json and decorating with defaults
+  - [x] Handle validating/cleaning destination path before docs generation
+  - [x] Generate raw yuidoc json file and save in tmp dir
+  - [x] Generate fountainhead json data files by parsing markdown and decorating individual class files
+  - [] Create unit tests for utility modules
 - [ ] README Documentation
   - [x] Install deps
   - [x] CLI Build Spells
   - [x] CLI Build theme specifications for code mirror
   - [x] Mounting doc routes
   - [x] Import addon styles
+  - [] Creating a `fountainhead.js` configuration file
+  - [] Using .watchmanconfig to ignore docs output directory to prevent rebuilds
