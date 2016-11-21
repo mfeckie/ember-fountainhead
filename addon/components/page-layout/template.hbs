@@ -2,14 +2,21 @@
 
 <main>
   <div>
-    {{! Check for a docs classes to know if data is available for sidebar }}
+    {{! ------------------------------------------------------------------- }}
+    {{! If there are classes, there is data for the sidebar
+    {{! ------------------------------------------------------------------- }}
     {{#if model.classes}}
       {{docs-sidebar docsItems=model}}
     {{/if}}
   </div>
+
+  {{! ------------------------------------------------------------------- }}
+  {{! Show a doc page when model exists (model=some doc)
+  {{! ------------------------------------------------------------------- }}
   <div>
     {{#if model}}
-      {{docs-page content=model}} {{!-- @TODO: Figure out what to actually do with this 😑 --}}
+      {{! @TODO rename content to doc? }}
+      {{fountain.doc-page content=model}} {{!-- @TODO: Figure out what to actually do with this 😑 --}}
     {{/if}}
   </div>
 </main>

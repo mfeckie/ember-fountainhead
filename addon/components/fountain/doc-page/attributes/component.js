@@ -3,6 +3,6 @@ import layout from './template';
 
 export default Ember.Component.extend({
   layout,
-  classNames: ['fh-attributes'],
+  classNames: ['fountainhead-attributes'],
   tagName: 'div'
 });

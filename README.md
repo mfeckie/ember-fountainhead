@@ -104,6 +104,10 @@ Note that all paths are resolved using `path.resolve`, meaning that either a rel
 ## THINGS TO GET DONE
 
 ##### Addon
+- [] Pull in ember-radical/schematics for components and styles for dummy app
+- [] Move all components into a master `fountain` directory for super easy filtering of app files
+- [] Rename app level components to `fountain-*` instead of `docs-*` for clarity between app and doc pages
+- [] Switch to `ember-cli-codemirror-shim` for component-playground && codemirror
 - [] Use `included` hook to pull in ember && github svg logos
 - [] Pull in aset of svg line icons
   - File icon for file page

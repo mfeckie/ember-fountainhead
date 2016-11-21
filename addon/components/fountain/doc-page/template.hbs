@@ -1,0 +1,16 @@
+{{fountain.doc-page.title-bar
+  title=content.name
+  classUrl=(concat content.file '#' content.line)}}
+
+{{fountain.doc-page.attributes
+  name=content.name
+  extends=content.extends
+  file=content.file
+  line=content.line
+  is_constructor=content.is_constructor}}
+
+{{fountain.doc-page.live-description descriptionText=content.description}}
+
+{{#each content.classitems as |classItem|}}
+  {{fountain.doc-page.class-item item=classItem}}
+{{/each}}

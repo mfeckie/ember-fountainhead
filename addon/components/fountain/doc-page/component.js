@@ -6,15 +6,11 @@ export default Ember.Component.extend({
   // Passed Properties
   // ---------------------------------------------------------------------------
 
-  title: '',
+  content: null,
 
-  // Properties
+  sourceUrl: '',
+
+  // Layout
   // ---------------------------------------------------------------------------
-
-  classUrl: '',
-
-  layout,
-
-  tagName: 'h2',
-  classNames: ['title-bar']
+  layout
 });
