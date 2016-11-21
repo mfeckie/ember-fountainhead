@@ -103,9 +103,10 @@ Note that all paths are resolved using `path.resolve`, meaning that either a rel
 
 ## THINGS TO GET DONE
 
-
-- [x] Handle multiple entry points
-- [x] How to ignore public/docs to prevent rebuilding app on data files change (.watchmanconfig)
+##### Addon
+- [] Use `included` hook to pull in ember && github svg logos
+- [] Pull in aset of svg line icons
+  - File icon for file page
 - [x] Scaffold primary component structure
   - [x] Build header
   - [x] Build sidebar
@@ -130,17 +131,28 @@ Note that all paths are resolved using `path.resolve`, meaning that either a rel
   - [ ] Sidebar
   - [ ] Classes
   - [ ] Class Items
-- [] Documentation Scripts
-  - [x] Safely read project configuration and package.json and decorating with defaults
-  - [x] Handle validating/cleaning destination path before docs generation
-  - [x] Generate raw yuidoc json file and save in tmp dir
-  - [x] Generate fountainhead json data files by parsing markdown and decorating individual class files
-  - [] Create unit tests for utility modules
-- [ ] README Documentation
-  - [x] Install deps
-  - [x] CLI Build Spells
-  - [x] CLI Build theme specifications for code mirror
-  - [x] Mounting doc routes
-  - [x] Import addon styles
-  - [] Creating a `fountainhead.js` configuration file
-  - [] Using .watchmanconfig to ignore docs output directory to prevent rebuilds
+
+##### Code Highlighting
+- [x] Set up prism.js highlighting
+- [] Configurable highlighting languages
+- [] Configurable highlighting styles
+- [] Configurable highlighting addons
+
+##### Data Scripts
+- [x] Handle multiple entry points
+- [x] Safely read project configuration and package.json and decorating with defaults
+- [x] Handle validating/cleaning destination path before docs generation
+- [x] Generate raw yuidoc json file and save in tmp dir
+- [x] Generate fountainhead json data files by parsing markdown and decorating individual class files
+- [] Create unit tests for utility modules
+
+##### README Documentation
+- [x] Install deps
+- [x] CLI Build Spells
+- [x] CLI Build theme specifications for code mirror
+- [x] Mounting doc routes
+- [x] Import addon styles
+- [] How to ignore public/docs to prevent rebuilding app on data files change (.watchmanconfig)
+- [] Creating a `fountainhead.js` configuration file
+- [] Using .watchmanconfig to ignore docs output directory to prevent rebuilds
+- [] Optional font family scss import for source code pro

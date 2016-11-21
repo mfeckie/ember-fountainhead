@@ -11,6 +11,7 @@ $light-border: #e0e0df;
 // -----------------------------------------------------------------------------
 $base-font-size: 14;
 $font-family: 'Lato', Arial, sans-serif;
+$font-family-mono: 'Source Code Pro', monospace;
 $anchor-font-color: #1EAEDB;
 $anchor-font-color-hover: #0FA0CE;
 
@@ -18,3 +19,12 @@ $h1-size: 48 / $base-font-size;
 $h2-size: 36 / $base-font-size;
 $h3-size: 24 / $base-font-size;
 $h4-size: 18 / $base-font-size;
+
+// Code Blocks
+// ---------------------------------------------------------------------------
+$code-color: #c7254e;
+$code-bg: #f9f2f4;
+$code-border: 1px solid $light-border;
+
+$block-code-border: 1px solid #e1e1e1;
+$block-code-bg: #f1f1f1;

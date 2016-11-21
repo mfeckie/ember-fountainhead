@@ -1,31 +1,33 @@
-// Code Sample Styles
-// =============================================
+// ========================================================
+// Code Samples
+// ========================================================
 
 code {
-  padding: 1px 3px;
-
-  background: #F9F9F9;
-  border: 1px solid #E8E8E8;
-
-  font-family: Monaco,Menlo,Consolas,"Courier New",monospace!important;
-  font-size: 0.8rem;
-  color: #CC2255;
-
-  white-space: normal;
+  color: $code-color;
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background-color: $code-bg;
+  border: $code-border;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-family: $font-family-mono;
+  -webkit-font-smoothing: antialiased;
 }
 
-// hljs === highlight js code blocks
-pre.hljs {
+pre {
+  padding: 1rem 1.5rem;
+  border: $block-code-border;
+  background-color: $block-code-bg;
   border-radius: 4px;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  margin: 1rem 0;
 
-  code {
-    background: #3f3f3f;
-    border-color: transparent;
+  & > code {
+    background-color: $block-code-bg;
+    color: inherit;
     display: block;
-    padding: 1rem 1.5rem;
+    font-size: 80%;
     white-space: pre;
   }
 }
