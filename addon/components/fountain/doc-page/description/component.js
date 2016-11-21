@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   // Passed Properties
   // ---------------------------------------------------------------------------
 
-  descriptionText: '',
+  description: '',
 
   // Properties
   // ---------------------------------------------------------------------------
@@ -123,8 +123,8 @@ export default Ember.Component.extend({
    * @return {[type]}
    */
   didReceiveAttrs({ newAttrs }) {
-    if (!newAttrs.descriptionText.value) { newAttrs.descriptionText.value = ''; }
-    this._generateDescription(newAttrs.descriptionText.value);
+    if (!newAttrs.description.value) { newAttrs.description.value = ''; }
+    this._generateDescription(newAttrs.description.value);
   },
 
   // Actions
