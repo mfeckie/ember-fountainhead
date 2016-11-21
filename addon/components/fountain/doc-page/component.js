@@ -6,9 +6,12 @@ export default Ember.Component.extend({
   // Passed Properties
   // ---------------------------------------------------------------------------
 
+  /**
+   * Documentation page model content.
+   * @property content
+   * @type {Object}
+   */
   content: null,
-
-  sourceUrl: '',
 
   // Layout
   // ---------------------------------------------------------------------------
