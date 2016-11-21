@@ -2,23 +2,29 @@
 // Fountainhead Application Styles
 // ========================================================
 
-// Base
+// Base Definitions
+// ---------------------------------------------------------------------------
 @import 'variables';
 @import 'colors';
 @import 'grid';
 
 // App Modules
+// ---------------------------------------------------------------------------
 @import 'modules/app';
 @import 'modules/typography';
 @import 'modules/footer';
 @import 'modules/header';
+
 // Sidebar
+// ---------------------------------------------------------------------------
 @import 'modules/sidebar';
-@import 'modules/class-items';
 @import 'modules/code-blocks';
+
 // Doc Page
+// ---------------------------------------------------------------------------
 @import 'modules/doc-page/header';
 @import 'modules/doc-page/meta';
+@import 'modules/doc-page/class-item';
 
 // Prism
 @import 'prism-panda'; // TODO: make this optional && configurable
