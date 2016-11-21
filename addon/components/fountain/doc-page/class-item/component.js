@@ -3,7 +3,18 @@ import layout from './template';
 
 export default Ember.Component.extend({
 
-  classNames: ['class-item'],
+  // Passed Properties
+  // ---------------------------------------------------------------------------
 
+  /**
+   * Documentation generated `classitem` property
+   * @property classItem
+   * @type {Object}
+   */
+  classItem: {},
+
+  // Properties
+  // ---------------------------------------------------------------------------
+  classNames: ['class-item'],
   layout
 });

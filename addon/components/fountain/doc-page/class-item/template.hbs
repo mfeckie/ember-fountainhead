@@ -1,30 +1,30 @@
 <h4>
-  {{item.name}}
-  <span class="item-type">{{item.type}}</span>
-  {{#if item.params}}
+  {{classItem.name}}
+  <span class="item-type">{{classItem.type}}</span>
+  {{#if classItem.params}}
     <span>(
-      {{#each item.params as |param index|}}
+      {{#each classItem.params as |param index|}}
         {{if index ', '}}{{param.name}}
       {{/each}}
       )</span>
   {{/if}}
-  {{#if item.access}}
-    <span class="item-access access-{{item.access}}">{{item.access}}</span>
+  {{#if classItem.access}}
+    <span class="item-access access-{{classItem.access}}">{{classItem.access}}</span>
   {{/if}}
 </h4>
 
-{{#if item.inherited}}
-  <p class="small">Inherited from {{item.inherited}}</p>
+{{#if classItem.inherited}}
+  <p class="small">Inherited from {{classItem.inherited}}</p>
 {{/if}}
 
-{{#if item.description}}
-  {{fountain.doc-page.description description=item.description}}
+{{#if classItem.description}}
+  {{fountain.doc-page.description description=classItem.description}}
 {{/if}}
 
-{{#if item.params}}
+{{#if classItem.params}}
   <h5>Parameters</h5>
   <ul>
-  {{#each item.params as |param|}}
+  {{#each classItem.params as |param|}}
     <li>
       <strong>{{param.name}} {{#if param.type}}- <span>{{param.type}}</span>{{/if}}</strong><br />
       {{param.description}}
@@ -33,6 +33,6 @@
   </ul>
 {{/if}}
 
-{{#if item.default}}
+{{#if classItem.default}}
   <p><strong>Default: </strong> <code>{{item.default}}</code></p>
 {{/if}}
