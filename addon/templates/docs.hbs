@@ -1,5 +1,5 @@
 <div class="fountainhead-wrapper">
-  {{docs-header logo=model.logo repository=model.repository}}
+  {{fountain-head.header logo=model.logo repository=model.repository}}
 
   <main class="container-fluid">
     <div class="row">
@@ -7,7 +7,7 @@
         {{! Check for a docs classes to know if data is available for sidebar }}
         {{! Can we update search bar to look good and show always even if there isn't data? }}
         {{#if model.classes}}
-          {{docs-sidebar docsMeta=model}}
+          {{fountain-head.sidebar docsMeta=model}}
         {{/if}}
       </div>
       <div class="main-content col-sm-8">
@@ -15,5 +15,5 @@
       </div>
     </div>
   </main>
-  {{docs-footer}}
+  {{fountain-head.footer}}
 </div>

@@ -1,1 +1,0 @@
-export { default } from 'ember-fountainhead/components/docs-footer/component';
