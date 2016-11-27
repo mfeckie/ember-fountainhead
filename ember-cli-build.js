@@ -13,10 +13,6 @@ module.exports = function(defaults) {
     },
     sassOptions: {
       extension: 'scss'
-    },
-    codemirror: {
-      modes: ['handlebars'],
-      themes: ['monokai']
     }
   });
 
@@ -26,6 +22,7 @@ module.exports = function(defaults) {
     This build file does *not* influence how the addon or the app using it
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
+  app.import('vendor/ember-fountainhead.scss');
 
   // Pull public assets from core into the dummy app
    var publicAssets = new Funnel('public/', {
