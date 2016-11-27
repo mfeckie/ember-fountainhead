@@ -9,6 +9,6 @@ import Route from 'ember-route';
  */
 export default Route.extend({
   model(params) {
-    return Ember.$.ajax(`/docs/${params.itemId}.json`);
+    return Ember.$.ajax(`/docs/classes/${params.itemId}.json`);
   }
 });
