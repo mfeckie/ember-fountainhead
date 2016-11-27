@@ -44,7 +44,7 @@ export default Component.extend({
   layout: hbs`
     <div class="logo-home">
       {{#link-to 'index'}}
-        <img src="{{if logo logo "/assets/img/ember-logo.png"}}" class="docs-logo" alt="project logo" title="" />
+        <img src="{{if logo logo "/ember-fountainhead/img/ember-logo.png"}}" class="docs-logo" alt="project logo" title="" />
       {{/link-to}}
     </div>
 
