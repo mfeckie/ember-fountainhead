@@ -1,8 +1,9 @@
 import Ember from 'ember';
-import layout from './template';
-const { getOwner, HTMLBars } = Ember;
+import Component from 'ember-component';
+import hbs from 'htmlbars-inline-precompile';
+const { HTMLBars, getOwner } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -11,8 +12,6 @@ export default Ember.Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
-  layout,
 
   partialName: '',
 
@@ -137,5 +136,13 @@ export default Ember.Component.extend({
    * @property actions
    * @type {Object}
    */
-  actions: {}
+  actions: {},
+
+  // Layout
+  // ---------------------------------------------------------------------------
+  layout: hbs`
+    <div class="partial-wrapper">
+      {{partial partialName}}
+    </div>
+  `
 });

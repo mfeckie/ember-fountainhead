@@ -1,7 +1,7 @@
-import Ember from 'ember';
-import layout from './template';
+import Component from 'ember-component';
+import hbs from 'htmlbars-inline-precompile';
 
-export default Ember.Component.extend({
+export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -26,5 +26,12 @@ export default Ember.Component.extend({
 
   // Layout
   // ---------------------------------------------------------------------------
-  layout
+  layout: hbs`
+    {{! @TODO Handle Class/Module/Namespace }}
+    {{name}} Class
+    <small>
+      {{! @TODO: Link component needed to handle external vs internal file links }}
+      <a class="source-icon" href="file/{{file}}" target="_blank">[source]</a>
+    </small>
+  `
 });

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { $, Route } = Ember;
+import Route from 'ember-route';
 
 /**
  * Fountainhead `docs` route that handles automagically fetching documentation
@@ -19,9 +19,6 @@ export default Route.extend({
    * @return {Promise}
    */
   model() {
-    return $.ajax('/docs/meta.json').then(
-      res => res,
-      ex => ({ error: true, message: 'Meta fetch failed' })
-    );
+    return Ember.$.ajax('/docs/meta.json');
   }
 });

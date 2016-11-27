@@ -1,7 +1,13 @@
-import Ember from 'ember';
-import layout from './template';
+import Component from 'ember-component';
+import hbs from 'htmlbars-inline-precompile';
 
-export default Ember.Component.extend({
+/**
+ * Base documentation page Component.
+ * @class Fountain.DocPage
+ * @constructor
+ * @extends Ember.Component
+ */
+export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -15,5 +21,23 @@ export default Ember.Component.extend({
 
   // Layout
   // ---------------------------------------------------------------------------
-  layout
+  layout: hbs`
+    {{fountain.doc-page.header
+      name=content.name
+      file=content.file
+      classUrl=(concat content.file '#' content.line)}}
+
+    {{fountain.doc-page.meta
+      name=content.name
+      extends=content.extends
+      file=content.file
+      line=content.line
+      is_constructor=content.is_constructor}}
+
+    {{fountain.doc-page.description description=content.description}}
+
+    {{#each content.classitems as |classItem|}}
+      {{fountain.doc-page.class-item classItem=classItem}}
+    {{/each}}
+  `
 });
