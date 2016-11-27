@@ -1,0 +1,42 @@
+// ========================================================
+// Fountainhead Application Styles
+// ========================================================
+
+/*
+ * Styles that apply to the fountainhead application wrappers or across multiple
+ * components should be located here
+ */
+
+/*
+ * Fountainhead is intended to be pulled into any application to provide a /docs
+ * route for documentation. Many apps will have their own application.hbs defined
+ * with headers/sidebars etc. We use this div to create a 'full page modal' that
+ * effectively overlays the fountainhead application on top of the entire viewport
+ *
+ * Note that this overlay has z-index 2 by default, if your application uses
+ * absolute positioning for app level menus/sidebars you can update this
+ * as needed.
+ */
+.fh-page-in-page-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $fh-body-background;
+  overflow: auto;
+  z-index: $fh-page-in-page-index;
+}
+
+// Flexbox spell for a sticky footer and full height content container
+.fh-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .container-fluid {
+    flex: 1;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

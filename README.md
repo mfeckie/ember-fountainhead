@@ -9,17 +9,18 @@ It Just Works™.
 
 ## Installation
 
+```
+# From the command line
+ember install ember-fountainhead
+```
+
 ### Dependencies
 
-If you intend to use the `component-playground` to render interactive documentation,
-you need install the dependent addons first:
+If you intend to use the `component-playground` to render interactive documentation install the addons first:
 
 ```
 ember install ember-component-playground
-ember install ivy-codemirror
 ```
-
-You're golden!
 
 ### Mounting Fountainhead's Routes
 
@@ -65,7 +66,6 @@ ember install ember-cli-sass
 You'll then be able to import styles for Fountainhead and Component-Playground into your app's css:
 
 ```sass
-@import 'ember-component-playground/styles';
 @import "ember-fountainhead/styles";
 ```
 

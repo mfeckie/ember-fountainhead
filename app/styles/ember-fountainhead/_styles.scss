@@ -2,29 +2,27 @@
 // Fountainhead Application Styles
 // ========================================================
 
-// Base Definitions
+// Base Setup
 // ---------------------------------------------------------------------------
-@import 'variables';
-@import 'colors';
-@import 'grid';
+@import 'base/variables';
+@import 'base/grid';
 
-// App Modules
+// Base Styles
 // ---------------------------------------------------------------------------
-@import 'modules/app';
-@import 'modules/typography';
-@import 'modules/footer';
-@import 'modules/header';
+@import 'base/application';
+@import 'base/typography';
+@import 'base/code-blocks';
 
-// Sidebar
+// Fountainhead Components
 // ---------------------------------------------------------------------------
-@import 'modules/sidebar';
-@import 'modules/code-blocks';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sidebar';
 
 // Doc Page
-// ---------------------------------------------------------------------------
-@import 'modules/doc-page/header';
-@import 'modules/doc-page/meta';
-@import 'modules/doc-page/class-item';
+@import 'components/doc-page/header';
+@import 'components/doc-page/meta';
+@import 'components/doc-page/class-item';
 
-// Prism
+// Prism Panda Syntax Highlighting
 @import 'prism-panda'; // TODO: make this optional && configurable
