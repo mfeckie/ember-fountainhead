@@ -9,6 +9,7 @@ Contributions are welcome!!! Please see below for repo conventions and roadmap i
 - [] Create 'page-in page' wrapper for full page fountainhead overlay in any app
 - [] Bundle application svgs and export in `/public`
 - [] Fix nested routing router setup util
+- [] Update footer to made with heart by HSQ Open Source Labs
 
 ##### Addon
 - [] Pull in ember-radical/schematics for components and styles for dummy app

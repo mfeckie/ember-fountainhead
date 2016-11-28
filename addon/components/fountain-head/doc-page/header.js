@@ -31,7 +31,9 @@ export default Component.extend({
     {{name}} Class
     <small>
       {{! @TODO: Link component needed to handle external vs internal file links }}
-      <a class="source-icon" href="file/{{file}}" target="_blank">[source]</a>
+      {{#link-to "docs.file" fileJSON className="source-icon"}}
+        [source]
+      {{/link-to}}
     </small>
   `
 });

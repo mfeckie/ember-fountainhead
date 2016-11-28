@@ -25,6 +25,7 @@ export default Component.extend({
     {{fountain-head.doc-page.header
       name=content.name
       file=content.file
+      fileJSON=content.fileJSON
       classUrl=(concat content.file '#' content.line)}}
 
     {{fountain-head.doc-page.meta

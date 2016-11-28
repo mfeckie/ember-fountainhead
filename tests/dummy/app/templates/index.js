@@ -1,1 +1,1 @@
-export { default } from 'ember-fountainhead/templates/index';
+export { default } from 'ember-fountainhead/templates/docs/index';
