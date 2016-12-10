@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Individual class property or method documentation item
- * @class FountainHead.DocPage.ClassItem
+ * @class FountainHead.Class.ClassItem
  * @constructor
  * @extends Ember.Component
  */
@@ -46,7 +46,7 @@ export default Component.extend({
     {{/if}}
 
     {{#if classItem.description}}
-      {{fountain-head/doc-page/description description=classItem.description}}
+      {{fountain-head/class/description description=classItem.description}}
     {{/if}}
 
     {{#if classItem.params}}
