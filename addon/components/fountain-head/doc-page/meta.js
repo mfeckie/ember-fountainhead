@@ -26,7 +26,12 @@ export default Component.extend({
       {{#if file}}
         <div class="meta-item">
           {{! @TODO: FILE file path component}}
-          <span class="meta-defined">Defined In:</span> <a href="file/{{file}}#{{line}}">{{file}}:{{line}}</a>
+          {{! @TODO: Link component needed to handle external vs internal file links }}
+          {{! @TODO: Link to-s and hash fragments? for the line number }}
+          <span class="meta-defined">Defined In:</span>
+          {{#link-to "docs.file" fileJSON (query-params line=line)}}
+            {{file}}:{{line}}
+          {{/link-to}}
         </div>
       {{/if}}
 

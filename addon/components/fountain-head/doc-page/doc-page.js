@@ -29,11 +29,12 @@ export default Component.extend({
       classUrl=(concat content.file '#' content.line)}}
 
     {{fountain-head.doc-page.meta
-      name=content.name
       extends=content.extends
       file=content.file
+      fileJSON=content.fileJSON
+      is_constructor=content.is_constructor
       line=content.line
-      is_constructor=content.is_constructor}}
+      name=content.name}}
 
     {{fountain-head.doc-page.description description=content.description}}
 
