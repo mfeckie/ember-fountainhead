@@ -62,7 +62,7 @@ export default Component.extend({
     {{/if}}
 
     {{#if classItem.default}}
-      <p><strong>Default: </strong> <code>{{item.default}}</code></p>
+      <p><strong>Default: </strong> <code>{{classItem.default}}</code></p>
     {{/if}}
   `
 });

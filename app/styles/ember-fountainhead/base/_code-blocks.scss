@@ -11,7 +11,6 @@ code {
   background-color: $code-bg;
   border: $code-border;
   border-radius: 4px;
-  overflow-x: auto;
   white-space: nowrap;
   font-family: $font-family-mono;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +21,7 @@ pre {
   border: $block-code-border;
   background-color: $block-code-bg;
   border-radius: 4px;
+  overflow: auto;
 
   & > code {
     background-color: $block-code-bg;

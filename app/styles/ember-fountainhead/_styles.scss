@@ -24,5 +24,6 @@
 @import 'components/doc-page/meta';
 @import 'components/doc-page/class-item';
 
-// Prism Panda Syntax Highlighting
-@import 'prism-panda'; // TODO: make this optional && configurable
+// Prism Panda Syntax Highlighting // TODO: make this optional && configurable
+@import 'prism/prism-panda';
+@import 'prism/prism-line-numbers';
