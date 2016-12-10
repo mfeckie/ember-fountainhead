@@ -1,6 +1,10 @@
+{{! --------------------------------------------------------------------- }}
+{{! Addon Docs Landing Page
+{{! Model for index is the documentation meta file. If a name isn't found
+{{! then we know the user hasn't run the doc scripts yet.
+{{! --------------------------------------------------------------------- }}
 {{#if model.name}}
-  {{fountain-head.landing.welcome-message}}
+  {{fountain-head/landing.welcome-message}}
 {{else}}
-  {{! If the model doesn't have a name, documentation hasn't been generated }}
-  {{fountain-head.landing.get-started}}
+  {{fountain-head/landing.get-started}}
 {{/if}}

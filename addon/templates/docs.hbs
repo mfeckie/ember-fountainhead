@@ -1,6 +1,6 @@
 <div class="fh-page-in-page-wrapper">
   <div class="fh-wrapper">
-    {{fountain-head.header logo=model.logo repository=model.repository}}
+    {{fountain-head/header logo=model.logo repository=model.repository}}
 
     <main class="container-fluid">
       <div class="row">
@@ -8,7 +8,7 @@
           {{! Check for a docs classes to know if data is available for sidebar }}
           {{! Can we update search bar to look good and show always even if there isn't data? }}
           {{#if model.classes}}
-          {{fountain-head.sidebar docsMeta=model}}
+            {{fountain-head/sidebar docsMeta=model}}
           {{/if}}
         </div>
         <div class="main-content col-sm-8">
@@ -16,6 +16,6 @@
         </div>
       </div>
     </main>
-    {{fountain-head.footer}}
+    {{fountain-head/footer}}
   </div>
 </div>

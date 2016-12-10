@@ -19,9 +19,9 @@ export default Component.extend({
   layout: hbs`
     {{#each items as |item|}}
       <li class="item-group-item">
-        {{link-to item.name (concat 'docs.' item.type) item.id classNames="item-link"}}
+        {{link-to item.name (concat 'docs.' item.type) item.id classNames='item-link'}}
         {{#if item.subItems}}
-          {{fountain-head.sidebar.item-group items=item.subItems}}
+          {{fountain-head/sidebar/item-group items=item.subItems}}
         {{/if}}
       </li>
     {{else}}

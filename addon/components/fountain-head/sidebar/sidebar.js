@@ -5,7 +5,7 @@ import hbs from 'htmlbars-inline-precompile';
  * Wrapper component for the sidebar components. Expects the entire docs meta
  * object.
  *
- * @class Component.DocsSidebar
+ * @class FountainHead.Sidebar
  * @constructor
  * @extends Ember.Component
  */
@@ -36,24 +36,24 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{#fountain-head.sidebar.section sectionTitle="Search"}}
-      {{fountain-head.sidebar.search-bar docsItems=docsMeta onUpdate=(action "doFilter")}}
-    {{/fountain-head.sidebar.section}}
+    {{#fountain-head/sidebar/section sectionTitle='Search'}}
+      {{fountain-head/sidebar/search-bar docsItems=docsMeta onUpdate=(action 'doFilter')}}
+    {{/fountain-head/sidebar/section}}
 
     {{#if docsMeta.version}}
-      {{fountain-head.sidebar.section sectionTitle=(concat 'tag:' docsMeta.version)}}
+      {{fountain-head/sidebar/section sectionTitle=(concat 'tag:' docsMeta.version)}}
     {{/if}}
 
     {{#if docsMeta.modules}}
-      {{#fountain-head.sidebar.section sectionTitle="Modules"}}
-        {{fountain-head.sidebar.item-group items=docsMeta.modules}}
-      {{/fountain-head.sidebar.section}}
+      {{#fountain-head/sidebar/section sectionTitle='Modules'}}
+        {{fountain-head/sidebar/item-group items=docsMeta.modules}}
+      {{/fountain-head/sidebar/section}}
     {{/if}}
 
     {{#if docsMeta.classes}}
-      {{#fountain-head.sidebar.section sectionTitle="Classes"}}
-        {{fountain-head.sidebar.item-group items=docsMeta.classes}}
-      {{/fountain-head.sidebar.section}}
+      {{#fountain-head/sidebar/section sectionTitle='Classes'}}
+        {{fountain-head/sidebar/item-group items=docsMeta.classes}}
+      {{/fountain-head/sidebar/section}}
     {{/if}}
   `
 });

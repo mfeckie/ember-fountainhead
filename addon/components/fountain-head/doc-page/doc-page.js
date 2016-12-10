@@ -22,24 +22,20 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{fountain-head.doc-page.header
+    {{fountain-head/doc-page/header
       name=content.name
-      file=content.file
-      fileJSON=content.fileJSON
-      classUrl=(concat content.file '#' content.line)}}
+      fileJSON=content.fileJSON}}
 
-    {{fountain-head.doc-page.meta
+    {{fountain-head/doc-page/meta
       extends=content.extends
       file=content.file
       fileJSON=content.fileJSON
-      is_constructor=content.is_constructor
-      line=content.line
-      name=content.name}}
+      line=content.line}}
 
-    {{fountain-head.doc-page.description description=content.description}}
+    {{fountain-head/doc-page/description description=content.description}}
 
     {{#each content.classitems as |classItem|}}
-      {{fountain-head.doc-page.class-item classItem=classItem}}
+      {{fountain-head/doc-page/class-item classItem=classItem}}
     {{/each}}
   `
 });

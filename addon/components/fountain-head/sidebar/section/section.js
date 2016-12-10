@@ -11,7 +11,7 @@ export default Component.extend({
   // Properties
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{fountain-head.sidebar.section.header sectionTitle=sectionTitle}}
+    {{fountain-head/sidebar/section/header sectionTitle=sectionTitle}}
     {{yield}}
   `
 });

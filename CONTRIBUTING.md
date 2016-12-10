@@ -10,6 +10,7 @@ Contributions are welcome!!! Please see below for repo conventions and roadmap i
 - [] Bundle application svgs and export in `/public`
 - [] Fix nested routing router setup util
 - [] Update footer to made with heart by HSQ Open Source Labs
+- [] Generate which YUIDoc tags generate what data in components for easy reference for consumers
 
 ##### Addon
 - [] Pull in ember-radical/schematics for components and styles for dummy app

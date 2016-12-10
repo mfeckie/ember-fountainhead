@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 /**
  * Welcome message displayed when there are documentation classes available to
  * load
- * @class Landing.WelcomeMessage
+ * @class FountainHead.Landing.WelcomeMessage
  * @constructor
  * @extends Ember.Component
  */

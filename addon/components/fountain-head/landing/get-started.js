@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 /**
  * How to get started message shown when there are no documentation classes
  * available.
- * @class Landing.GetStarted
+ * @class FountainHead.Landing.GetStarted
  * @constructor
  * @extends Ember.Component
  */

@@ -1,6 +1,14 @@
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
+/**
+ * Creates meta information for a documentation class.
+ *
+ * TODO: Document which YUIDoc tags generate what meta data
+ * @class FountainHead.DocPage.Meta
+ * @constructor
+ * @extends Ember.Component
+ */
 export default Component.extend({
   classNames: ['doc-meta'],
   tagName: 'div',
@@ -29,7 +37,7 @@ export default Component.extend({
           {{! @TODO: Link component needed to handle external vs internal file links }}
           {{! @TODO: Link to-s and hash fragments? for the line number }}
           <span class="meta-defined">Defined In:</span>
-          {{#link-to "docs.file" fileJSON (query-params line=line)}}
+          {{#link-to 'docs.file' fileJSON (query-params line=line)}}
             {{file}}:{{line}}
           {{/link-to}}
         </div>
@@ -43,11 +51,11 @@ export default Component.extend({
       {{/if}}
     </div>
 
-    {{!--
-        @TODO: This info is just repeating above info and isn't even technically accurate
-        for many of the modules used in Ember applications... Ember docs have removed
-        this info and I think we should too...
-    --}}
+    {{! --------------------------------------------------------------------- }}
+    {{! @TODO: This info is just repeating above info and isn't even technically
+    {{! accurate for many of the modules used in Ember applications... Ember docs
+    {{! have removed this info and I think we should too...
+    {{! --------------------------------------------------------------------- }}
     {{!-- {{#if is_constructor}}
       <div class="fountain-constructor">
         <h3 class="constructor-title">Constructor</h3>
