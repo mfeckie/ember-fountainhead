@@ -5,7 +5,7 @@ import Route from 'ember-route';
  * Fountainhead `docs` route that handles automagically fetching documentation
  * data from `/docs/meta.json`. This is used as the model for the docs landing
  * page
- * @class Route.Docs
+ * @class Docs
  * @constructor
  * @extends Ember.Route
  */

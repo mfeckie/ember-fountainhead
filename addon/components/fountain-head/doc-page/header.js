@@ -40,7 +40,7 @@ export default Component.extend({
     {{name}} Class
     <small>
       {{! @TODO: Link component needed to handle external vs internal file links }}
-      {{#link-to 'docs.file' fileJSON className='source-icon'}}
+      {{#link-to 'docs.files' fileJSON className='source-icon'}}
         [source]
       {{/link-to}}
     </small>

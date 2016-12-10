@@ -3,7 +3,7 @@ import Route from 'ember-route';
 
 /**
  * This route handles fetching the data for an individual class using the id.
- * @class Route.Classes
+ * @class Docs.Classes
  * @constructor
  * @extends Ember.Route
  */
