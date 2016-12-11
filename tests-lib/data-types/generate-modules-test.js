@@ -61,8 +61,6 @@ describe('generate-modules', function() {
      */
     const actual = generateModules(rawData).modulesDatas;
 
-    console.log(actual[0].description);
-
     assert.equal(actual.length, 2, 'converts each object entry to an array entry');
     assert.equal(actual[0].description, '<h1>An H1</h1>\n<p>Plus a paragraph</p>\n',
       'parses module markdown descriptions to html');
