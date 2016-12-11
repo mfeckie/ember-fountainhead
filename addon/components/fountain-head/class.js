@@ -24,12 +24,12 @@ export default Component.extend({
   layout: hbs`
     {{fountain-head/class/header
       name=class.name
-      fileJSON=class.fileJSON}}
+      srcFileId=class.srcFileId}}
 
     {{fountain-head/class/meta
       extends=class.extends
       file=class.file
-      fileJSON=class.fileJSON
+      srcFileId=class.srcFileId
       line=class.line}}
 
     {{fountain-head/class/description description=class.description}}

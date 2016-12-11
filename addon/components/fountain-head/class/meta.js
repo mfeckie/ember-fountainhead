@@ -37,7 +37,7 @@ export default Component.extend({
           {{! @TODO: Link component needed to handle external vs internal file links }}
           {{! @TODO: Link to-s and hash fragments? for the line number }}
           <span class="meta-defined">Defined In:</span>
-          {{#link-to 'docs.files' fileJSON (query-params line=line)}}
+          {{#link-to 'docs.files' srcFileId (query-params line=line)}}
             {{file}}:{{line}}
           {{/link-to}}
         </div>

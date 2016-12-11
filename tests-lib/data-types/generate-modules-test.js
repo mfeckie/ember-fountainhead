@@ -35,6 +35,13 @@ const rawData =  {
 };
 
 describe('generate-modules', function() {
+  it('returns empty arrays if there is no data', () => {
+    const actual = generateModules({});
+
+    assert.ok(Array.isArray(actual.modulesMeta), 'returns empty array even if there is no data');
+    assert.ok(Array.isArray(actual.modulesDatas), 'returns empty array even if there is no data');
+  });
+
   it('returns an object with meta and data arrays', () => {
     const actual = generateModules(rawData);
 
