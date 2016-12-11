@@ -7,7 +7,6 @@ let packageJSON = {};
 
 describe('decorate-config', function() {
   it('sets a default entry if undefined', () => {
-    console.log(decorateConfig(config, packageJSON).entry);
     assert.equal(decorateConfig(config, packageJSON).entry, 'app', 'app is specified as default entry');
   });
 
