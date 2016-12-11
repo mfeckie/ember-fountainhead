@@ -9,7 +9,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "test:lib": "mocha tests-lib --recursive"
   },
   "repository": "https://github.com/healthsparq/ember-fountainhead",
   "engines": {
@@ -42,7 +43,8 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "mocha": "^3.2.0"
   },
   "keywords": [
     "ember-addon",

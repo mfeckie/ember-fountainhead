@@ -59,6 +59,7 @@ Contributions are welcome!!! Please see below for repo conventions and roadmap i
 - [x] Generate fountainhead json data files by parsing markdown and decorating individual class files
 - [] Create unit tests for utility modules
 - [] Flag framework types based on `extends` for automagic organization
+- [x] Output YUIDoc data directly to output instead of proxying through `docs-data.json`
 
 ##### README Documentation
 - [x] Install deps

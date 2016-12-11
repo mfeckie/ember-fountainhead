@@ -14,7 +14,8 @@
     node: true,
     es6: true,
     qunit: true,
-    embertest: true
+    embertest: true,
+    mocha: true
   },
 
   rules: {
