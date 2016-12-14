@@ -1,23 +1,54 @@
-/* jshint node: true */
 'use strict';
 
 module.exports = {
   name: 'ember-fountainhead',
 
-  // Include hook used to pull in template compiler
-  included: function(app, parentAddon) {
-    this._super.included.apply(this, arguments);
-    var target = (app || parentAddon);
+  // Methods
+  // ---------------------------------------------------------------------------
+
+  _importBrowserDependencies(app) {
+    // const vendor = this.treePaths.vendor;
 
     // Required to compile templates at runtime
-    target.import('bower_components/ember/ember-template-compiler.js');
+    app.import('bower_components/ember/ember-template-compiler.js');
+
+    // Ember Radical Styles
+    // @TODO: Make this configurable
+    // Not ready for these styles
+    // app.import(path.join(vendor, 'ember-radical', 'styles.css'));
+  },
+
+  // Addon Hooks
+  // ---------------------------------------------------------------------------
+
+  included: function(app, parentAddon) {
+    this._super.included.apply(this, arguments);
+
+    // see: https://github.com/ember-cli/ember-cli/issues/3718
+    while (typeof app.import !== 'function' && app.app) {
+      app = app.app;
+    }
+
+    this.app = app;
+
+    // Import Dependencies
+    this._importBrowserDependencies(app);
   }
 
-  // This appears to get called when the addon is installed, which is causing
-  // some weird behavior right now...
-  // includedCommands: function() {
-  //   return {
-  //     'fountainhead-gendocs': require('./lib/index')
-  //   };
+  // treeForVendor: function(vendorTree) {
+  //   const trees = [];
+  //   let radicalPath = path.dirname(require.resolve('ember-radical')); // MAGIC!
+  //
+  //   // Pull in existing vendor tree
+  //   if (vendorTree) {
+  //     trees.push(vendorTree);
+  //   }
+  //
+  //   // Pull in ember-radical style files
+  //   trees.push(new Funnel(path.resolve(radicalPath, 'vendor'), {
+  //     include: [new RegExp(/\.css$/)]
+  //   }));
+  //
+  //   return mergeTrees(trees);
   // }
 };

@@ -1,3 +1,7 @@
-import docsRoute from 'ember-fountainhead/routes/docs';
+import Route from 'ember-route';
 
-export default docsRoute;
+export default Route.extend({
+  activate() {
+    this.transitionTo('docs.index');
+  }
+});
