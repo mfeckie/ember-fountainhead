@@ -18,8 +18,8 @@
  */
 export default function routeSetup(self) {
   self.route('docs', function() {
-    this.route('classes', { path: '/classes/:itemId'});
-    this.route('modules', { path: '/modules/:itemId'});
-    this.route('files', { path: '/files/:fileId'});
+    this.route('classes', { path: '/classes/:class_id'});
+    this.route('modules', { path: '/modules/:module_id'});
+    this.route('files', { path: '/files/:file_id'});
   });
 }

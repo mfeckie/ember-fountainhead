@@ -8,6 +8,6 @@ import Route from 'ember-route';
  */
 export default Route.extend({
   model(params) {
-    console.log('module route hit');
+    console.log('module route hit', params.module_id);
   }
 });

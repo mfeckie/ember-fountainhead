@@ -10,6 +10,6 @@ import Route from 'ember-route';
 export default Route.extend({
   model(params) {
     console.log('file ', params);
-    return Ember.$.ajax(`/docs/files/${params.fileId}.json`);
+    return Ember.$.ajax(`/docs/files/${params.file_id}.json`);
   }
 });
