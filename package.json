@@ -57,7 +57,7 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-component-css": "^0.2.4",
-    "ember-radical": "git://github.com/healthsparq/ember-radical.git#v0.2.0-alpha",
+    "ember-radical": "git://github.com/healthsparq/ember-radical.git#7bffd41445e6cac3b658be8aa10cb1a271c5731a",
     "markdown-it": "^8.0.0",
     "prismjs": "^1.5.1",
     "yuidocjs": "^0.10.2"

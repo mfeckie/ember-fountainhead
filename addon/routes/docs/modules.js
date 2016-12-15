@@ -1,4 +1,5 @@
 import Route from 'ember-route';
+import $ from 'jquery';
 
 /**
  * Route to be created for handling modules
@@ -8,6 +9,6 @@ import Route from 'ember-route';
  */
 export default Route.extend({
   model(params) {
-    console.log('module route hit', params.module_id);
+    return $.ajax(`/docs/modules/${params.module_id}.json`);
   }
 });

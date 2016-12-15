@@ -1,5 +1,5 @@
-import Ember from 'ember';
 import Route from 'ember-route';
+import $ from 'jquery';
 
 /**
  * This route handles fetching the data for an individual class using the id.
@@ -9,6 +9,6 @@ import Route from 'ember-route';
  */
 export default Route.extend({
   model(params) {
-    return Ember.$.ajax(`/docs/classes/${params.class_id}.json`);
+    return $.ajax(`/docs/classes/${params.class_id}.json`);
   }
 });
