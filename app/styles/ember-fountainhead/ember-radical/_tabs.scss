@@ -1,0 +1,61 @@
+// ========================================================
+// Tabs Styles
+// ========================================================
+
+.core-tabs {
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 50px;
+
+  .tab-list {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+    list-style: none; // override skeleton
+  }
+
+  .tab-li {
+    flex-basis: auto;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+
+    height: auto; // override skeleton
+    line-height: 1; // override skeleton
+
+    &.active {
+      border: 1px solid $border-color;
+      border-bottom: 1px solid transparent;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+
+  // Button Style
+  // ---------------------------------------------------------------------------
+  .button-style {
+    .tab-li {
+      background-color: #fff;
+      border-bottom: 4px solid #0e687a;
+    }
+
+    .tab.active {
+      background-color: #0e687a;
+      border-color: #0e687a;
+      color : #fff;
+    }
+  }
+}

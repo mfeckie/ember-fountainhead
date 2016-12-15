@@ -13,6 +13,10 @@
 @import 'base/typography';
 @import 'base/code-blocks';
 
+// Radical Styles
+// ---------------------------------------------------------------------------
+@import 'ember-radical/tabs';
+
 // Fountainhead Components
 // ---------------------------------------------------------------------------
 @import 'components/header';
@@ -22,6 +26,7 @@
 // Doc Page
 @import 'components/doc-page/header';
 @import 'components/doc-page/meta';
+@import 'components/doc-page/class-items-container';
 @import 'components/doc-page/class-item';
 
 // Prism Panda Syntax Highlighting // TODO: make this optional && configurable

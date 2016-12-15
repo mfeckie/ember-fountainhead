@@ -26,7 +26,7 @@ describe('generate-src-file', function() {
     assert.ok(actual.includes(
       '<pre class="language-javascript line-numbers"><code class="language-javascript}">'),
       'prepends pre and code tags');
-    assert.ok(actual.match(/<span aria-hidden="true" class="line-numbers-rows">/g),
+    assert.ok(actual.match(/<span aria-hidden="true" role="presentation" class="line-numbers-rows">/g),
       'injects line numbers wrapping span');
   });
 });

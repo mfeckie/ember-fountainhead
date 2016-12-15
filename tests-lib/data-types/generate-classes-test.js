@@ -72,16 +72,16 @@ describe('generate-classes', function() {
     assert.equal(someClass.classitems.length, 2, 'all classitems for someClass are attached');
     assert.equal(anotherClass.classitems.length, 1, 'all classitems for anotherClass are attached');
 
-    assert.ok(Array.isArray(someClass.methods), 'methods array is added to classes');
-    assert.ok(Array.isArray(someClass.properties), 'properties array is added to classes');
-    assert.ok(Array.isArray(someClass.events), 'events array is added to classes');
+    assert.ok(Array.isArray(someClass.method), 'method array is added to classes');
+    assert.ok(Array.isArray(someClass.property), 'property array is added to classes');
+    assert.ok(Array.isArray(someClass.event), 'event array is added to classes');
 
-    assert.equal(someClass.methods.length, 1, 'method class item was attached to correct class');
-    assert.equal(someClass.properties.length, 1, 'properties class item was attached to correct class');
-    assert.equal(someClass.events.length, 0, 'no event class items returns empty array for class');
+    assert.equal(someClass.method.length, 1, 'method class item was attached to correct class');
+    assert.equal(someClass.property.length, 1, 'property class item was attached to correct class');
+    assert.equal(someClass.event.length, 0, 'no event class items returns empty array for class');
 
-    assert.equal(anotherClass.methods.length, 0, 'no method class items returns empty array for class');
-    assert.equal(anotherClass.properties.length, 0, 'no property class items returns empty array for class');
-    assert.equal(anotherClass.events.length, 1, 'events class item was attached to correct class');
+    assert.equal(anotherClass.method.length, 0, 'no method class items returns empty array for class');
+    assert.equal(anotherClass.property.length, 0, 'no property class items returns empty array for class');
+    assert.equal(anotherClass.event.length, 1, 'events class item was attached to correct class');
   });
 });

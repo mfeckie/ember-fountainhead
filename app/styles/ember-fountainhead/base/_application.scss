@@ -40,3 +40,71 @@
     margin-right: initial;
   }
 }
+
+// Show/Hide Classes
+// -----------------------------------------------------------------------------
+
+span[aria-hidden="true"],
+div[aria-hidden="true"],
+li[aria-hidden="true"] {
+  display: none;
+  pointer-events: none;
+  visibility: hidden;
+}
+span[aria-hidden="false"],
+div[aria-hidden="false"],
+li[aria-hidden="false"] {
+  display: block;
+  pointer-events: auto;
+  visibility: visible;
+}
+span[role="presentation"],
+div[role="presentation"],
+li[role="presentation"] {
+  display: initial;
+  pointer-events: auto;
+  visibility: visible;;
+}
+
+
+// Link Buttons
+// ---------------------------------------------------------------------------
+.btn-link {
+  font-weight: normal;
+  color: $anchor-font-color;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $anchor-font-color-hover;
+    text-decoration: underline;;
+    background-color: transparent;
+  }
+}
+
+// Fix skeleton buttons being janky
+// ---------------------------------------------------------------------------
+button {
+  line-height: 1;
+  height: auto;
+  padding: 0.6rem 2rem;
+  text-transform: none;
+  font-size: 1rem;
+}

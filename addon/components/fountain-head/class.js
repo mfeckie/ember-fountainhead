@@ -32,17 +32,15 @@ export default Component.extend({
       srcFileId=class.srcFileId
       line=class.line}}
 
-    {{fountain-head/class/description description=class.description}}
+    {{fountain-head/class/description
+      description=class.description}}
 
-    {{#core-tabs as |components|}}
-      {{#components.content label='index'}}
-        A TAB
-      {{/components.content}}
-
-    {{/core-tabs}}
-
-    {{#each class.classitems as |classItem|}}
-      {{fountain-head/class/class-item classItem=classItem}}
-    {{/each}}
+    {{! Only render class items tabs if there are items to display }}
+    {{#if class.classitems.length}}
+      {{fountain-head/class/class-items-container
+        property=class.property
+        method=class.method
+        event=class.event}}
+    {{/if}}
   `
 });

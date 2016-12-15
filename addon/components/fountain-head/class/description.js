@@ -29,7 +29,7 @@ export default Component.extend({
 
   /**
    * Name of generated partial that is used in the template.
-   * @description partialName
+   * @property partialName
    * @type {string}
    */
   partialName: '',
@@ -137,7 +137,8 @@ export default Component.extend({
    * based on the parent's code editor input.
    *
    * @event didReceiveAttrs
-   * @param {[type]} { newAttrs } [description]
+   * @param {Object} attrs          Ember attrs object
+   * @param {Object} attrs.newAttrs The new attrs received
    * @return {[type]}
    */
   didReceiveAttrs({ newAttrs }) {
