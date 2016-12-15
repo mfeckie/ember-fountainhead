@@ -2,7 +2,7 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * File page wrapping component
+ * Fountainhead `/doc/file` page component
  * @class FountainHead.File
  * @constructor
  * @extends Ember.Component

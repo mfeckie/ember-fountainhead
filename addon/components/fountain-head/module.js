@@ -2,7 +2,7 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * Module page wrapping component.
+ * Fountainhead `/doc/module` page component
  * There's nothing here yet.
  * @class FountainHead.Module
  * @constructor
