@@ -21,5 +21,18 @@ export default Route.extend({
    */
   model(params) {
     return $.ajax(`/docs/modules/${params.module_id}.json/`, { dataType: 'json' });
+  },
+
+  // Actions
+  // ---------------------------------------------------------------------------
+  actions: {
+    /**
+     * Reset page scroll on any transition. Note that Fountainhead is inside of
+     * a fake page, so we scroll that instead of the body
+     * @event didTransition
+     */
+    didTransition() {
+      $('.fh-page-in-page-wrapper').scrollTop(0);
+    }
   }
 });
