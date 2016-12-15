@@ -32,7 +32,7 @@ export default Component.extend({
       srcFileId=class.srcFileId
       line=class.line}}
 
-    {{fountain-head/class/description
+    {{fountain-head/runtime-description
       description=class.description}}
 
     {{! Only render class items tabs if there are items to display }}

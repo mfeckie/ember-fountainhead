@@ -66,7 +66,7 @@ export default Component.extend({
     {{/if}}
 
     {{#if classItem.description}}
-      {{fountain-head/class/description description=classItem.description}}
+      {{fountain-head/runtime-description description=classItem.description}}
     {{/if}}
 
     {{#if classItem.params}}
