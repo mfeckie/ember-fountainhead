@@ -51,6 +51,20 @@ export default Component.extend({
    */
   activeTab: 'indexPanel',
 
+  // Hooks
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Handle resetting tabs container to the index panel any time that this
+   * component receives attrs. The only props passed in to this component are
+   * the class items for the container, so we know if they change in any way
+   * that this is the right time to update the tabs panel.
+   * @event didReceiveAttrs
+   */
+  didReceiveAttrs() {
+    this.set('activeTab', 'indexPanel');
+  },
+
   // Actions
   // ---------------------------------------------------------------------------
   actions: {
