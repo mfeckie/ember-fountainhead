@@ -1,7 +1,7 @@
 const assert = require('assert');
 const generateClasses = require('../../lib/data-types/generate-classes');
 
-const rawClasses = {
+const classes = {
   someClass: {
     name: 'someClass',
     shortname: 'someClass',
@@ -20,7 +20,7 @@ const rawClasses = {
   }
 };
 
-const rawClassItems = [
+const classItems = [
   {
     file: 'some/file/path.js',
     line: 15,
@@ -58,8 +58,22 @@ describe('generate-classes', function() {
     assert.ok(Array.isArray(actual.classesDatas), 'returns empty array even if there is no data');
   });
 
+  it('returns meta data for classes', () => {
+    const testClasses = JSON.parse(JSON.stringify(classes));
+    const testClassItems = JSON.parse(JSON.stringify(classItems));
+    const expected = [
+      { name: 'someClass', type: 'classes' },
+      { name: 'anotherClass', type: 'classes' }
+    ];
+    const actual = generateClasses(testClasses, testClassItems).classesMeta;
+
+    assert.deepEqual(actual, expected, 'appropriate meta for modules is returned as modulesMeta');
+  });
+
   it('it adds all class items to their parent class', () => {
-    const actual = generateClasses(rawClasses, rawClassItems);
+    const testClasses = JSON.parse(JSON.stringify(classes));
+    const testClassItems = JSON.parse(JSON.stringify(classItems));
+    const actual = generateClasses(testClasses, testClassItems);
     const someClass = actual.classesDatas.filter(klass => klass.name === 'someClass')[0];
     const anotherClass = actual.classesDatas.filter(klass => klass.name === 'anotherClass')[0];
 

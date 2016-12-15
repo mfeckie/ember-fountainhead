@@ -52,8 +52,8 @@ describe('generate-modules', function() {
 
   it('returns meta data for modules', () => {
     const expected = [
-      { id: 'documentation-generation', name: 'DocumentationGeneration', type: 'modules' },
-      { id: 'create-dirs', name: 'CreateDirs', type: 'modules' }
+      { name: 'DocumentationGeneration', type: 'modules' },
+      { name: 'CreateDirs', type: 'modules' }
     ];
     const actual = generateModules(rawData).modulesMeta;
 
