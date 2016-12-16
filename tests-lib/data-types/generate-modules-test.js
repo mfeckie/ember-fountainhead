@@ -52,12 +52,13 @@ describe('generate-modules', function() {
 
   it('returns meta data for modules', () => {
     const expected = [
-      { name: 'DocumentationGeneration', type: 'modules' },
-      { name: 'CreateDirs', type: 'modules' }
+      { name: 'CreateDirs', type: 'modules' },
+      { name: 'DocumentationGeneration', type: 'modules' }
     ];
     const actual = generateModules(rawData).modulesMeta;
 
-    assert.deepEqual(actual, expected, 'appropriate meta for modules is returned as modulesMeta');
+    assert.deepEqual(actual, expected,
+      'appropriate meta for modules is alphabetized and returned as modulesMeta');
   });
 
   it('returns decorated data objects for modules', () => {
