@@ -1,29 +1,39 @@
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
+import inject from 'ember-service/inject';
 
 /**
- * Fountainhead `/doc` page component
+ * Fountainhead `/doc` page component serves as the wrapping template for all of
+ * Fountainhead. The `outlet` for the route is yielded by this component, which
+ * is how we use components to handle rendering all of our markup, even with
+ * subroutes.
+ *
+ * Because we want the default setup of Fountainhead to look like it's own app
+ * we render everything in a `fh-page-in-page-wrapper` wrapper which is position
+ * fixed to cover the entire screen. This allows us to have our own header and
+ * footer even if a consuming application has one in their `application.hbs`
+ * template.
+ *
+ * The `fountainhead` service is the primary store for the addon and handles
+ * fetching the meta data for the docs.
  * @class FountainHead.Docs
  * @constructor
  * @extends Ember.Component
  */
 export default Component.extend({
+  fountainhead: inject(),
 
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
     <div class="fh-page-in-page-wrapper">
       <div class="fh-wrapper">
-        {{fountain-head/header logo=model.logo repository=model.repository}}
+        {{fountain-head/docs/header logo=fountainhead.meta.logo repository=fountainhead.meta.repository}}
 
         <main class="container-fluid">
           <div class="row">
             <div class="col-sm-4">
-              {{! Check for a docs classes to know if data is available for sidebar }}
-              {{! Can we update search bar to look good and show always even if there isn't data? }}
-              {{#if model.classes}}
-                {{fountain-head/sidebar docsMeta=model}}
-              {{/if}}
+              {{fountain-head/docs/sidebar meta=fountainhead.meta}}
             </div>
             <div class="main-content col-sm-8">
               {{! This is where subroutes are rendered through the outlet }}
@@ -31,7 +41,7 @@ export default Component.extend({
             </div>
           </div>
         </main>
-        {{fountain-head/footer}}
+        {{fountain-head/docs/footer}}
       </div>
     </div>
   `

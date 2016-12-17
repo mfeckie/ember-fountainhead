@@ -1,4 +1,16 @@
 'use strict';
+const path = require('path');
+
+let config;
+
+// Configuration is optional, load in a try/catch to handle possible error
+try {
+  config = require(path.resolve('fountainhead.js'));
+} catch(ex) {
+  config = {};
+}
+
+console.log('FOUNTAINHEAD: ', config);
 
 module.exports = {
   name: 'ember-fountainhead',

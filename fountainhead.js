@@ -4,6 +4,7 @@ module.exports = {
   version: '1.0.0',
   repository: null,
   logo: null,
+  includeForProduction: false,
   entry: [
     'addon', 'lib'
   ],
