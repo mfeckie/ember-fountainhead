@@ -23,10 +23,11 @@ export default Component.extend({
   // Properties
   // ---------------------------------------------------------------------------
   /**
-   * Class names: `class-item`
+   * @property classNames
    * @type {Array}
+   * @default ['fh-class-item']
    */
-  classNames: ['class-item'],
+  classNames: ['fh-class-item'],
 
   // Hooks
   // ---------------------------------------------------------------------------
@@ -46,21 +47,36 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h4>
+    {{! --------------------------------------------------------------------- }}
+    {{! Item Header
+    {{! --------------------------------------------------------------------- }}
+    <h4 class="fh-item-header">
       {{classItem.name}}
-      <span class="item-type">{{classItem.itemtype}}</span>
+      {{!-- <span class="item-type">{{classItem.itemtype}}</span> --}}
       {{#if classItem.params}}
-        <span>(
+        <span class="item-params">(
           {{#each classItem.params as |param index|}}
             {{if index ', '}}{{param.name}}
           {{/each}}
           )</span>
       {{/if}}
+      {{#if classItem.return.type}}
+        <span class="return-type">{{classItem.return.type}}</span>
+      {{/if}}
       {{#if classItem.access}}
-        <span class="item-access access-{{classItem.access}}">{{classItem.access}}</span>
+        <span class="item-access {{classItem.access}}">{{classItem.access}}</span>
       {{/if}}
     </h4>
 
+    {{#if classItem.file}}
+      <p class="small italics">Defined in:
+        {{#link-to 'docs.files' classItem.srcFileId (query-params line=classItem.line)}}
+          {{classItem.file}}:{{classItem.line}}
+        {{/link-to}}
+      </p>
+    {{/if}}
+
+    {{! TODO: Where is this coming from? }}
     {{#if classItem.inherited}}
       <p class="small">Inherited from {{classItem.inherited}}</p>
     {{/if}}
@@ -72,17 +88,37 @@ export default Component.extend({
     {{#if classItem.params}}
       <h5>Parameters</h5>
       <ul>
-      {{#each classItem.params as |param|}}
-        <li>
-          <strong>{{param.name}} {{#if param.type}}- <span>{{param.type}}</span>{{/if}}</strong><br />
-          {{param.description}}
-        </li>
-      {{/each}}
+        {{#each classItem.params as |param|}}
+          <li>
+            <strong>
+              {{! Surround optional params with brackets to denote they're optional}}
+              {{! TODO: Visual flag for optional? }}
+              {{#if param.optional}}
+                [{{param.name}}]
+              {{else}}
+                {{param.name}}
+              {{/if}}
+              {{#if param.type}}<span class="param-type">{{param.type}}</span>{{/if}}
+            </strong>
+            <br />
+            {{param.description}}
+          </li>
+        {{/each}}
       </ul>
     {{/if}}
 
     {{#if classItem.default}}
       <p><strong>Default: </strong> <code>{{classItem.default}}</code></p>
+    {{/if}}
+
+    {{#if classItem.return}}
+      <h4>Returns:</h4>
+      {{#if classItem.return.description}}
+        <p>{{classItem.return.description}}</p>
+      {{/if}}
+      {{#if classItem.return.type}}
+        <p class="return-type">{{classItem.return.type}}</p>
+      {{/if}}
     {{/if}}
   `
 });
