@@ -27,10 +27,14 @@ export default Component.extend({
       srcFileId=class.srcFileId}}
 
     {{fountain-head/class/meta
+      access=class.access
       extends=class.extends
       file=class.file
+      module=class.module
+      line=class.line
       srcFileId=class.srcFileId
-      line=class.line}}
+      submodule=class.submodule
+      uses=class.uses}}
 
     {{fountain-head/runtime-description
       description=class.description}}
