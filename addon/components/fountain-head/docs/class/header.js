@@ -31,7 +31,7 @@ export default Component.extend({
   // Properties
   // ---------------------------------------------------------------------------
   tagName: 'h2',
-  classNames: ['fountain-doc-header'],
+  classNames: ['fh-docs-header'],
 
   // Layout
   // ---------------------------------------------------------------------------
