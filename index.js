@@ -1,17 +1,14 @@
 'use strict';
-// const path = require('path');
-// const Funnel = require('broccoli-funnel');
+const path = require('path');
 
-// let config;
-//
-// // Configuration is optional, load in a try/catch to handle possible error
-// try {
-//   config = require(path.resolve('fountainhead.js'));
-// } catch(ex) {
-//   config = {};
-// }
+let config;
 
-// console.log('FOUNTAINHEAD: ', config);
+// Configuration is optional, load in a try/catch to handle possible error
+try {
+  config = require(path.resolve('fountainhead.js'));
+} catch(ex) {
+  config = {};
+}
 
 module.exports = {
   name: 'ember-fountainhead',
@@ -19,16 +16,31 @@ module.exports = {
   // Methods
   // ---------------------------------------------------------------------------
 
+  /**
+   * Handle importing required assets on behalf of consuming application. The
+   * template compiler is required for the runtime-description component and
+   * the styles are automatically included for simpler setup
+   * @method _importBrowserDependencies
+   * @param {Object} app Consuming application
+   */
   _importBrowserDependencies(app) {
+    const vendor = this.treePaths.vendor;
+
     // Required to compile templates at runtime
     app.import('bower_components/ember/ember-template-compiler.js');
+    // Styles
+    app.import(`${vendor}/ember-fountainhead.css`);
   },
 
   // Addon Hooks
   // ---------------------------------------------------------------------------
 
   /**
-   * Handle importing browser dependencies
+   * Handle walking addon tree to find consuming application and setting project
+   * configs on addon for reference.
+   *
+   * If in development or addon is configured for inclusion to production build
+   * handle addon setup
    * @method included
    */
   included(app, parentAddon) {
@@ -40,24 +52,11 @@ module.exports = {
     }
 
     this.app = app;
+    this.projectConfiguration = this.project.config(process.env.EMBER_ENV);
 
-    // Import Dependencies
-    this._importBrowserDependencies(app);
+    // Import browser deps only in development, or also in prod when configured
+    if (this.projectConfiguration.environment === 'development' || config.includeForProduction) {
+      this._importBrowserDependencies(app);
+    }
   }
-  /**
-   * Handle excluding files in prod build unless configured to include.
-   * @method postprocessTree
-   */
-  // postprocessTree(type, tree) {
-  //   // We only want to work with the js files
-  //   if (type !== 'js') { return tree; }
-  //   // If configured for production build, do less
-  //   if (config.includeForProduction) { return tree; }
-  //   // Use Funnel to exclude components from build
-  //   console.log('new funnel time');
-  //   return new Funnel(tree, {
-  //     exclude: ['components/fountain-head/**/*'],
-  //     description: 'Funnel: Remove Fountainhead components for production build'
-  //   });
-  // }
 };

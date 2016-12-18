@@ -4,13 +4,14 @@
 /dist
 /tmp
 /public/docs
+vendor/feature-flags.js
+vendor/ember-fountainhead.css
 
 # dependencies
 /node_modules
 /bower_components
 
 # misc
-vendor/feature-flags.js
 /.sass-cache
 /connect.lock
 /coverage/*

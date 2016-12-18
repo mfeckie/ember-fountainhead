@@ -7,10 +7,12 @@
     "test": "tests"
   },
   "scripts": {
+    "prepublish": "npm run sass",
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
-    "test:lib": "mocha tests-lib --recursive"
+    "test:lib": "mocha tests-lib --recursive",
+    "sass": "node-sass app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css"
   },
   "repository": "https://github.com/healthsparq/ember-fountainhead",
   "engines": {
@@ -44,8 +46,11 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+    "i": "^0.3.5",
     "loader.js": "^4.0.1",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "node-sass": "^4.0.0",
+    "npm": "^4.0.5"
   },
   "keywords": [
     "ember-addon",
