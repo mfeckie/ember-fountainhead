@@ -17,7 +17,8 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  pre {
+  // Do not interfer with PrismJS styles
+  pre:not([class*="language-"]) {
     padding: 1rem 1.5rem;
     border: $block-code-border;
     background-color: $block-code-bg;
@@ -26,6 +27,7 @@
 
     & > code {
       background-color: $block-code-bg;
+      border: none;
       color: inherit;
       display: block;
       font-size: 80%;

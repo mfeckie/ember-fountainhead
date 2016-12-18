@@ -6,15 +6,26 @@
  */
 
 // extends && defined wrapper
-.doc-meta {
+.fh-class-meta {
   margin-bottom: 2rem;
 
+  p {
+    line-height: 1;
+    margin-bottom: 1px;
+  }
+
+  .meta-access,
   .meta-extends,
   .meta-defined,
   .meta-uses,
   .meta-module {
     text-transform: uppercase;
-    color: $gray-1; // TODO: this isn't available in fountainhead!
+    color: $gray-3; // TODO: this isn't available in fountainhead!
+  }
+
+  .meta-access {
+    .public { color: $success; }
+    .private { color: $alert; }
   }
 }
 

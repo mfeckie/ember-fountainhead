@@ -43,7 +43,13 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h2 class="fh-docs-header">{{module.name}} Module</h2>
+    <h2 class="fh-docs-header">
+      {{module.name}}
+      <small>
+        {{! @TODO: Link component needed to handle external vs internal file links }}
+        {{link-to '[source]' 'docs.files' module.srcFileId classNames='source-icon'}}
+      </small>
+    </h2>
     {{! Not sure if this is right, attempting to match Ember docs, see ember-routing}}
     {{#if module.is_submodule}}
       {{! TODO: Module parent should be a link }}

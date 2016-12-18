@@ -102,33 +102,35 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{#if access}}
-      <div class="meta-access {{access}}">{{access}}</div>
+      <p class="meta-access">
+        <span class="uppercase">Access:</span> <span class={{access}}>{{access}}</span>
+      </p>
     {{/if}}
 
     {{#if extends}}
-      <div class="meta-item">
+      <p class="meta-item">
         <span class="meta-extends">Extends:</span>
         {{link-to extends 'docs.classes' extends}}
-      </div>
+      </p>
     {{/if}}
 
     {{#if uses.length}}
       {{#each uses as |use|}}
-        <div class="meta-item">
+        <p class="meta-item">
           <span class="meta-uses">Uses:</span>
           {{link-to use 'docs.classes' use}}
-        </div>
+        </p>
       {{/each}}
     {{/if}}
 
     {{#if file}}
-      <div class="meta-item">
+      <p class="meta-item">
         {{! @TODO: Need a config for internal vs external src file linking }}
         <span class="meta-defined">Defined In:</span>
         {{#link-to 'docs.files' srcFileId (query-params line=line)}}
           {{file}}:{{line}}
         {{/link-to}}
-      </div>
+      </p>
     {{/if}}
 
     {{! --------------------------------------------------------------------- }}
@@ -137,15 +139,15 @@ export default Component.extend({
     {{! submodule than the module
     {{! --------------------------------------------------------------------- }}
     {{#if submodule}}
-      <div class="meta-item">
+      <p class="meta-item">
         <span class="meta-module">Module:</span>
         {{link-to submodule 'docs.modules' submodule}}
-      </div>
+      </p>
     {{else if module}}
-      <div class="meta-item">
+      <p class="meta-item">
         <span class="meta-module">Module:</span>
         {{link-to module 'docs.modules' module}}
-      </div>
+      </p>
     {{/if}}
   `
 });
