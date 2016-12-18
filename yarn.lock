@@ -928,10 +928,6 @@ cardinal@^1.0.0:
     ansicolors "~0.2.1"
     redeyed "~1.0.0"
 
-case@^1.4.1:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/case/-/case-1.4.2.tgz#9258a3cf01ca98fca140946e23495ce435825eb5"
-
 caseless@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
@@ -2584,7 +2580,7 @@ github-url-from-username-repo@~1.0.2:
     minimatch "^2.0.1"
     once "^1.3.0"
 
-glob@7.0.5, glob@~7.0.3:
+glob@7.0.5, glob@^7.0.3, glob@~7.0.3:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.5.tgz#b4202a69099bbb4d292a7c1b95b6682b67ebdc95"
   dependencies:
@@ -2615,7 +2611,7 @@ glob@^6.0.0:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.4, glob@^7.0.5, glob@~7.1.1:
+glob@^7.0.0, glob@^7.0.4, glob@^7.0.5, glob@~7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
