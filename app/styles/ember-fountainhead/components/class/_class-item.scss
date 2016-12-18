@@ -1,8 +1,87 @@
 // ========================================================
-// Document Class Item
+// Classitem Styles
 // ========================================================
-.class-item {
+
+.fh-classitem {
   margin: 3em 0 0;
   padding: 0 0 2.5em;
-  border-bottom: 1px solid #ACACAC;
+  border-bottom: 1px solid $border-color;
+
+  .fh-header {
+    margin-bottom: 0;
+  }
+
+  .header-params,
+  .item-type,
+  .return-type {
+    font-size: 90%;
+    font-weight: 300;
+  }
+
+  // Classitem Meta
+  // ---------------------------------------------------------------------------
+  .fh-meta {
+    margin-bottom: 20px;
+    color: $rhino;
+  }
+
+  .fh-defined,
+  .fh-inherited,
+  .fh-since {
+    display: block;
+    font-size: 11px;
+
+    a {
+      font-size: 11px;
+    }
+  }
+
+  .fh-default {
+    color: $rhino;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  // Params
+  // ---------------------------------------------------------------------------
+  .fh-params {
+    list-style-type: lower-roman;
+  }
+
+  .param-meta,
+  .param-description {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  // Deprecation Message
+  // ---------------------------------------------------------------------------
+  .fh-deprecation-container {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: $deprecated-bg;
+    border-radius: $radius;
+    border: 1px solid $deprecated-border;
+  }
+
+  .fh-deprecation-header {
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid $deprecated-color;
+    color: $deprecated-color;
+  }
+  .fh-deprecation-message {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Returns
+  // ---------------------------------------------------------------------------
+  .fh-return-description,
+  .fh-return-type {
+    margin-left: 40px;
+  }
 }

@@ -18,6 +18,7 @@ export default Component.extend({
    * The access property is set by using either of the tags:
    * - `@private`
    * - `@public`
+   *
    * The value for access matches the tag used
    * @property access
    * @type {string}
@@ -52,7 +53,7 @@ export default Component.extend({
    * The line property matches the line where documentation for a class is
    * declared in the source files. It is set automatically.
    * @property line
-   * @type {number|null}
+   * @type {?number}
    * @default null
    */
   line: null,
@@ -87,7 +88,7 @@ export default Component.extend({
 
   /**
    * @property classNames
-   * @type {Array|string}
+   * @type {Array.<string>}
    * @default ['fh-class-meta']
    */
   classNames: ['fh-class-meta'],
@@ -102,13 +103,13 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{#if access}}
-      <p class="meta-access">
-        <span class="uppercase">Access:</span> <span class={{access}}>{{access}}</span>
+      <p class="fh-meta">
+        <span class="meta-access">Access:</span> <span class="fh-{{access}}">{{access}}</span>
       </p>
     {{/if}}
 
     {{#if extends}}
-      <p class="meta-item">
+      <p class="fh-meta">
         <span class="meta-extends">Extends:</span>
         {{link-to extends 'docs.classes' extends}}
       </p>
@@ -116,7 +117,7 @@ export default Component.extend({
 
     {{#if uses.length}}
       {{#each uses as |use|}}
-        <p class="meta-item">
+        <p class="fh-meta">
           <span class="meta-uses">Uses:</span>
           {{link-to use 'docs.classes' use}}
         </p>
@@ -124,7 +125,7 @@ export default Component.extend({
     {{/if}}
 
     {{#if file}}
-      <p class="meta-item">
+      <p class="fh-meta">
         {{! @TODO: Need a config for internal vs external src file linking }}
         <span class="meta-defined">Defined In:</span>
         {{#link-to 'docs.files' srcFileId (query-params line=line)}}
@@ -139,12 +140,12 @@ export default Component.extend({
     {{! submodule than the module
     {{! --------------------------------------------------------------------- }}
     {{#if submodule}}
-      <p class="meta-item">
+      <p class="fh-meta">
         <span class="meta-module">Module:</span>
         {{link-to submodule 'docs.modules' submodule}}
       </p>
     {{else if module}}
-      <p class="meta-item">
+      <p class="fh-meta">
         <span class="meta-module">Module:</span>
         {{link-to module 'docs.modules' module}}
       </p>

@@ -39,9 +39,9 @@ export default Component.extend({
   /**
    * @property classNames
    * @type {Array}
-   * @default ['fh-header']
+   * @default ['fh-addon-header']
    */
-  classNames: ['fh-header'],
+  classNames: ['fh-addon-header'],
   /**
    * @property tagName
    * @type {string}

@@ -1,16 +1,14 @@
 // ========================================================
-// Variables
+// Simple Theme Variables
 // ========================================================
 
 // Z-Indices
 // ---------------------------------------------------------------------------
 $fh-page-in-page-index: 2;
 
-// Elements
+// Element Variables
 // -----------------------------------------------------------------------------
-$box-shadow: 0 2px 6px #aca8a5;
 $radius: 3px;
-$light-border: #e0e0df;
 
 // Typography
 // -----------------------------------------------------------------------------
@@ -28,15 +26,6 @@ $h2-size: 36px;
 $h3-size: 24px;
 $h4-size: 18px;
 
-// Code Blocks
-// ---------------------------------------------------------------------------
-$code-color: #c7254e;
-$code-bg: #f9f2f4;
-$code-border: 1px solid $light-border;
-
-$block-code-border: 1px solid #e1e1e1;
-$block-code-bg: #f1f1f1;
-
 
 // ========================================================
 // Colors
@@ -45,24 +34,40 @@ $block-code-bg: #f1f1f1;
 $black: #000;
 $white: #fff;
 
-// Grays
-$dark-gray: #2b2b2b;
-$gray-1: #6d6964;
-$gray-2: #999591;
-$gray-3: #c2bfbd;
-$gray-4: #e0e0df;
-$light-gray: #f1f1f1;
+// Grays - Use names for scalability
+$onyx: #2b2b2b;
+$charcoal: #4B4B4B;
+$battleship: #6d6964;
+$rhino: #7A8288;
+$argent: #c2bfbd;
+$smoke: #f1f1f1;
 
 // Branding
 $primary: #253B52;
 
 // Status Colors
-$alert: #ee0032;
-$warning: #ff8b00;
-$success: #31a271;
+$alert: #D9534F;
+$warning: #FCF8E3;
+$success: #93C54B;
 
-// Color Element Variables
+// Links
 $link-color: #3F61A1;
 $link-hover-color: darken($link-color, 15%);
+
+// Deprecation warnings
+$deprecated-bg: $warning;
+$deprecated-color: #8A6D3B;
+$deprecated-border: #FAEBCC;
+
+// Misc
 $fh-body-background: $white;
-$border-color: #f1f1f1;
+$border-color: $smoke;
+
+// Code Blocks
+// ---------------------------------------------------------------------------
+$code-color: #c7254e;
+$code-bg: #f9f2f4;
+$code-border: 1px solid #f1f1f1;
+
+$block-code-border: 1px solid #e1e1e1;
+$block-code-bg: #f1f1f1;

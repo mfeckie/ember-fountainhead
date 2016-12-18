@@ -1,38 +1,30 @@
+// ========================================================
 // Typography
 // ========================================================
-
-// Setup
-// -----------------------------------------------------------------------------
-
-.fh-page-in-page-wrapper {
-  h1, h2, h3, h4, p {
-    font-family: $font-family;
-    color: $dark-gray;
-    margin-bottom: .5rem;
-    margin-top: .2rem;
-    text-rendering: optimizeLegibility;
-  }
-
-  li, button {
-    font-family: $font-family;
-    font-size: 14px;
-  }
-}
 
 // Headings
 // -----------------------------------------------------------------------------
 
 .fh-page-in-page-wrapper {
+
+  h1, h2, h3, h4 {
+    color: $charcoal;
+    font-family: $font-family;
+    margin-bottom: .5rem;
+    margin-top: .2rem;
+    text-rendering: optimizeLegibility;
+  }
+
   h1 { font-size: $h1-size; line-height: 1.25; }
   h2 { font-size: $h2-size; line-height: 1.333; }
   h3 { font-size: $h3-size; line-height: 1.5; }
   h4 { font-size: $h4-size; line-height: 1.166; }
 
   // Header weights
-  h1,
-  h2,
-  h3 { font-weight: 300; }
+  h1, h2, h3 { font-weight: 300; }
   h4 { font-weight: bold }
+
+
 }
 
 // Anchors
@@ -64,32 +56,40 @@
 // -----------------------------------------------------------------------------
 
 .fh-page-in-page-wrapper {
-  p {
-    margin-bottom: 1.42857rem;
+  p, li, small {
+    color: $onyx;
+    font-family: $font-family;
     font-size: $base-font-size * 1px;
+  }
+
+  p {
+    margin: 3px 0 22px;
     line-height: 1.5rem;
+    text-rendering: optimizeLegibility;
   }
 
   small {
     font-size: .85rem;
     line-height: 1.15rem;
   }
+
+  button {
+    font-family: $font-family;
+    font-size: $base-font-size * 1px;
+  }
 }
 
 // Utility Classes
 // -----------------------------------------------------------------------------
 
-.lowercase { text-transform: lowercase; }
-.uppercase { text-transform: uppercase; }
+.fh-page-in-page-wrapper {
+  .lowercase { text-transform: lowercase; }
+  .uppercase { text-transform: uppercase; }
 
-.bold { font-weight: bold; }
-.normal { font-weight: normal; }
+  .bold { font-weight: bold; }
+  .normal { font-weight: normal; }
 
-// .body-color,
-// .body-color:hover {
-//   color: $dark-gray;
-// }
-
-.align-right { text-align: right; }
-.align-center { text-align: center; }
-.align-left { text-align: left; }
+  .align-right { text-align: right; }
+  .align-center { text-align: center; }
+  .align-left { text-align: left; }
+}

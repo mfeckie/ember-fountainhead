@@ -14,9 +14,9 @@ export default Component.extend({
   /**
    * @property classNames
    * @type {Array}
-   * @default ['fh-footer']
+   * @default ['fh-addon-footer']
    */
-  classNames: ['fh-footer'],
+  classNames: ['fh-addon-footer'],
   /**
    * @property tagName
    * @type {string}

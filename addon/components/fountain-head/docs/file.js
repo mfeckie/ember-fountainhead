@@ -20,7 +20,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h1>File Contents:</h1>
+    <h4 class="normal fh-docs-header">File: {{file.file}}</h4>
     {{{file.content}}}
   `
 });

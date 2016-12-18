@@ -90,8 +90,7 @@ export default Component.extend({
    * making new ones each time
    *
    * @method _generateDescription
-   * @param {[type]} templateString [description]
-   * @return {[type]}
+   * @param {string} templateString String to generate template from
    */
   _generateDescription(templateString) {
     try {
@@ -144,7 +143,6 @@ export default Component.extend({
    * @event didReceiveAttrs
    * @param {Object} attrs          Ember attrs object
    * @param {Object} attrs.newAttrs The new attrs received
-   * @return {[type]}
    */
   didReceiveAttrs({ newAttrs }) {
     if (!newAttrs.description.value) { newAttrs.description.value = ''; }
@@ -154,13 +152,6 @@ export default Component.extend({
   // Actions
   // ---------------------------------------------------------------------------
 
-  /**
-   * The component actions hash; to be filled in by the parent context, and/or
-   * by failsafe action detection
-   *
-   * @property actions
-   * @type {Object}
-   */
   actions: {},
 
   // Layout

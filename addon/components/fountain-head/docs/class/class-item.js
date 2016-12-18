@@ -25,9 +25,9 @@ export default Component.extend({
   /**
    * @property classNames
    * @type {Array}
-   * @default ['fh-class-item']
+   * @default ['fh-classitem']
    */
-  classNames: ['fh-class-item'],
+  classNames: ['fh-classitem'],
 
   // Hooks
   // ---------------------------------------------------------------------------
@@ -50,11 +50,11 @@ export default Component.extend({
     {{! --------------------------------------------------------------------- }}
     {{! Item Header
     {{! --------------------------------------------------------------------- }}
-    <h4 class="fh-item-header">
+    <h4 class="fh-header">
       {{classItem.name}}
       {{!-- <span class="item-type">{{classItem.itemtype}}</span> --}}
       {{#if classItem.params}}
-        <span class="item-params">(
+        <span class="header-params">(
           {{#each classItem.params as |param index|}}
             {{if index ', '}}{{param.name}}
           {{/each}}
@@ -63,61 +63,128 @@ export default Component.extend({
       {{#if classItem.return.type}}
         <span class="return-type">{{classItem.return.type}}</span>
       {{/if}}
+      {{! Show type for props only }}
+      {{#if (eq classItem.itemtype 'property')}}
+        {{#if classItem.type}}
+          <span class="item-type">{{classItem.type}}</span>
+        {{/if}}
+      {{/if}}
+      {{! Begin Info Badges (access, static, deprecated) }}
       {{#if classItem.access}}
-        <span class="item-access {{classItem.access}}">{{classItem.access}}</span>
+        <span class="item-access {{if (eq classItem.access 'public') 'fh-success' 'fh-alert'}}">
+          {{classItem.access}}
+        </span>
+      {{/if}}
+      {{#if classItem.static}}
+        <span class="item-static fh-info">Static</span>
+      {{/if}}
+      {{#if classItem.deprecated}}
+        <span class="item-static fh-alert">Deprecated</span>
       {{/if}}
     </h4>
 
-    {{#if classItem.file}}
-      <p class="small italics">Defined in:
-        {{#link-to 'docs.files' classItem.srcFileId (query-params line=classItem.line)}}
-          {{classItem.file}}:{{classItem.line}}
-        {{/link-to}}
-      </p>
+    {{! --------------------------------------------------------------------- }}
+    {{! Classitem Meta
+    {{! --------------------------------------------------------------------- }}
+    <div class="fh-meta">
+      {{#if classItem.file}}
+        <small class="fh-defined">Defined in:
+          {{#link-to 'docs.files' classItem.srcFileId (query-params line=classItem.line)}}
+            {{classItem.file}}:{{classItem.line}}
+          {{/link-to}}
+        </small>
+      {{/if}}
+
+      {{! TODO: Where is this coming from? }}
+      {{! CHECKING INHERITED PROPS! TODO MAKE THIS WORK }}
+      {{#if classItem.inherited}}
+        <small class="fh-inherited">Inherited from: {{classItem.inherited}}</small>
+      {{/if}}
+
+      {{#if classItem.since}}
+        <small class="fh-since">Available since: {{classItem.since}}</small>
+      {{/if}}
+
+      {{#if classItem.default}}
+        <p class="fh-default"><span class="uppercase">Default: </span> <code>{{classItem.default}}</code></p>
+      {{/if}}
+    </div>
+
+    {{! --------------------------------------------------------------------- }}
+    {{! Deprecation Warning
+    {{! --------------------------------------------------------------------- }}
+    {{#if classItem.deprecated}}
+      <div class="fh-deprecation-container">
+        <h4 class="fh-deprecation-header">This {{classItem.itemtype}} is deprecated</h4>
+        <div class="fh-deprecation-message">{{{classItem.deprecationMessage}}}</div>
+      </div>
     {{/if}}
 
-    {{! TODO: Where is this coming from? }}
-    {{#if classItem.inherited}}
-      <p class="small">Inherited from {{classItem.inherited}}</p>
-    {{/if}}
-
+    {{! --------------------------------------------------------------------- }}
+    {{! Special runtime description for classitem descriptions (components allowed)
+    {{! --------------------------------------------------------------------- }}
     {{#if classItem.description}}
       {{fountain-head/shared/runtime-description description=classItem.description}}
     {{/if}}
 
+    {{! --------------------------------------------------------------------- }}
+    {{! Classitem Params
+    {{! --------------------------------------------------------------------- }}
     {{#if classItem.params}}
-      <h5>Parameters</h5>
-      <ul>
+      <h4 class="fh-item-header">Parameters</h4>
+      <ul class="fh-params">
         {{#each classItem.params as |param|}}
-          <li>
-            <strong>
-              {{! Surround optional params with brackets to denote they're optional}}
-              {{! TODO: Visual flag for optional? }}
-              {{#if param.optional}}
-                [{{param.name}}]
-              {{else}}
-                {{param.name}}
-              {{/if}}
+          <li class="fh-classitem-params">
+            <span class="param-meta">
+              <strong>
+                {{! Surround optional params with brackets to denote they're optional}}
+                {{! TODO: Visual flag for optional? }}
+                {{#if param.optional}}
+                  [{{param.name}}]
+                {{else}}
+                  {{param.name}}
+                {{/if}}
+              </strong>
               {{#if param.type}}<span class="param-type">{{param.type}}</span>{{/if}}
-            </strong>
-            <br />
-            {{param.description}}
+            </span>
+            {{#if param.props.length}}
+              <ul class="fh-params">
+                {{#each param.props as |prop|}}
+                  <li class="fh-classitem-params">
+                    <span class="param-meta">
+                      <strong>
+                        {{! Surround optional params with brackets to denote they're optional}}
+                        {{! TODO: Visual flag for optional? }}
+                        {{#if param.optional}}
+                          [{{prop.name}}]
+                        {{else}}
+                          {{prop.name}}
+                        {{/if}}
+                      </strong>
+                      {{#if param.type}}<span class="param-type">{{param.type}}</span>{{/if}}
+                    </span>
+                    <span class="param-description">
+                      {{{prop.description}}}
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+            {{/if}}
+            <span class="param-description">
+              {{{param.description}}}
+            </span>
           </li>
         {{/each}}
       </ul>
     {{/if}}
 
-    {{#if classItem.default}}
-      <p><strong>Default: </strong> <code>{{classItem.default}}</code></p>
-    {{/if}}
-
     {{#if classItem.return}}
-      <h4>Returns:</h4>
+      <h4 class="fh-item-header">Returns:</h4>
       {{#if classItem.return.description}}
-        <p>{{classItem.return.description}}</p>
+        <p class="fh-return-description">{{classItem.return.description}}</p>
       {{/if}}
       {{#if classItem.return.type}}
-        <p class="return-type">{{classItem.return.type}}</p>
+        <p class="fh-return-type">{{classItem.return.type}}</p>
       {{/if}}
     {{/if}}
   `
