@@ -32,4 +32,9 @@
     overflow: hidden;
     padding: 3px 0 3px;
   }
+
+  .item-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }

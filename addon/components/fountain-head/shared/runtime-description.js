@@ -28,6 +28,12 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
+   * @property classNames
+   * @type {Array}
+   * @default ['fh-description']
+   */
+  classNames: ['fh-description'],
+  /**
    * Name of generated partial that is used in the template.
    * @property partialName
    * @type {string}

@@ -17,6 +17,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  pre,
+  pre[class*="language-"] {
+    margin-bottom: 22px;
+  }
+
   // Do not interfer with PrismJS styles
   pre:not([class*="language-"]) {
     padding: 1rem 1.5rem;

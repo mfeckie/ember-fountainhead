@@ -50,6 +50,12 @@
   .fh-main-content {
     padding: 0 15px;
   }
+
+  // Constrain main content. If this doesn't work add useable class names to
+  // subroute components and constrain them
+  .fh-main-content {
+    max-width: 800px;
+  }
 }
 
 .fh-landing {
