@@ -84,19 +84,23 @@ export default Component.extend({
        * Named function for scrolling to selected item after the tab change has
        * been rendered. VERY IMPORTANT: Fountainhead is rendered inside of a
        * fake wrapper page, so we have to scroll that wrapper page instead of
-       * the body!
+       * the body. We also need to get the current scrollTop of that containing
+       * wrapper before adding the new scrollTop, b/c we're really just scrolling
+       * that div
        */
       function scrollTo() {
-        $('.fh-page-in-page-wrapper').animate({
-          scrollTop: $(`#${itemtype}_${name}`).offset().top - 75
-        }, 350);
+        let scrollTop = $('.fh-page-in-page-wrapper').scrollTop()
+          + $(`#${itemtype}_${name}`).offset().top
+          - 75;
+
+        $('.fh-page-in-page-wrapper').animate({ scrollTop }, 350);
       }
 
       // Change to the selected tab using the itemtype to build the tab's id
       this.set('activeTab', `${itemtype}Panel`);
 
       // We can't scroll until after the next render has udpated the current tab
-      scheduleOnce('afterRender', null, scrollTo);
+      scheduleOnce('afterRender', this, scrollTo);
     },
     /**
      * Closure action passed into the tab component. This action is called
