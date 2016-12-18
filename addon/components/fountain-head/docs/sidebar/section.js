@@ -6,12 +6,12 @@ export default Component.extend({
   // Passed Properties
   // ---------------------------------------------------------------------------
 
-  sectionTitle: '',
+  title: '',
 
   // Properties
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class="fh-section-header">{{sectionTitle}}</div>
+    <h4 class="section-header">{{title}}</h4>
     {{yield}}
   `
 });

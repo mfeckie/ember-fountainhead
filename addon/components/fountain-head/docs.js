@@ -29,16 +29,13 @@ export default Component.extend({
     <div class="fh-page-in-page-wrapper">
       <div class="fh-wrapper">
         {{fountain-head/docs/header logo=fountainhead.meta.logo repository=fountainhead.meta.repository}}
-
-        <main class="container-fluid">
-          <div class="row">
-            <div class="col-sm-4">
-              {{fountain-head/docs/sidebar meta=fountainhead.meta}}
-            </div>
-            <div class="main-content col-sm-8">
-              {{! This is where subroutes are rendered through the outlet }}
-              {{yield}}
-            </div>
+        <main class="fh-container">
+          <div class="fh-sidebar-container">
+            {{fountain-head/docs/sidebar meta=fountainhead.meta}}
+          </div>
+          <div class="fh-main-content">
+            {{! This is where subroutes are rendered through the outlet }}
+            {{yield}}
           </div>
         </main>
         {{fountain-head/docs/footer}}

@@ -4,8 +4,8 @@
 
 // Base Setup
 // ---------------------------------------------------------------------------
-@import 'base/variables';
-@import 'base/grid';
+@import 'themes/simple';
+@import 'base/utils';
 
 // Base Styles
 // ---------------------------------------------------------------------------
@@ -24,10 +24,10 @@
 @import 'components/sidebar';
 
 // Doc Page
-@import 'components/doc-page/header';
-@import 'components/doc-page/meta';
-@import 'components/doc-page/class-items-container';
-@import 'components/doc-page/class-item';
+@import 'components/class/header';
+@import 'components/class/meta';
+@import 'components/class/class-items-container';
+@import 'components/class/class-item';
 
 // Prism Panda Syntax Highlighting // TODO: make this optional && configurable
 @import 'prism/prism-panda';

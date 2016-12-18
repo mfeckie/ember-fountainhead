@@ -1,8 +1,11 @@
 // Footer Styles
 // =============================================
 
-.docs-footer {
-  background: $teal;
-  color: $white;
+.fh-footer {
+  background: $primary;
   padding: 50px 5rem;
+
+  p {
+    color: $white;
+  }
 }

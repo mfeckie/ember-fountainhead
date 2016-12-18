@@ -11,13 +11,21 @@ import hbs from 'htmlbars-inline-precompile';
  * @extends Ember.Component
  */
 export default Component.extend({
+
+  /**
+   * @property classNames
+   * @type {Array}
+   * @default ['fh-landing']
+   */
+  classNames: ['fh-landing'],
+
   layout: hbs`
     {{! --------------------------------------------------------------------- }}
     {{! Addon Docs Landing Page
     {{! If meta isn't found then we know the user hasn't run the doc scripts yet.
     {{! --------------------------------------------------------------------- }}
     {{#if meta}}
-      <h1>Welcome</h1>
+      <h1 class="align-center">Welcome</h1>
       <p>Browse to a module or class using the sidebar to view its API documentation.</p>
       <h4>Keyboard Shortcuts</h4>
       <ul>

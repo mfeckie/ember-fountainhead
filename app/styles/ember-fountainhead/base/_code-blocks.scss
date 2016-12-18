@@ -2,32 +2,34 @@
 // Code Samples
 // ========================================================
 
-code {
-  color: $code-color;
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
-  font-size: 90%;
-  white-space: nowrap;
-  background-color: $code-bg;
-  border: $code-border;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-family: $font-family-mono;
-  -webkit-font-smoothing: antialiased;
-}
+.fh-page-in-page-wrapper {
+  code {
+    color: $code-color;
+    padding: .2rem .5rem;
+    margin: 0 .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background-color: $code-bg;
+    border: $code-border;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-family: $font-family-mono;
+    -webkit-font-smoothing: antialiased;
+  }
 
-pre {
-  padding: 1rem 1.5rem;
-  border: $block-code-border;
-  background-color: $block-code-bg;
-  border-radius: 4px;
-  overflow: auto;
-
-  & > code {
+  pre {
+    padding: 1rem 1.5rem;
+    border: $block-code-border;
     background-color: $block-code-bg;
-    color: inherit;
-    display: block;
-    font-size: 80%;
-    white-space: pre;
+    border-radius: 4px;
+    overflow: auto;
+
+    & > code {
+      background-color: $block-code-bg;
+      color: inherit;
+      display: block;
+      font-size: 80%;
+      white-space: pre;
+    }
   }
 }

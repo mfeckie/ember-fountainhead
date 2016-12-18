@@ -2,8 +2,6 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * Addon Footer
- *
  * @class FountainHead.Footer
  * @constructor
  * @extends Ember.Component
@@ -14,21 +12,21 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
-   * Bind `docs-footer` class
    * @property classNames
    * @type {Array}
+   * @default ['fh-footer']
    */
-  classNames: ['docs-footer'],
+  classNames: ['fh-footer'],
   /**
-   * Use `<footer>` element
    * @property tagName
    * @type {string}
+   * @default 'footer'
    */
   tagName: 'footer',
 
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class="copyright align-right">Made with love by HealthSparq Open Source Labs</div>
+    <p class="align-right">Made with love by HealthSparq Open Source Labs</p>
   `
 });

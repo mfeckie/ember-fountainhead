@@ -36,7 +36,17 @@ export default Component.extend({
   // Properties
   // ---------------------------------------------------------------------------
 
-  classNames: ['docs-header'],
+  /**
+   * @property classNames
+   * @type {Array}
+   * @default ['fh-header']
+   */
+  classNames: ['fh-header'],
+  /**
+   * @property tagName
+   * @type {string}
+   * @default 'header'
+   */
   tagName: 'header',
 
   // Layout

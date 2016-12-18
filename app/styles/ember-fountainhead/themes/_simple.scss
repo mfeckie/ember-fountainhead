@@ -14,16 +14,19 @@ $light-border: #e0e0df;
 
 // Typography
 // -----------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 $base-font-size: 14;
-$font-family: 'Lato', Arial, sans-serif;
+$font-family: 'Libre Franklin', Arial, sans-serif;
 $font-family-mono: 'Source Code Pro', monospace;
 $anchor-font-color: #1EAEDB;
 $anchor-font-color-hover: #0FA0CE;
 
-$h1-size: 48 / $base-font-size;
-$h2-size: 36 / $base-font-size;
-$h3-size: 24 / $base-font-size;
-$h4-size: 18 / $base-font-size;
+$h1-size: 48px;
+$h2-size: 36px;
+$h3-size: 24px;
+$h4-size: 18px;
 
 // Code Blocks
 // ---------------------------------------------------------------------------
@@ -42,7 +45,7 @@ $block-code-bg: #f1f1f1;
 $black: #000;
 $white: #fff;
 
-// New Greys
+// Grays
 $dark-gray: #2b2b2b;
 $gray-1: #6d6964;
 $gray-2: #999591;
@@ -50,18 +53,16 @@ $gray-3: #c2bfbd;
 $gray-4: #e0e0df;
 $light-gray: #f1f1f1;
 
-$border-color: #f1f1f1;
-
-// Blues
-$primary-blue: #3486c0;
-$teal: #074e68;
-$dark-blue: #32639a;
-$light-blue: #b8d8f8;
+// Branding
+$primary: #253B52;
 
 // Status Colors
-$red: #ee0032;
-$orange: #ff8b00;
-$green: #31a271;
+$alert: #ee0032;
+$warning: #ff8b00;
+$success: #31a271;
 
 // Color Element Variables
+$link-color: #3F61A1;
+$link-hover-color: darken($link-color, 15%);
 $fh-body-background: $white;
+$border-color: #f1f1f1;
