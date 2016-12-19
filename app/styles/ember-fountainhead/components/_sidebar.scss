@@ -29,9 +29,6 @@
 
   // sidebar ul li
   .item-group-item {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     padding: 0;
     margin: 0;
   }
@@ -40,6 +37,9 @@
   .item-link {
     display: block;
     padding: 4px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
     &.active {
       background-color: $ash;
