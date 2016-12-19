@@ -30,8 +30,19 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-  tagName: 'h2',
+
+  /**
+   * @property classNames
+   * @type {Array}
+   * @default ['fh-docs-header']
+   */
   classNames: ['fh-docs-header'],
+  /**
+   * @property tagName
+   * @type {string}
+   * @default 'h2'
+   */
+  tagName: 'h2',
 
   // Layout
   // ---------------------------------------------------------------------------

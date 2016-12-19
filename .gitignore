@@ -3,7 +3,7 @@
 # compiled output
 /dist
 /tmp
-/public/docs
+/tests/dummy/public/docs
 vendor/feature-flags.js
 vendor/ember-fountainhead.css
 

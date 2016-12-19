@@ -6,10 +6,10 @@
 // -----------------------------------------------------------------------------
 
 .fh-page-in-page-wrapper {
-
   h1, h2, h3, h4 {
     color: $charcoal;
     font-family: $font-family;
+    letter-spacing: 0;
     margin-bottom: .5rem;
     margin-top: .2rem;
     text-rendering: optimizeLegibility;
@@ -23,8 +23,6 @@
   // Header weights
   h1, h2, h3 { font-weight: 300; }
   h4 { font-weight: bold }
-
-
 }
 
 // Anchors

@@ -10,7 +10,7 @@ module.exports = {
   ],
   output: {
     filename: 'fountainhead-data.json',
-    path: 'public/docs'
+    path: 'tests/dummy/public/docs'
   },
   external: {
     data: [
