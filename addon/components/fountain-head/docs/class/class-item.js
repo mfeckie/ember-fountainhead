@@ -59,6 +59,8 @@ export default Component.extend({
             {{if index ', '}}{{param.name}}
           {{/each}}
           )</span>
+      {{else}}
+        <span class="header-params">(&nbsp;&nbsp;&nbsp;)</span>
       {{/if}}
       {{#if classItem.return.type}}
         <span class="return-type">{{classItem.return.type}}</span>
