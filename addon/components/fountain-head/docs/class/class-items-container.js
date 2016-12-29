@@ -2,11 +2,16 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 import $ from 'jquery';
 import { scheduleOnce } from 'ember-runloop';
+import get from 'ember-metal/get';
 
 /**
- * Tab container for the class' documentation items.
- * TODO: Add a hook in here to reset the default tab any time this component
- * is re-created May need to be communicated by parent?
+ * Tab container for the class' documentation items. Component handles running
+ * a controlled instance of `core-tabs` by tracking `activeTab` internally and
+ * passing `tabsChanged` to the `core-tabs` instance.
+ *
+ * The active tab is reset to the index panel anytime that the `name` (of the
+ * class) changes.
+ *
  * @class FountainHead.Class.ClassItemsContainer
  * @constructor
  * @extends Ember.Component
@@ -37,6 +42,12 @@ export default Component.extend({
    * @default []
    */
   method: [],
+  /**
+   * Name of the class. Is checked in `didUpdateAttrs` to know if the tabs
+   * should be reset to the index panel
+   * @type {string}
+   */
+  name: '',
 
   // Properties
   // ---------------------------------------------------------------------------
@@ -59,10 +70,20 @@ export default Component.extend({
    * component receives attrs. The only props passed in to this component are
    * the class items for the container, so we know if they change in any way
    * that this is the right time to update the tabs panel.
+   *
+   * NOTE: GUESS WHAT! This hook doens't only get called when passed props
+   * change! There is some crazy behavior where this hook will get called ONCE
+   * and only ONCE when an internal property changes after the props for this
+   * component has changed. Super weird. For now we're 'fixing' it by also
+   * passing in the class name and using that as a check to reset the `activeTab`
    * @event didReceiveAttrs
    */
-  didReceiveAttrs() {
-    this.set('activeTab', 'indexPanel');
+  didUpdateAttrs({ oldAttrs, newAttrs }) {
+    this._super(...arguments);
+
+    if (get(oldAttrs, 'name.value') !== get(newAttrs, 'name.value')) {
+      this.set('activeTab', 'indexPanel');
+    }
   },
 
   // Actions

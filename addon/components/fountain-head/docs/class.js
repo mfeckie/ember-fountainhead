@@ -44,7 +44,8 @@ export default Component.extend({
       {{fountain-head/docs/class/class-items-container
         property=class.property
         method=class.method
-        event=class.event}}
+        event=class.event
+        name=class.name}}
     {{/if}}
   `
 });
