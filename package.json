@@ -1,6 +1,6 @@
 {
   "name": "ember-fountainhead",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.1",
   "description": "Robust interactive documentation for your Ember application's source code",
   "directories": {
     "doc": "doc",
@@ -17,7 +17,7 @@
   },
   "repository": "https://github.com/healthsparq/ember-fountainhead",
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 4.3.2"
   },
   "contributors": [
     "Evan Rowe <ev.rowe@gmail.com>",
