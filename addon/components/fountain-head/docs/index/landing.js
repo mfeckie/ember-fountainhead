@@ -35,7 +35,27 @@ export default Component.extend({
       </ul>
     {{else}}
       <h1>Welcome to Ember Fountainhead!</h1>
-      <p>It looks like you haven't generated your app's documentation yet. To get started, run <code>ember fountainhead-gendocs</code>.</p>
+      <p>It looks like you haven't generated your app's documentation yet. There are two ways to get stated.</p>
+      <h4>Call Ember Fountainhead Directly</h4>
+      <p>You can directly call the Ember Fountainhead entry through your
+        <code>node_modules/bin</code> directory by executing
+        <code>./node_modules/bin/ember-fountainhead</code> from the command line
+      </p>
+
+      <h4><strong>[Preferred]</strong> Create a <code>package.json</code> Script</h4>
+      <p>Instead of directly calling the <code>ember-fountainhead</code> command file by path, we can use a <code>package.json</code> script entry (which automatically checks for a command in the <code>node_modules/bin</code> directory first.</p>
+
+<pre>
+<code>// package.json
+{
+  "scripts": {
+    // your scripts
+    "docs": "ember-fountainhead"
+  }
+}</code>
+</pre>
+
+      <p>After adding the docs key to your scripts, you can generate docs by running:<br/><code>npm run docs</code></p>
     {{/if}}
   `
 });

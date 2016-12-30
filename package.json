@@ -11,6 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
+    "docs": "node ./lib/index.js",
     "test:lib": "mocha --recursive lib/**/*.spec.js",
     "sass": "node-sass app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css",
     "sass:watch": "node-sass -w=app/styles app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css"

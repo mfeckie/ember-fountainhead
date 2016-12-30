@@ -10,6 +10,17 @@ try {
   config = {};
 }
 
+/**
+ * The `Index` class from `index.js` handles addon consumption through Ember CLI.
+ * @module EmberFountainhead
+ */
+
+/**
+ * Addon index export handles all of the behind the scenes Ember magic that sets
+ * up Ember Fountainhead consumption in a given app.
+ * @class Index
+ * @constructor
+ */
 module.exports = {
   name: 'ember-fountainhead',
 
