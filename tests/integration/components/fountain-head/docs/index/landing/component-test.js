@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountain-head/docs/indexlanding', 'Integration | Component | fountain head/docs/index/landing', {
+moduleForComponent('fountain-head/docs/index/landing', 'Integration | Component | fountain head/docs/index/landing', {
   integration: true
 });
 
