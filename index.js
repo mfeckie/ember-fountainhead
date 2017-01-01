@@ -40,8 +40,12 @@ module.exports = {
 
     // Required to compile templates at runtime
     app.import('bower_components/ember/ember-template-compiler.js');
-    // Styles
-    app.import(`${vendor}/ember-fountainhead.css`);
+
+    // Unless `includeVendorStyles` is explicitly set to false, we auto bundle
+    // Fountainhead's styles into the vendor.css file here
+    if (config.includeVendorStyles !== false) {
+      app.import(`${vendor}/ember-fountainhead.css`);
+    }
   },
 
   // Addon Hooks

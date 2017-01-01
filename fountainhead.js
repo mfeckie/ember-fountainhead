@@ -1,10 +1,10 @@
+/*
+ * This file drives the configuration for you Fountainhead instance.
+ * TODO: Documente config options in demo app
+ */
 module.exports = {
-  name: 'Fountainhead Docs',
-  description: 'The documentation for Fountainhead Docs... how meta',
-  version: '1.0.0',
-  repository: null,
-  logo: null,
-  includeForProduction: false,
+  includeForProduction: true,
+  includeVendorStyles: false, // We directly import styles for dev hot reloading
   entry: [
     'addon', 'lib'
   ],
