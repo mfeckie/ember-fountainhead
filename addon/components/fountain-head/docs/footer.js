@@ -1,7 +1,7 @@
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
-/**
+/*
  * @class FountainHead.Footer
  * @constructor
  * @extends Ember.Component

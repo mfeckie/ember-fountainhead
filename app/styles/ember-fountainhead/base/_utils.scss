@@ -31,8 +31,15 @@ li[role="presentation"] {
 // Spacing
 // ---------------------------------------------------------------------------
 
-.fh-element {
-  padding: 20px;
+.fh-element, .fh-element-container {
+  padding: 15px;
+}
+
+.fh-element-full-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 // Link Buttons

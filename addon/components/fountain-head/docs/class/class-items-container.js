@@ -62,6 +62,12 @@ export default Component.extend({
    * @default indexPanel
    */
   activeTab: 'indexPanel',
+  /**
+   * @property classNames
+   * @type {Array}
+   * @default ['fh-tabs-container']
+   */
+  classNames: ['fh-tabs-container'],
 
   // Hooks
   // ---------------------------------------------------------------------------

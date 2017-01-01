@@ -17,6 +17,8 @@ import inject from 'ember-service/inject';
  * The `fountainhead` service is the primary store for the addon and handles
  * fetching the meta data for the docs.
  * @class FountainHead.Docs
+ * @uses FountainHead.Docs.Github
+ * @uses FountainHead.Docs.Sidebar
  * @constructor
  * @extends Ember.Component
  */
@@ -27,19 +29,21 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     <div class="fh-page-in-page-wrapper">
-      <div class="fh-wrapper">
-        {{fountain-head/docs/header logo=fountainhead.meta.logo repository=fountainhead.meta.repository}}
-        <main class="fh-container">
-          <div class="fh-sidebar-container">
-            {{fountain-head/docs/sidebar meta=fountainhead.meta}}
-          </div>
-          <div class="fh-main-content">
+      {{! Octocat page corner SVG logo }}
+      {{fountain-head/docs/github repository=fountainhead.meta.repository}}
+
+      {{! Layout for sidebar and content containers }}
+      <main class="fh-container">
+        <div class="fh-sidebar-container">
+          {{fountain-head/docs/sidebar meta=fountainhead.meta}}
+        </div>
+        <div class="fh-content-container">
+          <div class="fh-content">
             {{! This is where subroutes are rendered through the outlet }}
             {{yield}}
           </div>
-        </main>
-        {{fountain-head/docs/footer}}
-      </div>
+        </div>
+      </main>
     </div>
   `
 });

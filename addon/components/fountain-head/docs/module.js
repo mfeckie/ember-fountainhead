@@ -43,7 +43,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h2 class="fh-docs-header">
+    <h2 class="fh-page-header">
       {{module.name}}
       <small>
         {{! @TODO: Link component needed to handle external vs internal file links }}

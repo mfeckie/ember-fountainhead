@@ -6,7 +6,7 @@ import computed from 'ember-computed';
  * Wrapper component for the sidebar components. Expects the entire docs meta
  * object.
  *
- * @class FountainHead.Sidebar
+ * @class FountainHead.Docs.Sidebar
  * @constructor
  * @extends Ember.Component
  */
@@ -42,9 +42,9 @@ export default Component.extend({
   /**
    * @property tagName
    * @type {string}
-   * @default 'div'
+   * @default 'nav'
    */
-  tagName: 'div',
+  tagName: 'nav',
 
   // Computeds
   // ---------------------------------------------------------------------------
@@ -82,13 +82,22 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{#fountain-head/docs/sidebar/section title='Search'}}
-      {{fountain-head/docs/sidebar/search-bar onUpdate=(action 'doFilter')}}
-    {{/fountain-head/docs/sidebar/section}}
+    {{! Project Logo, falls back to ember logo if one isn't specified }}
+    <div class="project-logo-wrapper fh-element">
+      {{#link-to 'index' classNames='logo-link'}}
+        <img src={{if logo logo '/ember-fountainhead/img/ember-logo.png'}} class="project-logo" alt="project logo" />
+      {{/link-to}}
+    </div>
 
-    {{#if meta.version}}
-      {{fountain-head/docs/sidebar/section title=(concat 'tag:' meta.version)}}
-    {{/if}}
+    {{! TODO: Make these work }}
+    {{!-- {{#fountain-head/docs/sidebar/section title='Search'}}
+      {{fountain-head/docs/sidebar/search-bar onUpdate=(action 'doFilter')}}
+    {{/fountain-head/docs/sidebar/section}} --}}
+
+    {{!-- {{#if meta.version}}
+      {{TODO: This should be a link to this tag OR a version selector! }}
+      {{fountain-head/docs/sidebar/section title=(concat 'tag: ' meta.version)}}
+    {{/if}} --}}
 
     {{#if meta.modules}}
       {{#fountain-head/docs/sidebar/section title='Modules'}}
@@ -101,5 +110,9 @@ export default Component.extend({
         {{fountain-head/docs/sidebar/item-group items=meta.classes}}
       {{/fountain-head/docs/sidebar/section}}
     {{/if}}
+
+    <div class="made-with-wrapper fh-element">
+      <p class="made-with">Made with lots of {{fountain-head/shared/fountainhead-svg svgId='heart'}} by <br> HealthSparq Open Source Labs</p>
+    </div>
   `
 });
