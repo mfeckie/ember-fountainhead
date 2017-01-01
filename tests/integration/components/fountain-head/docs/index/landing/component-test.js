@@ -9,5 +9,5 @@ test('it renders', function(assert) {
   this.render(hbs`{{fountain-head/docs/index/landing}}`);
 
   assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '),
-    'Welcome to Ember Fountainhead! It looks like you haven\'t generated your app\'s documentation yet. To get started, run ember fountainhead-gendocs.');
+    'Welcome to Ember Fountainhead! It looks like you haven\'t generated your app\'s documentation yet. You can run ember docs to generate you app\'s documentation data.');
 });
