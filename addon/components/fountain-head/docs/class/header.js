@@ -34,9 +34,9 @@ export default Component.extend({
   /**
    * @property classNames
    * @type {Array}
-   * @default ['fh-docs-header']
+   * @default ['fh-page-header']
    */
-  classNames: ['fh-docs-header'],
+  classNames: ['fh-page-header'],
   /**
    * @property tagName
    * @type {string}
