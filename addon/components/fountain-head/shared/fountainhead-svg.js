@@ -16,7 +16,7 @@ export default Component.extend({
    * @type {string}
    * @default assets/svg-defs.svg
    */
-  filePath: 'ember-fountainhead/svg/symbol-defs.svg',
+  filePath: '/ember-fountainhead/svg/symbol-defs.svg',
   /**
    * The id of the svg.
    * @property svgId
