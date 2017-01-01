@@ -1,0 +1,33 @@
+<div class="hero">
+  <div class="hero-message">
+    <h1>Ember Fountainhead {{fountain-head/shared/fountainhead-svg svgId='document'}}</h1>
+    <span class="italic">Create beautiful, dynamic documentation.</span>
+  </div>
+</div>
+
+<div class="wrapper">
+  {{! Demo site sidebar navigation }}
+  {{sidebar-nav}}
+
+  <div class="introduction element">
+    <h4 class="uppercase">Introduction</h4>
+    <p>Ember Fountainhead is a documentation application that generates documentation JSON files and a modern, readable interface in your application. It is designed to be drop in ready for simple applications with the ability for full customization through exported components and configuration for custom use cases.</p>
+
+    <h4>Runtime Template Compilation</h4>
+    <p>One of the most exciting features of Fountainhead is that all documentation descriptions are compiled to Glimmer templates and registered with your application during run time. This means that you are not limited to a pre defined set of components in your documentation. Any component from your application can be included as a live example in your documentation.</p>
+
+    <h4 class="uppercase">Is Ember Fountainhead For You?</h4>
+    <p>If your Ember project has any collaboration or users other than yourself, then Fountainhead is for you! Great documenation helps contributors navigate your codebase and make smarter pull requests. It helps users understand your API and easily troubleshoot issues. Great documentation makes your project more accessible to everyone.</p>
+  </div>
+
+  <div class="features element">
+    <h4 class="uppercase">Features</h4>
+    <ul class="list-unstyled">
+      <li>Comment parsing using YUIDoc syntax</li>
+      <li>Dynamic documentation driven by your Ember application</li>
+      <li>Markdown parsing at build time</li>
+      <li>Code highlighting using <a href="http://prismjs.com/" target="_blank">Prism</a></li>
+      <li>Descriptions are compiled to Glimmer templates at runtime</li>
+    </ul>
+  </div>
+</div>

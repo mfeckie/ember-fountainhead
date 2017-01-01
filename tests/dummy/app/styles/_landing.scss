@@ -1,0 +1,21 @@
+// ========================================================
+// Landing Page Styles
+// ========================================================
+
+.hero {
+  background-color: #50676B;
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-message {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    font-size: 60px;
+  }
+}

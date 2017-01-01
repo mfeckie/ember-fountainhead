@@ -42,6 +42,10 @@
     white-space: nowrap;
     overflow: hidden;
 
+    &:hover {
+      background-color: $ash;
+    }
+
     &.active {
       background-color: $ash;
     }

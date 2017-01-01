@@ -1,0 +1,60 @@
+<h1>Getting Started</h1>
+
+<h2>Install</h2>
+<code>ember install ember-fountainhead</code>
+
+<h2>Documentation JSON Generation</h2>
+<code>ember docs</code>
+
+<h2>Stylesheets</h2>
+<p>Ember Fountainhead styles are scoped to addon namespaces and shouldn't conflict with your application's stylesheets. Styles for Fountainhead are included in your <code>vendor.css</code> bundle by default. You can turn this off by setting <code>includeVendorStyles</code> to false in your <code>fountainhead.js</code> configuration file.</p>
+
+<p>If you'd like to extend Fountainhead's styles and your project uses SASS, you can turn off the auto bundle to the vendor file and directly import Fountianhead into your SASS: <code>@import 'ember-fountainhead'</code>. See the themes in <code>app/styles/ember-fountianhead/themes</code> for variables you can override.</p>
+
+<h2>Mounting Fountainhead's Routes</h2>
+<p>In order to make use of Fountainhead's in-app documentation features, you will
+need to import and mount its routes so that they are available to you. We recommend
+doing this explicitly when developing in the context of a <code>development</code> environment,
+but you can of course choose to always mount Fountainhead's routes.</p>
+
+<p>If you wish to take advantage of environment-specific loading, you'll need to
+set up your <code>ember-cli-build.js</code> file to consume and store the environment argument:</p>
+
+<pre><code>
+module.exports = function(environment) {
+  var ENV = {
+    environment: environment
+  };
+
+  return ENV;
+}
+</code></pre>
+
+<p>To mount the routes, make these additions in your app's <code>router.js</code>:</p>
+
+<pre><code>
+import fountainheadRoutes from 'ember-fountainhead/utils/route-setup';
+import config from '../config/environment';
+
+Router.map(function() {
+  if (config.environment === 'development') {
+    fountainheadRoutes(this);
+  }
+});
+</code></pre>
+
+<h2>Configuration</h2>
+
+<p>Configuration for this addon and the build scripts can be specified in a <code>fountainhead.js</code> file located in your repo's root. Note that all paths are resolved using <code>path.resolve</code>, meaning that either a relative path or paths starting with <code>./</code> will resolve to your project's root directory.</p>
+
+<ul>
+<li>entry: Can be a string, or array of strings.</li>
+<li>output: Object
+  <li>path: Path for output files</li>
+  <li>filename: Filename for documentation meta data file</li>
+</li>
+</ul>
+
+<h2>Ember Component Playground</h2>
+
+<p>The <a href="https://github.com/healthsparq/ember-component-playground" target="_blank">Ember Component Playground</a> addon is a great compliment to this addon that allows real time examples of components. See the repo for installation.</p>

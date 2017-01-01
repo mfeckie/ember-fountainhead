@@ -1,1 +1,22 @@
+// ========================================================
+// Ember Fountainhead Documentation Site Styles
+// ========================================================
+
+// Ember Radical Styles Set Base Line
+// ---------------------------------------------------------------------------
+@import 'ember-radical/styles';
+
+// Import Fountainhead styles directly for live reload in dev
+// ---------------------------------------------------------------------------
 @import 'ember-fountainhead';
+
+// Github Documentation Site Styles
+// ---------------------------------------------------------------------------
+@import 'landing';
+
+
+// TODO: Remove when added to Radical
+p { max-width: 750px; }
+.wrapper, .element { padding: 10px; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }

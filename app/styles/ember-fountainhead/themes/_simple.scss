@@ -4,72 +4,73 @@
 
 // Z-Indices
 // ---------------------------------------------------------------------------
-$fh-page-in-page-index: 2;
+$fh-page-in-page-index: 2 !default;
 
 // Element Variables
 // -----------------------------------------------------------------------------
-$radius: 3px;
+$radius: 3px !default;
 
 // Typography
 // -----------------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-$base-font-size: 14;
-$font-family: 'Libre Franklin', Arial, sans-serif;
-$font-family-mono: 'Source Code Pro', monospace;
-$anchor-font-color: #1EAEDB;
-$anchor-font-color-hover: #0FA0CE;
+$base-font-size: 14 !default;
+$font-family: 'Libre Franklin', Arial, sans-serif !default;
+$font-family-mono: 'Source Code Pro', monospace !default;
 
-$h1-size: 48px;
-$h2-size: 36px;
-$h3-size: 24px;
-$h4-size: 18px;
+$h1-size: 48px !default;
+$h2-size: 36px !default;
+$h3-size: 24px !default;
+$h4-size: 18px !default;
 
 
 // ========================================================
 // Colors
 // ========================================================
 
-$black: #000;
-$white: #fff;
+$black: #000 !default;
+$white: #fff !default;
 
 // Grays - Use names for scalability
-$onyx: #2b2b2b;
-$charcoal: #4B4B4B;
-$battleship: #6d6964;
-$rhino: #7A8288;
-$argent: #c2bfbd;
-$ash: rgba(224, 224, 224, 0.65);
-$smoke: #f1f1f1;
+$onyx: #2b2b2b !default;
+$charcoal: #4B4B4B !default;
+$battleship: #6d6964 !default;
+$rhino: #7A8288 !default;
+$argent: #c2bfbd !default;
+$ash: rgba(224, 224, 224, 0.65) !default;
+$smoke: #f1f1f1 !default;
 
 // Branding
-// $primary: #253B52;
-$primary: #3E4855;
+// $primary: #253B52 !default;
+$primary: #3E4855 !default;
+// $primary: #6B8C92 !default;
+// $primary: #50676B !default;
+// $primary: #60628B !default;
 
 // Status Colors
-$alert: #D9534F;
-$warning: #FCF8E3;
-$success: #93C54B;
+$alert: #D9534F !default;
+$warning: #FCF8E3 !default;
+$success: #93C54B !default;
 
 // Links
-$link-color: #3F61A1;
-$link-hover-color: darken($link-color, 15%);
+$link-color: #3F61A1 !default;
+$link-hover-color: darken($link-color, 15%) !default;
 
 // Deprecation warnings
-$deprecated-bg: $warning;
-$deprecated-color: #8A6D3B;
-$deprecated-border: #FAEBCC;
+$deprecated-bg: $warning !default;
+$deprecated-color: #8A6D3B !default;
+$deprecated-border: #FAEBCC !default;
 
 // Misc
-$fh-body-background: $white;
-$border-color: $smoke;
+$fh-body-background: $white !default;
+$border-color: $smoke !default;
 
 // Code Blocks
 // ---------------------------------------------------------------------------
-$code-color: #c7254e;
-$code-bg: #f9f2f4;
-$code-border: 1px solid #f1f1f1;
+$code-color: #c7254e !default;
+$code-bg: #f9f2f4 !default;
+$code-border: 1px solid #f1f1f1 !default;
 
-$block-code-border: 1px solid #e1e1e1;
-$block-code-bg: #f1f1f1;
+$block-code-border: 1px solid #e1e1e1 !default;
+$block-code-bg: #f1f1f1 !default;
