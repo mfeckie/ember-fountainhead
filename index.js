@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const generateDocs = require('./lib/index.js');
 
 let config;
 
@@ -69,5 +70,25 @@ module.exports = {
     if (this.projectConfiguration.environment === 'development' || config.includeForProduction) {
       this._importBrowserDependencies(app);
     }
+  },
+  /**
+   * Define cli commands in return object. Check out http://thejsguy.com/2016/07/10/creating-a-custom-ember-cli-command.html for a
+   * nice high level intro to defining cli commands.
+   * @method includedCommands
+   * @return {Object} Object of command definitions according to some spec somewhere
+   */
+  includedCommands() {
+    return {
+      // Defines `ember docs` command that generates docs JSON files
+      // TODO: Ability to specify config path
+      docs: {
+        name: 'docs',
+        description: 'Generate Fountainhead documentation data and files',
+        run(commandOptions, rawArgs) {
+          generateDocs();
+        }
+      }
+      // TODO: Help and init config commands
+    };
   }
 };

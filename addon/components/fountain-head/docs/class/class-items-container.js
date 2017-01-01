@@ -45,6 +45,7 @@ export default Component.extend({
   /**
    * Name of the class. Is checked in `didUpdateAttrs` to know if the tabs
    * should be reset to the index panel
+   * @property name
    * @type {string}
    */
   name: '',

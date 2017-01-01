@@ -5,7 +5,7 @@ import Ember from 'ember';
  * @class Helper.Eq
  * @constructor
  * @param {array} args Positional args passed to helper should be compared
- * @returns {boolean}
+ * @return {boolean}
  */
 export function eq([arg1, arg2]) {
   return arg1 === arg2;
