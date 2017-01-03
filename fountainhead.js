@@ -5,7 +5,7 @@
 module.exports = {
   includeVendorStyles: false, // We directly import styles for dev hot reloading
   entry: [
-    'addon', 'app', 'lib'
+    'addon', 'app', 'blueprints', 'lib'
   ],
   output: {
     filename: 'fountainhead-data.json',
