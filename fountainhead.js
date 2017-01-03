@@ -1,12 +1,11 @@
 /*
  * This file drives the configuration for you Fountainhead instance.
- * TODO: Documente config options in demo app
+ * TODO: Document config options in demo app
  */
 module.exports = {
-  includeForProduction: true,
   includeVendorStyles: false, // We directly import styles for dev hot reloading
   entry: [
-    'addon', 'lib'
+    'addon', 'app', 'lib'
   ],
   output: {
     filename: 'fountainhead-data.json',

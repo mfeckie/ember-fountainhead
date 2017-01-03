@@ -67,13 +67,17 @@ module.exports = {
       app = app.app;
     }
 
-    this.app = app;
-    this.projectConfiguration = this.project.config(process.env.EMBER_ENV);
+    const env = process.env.EMBER_ENV || 'development';
+    let projectConfiguration = this.project.config(env);
+    let projectOptions = app.options;
 
-    // Import browser deps only in development, or also in prod when configured
-    if (this.projectConfiguration.environment === 'development' || config.includeForProduction) {
-      this._importBrowserDependencies(app);
-    }
+    this.app = app;
+    this.projectConfiguration = projectConfiguration;
+    this.projectOptions = projectOptions;
+
+    // Pulls in dependencies to /vendor, we always run this b/c the entire addon
+    // should be blacklisted if not wanted in production
+    this._importBrowserDependencies(app);
   },
   /**
    * Define cli commands in return object. Check out http://thejsguy.com/2016/07/10/creating-a-custom-ember-cli-command.html for a
@@ -95,4 +99,24 @@ module.exports = {
       // TODO: Help and init config commands
     };
   }
+
+  // Fallback exclude feature if we need to nix using
+  // app/instance-initializers/fountainhead-routes to setup fountainhead routes
+  // automagically
+  // postprocessTree(type, tree) {
+  //   if (type !== 'js') { return tree; }
+  //
+  //   return new Funnel(tree, {
+  //     exclude: [
+  //       /components\/core-/, /* radical */
+  //       /components\/fountain-head/,
+  //       /routes\/docs/, /* works */
+  //       /services\/fountainhead/,
+  //       /services\/tagging/, /* radical */
+  //       // /utils\/route-setup/, /* this is directly imported */
+  //       /templates\/docs/
+  //     ],
+  //     description: 'Funnel: Conditionally Filtered Fountainhead'
+  //   });
+  // }
 };
