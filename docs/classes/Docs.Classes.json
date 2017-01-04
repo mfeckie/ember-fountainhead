@@ -4,7 +4,7 @@
   "classitems": [
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 25,
+      "line": 28,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",
@@ -13,8 +13,8 @@
     },
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 11,
-      "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+      "line": 14,
+      "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -45,15 +45,15 @@
   "extension_for": [],
   "module": "Addon",
   "file": "addon/routes/docs/classes.js",
-  "line": 4,
-  "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+  "line": 5,
+  "description": "<p>Route handles fetching data for an individual class.</p>\n",
   "is_constructor": 1,
   "extends": "Ember.Route",
   "method": [
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 11,
-      "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+      "line": 14,
+      "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -82,7 +82,7 @@
   "event": [
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 25,
+      "line": 28,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",

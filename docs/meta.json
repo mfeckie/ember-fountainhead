@@ -3,8 +3,9 @@
   "namespaces": [],
   "name": "ember-fountainhead",
   "description": "Robust interactive documentation for your Ember application's source code",
-  "version": "2.0.0-beta.4",
+  "version": "2.0.0-beta.6",
   "repository": "https://github.com/healthsparq/ember-fountainhead",
+  "logo": "/ember-fountainhead/ember-fountainhead/img/ember-logo.png",
   "modules": [
     {
       "name": "Addon",

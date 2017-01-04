@@ -319,7 +319,7 @@
       "namespaces": {},
       "tag": "module",
       "file": "addon/services/fountainhead.js",
-      "line": 6,
+      "line": 7,
       "description": "Addon module contains the components, routes and utils for generating docs\napplication."
     },
     "App": {
@@ -610,8 +610,8 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/classes.js",
-      "line": 4,
-      "description": "This route handles fetching the data for an individual class using the id.",
+      "line": 5,
+      "description": "Route handles fetching data for an individual class.",
       "is_constructor": 1,
       "extends": "Ember.Route"
     },
@@ -625,8 +625,8 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/files.js",
-      "line": 4,
-      "description": "This route handles fetching the data for an individual class using the id.",
+      "line": 5,
+      "description": "Route handles fetching data for a source file.",
       "is_constructor": 1,
       "extends": "Ember.Route"
     },
@@ -640,7 +640,7 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/modules.js",
-      "line": 4,
+      "line": 5,
       "description": "Route to be created for handling modules",
       "is_constructor": 1,
       "extends": "Ember.Route"
@@ -655,7 +655,7 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/services/fountainhead.js",
-      "line": 6,
+      "line": 7,
       "description": "Fountainhead application service.",
       "is_constructor": 1,
       "extends": "Ember.Service"
@@ -1546,8 +1546,8 @@
     },
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 11,
-      "description": "Classes route model fetches classes JSON saved in `/docs/classes`.",
+      "line": 14,
+      "description": "Fetches class' JSON at: `${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -1572,7 +1572,7 @@
     },
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 25,
+      "line": 28,
       "description": "Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body",
       "itemtype": "event",
       "name": "didTransition",
@@ -1580,7 +1580,33 @@
     },
     {
       "file": "addon/routes/docs/files.js",
-      "line": 18,
+      "line": 14,
+      "description": "Fetches file's JSON at: `${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json`",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": "",
+          "type": "Object",
+          "props": [
+            {
+              "name": "file_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Files"
+    },
+    {
+      "file": "addon/routes/docs/files.js",
+      "line": 28,
       "description": "Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body",
       "itemtype": "event",
       "name": "didTransition",
@@ -1588,8 +1614,8 @@
     },
     {
       "file": "addon/routes/docs/modules.js",
-      "line": 11,
-      "description": "Modules route model fetches modules JSON saved in `/docs/modules`.",
+      "line": 14,
+      "description": "Fetches modules's JSON at: `${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json`",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -1614,7 +1640,7 @@
     },
     {
       "file": "addon/routes/docs/modules.js",
-      "line": 25,
+      "line": 28,
       "description": "Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body",
       "itemtype": "event",
       "name": "didTransition",
@@ -1622,8 +1648,18 @@
     },
     {
       "file": "addon/services/fountainhead.js",
-      "line": 17,
-      "description": "Documentation meta fetched from `/docs/meta.json`. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.",
+      "line": 18,
+      "description": "All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.",
+      "itemtype": "property",
+      "name": "apiNamespace",
+      "type": "{string}",
+      "default": "'/docs'",
+      "class": "Fountainhead"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 28,
+      "description": "Documentation meta fetched from `/meta.json`. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.",
       "itemtype": "property",
       "name": "meta",
       "type": "{?Object}",
@@ -1632,7 +1668,7 @@
     },
     {
       "file": "addon/services/fountainhead.js",
-      "line": 28,
+      "line": 39,
       "description": "Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.",
       "itemtype": "property",
       "name": "metaError",
@@ -1642,8 +1678,8 @@
     },
     {
       "file": "addon/services/fountainhead.js",
-      "line": 40,
-      "description": "When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar && header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.",
+      "line": 51,
+      "description": "When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar && header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.\n\nNOTE: the meta request needs to be wrapped in a `run.next` so that if a\nconsuming application needs to override the `apiNamespace` the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default `/docs`\nnamespace.",
       "itemtype": "method",
       "name": "init",
       "class": "Fountainhead"

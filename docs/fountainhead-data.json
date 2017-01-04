@@ -319,7 +319,7 @@
       "namespaces": {},
       "tag": "module",
       "file": "addon/services/fountainhead.js",
-      "line": 6,
+      "line": 7,
       "description": "<p>Addon module contains the components, routes and utils for generating docs\napplication.</p>\n"
     },
     "App": {
@@ -2051,7 +2051,7 @@
       "classitems": [
         {
           "file": "addon/routes/docs/classes.js",
-          "line": 25,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
@@ -2060,8 +2060,8 @@
         },
         {
           "file": "addon/routes/docs/classes.js",
-          "line": 11,
-          "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+          "line": 14,
+          "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2092,15 +2092,15 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/classes.js",
-      "line": 4,
-      "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+      "line": 5,
+      "description": "<p>Route handles fetching data for an individual class.</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Route",
       "method": [
         {
           "file": "addon/routes/docs/classes.js",
-          "line": 11,
-          "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+          "line": 14,
+          "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2129,7 +2129,7 @@
       "event": [
         {
           "file": "addon/routes/docs/classes.js",
-          "line": 25,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
@@ -2145,10 +2145,37 @@
       "classitems": [
         {
           "file": "addon/routes/docs/files.js",
-          "line": 18,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
+          "class": "Docs.Files",
+          "srcFileId": "addon_routes_docs_files.js"
+        },
+        {
+          "file": "addon/routes/docs/files.js",
+          "line": 14,
+          "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "file_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
           "class": "Docs.Files",
           "srcFileId": "addon_routes_docs_files.js"
         }
@@ -2159,16 +2186,44 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/files.js",
-      "line": 4,
-      "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+      "line": 5,
+      "description": "<p>Route handles fetching data for a source file.</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Route",
-      "method": [],
+      "method": [
+        {
+          "file": "addon/routes/docs/files.js",
+          "line": 14,
+          "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "file_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Files",
+          "srcFileId": "addon_routes_docs_files.js"
+        }
+      ],
       "property": [],
       "event": [
         {
           "file": "addon/routes/docs/files.js",
-          "line": 18,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
@@ -2184,7 +2239,7 @@
       "classitems": [
         {
           "file": "addon/routes/docs/modules.js",
-          "line": 25,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
@@ -2193,8 +2248,8 @@
         },
         {
           "file": "addon/routes/docs/modules.js",
-          "line": 11,
-          "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
+          "line": 14,
+          "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2225,15 +2280,15 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/routes/docs/modules.js",
-      "line": 4,
+      "line": 5,
       "description": "<p>Route to be created for handling modules</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Route",
       "method": [
         {
           "file": "addon/routes/docs/modules.js",
-          "line": 11,
-          "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
+          "line": 14,
+          "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2262,7 +2317,7 @@
       "event": [
         {
           "file": "addon/routes/docs/modules.js",
-          "line": 25,
+          "line": 28,
           "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
           "itemtype": "event",
           "name": "didTransition",
@@ -2278,8 +2333,19 @@
       "classitems": [
         {
           "file": "addon/services/fountainhead.js",
-          "line": 40,
-          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+          "line": 18,
+          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+          "itemtype": "property",
+          "name": "apiNamespace",
+          "type": "{string}",
+          "default": "'/docs'",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        },
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 51,
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
           "itemtype": "method",
           "name": "init",
           "class": "Fountainhead",
@@ -2287,8 +2353,8 @@
         },
         {
           "file": "addon/services/fountainhead.js",
-          "line": 17,
-          "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+          "line": 28,
+          "description": "<p>Documentation meta fetched from <code>/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
           "itemtype": "property",
           "name": "meta",
           "type": "{?Object}",
@@ -2298,7 +2364,7 @@
         },
         {
           "file": "addon/services/fountainhead.js",
-          "line": 28,
+          "line": 39,
           "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
           "itemtype": "property",
           "name": "metaError",
@@ -2314,15 +2380,15 @@
       "extension_for": [],
       "module": "Addon",
       "file": "addon/services/fountainhead.js",
-      "line": 6,
+      "line": 7,
       "description": "<p>Fountainhead application service.</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Service",
       "method": [
         {
           "file": "addon/services/fountainhead.js",
-          "line": 40,
-          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+          "line": 51,
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
           "itemtype": "method",
           "name": "init",
           "class": "Fountainhead",
@@ -2332,8 +2398,19 @@
       "property": [
         {
           "file": "addon/services/fountainhead.js",
-          "line": 17,
-          "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+          "line": 18,
+          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+          "itemtype": "property",
+          "name": "apiNamespace",
+          "type": "{string}",
+          "default": "'/docs'",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        },
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 28,
+          "description": "<p>Documentation meta fetched from <code>/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
           "itemtype": "property",
           "name": "meta",
           "type": "{?Object}",
@@ -2343,7 +2420,7 @@
         },
         {
           "file": "addon/services/fountainhead.js",
-          "line": 28,
+          "line": 39,
           "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
           "itemtype": "property",
           "name": "metaError",
@@ -3031,14 +3108,15 @@
       "srcFileId": "blueprints_ember-fountainhead_index.js"
     },
     {
-      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
-      "line": 30,
-      "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+      "file": "addon/services/fountainhead.js",
+      "line": 18,
+      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
       "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
-      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+      "name": "apiNamespace",
+      "type": "{string}",
+      "default": "'/docs'",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
     },
     {
       "file": "addon/components/fountain-head/docs/sidebar.js",
@@ -3049,6 +3127,16 @@
       "default": "['stringForAriaHidden:aria-hidden']",
       "class": "FountainHead.Docs.Sidebar",
       "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 30,
+      "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
     },
     {
       "file": "addon/components/fountain-head/docs/class.js",
@@ -3081,66 +3169,6 @@
       "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/class/class-item.js",
-      "line": 25,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-classitem']",
-      "class": "FountainHead.Class.ClassItem",
-      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/class/header.js",
-      "line": 34,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-page-header']",
-      "class": "FountainHead.Class.Header",
-      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
-      "line": 36,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-sidebar']",
-      "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/index/landing.js",
-      "line": 15,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-landing']",
-      "class": "FountainHead.Header",
-      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
-      "line": 65,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-tabs-container']",
-      "class": "FountainHead.Class.ClassItemsContainer",
-      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
-    },
-    {
-      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
-      "line": 38,
-      "description": "<p>Class names: <code>core-svg</code></p>\n",
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
-      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
-    },
-    {
       "file": "addon/components/fountain-head/docs/header.js",
       "line": 39,
       "itemtype": "property",
@@ -3149,16 +3177,6 @@
       "default": "['fh-addon-header']",
       "class": "FountainHead.Module",
       "srcFileId": "addon_components_fountain-head_docs_header.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/footer.js",
-      "line": 14,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-addon-footer']",
-      "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_footer.js"
     },
     {
       "file": "addon/components/fountain-head/shared/runtime-description.js",
@@ -3171,6 +3189,66 @@
       "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
     },
     {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 34,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-page-header']",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 38,
+      "description": "<p>Class names: <code>core-svg</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 65,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-tabs-container']",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-item.js",
+      "line": 25,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-classitem']",
+      "class": "FountainHead.Class.ClassItem",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 36,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-sidebar']",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/footer.js",
+      "line": 14,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-addon-footer']",
+      "class": "FountainHead.Docs.Github",
+      "srcFileId": "addon_components_fountain-head_docs_footer.js"
+    },
+    {
       "file": "addon/components/fountain-head/docs/class/meta.js",
       "line": 89,
       "itemtype": "property",
@@ -3179,6 +3257,16 @@
       "default": "['fh-class-meta']",
       "class": "FountainHead.Class.Meta",
       "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/index/landing.js",
+      "line": 15,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-landing']",
+      "class": "FountainHead.Header",
+      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
     },
     {
       "file": "addon/components/fountain-head/shared/runtime-description.js",
@@ -3190,6 +3278,15 @@
       "default": "''",
       "class": "FountainHead.Shared.RuntimeDescription",
       "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 24,
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
     },
     {
       "file": "addon/components/fountain-head/docs/class/class-items-container.js",
@@ -3224,17 +3321,8 @@
       "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/module.js",
-      "line": 24,
-      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
-      "itemtype": "event",
-      "name": "didReceiveAttrs",
-      "class": "FountainHead.Module",
-      "srcFileId": "addon_components_fountain-head_docs_module.js"
-    },
-    {
       "file": "addon/routes/docs/classes.js",
-      "line": 25,
+      "line": 28,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",
@@ -3243,7 +3331,7 @@
     },
     {
       "file": "addon/routes/docs/files.js",
-      "line": 18,
+      "line": 28,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",
@@ -3252,7 +3340,7 @@
     },
     {
       "file": "addon/routes/docs/modules.js",
-      "line": 25,
+      "line": 28,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",
@@ -3397,15 +3485,6 @@
       "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
     },
     {
-      "file": "addon/services/fountainhead.js",
-      "line": 40,
-      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
-      "itemtype": "method",
-      "name": "init",
-      "class": "Fountainhead",
-      "srcFileId": "addon_services_fountainhead.js"
-    },
-    {
       "file": "addon/components/fountain-head/docs/class/class-item.js",
       "line": 35,
       "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
@@ -3413,6 +3492,15 @@
       "name": "init",
       "class": "FountainHead.Class.ClassItem",
       "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 51,
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
     },
     {
       "file": "addon/components/fountain-head/shared/runtime-description.js",
@@ -3471,8 +3559,8 @@
     },
     {
       "file": "addon/services/fountainhead.js",
-      "line": 17,
-      "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+      "line": 28,
+      "description": "<p>Documentation meta fetched from <code>/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
       "itemtype": "property",
       "name": "meta",
       "type": "{?Object}",
@@ -3482,7 +3570,7 @@
     },
     {
       "file": "addon/services/fountainhead.js",
-      "line": 28,
+      "line": 39,
       "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
       "itemtype": "property",
       "name": "metaError",
@@ -3524,36 +3612,9 @@
       "srcFileId": "lib_create-dirs.js"
     },
     {
-      "file": "addon/routes/docs/modules.js",
-      "line": 11,
-      "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
-      "itemtype": "method",
-      "name": "model",
-      "params": [
-        {
-          "name": "params",
-          "description": null,
-          "type": "Object",
-          "props": [
-            {
-              "name": "module_id",
-              "description": "Name of this class, use to fetch data",
-              "type": "String"
-            }
-          ]
-        }
-      ],
-      "return": {
-        "description": "jQuery ajax promise",
-        "type": "Promise"
-      },
-      "class": "Docs.Modules",
-      "srcFileId": "addon_routes_docs_modules.js"
-    },
-    {
       "file": "addon/routes/docs/classes.js",
-      "line": 11,
-      "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+      "line": 14,
+      "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -3578,15 +3639,58 @@
       "srcFileId": "addon_routes_docs_classes.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/class/meta.js",
-      "line": 44,
-      "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
-      "itemtype": "property",
-      "name": "module",
-      "type": "{string}",
-      "default": "''",
-      "class": "FountainHead.Class.Meta",
-      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+      "file": "addon/routes/docs/modules.js",
+      "line": 14,
+      "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "module_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Modules",
+      "srcFileId": "addon_routes_docs_modules.js"
+    },
+    {
+      "file": "addon/routes/docs/files.js",
+      "line": 14,
+      "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "file_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
     },
     {
       "file": "addon/components/fountain-head/docs/module.js",
@@ -3598,6 +3702,17 @@
       "default": "''",
       "class": "FountainHead.Module",
       "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 44,
+      "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
     },
     {
       "file": "addon/components/fountain-head/docs/class/class-items-container.js",
@@ -3722,17 +3837,6 @@
       "srcFileId": "lib_generate-fountainhead-data.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/class/header.js",
-      "line": 16,
-      "description": "<p>Src file id for this file. Used for link to for source.</p>\n",
-      "itemtype": "property",
-      "name": "srcFileId",
-      "type": "{string}",
-      "default": "''",
-      "class": "FountainHead.Class.Header",
-      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
-    },
-    {
       "file": "addon/components/fountain-head/docs/class/meta.js",
       "line": 60,
       "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
@@ -3744,6 +3848,17 @@
       "default": "''",
       "class": "FountainHead.Class.Meta",
       "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 16,
+      "description": "<p>Src file id for this file. Used for link to for source.</p>\n",
+      "itemtype": "property",
+      "name": "srcFileId",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
     },
     {
       "file": "addon/components/fountain-head/docs/sidebar.js",
@@ -3811,14 +3926,24 @@
       "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/header.js",
-      "line": 45,
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 40,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "default": "'header'",
-      "class": "FountainHead.Module",
-      "srcFileId": "addon_components_fountain-head_docs_header.js"
+      "default": "'h2'",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 95,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'div'",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
     },
     {
       "file": "addon/components/fountain-head/docs/footer.js",
@@ -3831,24 +3956,14 @@
       "srcFileId": "addon_components_fountain-head_docs_footer.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/class/header.js",
-      "line": 40,
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 45,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "default": "'h2'",
-      "class": "FountainHead.Class.Header",
-      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
-      "line": 42,
-      "itemtype": "property",
-      "name": "tagName",
-      "type": "{string}",
-      "default": "'nav'",
-      "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "default": "'header'",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
     },
     {
       "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
@@ -3861,14 +3976,14 @@
       "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/class/meta.js",
-      "line": 95,
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 42,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "default": "'div'",
-      "class": "FountainHead.Class.Meta",
-      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+      "default": "'nav'",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
     },
     {
       "file": "addon/components/fountain-head/docs/class/meta.js",

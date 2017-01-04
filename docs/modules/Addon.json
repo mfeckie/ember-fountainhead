@@ -26,6 +26,6 @@
   "namespaces": {},
   "tag": "module",
   "file": "addon/services/fountainhead.js",
-  "line": 6,
+  "line": 7,
   "description": "<p>Addon module contains the components, routes and utils for generating docs\napplication.</p>\n"
 }
