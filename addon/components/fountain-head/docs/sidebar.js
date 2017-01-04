@@ -85,7 +85,7 @@ export default Component.extend({
     {{! Project Logo, falls back to ember logo if one isn't specified }}
     <div class="project-logo-wrapper fh-element">
       {{#link-to 'index' classNames='logo-link'}}
-        <img src={{if logo logo '/ember-fountainhead/img/ember-logo.png'}} class="project-logo" alt="project logo" />
+        <img src={{if meta.logo meta.logo '/ember-fountainhead/img/ember-logo.png'}} class="project-logo" alt="project logo" />
       {{/link-to}}
     </div>
 

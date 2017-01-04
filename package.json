@@ -9,13 +9,13 @@
   "scripts": {
     "prepublish": "npm run sass",
     "build": "ember build",
+    "docs:prod": "NODE_ENV=production ember docs",
+    "deploy": "npm run docs:prod && ember b -environment=production && gh-pages -d dist",
     "start": "ember server",
-    "deploy": "gh-pages -d dist",
+    "svgs": "svg-sprite --defs --defs-dest=public/svg --defs-sprite=symbol-defs.svg public/svg/svgs/*.svg",
     "test": "ember try:each",
     "test:lib": "mocha --recursive lib/*.spec.js lib/**/*.spec.js",
-    "sass": "node-sass app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css",
-    "sass:watch": "node-sass -w=app/styles app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css",
-    "svgs": "svg-sprite --defs --defs-dest=public/svg --defs-sprite=symbol-defs.svg public/svg/svgs/*.svg"
+    "sass": "node-sass app/styles/ember-fountainhead.scss vendor/ember-fountainhead.css"
   },
   "repository": "https://github.com/healthsparq/ember-fountainhead",
   "engines": {

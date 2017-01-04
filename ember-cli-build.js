@@ -7,6 +7,12 @@ module.exports = function(defaults) {
       useLintTree: false
     },
 
+    // Don't fingerprint the ember-logo b/c it is pulled using a path from the
+    // docs meta which doesn't get updated with fingerprint hash
+    fingerprint: {
+      exclude: ['ember-logo']
+    },
+
     sassOptions: {
       extension: 'scss'
     }

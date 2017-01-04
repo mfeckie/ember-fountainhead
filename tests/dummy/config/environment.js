@@ -41,7 +41,7 @@ module.exports = function(environment) {
    * assets need to be served from that root in production
    */
   if (environment === 'production') {
-    ENV.rootURL = '/ember-fountainhead';
+    ENV.rootURL = '/ember-fountainhead/';
   }
 
   return ENV;
