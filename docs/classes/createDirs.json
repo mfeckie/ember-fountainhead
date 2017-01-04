@@ -1,0 +1,76 @@
+{
+  "name": "createDirs",
+  "shortname": "createDirs",
+  "classitems": [
+    {
+      "file": "lib/create-dirs.js",
+      "line": 19,
+      "description": "<p>Synchronous mkdir that handles creating a potentially nested directory</p>\n",
+      "itemtype": "method",
+      "name": "mkdirSync",
+      "params": [
+        {
+          "name": "dirPath",
+          "description": "<p>Directory path to create, can be nested</p>\n",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "createDirs",
+      "module": "Lib",
+      "srcFileId": "lib_create-dirs.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [
+    "Index"
+  ],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/create-dirs.js",
+  "line": 7,
+  "description": "<p>Handle creating output directories for Fountainhead data.</p>\n",
+  "is_constructor": 1,
+  "params": [
+    {
+      "name": "output",
+      "description": "Project output configurations",
+      "type": "Object"
+    }
+  ],
+  "return": {
+    "description": "",
+    "type": "Undefined"
+  },
+  "method": [
+    {
+      "file": "lib/create-dirs.js",
+      "line": 19,
+      "description": "<p>Synchronous mkdir that handles creating a potentially nested directory</p>\n",
+      "itemtype": "method",
+      "name": "mkdirSync",
+      "params": [
+        {
+          "name": "dirPath",
+          "description": "<p>Directory path to create, can be nested</p>\n",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "createDirs",
+      "module": "Lib",
+      "srcFileId": "lib_create-dirs.js"
+    }
+  ],
+  "property": [],
+  "event": [],
+  "srcFileId": "lib_create-dirs.js"
+}

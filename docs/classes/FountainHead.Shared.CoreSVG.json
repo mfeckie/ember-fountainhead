@@ -1,0 +1,142 @@
+{
+  "name": "FountainHead.Shared.CoreSVG",
+  "shortname": "FountainHead.Shared.CoreSVG",
+  "classitems": [
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 30,
+      "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 44,
+      "description": "<p>Bound classNames: <code>svgId</code></p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 38,
+      "description": "<p>Class names: <code>core-svg</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 13,
+      "description": "<p>File path to svg definitions file</p>\n",
+      "itemtype": "property",
+      "name": "filePath",
+      "type": "{string}",
+      "default": "assets/svg-defs.svg",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 20,
+      "description": "<p>The id of the svg.</p>\n",
+      "itemtype": "property",
+      "name": "svgId",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 50,
+      "description": "<p>SVG DOM element</p>\n",
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+  "line": 4,
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 30,
+      "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 44,
+      "description": "<p>Bound classNames: <code>svgId</code></p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 38,
+      "description": "<p>Class names: <code>core-svg</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 13,
+      "description": "<p>File path to svg definitions file</p>\n",
+      "itemtype": "property",
+      "name": "filePath",
+      "type": "{string}",
+      "default": "assets/svg-defs.svg",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 20,
+      "description": "<p>The id of the svg.</p>\n",
+      "itemtype": "property",
+      "name": "svgId",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 50,
+      "description": "<p>SVG DOM element</p>\n",
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+}

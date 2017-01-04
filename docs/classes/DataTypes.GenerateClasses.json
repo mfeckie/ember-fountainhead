@@ -1,0 +1,37 @@
+{
+  "name": "DataTypes.GenerateClasses",
+  "shortname": "DataTypes.GenerateClasses",
+  "classitems": [],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [
+    "generateFountainheadData"
+  ],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/data-types/generate-classes.js",
+  "line": 4,
+  "description": "<p>Module handles decorating and compiling classes and their class items including:</p>\n<ul>\n<li>Compiling each class item to its class</li>\n<li>Creating an id for class and class src file</li>\n<li>Parsing class and class item descriptions markdown to HTML</li>\n</ul>\n",
+  "is_constructor": 1,
+  "params": [
+    {
+      "name": "classes",
+      "description": "Object of raw YUIDoc classes",
+      "type": "Object"
+    },
+    {
+      "name": "classItems",
+      "description": "Array of raw YUIDoc classItems",
+      "type": "Object"
+    }
+  ],
+  "return": {
+    "description": "Returns object: `{ classesMeta, classesDatas }` for saving",
+    "type": "Object"
+  },
+  "method": [],
+  "property": [],
+  "event": [],
+  "srcFileId": "lib_data-types_generate-classes.js"
+}

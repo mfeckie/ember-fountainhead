@@ -1,0 +1,31 @@
+{
+  "name": "DataTypes.GenerateModules",
+  "shortname": "DataTypes.GenerateModules",
+  "classitems": [],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [
+    "generateFountainheadData"
+  ],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/data-types/generate-modules.js",
+  "line": 4,
+  "description": "<p>Handle parsing/decorating raw YUIDoc modules data including:</p>\n<ul>\n<li>Generate meta objects for each module that can be used for the sidebar nav</li>\n<li>Create an array of modules from YUIDoc object of modules for standard lib format</li>\n<li>Parse module markdown description to HTML</li>\n</ul>\n",
+  "params": [
+    {
+      "name": "modules",
+      "description": "YUIDoc raw modules object",
+      "type": "Object"
+    }
+  ],
+  "return": {
+    "description": "Returns object: `{ modulesMeta, modulesDatas }` for saving",
+    "type": "Object"
+  },
+  "method": [],
+  "property": [],
+  "event": [],
+  "srcFileId": "lib_data-types_generate-modules.js"
+}

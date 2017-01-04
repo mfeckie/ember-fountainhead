@@ -1,0 +1,84 @@
+{
+  "name": "Fountainhead",
+  "shortname": "Fountainhead",
+  "classitems": [
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 40,
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 17,
+      "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+      "itemtype": "property",
+      "name": "meta",
+      "type": "{?Object}",
+      "default": "null",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 28,
+      "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
+      "itemtype": "property",
+      "name": "metaError",
+      "type": "{Boolean}",
+      "default": "false",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/services/fountainhead.js",
+  "line": 6,
+  "description": "<p>Fountainhead application service.</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Service",
+  "method": [
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 40,
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    }
+  ],
+  "property": [
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 17,
+      "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+      "itemtype": "property",
+      "name": "meta",
+      "type": "{?Object}",
+      "default": "null",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 28,
+      "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
+      "itemtype": "property",
+      "name": "metaError",
+      "type": "{Boolean}",
+      "default": "false",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_services_fountainhead.js"
+}

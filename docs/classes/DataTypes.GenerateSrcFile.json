@@ -1,0 +1,28 @@
+{
+  "name": "DataTypes.GenerateSrcFile",
+  "shortname": "DataTypes.GenerateSrcFile",
+  "classitems": [],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [
+    "generateFountainheadData"
+  ],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/data-types/generate-src-file.js",
+  "line": 5,
+  "description": "<p>Handle syntax highlighting and creating meta information for a src file</p>\n",
+  "is_constructor": 1,
+  "params": [
+    {
+      "name": "filePath",
+      "description": "File filepath from class definition",
+      "type": "String"
+    }
+  ],
+  "method": [],
+  "property": [],
+  "event": [],
+  "srcFileId": "lib_data-types_generate-src-file.js"
+}

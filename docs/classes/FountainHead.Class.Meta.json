@@ -1,0 +1,241 @@
+{
+  "name": "FountainHead.Class.Meta",
+  "shortname": "FountainHead.Class.Meta",
+  "classitems": [
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 17,
+      "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
+      "itemtype": "property",
+      "name": "access",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 89,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array.<string>}",
+      "default": "['fh-class-meta']",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 28,
+      "description": "<p>The value property is set by using the <code>@extends</code> tag. Any class used in\nan extends tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "extends",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 36,
+      "description": "<p>The file property matches where the documentation for a class is declared\nin the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "file",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 52,
+      "description": "<p>The line property matches the line where documentation for a class is\ndeclared in the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "line",
+      "type": "{?number}",
+      "default": "null",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 44,
+      "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 60,
+      "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
+      "access": "private",
+      "tagname": "",
+      "itemtype": "property",
+      "name": "srcFileId",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 69,
+      "description": "<p>The submodule property is set by using the <code>@submodule</code> tag. Any submodule\nused in a submodule tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "submodule",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 95,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'div'",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 77,
+      "description": "<p>The uses array is set by using one or more <code>@uses</code> tags. Any class used in\na uses tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "uses",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountain-head/docs/class/meta.js",
+  "line": 4,
+  "description": "<p>Creates meta information for a documentation class.</p>\n<p>TODO: Document which YUIDoc tags generate what meta data</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 17,
+      "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
+      "itemtype": "property",
+      "name": "access",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 89,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array.<string>}",
+      "default": "['fh-class-meta']",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 28,
+      "description": "<p>The value property is set by using the <code>@extends</code> tag. Any class used in\nan extends tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "extends",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 36,
+      "description": "<p>The file property matches where the documentation for a class is declared\nin the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "file",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 52,
+      "description": "<p>The line property matches the line where documentation for a class is\ndeclared in the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "line",
+      "type": "{?number}",
+      "default": "null",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 44,
+      "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 60,
+      "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
+      "access": "private",
+      "tagname": "",
+      "itemtype": "property",
+      "name": "srcFileId",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 69,
+      "description": "<p>The submodule property is set by using the <code>@submodule</code> tag. Any submodule\nused in a submodule tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "submodule",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 95,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'div'",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 77,
+      "description": "<p>The uses array is set by using one or more <code>@uses</code> tags. Any class used in\na uses tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "uses",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+}

@@ -1,0 +1,3897 @@
+{
+  "project": {},
+  "files": {
+    "addon/components/fountain-head/docs/class/class-item.js": {
+      "name": "addon/components/fountain-head/docs/class/class-item.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Class.ClassItem": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/class/class-items-container.js": {
+      "name": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Class.ClassItemsContainer": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/class/header.js": {
+      "name": "addon/components/fountain-head/docs/class/header.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Class.Header": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/class/meta.js": {
+      "name": "addon/components/fountain-head/docs/class/meta.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Class.Meta": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/index/landing.js": {
+      "name": "addon/components/fountain-head/docs/index/landing.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Header": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/class.js": {
+      "name": "addon/components/fountain-head/docs/class.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Class": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/file.js": {
+      "name": "addon/components/fountain-head/docs/file.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.File": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/footer.js": {
+      "name": "addon/components/fountain-head/docs/footer.js",
+      "modules": {},
+      "classes": {},
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/github.js": {
+      "name": "addon/components/fountain-head/docs/github.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Docs.Github": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/header.js": {
+      "name": "addon/components/fountain-head/docs/header.js",
+      "modules": {},
+      "classes": {},
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/module.js": {
+      "name": "addon/components/fountain-head/docs/module.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Module": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs/sidebar.js": {
+      "name": "addon/components/fountain-head/docs/sidebar.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Docs.Sidebar": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/shared/fountainhead-svg.js": {
+      "name": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Shared.CoreSVG": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/shared/runtime-description.js": {
+      "name": "addon/components/fountain-head/shared/runtime-description.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Shared.RuntimeDescription": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountain-head/docs.js": {
+      "name": "addon/components/fountain-head/docs.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Docs": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/helpers/eq.js": {
+      "name": "addon/helpers/eq.js",
+      "modules": {},
+      "classes": {
+        "Helper.Eq": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/routes/docs/classes.js": {
+      "name": "addon/routes/docs/classes.js",
+      "modules": {},
+      "classes": {
+        "Docs.Classes": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/routes/docs/files.js": {
+      "name": "addon/routes/docs/files.js",
+      "modules": {},
+      "classes": {
+        "Docs.Files": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/routes/docs/modules.js": {
+      "name": "addon/routes/docs/modules.js",
+      "modules": {},
+      "classes": {
+        "Docs.Modules": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/services/fountainhead.js": {
+      "name": "addon/services/fountainhead.js",
+      "modules": {},
+      "classes": {
+        "Fountainhead": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/_module-definition.js": {
+      "name": "addon/_module-definition.js",
+      "modules": {
+        "Addon": 1
+      },
+      "classes": {},
+      "fors": {},
+      "namespaces": {}
+    },
+    "app/instance-initializers/fountainhead-routes.js": {
+      "name": "app/instance-initializers/fountainhead-routes.js",
+      "modules": {
+        "App": 1
+      },
+      "classes": {
+        "FountainheadRoutes": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "blueprints/ember-fountainhead/index.js": {
+      "name": "blueprints/ember-fountainhead/index.js",
+      "modules": {
+        "Blueprints": 1
+      },
+      "classes": {
+        "EmberFountainhead.Index": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/data-types/_module.js": {
+      "name": "lib/data-types/_module.js",
+      "modules": {
+        "Lib": 1
+      },
+      "classes": {},
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/data-types/generate-classes.js": {
+      "name": "lib/data-types/generate-classes.js",
+      "modules": {},
+      "classes": {
+        "DataTypes.GenerateClasses": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/data-types/generate-modules.js": {
+      "name": "lib/data-types/generate-modules.js",
+      "modules": {},
+      "classes": {
+        "DataTypes.GenerateModules": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/data-types/generate-src-file.js": {
+      "name": "lib/data-types/generate-src-file.js",
+      "modules": {},
+      "classes": {
+        "DataTypes.GenerateSrcFile": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/create-dirs.js": {
+      "name": "lib/create-dirs.js",
+      "modules": {},
+      "classes": {
+        "createDirs": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/decorate-config.js": {
+      "name": "lib/decorate-config.js",
+      "modules": {},
+      "classes": {
+        "decorateConfig": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/generate-fountainhead-data.js": {
+      "name": "lib/generate-fountainhead-data.js",
+      "modules": {},
+      "classes": {
+        "generateFountainheadData": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/index.js": {
+      "name": "lib/index.js",
+      "modules": {},
+      "classes": {
+        "Index": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "lib/parse-markdown.js": {
+      "name": "lib/parse-markdown.js",
+      "modules": {},
+      "classes": {
+        "parseMarkdown": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    }
+  },
+  "modules": {
+    "Addon": {
+      "name": "Addon",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "FountainHead.Class.ClassItem": 1,
+        "FountainHead.Class.ClassItemsContainer": 1,
+        "FountainHead.Class.Header": 1,
+        "FountainHead.Class.Meta": 1,
+        "FountainHead.Header": 1,
+        "FountainHead.Class": 1,
+        "FountainHead.File": 1,
+        "FountainHead.Docs.Github": 1,
+        "FountainHead.Module": 1,
+        "FountainHead.Docs.Sidebar": 1,
+        "FountainHead.Shared.CoreSVG": 1,
+        "FountainHead.Shared.RuntimeDescription": 1,
+        "FountainHead.Docs": 1,
+        "Helper.Eq": 1,
+        "Docs.Classes": 1,
+        "Docs.Files": 1,
+        "Docs.Modules": 1,
+        "Fountainhead": 1
+      },
+      "fors": {},
+      "namespaces": {},
+      "tag": "module",
+      "file": "addon/services/fountainhead.js",
+      "line": 6,
+      "description": "<p>Addon module contains the components, routes and utils for generating docs\napplication.</p>\n"
+    },
+    "App": {
+      "name": "App",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "FountainheadRoutes": 1
+      },
+      "fors": {},
+      "namespaces": {},
+      "tag": "module",
+      "file": "app/instance-initializers/fountainhead-routes.js",
+      "line": 11,
+      "description": "<p>Fountainhead’s routes are automatically mounted to the consuming application’s\nrouter through an <code>instance-initializer</code>. We’re currently directly importing\nthe consuming application’s router by declaring this initializer in the <code>/app</code>\ndirectory instead of the <code>/addon</code> directory.</p>\n"
+    },
+    "Blueprints": {
+      "name": "Blueprints",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "EmberFountainhead.Index": 1
+      },
+      "fors": {},
+      "namespaces": {},
+      "tag": "module",
+      "file": "blueprints/ember-fountainhead/index.js",
+      "line": 14,
+      "description": "<p>When an addon has an <code>index.js</code> file under <code>/blueprints/ADDON_NAME</code>, Ember\nCLI will call the hooks defined there. We use this to handle anything that\nneeds to be updated in the consuming application only once during the addon\nsetup.</p>\n"
+    },
+    "Lib": {
+      "name": "Lib",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "DataTypes.GenerateClasses": 1,
+        "DataTypes.GenerateModules": 1,
+        "DataTypes.GenerateSrcFile": 1,
+        "createDirs": 1,
+        "decorateConfig": 1,
+        "generateFountainheadData": 1,
+        "Index": 1,
+        "parseMarkdown": 1
+      },
+      "fors": {},
+      "namespaces": {},
+      "tag": "module",
+      "file": "lib/parse-markdown.js",
+      "line": 24,
+      "description": "<p>Modules in the <code>./lib</code> directory handle generating -&gt; parsing -&gt; decorating -&gt;\nsaving all data required for Fountainhead. Fountainhead is backed by REST APIs\nrather than static file generation. Each module, class and file are saved as\nJSON fetched on demand by the client.</p>\n<p>See this module for details/classes on the Node data generation application.\nSee below for a high level overview of the flow of the application through\nthe related modules.</p>\n<h2>Lib Classes Overview:</h2>\n<h4>Validation &amp;&amp; Preparation</h4>\n<ul>\n<li><code>index.js</code>: Primary entry point to Node application</li>\n<li><code>decorate-config</code>: Validate and merge addon configs, package JSON and default configs</li>\n<li><code>create-dirs</code>: Create directories required for JSON files</li>\n</ul>\n<h4>Generation &amp;&amp; Decoration</h4>\n<ul>\n<li><code>generate-fountainhead-data</code>: Coordinates parsing raw YUIDoc using <code>data-types</code> modules</li>\n<li><code>data-types/generate-modules</code>: Parse &amp;&amp; decorate raw modules data</li>\n<li><code>data-types/generate-classes</code>: Parse &amp;&amp; decorate raw class &amp;&amp; class items data</li>\n<li><code>data-types/generate-file</code>: Parse &amp;&amp; decorate source files</li>\n<li><code>parse-markdown</code>: Called for every description, parses markdown contents to HTML</li>\n</ul>\n"
+    }
+  },
+  "classes": {
+    "FountainHead.Class.ClassItem": {
+      "name": "FountainHead.Class.ClassItem",
+      "shortname": "FountainHead.Class.ClassItem",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 15,
+          "description": "<p>Model backing this class item, generated by YUIDoc.\nTODO: Document props of classItem and how they get used in template</p>\n",
+          "itemtype": "property",
+          "name": "classItem",
+          "type": "{Object}",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 25,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-classitem']",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 35,
+          "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/class/class-item.js",
+      "line": 4,
+      "description": "<p>Individual class property or method documentation item</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 35,
+          "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 15,
+          "description": "<p>Model backing this class item, generated by YUIDoc.\nTODO: Document props of classItem and how they get used in template</p>\n",
+          "itemtype": "property",
+          "name": "classItem",
+          "type": "{Object}",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-item.js",
+          "line": 25,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-classitem']",
+          "class": "FountainHead.Class.ClassItem",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    "FountainHead.Class.ClassItemsContainer": {
+      "name": "FountainHead.Class.ClassItemsContainer",
+      "shortname": "FountainHead.Class.ClassItemsContainer",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 56,
+          "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
+          "itemtype": "property",
+          "name": "activeTab",
+          "type": "{string}",
+          "default": "indexPanel",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 65,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-tabs-container']",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 75,
+          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 31,
+          "description": "<p>This class’ array of event documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "event",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 99,
+          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "itemtype": "method",
+          "name": "goToItem",
+          "params": [
+            {
+              "name": "classitem",
+              "description": "<p>Backing classitem</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "itemtype",
+                  "description": "Type for item of: `method`/`property`/`event`",
+                  "type": "String"
+                },
+                {
+                  "name": "name",
+                  "description": "Name for classitem",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 38,
+          "description": "<p>This class’ array of method documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "method",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 45,
+          "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
+          "itemtype": "property",
+          "name": "name",
+          "type": "{string}",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 24,
+          "description": "<p>This class’ array of property documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "property",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 133,
+          "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
+          "itemtype": "method",
+          "name": "tabsChanged",
+          "params": [
+            {
+              "name": "tab",
+              "description": "<p>Backing object for a given tab</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "elementId",
+                  "description": "The id of the tab, controls current tab displayed",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 7,
+      "description": "<p>Tab container for the class’ documentation items. Component handles running\na controlled instance of <code>core-tabs</code> by tracking <code>activeTab</code> internally and\npassing <code>tabsChanged</code> to the <code>core-tabs</code> instance.</p>\n<p>The active tab is reset to the index panel anytime that the <code>name</code> (of the\nclass) changes.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 99,
+          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "itemtype": "method",
+          "name": "goToItem",
+          "params": [
+            {
+              "name": "classitem",
+              "description": "<p>Backing classitem</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "itemtype",
+                  "description": "Type for item of: `method`/`property`/`event`",
+                  "type": "String"
+                },
+                {
+                  "name": "name",
+                  "description": "Name for classitem",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 133,
+          "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
+          "itemtype": "method",
+          "name": "tabsChanged",
+          "params": [
+            {
+              "name": "tab",
+              "description": "<p>Backing object for a given tab</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "elementId",
+                  "description": "The id of the tab, controls current tab displayed",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 56,
+          "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
+          "itemtype": "property",
+          "name": "activeTab",
+          "type": "{string}",
+          "default": "indexPanel",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 65,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-tabs-container']",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 31,
+          "description": "<p>This class’ array of event documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "event",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 38,
+          "description": "<p>This class’ array of method documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "method",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 45,
+          "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
+          "itemtype": "property",
+          "name": "name",
+          "type": "{string}",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 24,
+          "description": "<p>This class’ array of property documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "property",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        }
+      ],
+      "event": [
+        {
+          "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+          "line": 75,
+          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "class": "FountainHead.Class.ClassItemsContainer",
+          "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+        }
+      ],
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    "FountainHead.Class.Header": {
+      "name": "FountainHead.Class.Header",
+      "shortname": "FountainHead.Class.Header",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 34,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-page-header']",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 23,
+          "description": "<p>Name of the class. Is generated by the <code>@constructor</code> tag.</p>\n",
+          "itemtype": "property",
+          "name": "name",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 16,
+          "description": "<p>Src file id for this file. Used for link to for source.</p>\n",
+          "itemtype": "property",
+          "name": "srcFileId",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 40,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'h2'",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 4,
+      "description": "<p>Docs Page class header. Contains class name with a link to source file for\nclass.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 34,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-page-header']",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 23,
+          "description": "<p>Name of the class. Is generated by the <code>@constructor</code> tag.</p>\n",
+          "itemtype": "property",
+          "name": "name",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 16,
+          "description": "<p>Src file id for this file. Used for link to for source.</p>\n",
+          "itemtype": "property",
+          "name": "srcFileId",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/header.js",
+          "line": 40,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'h2'",
+          "class": "FountainHead.Class.Header",
+          "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    "FountainHead.Class.Meta": {
+      "name": "FountainHead.Class.Meta",
+      "shortname": "FountainHead.Class.Meta",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 17,
+          "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
+          "itemtype": "property",
+          "name": "access",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 89,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array.<string>}",
+          "default": "['fh-class-meta']",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 28,
+          "description": "<p>The value property is set by using the <code>@extends</code> tag. Any class used in\nan extends tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "extends",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 36,
+          "description": "<p>The file property matches where the documentation for a class is declared\nin the source files. It is set automatically.</p>\n",
+          "itemtype": "property",
+          "name": "file",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 52,
+          "description": "<p>The line property matches the line where documentation for a class is\ndeclared in the source files. It is set automatically.</p>\n",
+          "itemtype": "property",
+          "name": "line",
+          "type": "{?number}",
+          "default": "null",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 44,
+          "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 60,
+          "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
+          "access": "private",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "srcFileId",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 69,
+          "description": "<p>The submodule property is set by using the <code>@submodule</code> tag. Any submodule\nused in a submodule tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "submodule",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 95,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'div'",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 77,
+          "description": "<p>The uses array is set by using one or more <code>@uses</code> tags. Any class used in\na uses tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "uses",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 4,
+      "description": "<p>Creates meta information for a documentation class.</p>\n<p>TODO: Document which YUIDoc tags generate what meta data</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 17,
+          "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
+          "itemtype": "property",
+          "name": "access",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 89,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array.<string>}",
+          "default": "['fh-class-meta']",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 28,
+          "description": "<p>The value property is set by using the <code>@extends</code> tag. Any class used in\nan extends tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "extends",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 36,
+          "description": "<p>The file property matches where the documentation for a class is declared\nin the source files. It is set automatically.</p>\n",
+          "itemtype": "property",
+          "name": "file",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 52,
+          "description": "<p>The line property matches the line where documentation for a class is\ndeclared in the source files. It is set automatically.</p>\n",
+          "itemtype": "property",
+          "name": "line",
+          "type": "{?number}",
+          "default": "null",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 44,
+          "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 60,
+          "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
+          "access": "private",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "srcFileId",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 69,
+          "description": "<p>The submodule property is set by using the <code>@submodule</code> tag. Any submodule\nused in a submodule tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "submodule",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 95,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'div'",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/class/meta.js",
+          "line": 77,
+          "description": "<p>The uses array is set by using one or more <code>@uses</code> tags. Any class used in\na uses tag will be linked to.</p>\n",
+          "itemtype": "property",
+          "name": "uses",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHead.Class.Meta",
+          "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    "FountainHead.Header": {
+      "name": "FountainHead.Header",
+      "shortname": "FountainHead.Header",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/index/landing.js",
+          "line": 15,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-landing']",
+          "class": "FountainHead.Header",
+          "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/index/landing.js",
+      "line": 4,
+      "description": "<p>The landing message is rendered on the <code>/docs/index</code> route and shows either a\nhelpful getting started or docs related message depending on if the user has\ngenerated docs or not. We know by passing in the meta information in the\n<code>/docs/index</code> template</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/index/landing.js",
+          "line": 15,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-landing']",
+          "class": "FountainHead.Header",
+          "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+    },
+    "FountainHead.Class": {
+      "name": "FountainHead.Class",
+      "shortname": "FountainHead.Class",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/class.js",
+          "line": 15,
+          "description": "<p>Class model content.</p>\n",
+          "itemtype": "property",
+          "name": "class",
+          "type": "{Object}",
+          "class": "FountainHead.Class",
+          "srcFileId": "addon_components_fountain-head_docs_class.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/class.js",
+      "line": 4,
+      "description": "<p>Fountainhead <code>/doc/class</code> page component</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/class.js",
+          "line": 15,
+          "description": "<p>Class model content.</p>\n",
+          "itemtype": "property",
+          "name": "class",
+          "type": "{Object}",
+          "class": "FountainHead.Class",
+          "srcFileId": "addon_components_fountain-head_docs_class.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_class.js"
+    },
+    "FountainHead.File": {
+      "name": "FountainHead.File",
+      "shortname": "FountainHead.File",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/file.js",
+          "line": 12,
+          "description": "<p>JSON stringified file generated by documentation script.</p>\n",
+          "itemtype": "property",
+          "name": "file",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.File",
+          "srcFileId": "addon_components_fountain-head_docs_file.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/file.js",
+      "line": 4,
+      "description": "<p>Fountainhead <code>/doc/file</code> page component</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/file.js",
+          "line": 12,
+          "description": "<p>JSON stringified file generated by documentation script.</p>\n",
+          "itemtype": "property",
+          "name": "file",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.File",
+          "srcFileId": "addon_components_fountain-head_docs_file.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_file.js"
+    },
+    "FountainHead.Docs.Github": {
+      "name": "FountainHead.Docs.Github",
+      "shortname": "FountainHead.Docs.Github",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/footer.js",
+          "line": 14,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-addon-footer']",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_footer.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/github.js",
+          "line": 14,
+          "description": "<p>Repository URL from fountainhead configurations. If a URL has been specified\nin the configs or the <code>package.json</code> this github logo will show with a link\nto the repo</p>\n",
+          "itemtype": "property",
+          "name": "repository",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_github.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/footer.js",
+          "line": 20,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'footer'",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_footer.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "FountainHead.Docs"
+      ],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/github.js",
+      "line": 4,
+      "description": "<p>Github octocat logo in the top right corner.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/footer.js",
+          "line": 14,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-addon-footer']",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_footer.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/github.js",
+          "line": 14,
+          "description": "<p>Repository URL from fountainhead configurations. If a URL has been specified\nin the configs or the <code>package.json</code> this github logo will show with a link\nto the repo</p>\n",
+          "itemtype": "property",
+          "name": "repository",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_github.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/footer.js",
+          "line": 20,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'footer'",
+          "class": "FountainHead.Docs.Github",
+          "srcFileId": "addon_components_fountain-head_docs_footer.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_github.js"
+    },
+    "FountainHead.Module": {
+      "name": "FountainHead.Module",
+      "shortname": "FountainHead.Module",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 39,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-addon-header']",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/module.js",
+          "line": 24,
+          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_module.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 29,
+          "description": "<p>Project logo, pulled from configs</p>\n",
+          "itemtype": "property",
+          "name": "logo",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/module.js",
+          "line": 13,
+          "description": "<p>Module model content</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_module.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 17,
+          "description": "<p>Project name used as docs <code>&lt;h1&gt;</code></p>\n",
+          "itemtype": "property",
+          "name": "projectName",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 23,
+          "description": "<p>Project url, pulled from repository in <code>fountainhead.js</code> config or <code>package.json</code></p>\n",
+          "itemtype": "property",
+          "name": "projectUrl",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 45,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'header'",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 4,
+      "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere’s nothing here yet.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 39,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-addon-header']",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 29,
+          "description": "<p>Project logo, pulled from configs</p>\n",
+          "itemtype": "property",
+          "name": "logo",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/module.js",
+          "line": 13,
+          "description": "<p>Module model content</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_module.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 17,
+          "description": "<p>Project name used as docs <code>&lt;h1&gt;</code></p>\n",
+          "itemtype": "property",
+          "name": "projectName",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 23,
+          "description": "<p>Project url, pulled from repository in <code>fountainhead.js</code> config or <code>package.json</code></p>\n",
+          "itemtype": "property",
+          "name": "projectUrl",
+          "type": "{string}",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/header.js",
+          "line": 45,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'header'",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_header.js"
+        }
+      ],
+      "event": [
+        {
+          "file": "addon/components/fountain-head/docs/module.js",
+          "line": 24,
+          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "class": "FountainHead.Module",
+          "srcFileId": "addon_components_fountain-head_docs_module.js"
+        }
+      ],
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    "FountainHead.Docs.Sidebar": {
+      "name": "FountainHead.Docs.Sidebar",
+      "shortname": "FountainHead.Docs.Sidebar",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 30,
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "default": "['stringForAriaHidden:aria-hidden']",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 36,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-sidebar']",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 71,
+          "description": "<p>Method to filter on doc elements for search.</p>\n",
+          "itemtype": "method",
+          "name": "doFilter",
+          "params": [
+            {
+              "name": "query",
+              "description": "<p>The search query to filter on</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 18,
+          "description": "<p>Fountainhead meta passed from service. Used to calculate <code>stringForAriaHidden</code>\nto hide sidebar when there is no data.</p>\n",
+          "itemtype": "property",
+          "name": "meta",
+          "type": "{?Object}",
+          "default": "null",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 52,
+          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+          "itemtype": "property",
+          "name": "stringForAriaHidden",
+          "type": "{string}",
+          "return": {
+            "description": "Returns either string of `true` or `false` dependent on\n                 presence of meta",
+            "type": "String"
+          },
+          "class": "FountainHead.Docs.Sidebar",
+          "subprops": [
+            {
+              "name": "meta",
+              "description": "Fountainhead meta passed from service",
+              "type": "Object"
+            }
+          ],
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 42,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'nav'",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "FountainHead.Docs"
+      ],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 5,
+      "description": "<p>Wrapper component for the sidebar components. Expects the entire docs meta\nobject.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 71,
+          "description": "<p>Method to filter on doc elements for search.</p>\n",
+          "itemtype": "method",
+          "name": "doFilter",
+          "params": [
+            {
+              "name": "query",
+              "description": "<p>The search query to filter on</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 30,
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "default": "['stringForAriaHidden:aria-hidden']",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 36,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-sidebar']",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 18,
+          "description": "<p>Fountainhead meta passed from service. Used to calculate <code>stringForAriaHidden</code>\nto hide sidebar when there is no data.</p>\n",
+          "itemtype": "property",
+          "name": "meta",
+          "type": "{?Object}",
+          "default": "null",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 52,
+          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+          "itemtype": "property",
+          "name": "stringForAriaHidden",
+          "type": "{string}",
+          "return": {
+            "description": "Returns either string of `true` or `false` dependent on\n                 presence of meta",
+            "type": "String"
+          },
+          "class": "FountainHead.Docs.Sidebar",
+          "subprops": [
+            {
+              "name": "meta",
+              "description": "Fountainhead meta passed from service",
+              "type": "Object"
+            }
+          ],
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        },
+        {
+          "file": "addon/components/fountain-head/docs/sidebar.js",
+          "line": 42,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "'nav'",
+          "class": "FountainHead.Docs.Sidebar",
+          "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    "FountainHead.Shared.CoreSVG": {
+      "name": "FountainHead.Shared.CoreSVG",
+      "shortname": "FountainHead.Shared.CoreSVG",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 30,
+          "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 44,
+          "description": "<p>Bound classNames: <code>svgId</code></p>\n",
+          "itemtype": "property",
+          "name": "classNameBindings",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 38,
+          "description": "<p>Class names: <code>core-svg</code></p>\n",
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 13,
+          "description": "<p>File path to svg definitions file</p>\n",
+          "itemtype": "property",
+          "name": "filePath",
+          "type": "{string}",
+          "default": "assets/svg-defs.svg",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 20,
+          "description": "<p>The id of the svg.</p>\n",
+          "itemtype": "property",
+          "name": "svgId",
+          "type": "{string}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 50,
+          "description": "<p>SVG DOM element</p>\n",
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 4,
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 30,
+          "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 44,
+          "description": "<p>Bound classNames: <code>svgId</code></p>\n",
+          "itemtype": "property",
+          "name": "classNameBindings",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 38,
+          "description": "<p>Class names: <code>core-svg</code></p>\n",
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 13,
+          "description": "<p>File path to svg definitions file</p>\n",
+          "itemtype": "property",
+          "name": "filePath",
+          "type": "{string}",
+          "default": "assets/svg-defs.svg",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 20,
+          "description": "<p>The id of the svg.</p>\n",
+          "itemtype": "property",
+          "name": "svgId",
+          "type": "{string}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+          "line": 50,
+          "description": "<p>SVG DOM element</p>\n",
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "class": "FountainHead.Shared.CoreSVG",
+          "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    "FountainHead.Shared.RuntimeDescription": {
+      "name": "FountainHead.Shared.RuntimeDescription",
+      "shortname": "FountainHead.Shared.RuntimeDescription",
+      "classitems": [
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 46,
+          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+          "itemtype": "method",
+          "name": "_checkActionRefs",
+          "params": [
+            {
+              "name": "templateString",
+              "description": "<p>The template string to run the check for action matches on</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 80,
+          "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+          "itemtype": "method",
+          "name": "_generateDescription",
+          "params": [
+            {
+              "name": "templateString",
+              "description": "<p>String to generate template from</p>\n",
+              "type": "String"
+            }
+          ],
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 30,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-description']",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 19,
+          "description": "<p>The string that should be converted to a partial</p>\n",
+          "itemtype": "property",
+          "name": "description",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 139,
+          "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "params": [
+            {
+              "name": "attrs",
+              "description": "<p>Ember attrs object</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "newAttrs",
+                  "description": "The new attrs received",
+                  "type": "Object"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 115,
+          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 36,
+          "description": "<p>Name of generated partial that is used in the template.</p>\n",
+          "itemtype": "property",
+          "name": "partialName",
+          "type": "{string}",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 6,
+      "description": "<p>Generates a description during runtime by using HTMLBars to compile any\nstring to a partial. This allows us to create descriptions form JSON\nresponses with components inside of them.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 46,
+          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+          "itemtype": "method",
+          "name": "_checkActionRefs",
+          "params": [
+            {
+              "name": "templateString",
+              "description": "<p>The template string to run the check for action matches on</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 80,
+          "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+          "itemtype": "method",
+          "name": "_generateDescription",
+          "params": [
+            {
+              "name": "templateString",
+              "description": "<p>String to generate template from</p>\n",
+              "type": "String"
+            }
+          ],
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 115,
+          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 30,
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "default": "['fh-description']",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 19,
+          "description": "<p>The string that should be converted to a partial</p>\n",
+          "itemtype": "property",
+          "name": "description",
+          "type": "{string}",
+          "default": "''",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 36,
+          "description": "<p>Name of generated partial that is used in the template.</p>\n",
+          "itemtype": "property",
+          "name": "partialName",
+          "type": "{string}",
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        }
+      ],
+      "event": [
+        {
+          "file": "addon/components/fountain-head/shared/runtime-description.js",
+          "line": 139,
+          "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
+          "itemtype": "event",
+          "name": "didReceiveAttrs",
+          "params": [
+            {
+              "name": "attrs",
+              "description": "<p>Ember attrs object</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "newAttrs",
+                  "description": "The new attrs received",
+                  "type": "Object"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHead.Shared.RuntimeDescription",
+          "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+        }
+      ],
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    "FountainHead.Docs": {
+      "name": "FountainHead.Docs",
+      "shortname": "FountainHead.Docs",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountain-head/docs.js",
+      "line": 5,
+      "description": "<p>Fountainhead <code>/doc</code> page component serves as the wrapping template for all of\nFountainhead. The <code>outlet</code> for the route is yielded by this component, which\nis how we use components to handle rendering all of our markup, even with\nsubroutes.</p>\n<p>Because we want the default setup of Fountainhead to look like it’s own app\nwe render everything in a <code>fh-page-in-page-wrapper</code> wrapper which is position\nfixed to cover the entire screen. This allows us to have our own header and\nfooter even if a consuming application has one in their <code>application.hbs</code>\ntemplate.</p>\n<p>The <code>fountainhead</code> service is the primary store for the addon and handles\nfetching the meta data for the docs.</p>\n",
+      "uses": [
+        "FountainHead.Docs.Github",
+        "FountainHead.Docs.Sidebar"
+      ],
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "addon_components_fountain-head_docs.js"
+    },
+    "Helper.Eq": {
+      "name": "Helper.Eq",
+      "shortname": "Helper.Eq",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/helpers/eq.js",
+      "line": 3,
+      "description": "<p>Helper to compare two values to see if they are equal. Values must be of the same type.</p>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "args",
+          "description": "Positional args passed to helper should be compared",
+          "type": "Array"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Boolean"
+      },
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "addon_helpers_eq.js"
+    },
+    "Docs.Classes": {
+      "name": "Docs.Classes",
+      "shortname": "Docs.Classes",
+      "classitems": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 25,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        },
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 11,
+          "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "class_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/routes/docs/classes.js",
+      "line": 4,
+      "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Route",
+      "method": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 11,
+          "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "class_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "property": [],
+      "event": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 25,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
+    "Docs.Files": {
+      "name": "Docs.Files",
+      "shortname": "Docs.Files",
+      "classitems": [
+        {
+          "file": "addon/routes/docs/files.js",
+          "line": 18,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Files",
+          "srcFileId": "addon_routes_docs_files.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/routes/docs/files.js",
+      "line": 4,
+      "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Route",
+      "method": [],
+      "property": [],
+      "event": [
+        {
+          "file": "addon/routes/docs/files.js",
+          "line": 18,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Files",
+          "srcFileId": "addon_routes_docs_files.js"
+        }
+      ],
+      "srcFileId": "addon_routes_docs_files.js"
+    },
+    "Docs.Modules": {
+      "name": "Docs.Modules",
+      "shortname": "Docs.Modules",
+      "classitems": [
+        {
+          "file": "addon/routes/docs/modules.js",
+          "line": 25,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Modules",
+          "srcFileId": "addon_routes_docs_modules.js"
+        },
+        {
+          "file": "addon/routes/docs/modules.js",
+          "line": 11,
+          "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "module_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Modules",
+          "srcFileId": "addon_routes_docs_modules.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/routes/docs/modules.js",
+      "line": 4,
+      "description": "<p>Route to be created for handling modules</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Route",
+      "method": [
+        {
+          "file": "addon/routes/docs/modules.js",
+          "line": 11,
+          "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "module_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Modules",
+          "srcFileId": "addon_routes_docs_modules.js"
+        }
+      ],
+      "property": [],
+      "event": [
+        {
+          "file": "addon/routes/docs/modules.js",
+          "line": 25,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Modules",
+          "srcFileId": "addon_routes_docs_modules.js"
+        }
+      ],
+      "srcFileId": "addon_routes_docs_modules.js"
+    },
+    "Fountainhead": {
+      "name": "Fountainhead",
+      "shortname": "Fountainhead",
+      "classitems": [
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 40,
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        },
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 17,
+          "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+          "itemtype": "property",
+          "name": "meta",
+          "type": "{?Object}",
+          "default": "null",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        },
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 28,
+          "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
+          "itemtype": "property",
+          "name": "metaError",
+          "type": "{Boolean}",
+          "default": "false",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/services/fountainhead.js",
+      "line": 6,
+      "description": "<p>Fountainhead application service.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Service",
+      "method": [
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 40,
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 17,
+          "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+          "itemtype": "property",
+          "name": "meta",
+          "type": "{?Object}",
+          "default": "null",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        },
+        {
+          "file": "addon/services/fountainhead.js",
+          "line": 28,
+          "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
+          "itemtype": "property",
+          "name": "metaError",
+          "type": "{Boolean}",
+          "default": "false",
+          "class": "Fountainhead",
+          "srcFileId": "addon_services_fountainhead.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    "FountainheadRoutes": {
+      "name": "FountainheadRoutes",
+      "shortname": "FountainheadRoutes",
+      "classitems": [
+        {
+          "file": "app/instance-initializers/fountainhead-routes.js",
+          "line": 23,
+          "description": "<p>Initialize route that is called by consuming Ember application\n<code>Router</code> instance from the consuming application can directly mapped.</p>\n",
+          "itemtype": "method",
+          "name": "initialize",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainheadRoutes",
+          "module": "App",
+          "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "App",
+      "namespace": "",
+      "file": "app/instance-initializers/fountainhead-routes.js",
+      "line": 11,
+      "description": "<p>Automagically mount Fountainhead routes through an <code>instance-initializer</code>.</p>\n<p>NOTE: this initializer needs to be in the <code>/app</code> directory so that the the\nconsuming application’s router can be directly imported and manipulated.</p>\n<p>TODO: See if we can use some kind of lookup to do this from within an\ninitializer in the <code>/addon</code> directory</p>\n",
+      "is_constructor": 1,
+      "method": [
+        {
+          "file": "app/instance-initializers/fountainhead-routes.js",
+          "line": 23,
+          "description": "<p>Initialize route that is called by consuming Ember application\n<code>Router</code> instance from the consuming application can directly mapped.</p>\n",
+          "itemtype": "method",
+          "name": "initialize",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainheadRoutes",
+          "module": "App",
+          "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+        }
+      ],
+      "property": [],
+      "event": [],
+      "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+    },
+    "EmberFountainhead.Index": {
+      "name": "EmberFountainhead.Index",
+      "shortname": "EmberFountainhead.Index",
+      "classitems": [
+        {
+          "file": "blueprints/ember-fountainhead/index.js",
+          "line": 31,
+          "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+          "itemtype": "method",
+          "name": "afterInstall",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "EmberFountainhead.Index",
+          "module": "Blueprints",
+          "srcFileId": "blueprints_ember-fountainhead_index.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Blueprints",
+      "namespace": "",
+      "file": "blueprints/ember-fountainhead/index.js",
+      "line": 14,
+      "description": "<p>Fountainhead index blueprint is used to update the consuming application’s\n<code>.gitignore</code> to ignore the auto generated <code>vendor/feature-flags.js</code> file\ncreated by <code>ember-radical</code>. This file is used to create global variables if\nthe consuming application has turned off JSUglify code stripping.</p>\n",
+      "is_constructor": 1,
+      "extends": "EmberCLI.Blueprint",
+      "method": [
+        {
+          "file": "blueprints/ember-fountainhead/index.js",
+          "line": 31,
+          "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+          "itemtype": "method",
+          "name": "afterInstall",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "EmberFountainhead.Index",
+          "module": "Blueprints",
+          "srcFileId": "blueprints_ember-fountainhead_index.js"
+        }
+      ],
+      "property": [],
+      "event": [],
+      "srcFileId": "blueprints_ember-fountainhead_index.js"
+    },
+    "DataTypes.GenerateClasses": {
+      "name": "DataTypes.GenerateClasses",
+      "shortname": "DataTypes.GenerateClasses",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "generateFountainheadData"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/data-types/generate-classes.js",
+      "line": 4,
+      "description": "<p>Module handles decorating and compiling classes and their class items including:</p>\n<ul>\n<li>Compiling each class item to its class</li>\n<li>Creating an id for class and class src file</li>\n<li>Parsing class and class item descriptions markdown to HTML</li>\n</ul>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "classes",
+          "description": "Object of raw YUIDoc classes",
+          "type": "Object"
+        },
+        {
+          "name": "classItems",
+          "description": "Array of raw YUIDoc classItems",
+          "type": "Object"
+        }
+      ],
+      "return": {
+        "description": "Returns object: `{ classesMeta, classesDatas }` for saving",
+        "type": "Object"
+      },
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "lib_data-types_generate-classes.js"
+    },
+    "DataTypes.GenerateModules": {
+      "name": "DataTypes.GenerateModules",
+      "shortname": "DataTypes.GenerateModules",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "generateFountainheadData"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/data-types/generate-modules.js",
+      "line": 4,
+      "description": "<p>Handle parsing/decorating raw YUIDoc modules data including:</p>\n<ul>\n<li>Generate meta objects for each module that can be used for the sidebar nav</li>\n<li>Create an array of modules from YUIDoc object of modules for standard lib format</li>\n<li>Parse module markdown description to HTML</li>\n</ul>\n",
+      "params": [
+        {
+          "name": "modules",
+          "description": "YUIDoc raw modules object",
+          "type": "Object"
+        }
+      ],
+      "return": {
+        "description": "Returns object: `{ modulesMeta, modulesDatas }` for saving",
+        "type": "Object"
+      },
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "lib_data-types_generate-modules.js"
+    },
+    "DataTypes.GenerateSrcFile": {
+      "name": "DataTypes.GenerateSrcFile",
+      "shortname": "DataTypes.GenerateSrcFile",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "generateFountainheadData"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/data-types/generate-src-file.js",
+      "line": 5,
+      "description": "<p>Handle syntax highlighting and creating meta information for a src file</p>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "filePath",
+          "description": "File filepath from class definition",
+          "type": "String"
+        }
+      ],
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "lib_data-types_generate-src-file.js"
+    },
+    "createDirs": {
+      "name": "createDirs",
+      "shortname": "createDirs",
+      "classitems": [
+        {
+          "file": "lib/create-dirs.js",
+          "line": 19,
+          "description": "<p>Synchronous mkdir that handles creating a potentially nested directory</p>\n",
+          "itemtype": "method",
+          "name": "mkdirSync",
+          "params": [
+            {
+              "name": "dirPath",
+              "description": "<p>Directory path to create, can be nested</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "createDirs",
+          "module": "Lib",
+          "srcFileId": "lib_create-dirs.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "Index"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/create-dirs.js",
+      "line": 7,
+      "description": "<p>Handle creating output directories for Fountainhead data.</p>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "output",
+          "description": "Project output configurations",
+          "type": "Object"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "method": [
+        {
+          "file": "lib/create-dirs.js",
+          "line": 19,
+          "description": "<p>Synchronous mkdir that handles creating a potentially nested directory</p>\n",
+          "itemtype": "method",
+          "name": "mkdirSync",
+          "params": [
+            {
+              "name": "dirPath",
+              "description": "<p>Directory path to create, can be nested</p>\n",
+              "type": "String"
+            }
+          ],
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "createDirs",
+          "module": "Lib",
+          "srcFileId": "lib_create-dirs.js"
+        }
+      ],
+      "property": [],
+      "event": [],
+      "srcFileId": "lib_create-dirs.js"
+    },
+    "decorateConfig": {
+      "name": "decorateConfig",
+      "shortname": "decorateConfig",
+      "classitems": [
+        {
+          "file": "lib/decorate-config.js",
+          "line": 21,
+          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+          "itemtype": "property",
+          "name": "entry",
+          "type": "{Array}",
+          "default": "['app'] | ['addon']",
+          "class": "decorateConfig",
+          "module": "Lib",
+          "srcFileId": "lib_decorate-config.js"
+        },
+        {
+          "file": "lib/decorate-config.js",
+          "line": 29,
+          "description": "<p>Configuration output path should be a directory path. The default is <code>public/docs</code>\nwhen the consumer is an application and <code>tests/dummy/public/docs</code> when the\nconsumer is an addon (Outputting the docs to <code>/public</code> in an addon signals\nEmber CLI to bundle your docs into any consuming applications <code>/public</code> dir\nwhich is not the default behavior we want).</p>\n",
+          "itemtype": "property",
+          "name": "outputPath",
+          "type": "{string}",
+          "default": "'public/docs' | 'tests/dummy/public/docs'",
+          "class": "decorateConfig",
+          "module": "Lib",
+          "srcFileId": "lib_decorate-config.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "Index"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/decorate-config.js",
+      "line": 4,
+      "description": "<p>Handle adding default values to config and validating required properties\nare present</p>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "config",
+          "description": "Project configuration file",
+          "type": "Object"
+        },
+        {
+          "name": "packageJSON",
+          "description": "Project package.json file",
+          "type": "Object"
+        }
+      ],
+      "return": {
+        "description": "Fully decorated and validated project configuration file",
+        "type": "Object"
+      },
+      "method": [],
+      "property": [
+        {
+          "file": "lib/decorate-config.js",
+          "line": 21,
+          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+          "itemtype": "property",
+          "name": "entry",
+          "type": "{Array}",
+          "default": "['app'] | ['addon']",
+          "class": "decorateConfig",
+          "module": "Lib",
+          "srcFileId": "lib_decorate-config.js"
+        },
+        {
+          "file": "lib/decorate-config.js",
+          "line": 29,
+          "description": "<p>Configuration output path should be a directory path. The default is <code>public/docs</code>\nwhen the consumer is an application and <code>tests/dummy/public/docs</code> when the\nconsumer is an addon (Outputting the docs to <code>/public</code> in an addon signals\nEmber CLI to bundle your docs into any consuming applications <code>/public</code> dir\nwhich is not the default behavior we want).</p>\n",
+          "itemtype": "property",
+          "name": "outputPath",
+          "type": "{string}",
+          "default": "'public/docs' | 'tests/dummy/public/docs'",
+          "class": "decorateConfig",
+          "module": "Lib",
+          "srcFileId": "lib_decorate-config.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "lib_decorate-config.js"
+    },
+    "generateFountainheadData": {
+      "name": "generateFountainheadData",
+      "shortname": "generateFountainheadData",
+      "classitems": [
+        {
+          "file": "lib/generate-fountainhead-data.js",
+          "line": 63,
+          "description": "<p>The <code>docsMeta</code> object is the guide for the documentation data. It contains\ndescriptions of the project as well as arrays of module and class routing\ninformation</p>\n",
+          "itemtype": "property",
+          "name": "docsMeta",
+          "type": "{Object}",
+          "class": "generateFountainheadData",
+          "module": "Lib",
+          "srcFileId": "lib_generate-fountainhead-data.js"
+        },
+        {
+          "file": "lib/generate-fountainhead-data.js",
+          "line": 38,
+          "description": "<p>Call to handle saving data to a file. Requires a file path and data to save.\nIf data is not a string, it will be stringified</p>\n",
+          "itemtype": "method",
+          "name": "saveObjectToJSON",
+          "params": [
+            {
+              "name": "filePath",
+              "description": "<p>Path to save file at</p>\n",
+              "type": "String"
+            },
+            {
+              "name": "data",
+              "description": "<p>Data to save in file</p>\n",
+              "type": "Object|string"
+            }
+          ],
+          "return": {
+            "description": "True for successful operation, false for failures",
+            "type": "Boolean"
+          },
+          "class": "generateFountainheadData",
+          "module": "Lib",
+          "srcFileId": "lib_generate-fountainhead-data.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [
+        "Index"
+      ],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/generate-fountainhead-data.js",
+      "line": 9,
+      "description": "<p>This module handles coordinating parsing/reading/saving all of the individual\nFountainhead data files after the configs have been validated and the raw\nYUIDoc data has been generated.</p>\n<p>Module should:</p>\n<ul>\n<li>create and populate <code>docsMeta</code> that will be saved as <code>meta.json</code></li>\n<li>generate decorated modules files</li>\n<li>generate decorated class files</li>\n<li>generate decorated src file files</li>\n</ul>\n<p>NOTE: When switching doc generation from an executable to a function call\nall file operations had to be changed to a synchronous operation b/c the ember\ncommand finishes before the async file operations are complete and the contents\nare not written to file. This can be switched back to an async method by\nassembling and returning a promise.all for all async file calls</p>\n",
+      "is_constructor": 1,
+      "uses": [
+        "DataTypes.GenerateModules",
+        "DataTypes.GenerateClasses",
+        "DataTypes.GenerateSrcFile"
+      ],
+      "params": [
+        {
+          "name": "config",
+          "description": "Project configuration file",
+          "type": "Object"
+        },
+        {
+          "name": "yuidocJSON",
+          "description": "Raw yuidoc generated documentation JSON",
+          "type": "Object"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "method": [
+        {
+          "file": "lib/generate-fountainhead-data.js",
+          "line": 38,
+          "description": "<p>Call to handle saving data to a file. Requires a file path and data to save.\nIf data is not a string, it will be stringified</p>\n",
+          "itemtype": "method",
+          "name": "saveObjectToJSON",
+          "params": [
+            {
+              "name": "filePath",
+              "description": "<p>Path to save file at</p>\n",
+              "type": "String"
+            },
+            {
+              "name": "data",
+              "description": "<p>Data to save in file</p>\n",
+              "type": "Object|string"
+            }
+          ],
+          "return": {
+            "description": "True for successful operation, false for failures",
+            "type": "Boolean"
+          },
+          "class": "generateFountainheadData",
+          "module": "Lib",
+          "srcFileId": "lib_generate-fountainhead-data.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "lib/generate-fountainhead-data.js",
+          "line": 63,
+          "description": "<p>The <code>docsMeta</code> object is the guide for the documentation data. It contains\ndescriptions of the project as well as arrays of module and class routing\ninformation</p>\n",
+          "itemtype": "property",
+          "name": "docsMeta",
+          "type": "{Object}",
+          "class": "generateFountainheadData",
+          "module": "Lib",
+          "srcFileId": "lib_generate-fountainhead-data.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "lib_generate-fountainhead-data.js"
+    },
+    "Index": {
+      "name": "Index",
+      "shortname": "Index",
+      "classitems": [
+        {
+          "file": "lib/index.js",
+          "line": 34,
+          "description": "<p>Optional configs pulled from <code>fountainhead.js</code></p>\n",
+          "itemtype": "property",
+          "name": "fountainheadConfig",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        },
+        {
+          "file": "lib/index.js",
+          "line": 39,
+          "description": "<p>Package JSON for project. Used to populate project description if not\ndefined in <code>fountainhead.js</code> config.</p>\n",
+          "itemtype": "property",
+          "name": "packageJSON",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        },
+        {
+          "file": "lib/index.js",
+          "line": 68,
+          "description": "<p>Raw YUIDoc JSON data generated using constructor exported by <code>yuidocjs</code>.\nCall new with options from config to pass configs to YUIDoc and call <code>run</code>\nto generate JSON</p>\n",
+          "itemtype": "property",
+          "name": "yuidocJSON",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/index.js",
+      "line": 10,
+      "description": "<p>Fountainhead documentation data generation lib entry. Configuration is set\nthrough <code>fountainhead.js</code> file. (TODO: Add default configs to decorate-config)\nclass and link.</p>\n<p>The entry handles:</p>\n<ol>\n<li>Safe require of <code>package.json</code> &amp;&amp; <code>fountainhead.js</code> files for configs</li>\n<li>Decoration &amp;&amp; validation of project configs</li>\n<li>Generation of raw YUIDoc JSON through YUIDoc module directly</li>\n<li>Decoration of raw data in <code>generate-fountainhead-data</code> module.</li>\n</ol>\n<p>The primary module is the <code>generate-fountainhead-data</code> which handles all of\nthe decoration and file creation required for Fountainhead.</p>\n",
+      "is_constructor": 1,
+      "uses": [
+        "decorateConfig",
+        "createDirs",
+        "generateFountainheadData"
+      ],
+      "method": [],
+      "property": [
+        {
+          "file": "lib/index.js",
+          "line": 34,
+          "description": "<p>Optional configs pulled from <code>fountainhead.js</code></p>\n",
+          "itemtype": "property",
+          "name": "fountainheadConfig",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        },
+        {
+          "file": "lib/index.js",
+          "line": 39,
+          "description": "<p>Package JSON for project. Used to populate project description if not\ndefined in <code>fountainhead.js</code> config.</p>\n",
+          "itemtype": "property",
+          "name": "packageJSON",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        },
+        {
+          "file": "lib/index.js",
+          "line": 68,
+          "description": "<p>Raw YUIDoc JSON data generated using constructor exported by <code>yuidocjs</code>.\nCall new with options from config to pass configs to YUIDoc and call <code>run</code>\nto generate JSON</p>\n",
+          "itemtype": "property",
+          "name": "yuidocJSON",
+          "type": "{Object}",
+          "class": "Index",
+          "module": "Lib",
+          "srcFileId": "lib_index.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "lib_index.js"
+    },
+    "parseMarkdown": {
+      "name": "parseMarkdown",
+      "shortname": "parseMarkdown",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Lib",
+      "namespace": "",
+      "file": "lib/parse-markdown.js",
+      "line": 24,
+      "description": "<p>Handle parsing markdown using <a href=\"http://prismjs.com/\">Prism</a></p>\n",
+      "is_constructor": 1,
+      "params": [
+        {
+          "name": "description",
+          "description": "Markdown string to parse",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "HTML string parsed from passed markdown",
+        "type": "String"
+      },
+      "method": [],
+      "property": [],
+      "event": [],
+      "srcFileId": "lib_parse-markdown.js"
+    }
+  },
+  "elements": {},
+  "classitems": [
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 46,
+      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+      "itemtype": "method",
+      "name": "_checkActionRefs",
+      "params": [
+        {
+          "name": "templateString",
+          "description": "<p>The template string to run the check for action matches on</p>\n",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 80,
+      "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+      "itemtype": "method",
+      "name": "_generateDescription",
+      "params": [
+        {
+          "name": "templateString",
+          "description": "<p>String to generate template from</p>\n",
+          "type": "String"
+        }
+      ],
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 17,
+      "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
+      "itemtype": "property",
+      "name": "access",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 56,
+      "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
+      "itemtype": "property",
+      "name": "activeTab",
+      "type": "{string}",
+      "default": "indexPanel",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "blueprints/ember-fountainhead/index.js",
+      "line": 31,
+      "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+      "itemtype": "method",
+      "name": "afterInstall",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "EmberFountainhead.Index",
+      "module": "Blueprints",
+      "srcFileId": "blueprints_ember-fountainhead_index.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 30,
+      "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 30,
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "default": "['stringForAriaHidden:aria-hidden']",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class.js",
+      "line": 15,
+      "description": "<p>Class model content.</p>\n",
+      "itemtype": "property",
+      "name": "class",
+      "type": "{Object}",
+      "class": "FountainHead.Class",
+      "srcFileId": "addon_components_fountain-head_docs_class.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-item.js",
+      "line": 15,
+      "description": "<p>Model backing this class item, generated by YUIDoc.\nTODO: Document props of classItem and how they get used in template</p>\n",
+      "itemtype": "property",
+      "name": "classItem",
+      "type": "{Object}",
+      "class": "FountainHead.Class.ClassItem",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 44,
+      "description": "<p>Bound classNames: <code>svgId</code></p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-item.js",
+      "line": 25,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-classitem']",
+      "class": "FountainHead.Class.ClassItem",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 34,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-page-header']",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 36,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-sidebar']",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/index/landing.js",
+      "line": 15,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-landing']",
+      "class": "FountainHead.Header",
+      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 65,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-tabs-container']",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 38,
+      "description": "<p>Class names: <code>core-svg</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 39,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-addon-header']",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/footer.js",
+      "line": 14,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-addon-footer']",
+      "class": "FountainHead.Docs.Github",
+      "srcFileId": "addon_components_fountain-head_docs_footer.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 30,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-description']",
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 89,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array.<string>}",
+      "default": "['fh-class-meta']",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 19,
+      "description": "<p>The string that should be converted to a partial</p>\n",
+      "itemtype": "property",
+      "name": "description",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 75,
+      "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 139,
+      "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "params": [
+        {
+          "name": "attrs",
+          "description": "<p>Ember attrs object</p>\n",
+          "type": "Object",
+          "props": [
+            {
+              "name": "newAttrs",
+              "description": "The new attrs received",
+              "type": "Object"
+            }
+          ]
+        }
+      ],
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 24,
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/routes/docs/classes.js",
+      "line": 25,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Classes",
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
+    {
+      "file": "addon/routes/docs/files.js",
+      "line": 18,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
+    },
+    {
+      "file": "addon/routes/docs/modules.js",
+      "line": 25,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Modules",
+      "srcFileId": "addon_routes_docs_modules.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 71,
+      "description": "<p>Method to filter on doc elements for search.</p>\n",
+      "itemtype": "method",
+      "name": "doFilter",
+      "params": [
+        {
+          "name": "query",
+          "description": "<p>The search query to filter on</p>\n",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "lib/generate-fountainhead-data.js",
+      "line": 63,
+      "description": "<p>The <code>docsMeta</code> object is the guide for the documentation data. It contains\ndescriptions of the project as well as arrays of module and class routing\ninformation</p>\n",
+      "itemtype": "property",
+      "name": "docsMeta",
+      "type": "{Object}",
+      "class": "generateFountainheadData",
+      "module": "Lib",
+      "srcFileId": "lib_generate-fountainhead-data.js"
+    },
+    {
+      "file": "lib/decorate-config.js",
+      "line": 21,
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "itemtype": "property",
+      "name": "entry",
+      "type": "{Array}",
+      "default": "['app'] | ['addon']",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 31,
+      "description": "<p>This class’ array of event documentation items.</p>\n",
+      "itemtype": "property",
+      "name": "event",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 28,
+      "description": "<p>The value property is set by using the <code>@extends</code> tag. Any class used in\nan extends tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "extends",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/file.js",
+      "line": 12,
+      "description": "<p>JSON stringified file generated by documentation script.</p>\n",
+      "itemtype": "property",
+      "name": "file",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.File",
+      "srcFileId": "addon_components_fountain-head_docs_file.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 36,
+      "description": "<p>The file property matches where the documentation for a class is declared\nin the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "file",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 13,
+      "description": "<p>File path to svg definitions file</p>\n",
+      "itemtype": "property",
+      "name": "filePath",
+      "type": "{string}",
+      "default": "assets/svg-defs.svg",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "lib/index.js",
+      "line": 34,
+      "description": "<p>Optional configs pulled from <code>fountainhead.js</code></p>\n",
+      "itemtype": "property",
+      "name": "fountainheadConfig",
+      "type": "{Object}",
+      "class": "Index",
+      "module": "Lib",
+      "srcFileId": "lib_index.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 99,
+      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+      "itemtype": "method",
+      "name": "goToItem",
+      "params": [
+        {
+          "name": "classitem",
+          "description": "<p>Backing classitem</p>\n",
+          "type": "Object",
+          "props": [
+            {
+              "name": "itemtype",
+              "description": "Type for item of: `method`/`property`/`event`",
+              "type": "String"
+            },
+            {
+              "name": "name",
+              "description": "Name for classitem",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 40,
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-item.js",
+      "line": 35,
+      "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "FountainHead.Class.ClassItem",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-item.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 115,
+      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "app/instance-initializers/fountainhead-routes.js",
+      "line": 23,
+      "description": "<p>Initialize route that is called by consuming Ember application\n<code>Router</code> instance from the consuming application can directly mapped.</p>\n",
+      "itemtype": "method",
+      "name": "initialize",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainheadRoutes",
+      "module": "App",
+      "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 52,
+      "description": "<p>The line property matches the line where documentation for a class is\ndeclared in the source files. It is set automatically.</p>\n",
+      "itemtype": "property",
+      "name": "line",
+      "type": "{?number}",
+      "default": "null",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 29,
+      "description": "<p>Project logo, pulled from configs</p>\n",
+      "itemtype": "property",
+      "name": "logo",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 18,
+      "description": "<p>Fountainhead meta passed from service. Used to calculate <code>stringForAriaHidden</code>\nto hide sidebar when there is no data.</p>\n",
+      "itemtype": "property",
+      "name": "meta",
+      "type": "{?Object}",
+      "default": "null",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 17,
+      "description": "<p>Documentation meta fetched from <code>/docs/meta.json</code>. Contains high level map\nof modules and classes available in documentation. Used for sidebar and\nmapping item and return types.\nThis property is initialized to null so that the sidebar has an explicit\nvalue to bind aria-hidden to. When there is no meta, there is no sidebar.</p>\n",
+      "itemtype": "property",
+      "name": "meta",
+      "type": "{?Object}",
+      "default": "null",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/services/fountainhead.js",
+      "line": 28,
+      "description": "<p>Flag used by docs route to show getting started instructions if the call for\ndocumentation meta fails.</p>\n",
+      "itemtype": "property",
+      "name": "metaError",
+      "type": "{Boolean}",
+      "default": "false",
+      "class": "Fountainhead",
+      "srcFileId": "addon_services_fountainhead.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 38,
+      "description": "<p>This class’ array of method documentation items.</p>\n",
+      "itemtype": "property",
+      "name": "method",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "lib/create-dirs.js",
+      "line": 19,
+      "description": "<p>Synchronous mkdir that handles creating a potentially nested directory</p>\n",
+      "itemtype": "method",
+      "name": "mkdirSync",
+      "params": [
+        {
+          "name": "dirPath",
+          "description": "<p>Directory path to create, can be nested</p>\n",
+          "type": "String"
+        }
+      ],
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "createDirs",
+      "module": "Lib",
+      "srcFileId": "lib_create-dirs.js"
+    },
+    {
+      "file": "addon/routes/docs/modules.js",
+      "line": 11,
+      "description": "<p>Modules route model fetches modules JSON saved in <code>/docs/modules</code>.</p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "module_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Modules",
+      "srcFileId": "addon_routes_docs_modules.js"
+    },
+    {
+      "file": "addon/routes/docs/classes.js",
+      "line": 11,
+      "description": "<p>Classes route model fetches classes JSON saved in <code>/docs/classes</code>.</p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "class_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Classes",
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 44,
+      "description": "<p>The module property is set by using the <code>@module</code> tag. Any module used in\na module tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 13,
+      "description": "<p>Module model content</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 45,
+      "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
+      "itemtype": "property",
+      "name": "name",
+      "type": "{string}",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 23,
+      "description": "<p>Name of the class. Is generated by the <code>@constructor</code> tag.</p>\n",
+      "itemtype": "property",
+      "name": "name",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "lib/decorate-config.js",
+      "line": 29,
+      "description": "<p>Configuration output path should be a directory path. The default is <code>public/docs</code>\nwhen the consumer is an application and <code>tests/dummy/public/docs</code> when the\nconsumer is an addon (Outputting the docs to <code>/public</code> in an addon signals\nEmber CLI to bundle your docs into any consuming applications <code>/public</code> dir\nwhich is not the default behavior we want).</p>\n",
+      "itemtype": "property",
+      "name": "outputPath",
+      "type": "{string}",
+      "default": "'public/docs' | 'tests/dummy/public/docs'",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    },
+    {
+      "file": "lib/index.js",
+      "line": 39,
+      "description": "<p>Package JSON for project. Used to populate project description if not\ndefined in <code>fountainhead.js</code> config.</p>\n",
+      "itemtype": "property",
+      "name": "packageJSON",
+      "type": "{Object}",
+      "class": "Index",
+      "module": "Lib",
+      "srcFileId": "lib_index.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/runtime-description.js",
+      "line": 36,
+      "description": "<p>Name of generated partial that is used in the template.</p>\n",
+      "itemtype": "property",
+      "name": "partialName",
+      "type": "{string}",
+      "class": "FountainHead.Shared.RuntimeDescription",
+      "srcFileId": "addon_components_fountain-head_shared_runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 17,
+      "description": "<p>Project name used as docs <code>&lt;h1&gt;</code></p>\n",
+      "itemtype": "property",
+      "name": "projectName",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 23,
+      "description": "<p>Project url, pulled from repository in <code>fountainhead.js</code> config or <code>package.json</code></p>\n",
+      "itemtype": "property",
+      "name": "projectUrl",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 24,
+      "description": "<p>This class’ array of property documentation items.</p>\n",
+      "itemtype": "property",
+      "name": "property",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/github.js",
+      "line": 14,
+      "description": "<p>Repository URL from fountainhead configurations. If a URL has been specified\nin the configs or the <code>package.json</code> this github logo will show with a link\nto the repo</p>\n",
+      "itemtype": "property",
+      "name": "repository",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Docs.Github",
+      "srcFileId": "addon_components_fountain-head_docs_github.js"
+    },
+    {
+      "file": "lib/generate-fountainhead-data.js",
+      "line": 38,
+      "description": "<p>Call to handle saving data to a file. Requires a file path and data to save.\nIf data is not a string, it will be stringified</p>\n",
+      "itemtype": "method",
+      "name": "saveObjectToJSON",
+      "params": [
+        {
+          "name": "filePath",
+          "description": "<p>Path to save file at</p>\n",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "description": "<p>Data to save in file</p>\n",
+          "type": "Object|string"
+        }
+      ],
+      "return": {
+        "description": "True for successful operation, false for failures",
+        "type": "Boolean"
+      },
+      "class": "generateFountainheadData",
+      "module": "Lib",
+      "srcFileId": "lib_generate-fountainhead-data.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 16,
+      "description": "<p>Src file id for this file. Used for link to for source.</p>\n",
+      "itemtype": "property",
+      "name": "srcFileId",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 60,
+      "description": "<p>scrFile id is set by the data scripts. It is a snake case version of the\nfile path and should be used for calling for the file</p>\n",
+      "access": "private",
+      "tagname": "",
+      "itemtype": "property",
+      "name": "srcFileId",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 52,
+      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+      "itemtype": "property",
+      "name": "stringForAriaHidden",
+      "type": "{string}",
+      "return": {
+        "description": "Returns either string of `true` or `false` dependent on\n                 presence of meta",
+        "type": "String"
+      },
+      "class": "FountainHead.Docs.Sidebar",
+      "subprops": [
+        {
+          "name": "meta",
+          "description": "Fountainhead meta passed from service",
+          "type": "Object"
+        }
+      ],
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 69,
+      "description": "<p>The submodule property is set by using the <code>@submodule</code> tag. Any submodule\nused in a submodule tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "submodule",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 20,
+      "description": "<p>The id of the svg.</p>\n",
+      "itemtype": "property",
+      "name": "svgId",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/class-items-container.js",
+      "line": 133,
+      "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
+      "itemtype": "method",
+      "name": "tabsChanged",
+      "params": [
+        {
+          "name": "tab",
+          "description": "<p>Backing object for a given tab</p>\n",
+          "type": "Object",
+          "props": [
+            {
+              "name": "elementId",
+              "description": "The id of the tab, controls current tab displayed",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "class": "FountainHead.Class.ClassItemsContainer",
+      "srcFileId": "addon_components_fountain-head_docs_class_class-items-container.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 45,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'header'",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/footer.js",
+      "line": 20,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'footer'",
+      "class": "FountainHead.Docs.Github",
+      "srcFileId": "addon_components_fountain-head_docs_footer.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/header.js",
+      "line": 40,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'h2'",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountain-head_docs_class_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "line": 42,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'nav'",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountain-head/shared/fountainhead-svg.js",
+      "line": 50,
+      "description": "<p>SVG DOM element</p>\n",
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountain-head_shared_fountainhead-svg.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 95,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'div'",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/class/meta.js",
+      "line": 77,
+      "description": "<p>The uses array is set by using one or more <code>@uses</code> tags. Any class used in\na uses tag will be linked to.</p>\n",
+      "itemtype": "property",
+      "name": "uses",
+      "type": "{Array}",
+      "default": "[]",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountain-head_docs_class_meta.js"
+    },
+    {
+      "file": "lib/index.js",
+      "line": 68,
+      "description": "<p>Raw YUIDoc JSON data generated using constructor exported by <code>yuidocjs</code>.\nCall new with options from config to pass configs to YUIDoc and call <code>run</code>\nto generate JSON</p>\n",
+      "itemtype": "property",
+      "name": "yuidocJSON",
+      "type": "{Object}",
+      "class": "Index",
+      "module": "Lib",
+      "srcFileId": "lib_index.js"
+    }
+  ],
+  "warnings": []
+}

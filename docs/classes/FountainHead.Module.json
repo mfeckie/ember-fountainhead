@@ -1,0 +1,162 @@
+{
+  "name": "FountainHead.Module",
+  "shortname": "FountainHead.Module",
+  "classitems": [
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 39,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-addon-header']",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 24,
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 29,
+      "description": "<p>Project logo, pulled from configs</p>\n",
+      "itemtype": "property",
+      "name": "logo",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 13,
+      "description": "<p>Module model content</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 17,
+      "description": "<p>Project name used as docs <code>&lt;h1&gt;</code></p>\n",
+      "itemtype": "property",
+      "name": "projectName",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 23,
+      "description": "<p>Project url, pulled from repository in <code>fountainhead.js</code> config or <code>package.json</code></p>\n",
+      "itemtype": "property",
+      "name": "projectUrl",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 45,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'header'",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountain-head/docs/module.js",
+  "line": 4,
+  "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere’s nothing here yet.</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 39,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-addon-header']",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 29,
+      "description": "<p>Project logo, pulled from configs</p>\n",
+      "itemtype": "property",
+      "name": "logo",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 13,
+      "description": "<p>Module model content</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 17,
+      "description": "<p>Project name used as docs <code>&lt;h1&gt;</code></p>\n",
+      "itemtype": "property",
+      "name": "projectName",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 23,
+      "description": "<p>Project url, pulled from repository in <code>fountainhead.js</code> config or <code>package.json</code></p>\n",
+      "itemtype": "property",
+      "name": "projectUrl",
+      "type": "{string}",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    },
+    {
+      "file": "addon/components/fountain-head/docs/header.js",
+      "line": 45,
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "default": "'header'",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_header.js"
+    }
+  ],
+  "event": [
+    {
+      "file": "addon/components/fountain-head/docs/module.js",
+      "line": 24,
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "itemtype": "event",
+      "name": "didReceiveAttrs",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountain-head_docs_module.js"
+    }
+  ],
+  "srcFileId": "addon_components_fountain-head_docs_module.js"
+}

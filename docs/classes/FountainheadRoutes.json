@@ -1,0 +1,49 @@
+{
+  "name": "FountainheadRoutes",
+  "shortname": "FountainheadRoutes",
+  "classitems": [
+    {
+      "file": "app/instance-initializers/fountainhead-routes.js",
+      "line": 23,
+      "description": "<p>Initialize route that is called by consuming Ember application\n<code>Router</code> instance from the consuming application can directly mapped.</p>\n",
+      "itemtype": "method",
+      "name": "initialize",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainheadRoutes",
+      "module": "App",
+      "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "App",
+  "namespace": "",
+  "file": "app/instance-initializers/fountainhead-routes.js",
+  "line": 11,
+  "description": "<p>Automagically mount Fountainhead routes through an <code>instance-initializer</code>.</p>\n<p>NOTE: this initializer needs to be in the <code>/app</code> directory so that the the\nconsuming application’s router can be directly imported and manipulated.</p>\n<p>TODO: See if we can use some kind of lookup to do this from within an\ninitializer in the <code>/addon</code> directory</p>\n",
+  "is_constructor": 1,
+  "method": [
+    {
+      "file": "app/instance-initializers/fountainhead-routes.js",
+      "line": 23,
+      "description": "<p>Initialize route that is called by consuming Ember application\n<code>Router</code> instance from the consuming application can directly mapped.</p>\n",
+      "itemtype": "method",
+      "name": "initialize",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainheadRoutes",
+      "module": "App",
+      "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+    }
+  ],
+  "property": [],
+  "event": [],
+  "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+}

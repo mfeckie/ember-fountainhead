@@ -1,0 +1,30 @@
+{
+  "name": "parseMarkdown",
+  "shortname": "parseMarkdown",
+  "classitems": [],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/parse-markdown.js",
+  "line": 24,
+  "description": "<p>Handle parsing markdown using <a href=\"http://prismjs.com/\">Prism</a></p>\n",
+  "is_constructor": 1,
+  "params": [
+    {
+      "name": "description",
+      "description": "Markdown string to parse",
+      "type": "String"
+    }
+  ],
+  "return": {
+    "description": "HTML string parsed from passed markdown",
+    "type": "String"
+  },
+  "method": [],
+  "property": [],
+  "event": [],
+  "srcFileId": "lib_parse-markdown.js"
+}

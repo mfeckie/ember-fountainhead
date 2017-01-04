@@ -1,0 +1,140 @@
+{
+  "parser": "YUIDoc",
+  "namespaces": [],
+  "name": "ember-fountainhead",
+  "description": "Robust interactive documentation for your Ember application's source code",
+  "version": "2.0.0-beta.4",
+  "repository": "https://github.com/healthsparq/ember-fountainhead",
+  "modules": [
+    {
+      "name": "Addon",
+      "type": "modules"
+    },
+    {
+      "name": "App",
+      "type": "modules"
+    },
+    {
+      "name": "Blueprints",
+      "type": "modules"
+    },
+    {
+      "name": "Lib",
+      "type": "modules"
+    }
+  ],
+  "classes": [
+    {
+      "name": "DataTypes.GenerateClasses",
+      "type": "classes"
+    },
+    {
+      "name": "DataTypes.GenerateModules",
+      "type": "classes"
+    },
+    {
+      "name": "DataTypes.GenerateSrcFile",
+      "type": "classes"
+    },
+    {
+      "name": "Docs.Classes",
+      "type": "classes"
+    },
+    {
+      "name": "Docs.Files",
+      "type": "classes"
+    },
+    {
+      "name": "Docs.Modules",
+      "type": "classes"
+    },
+    {
+      "name": "EmberFountainhead.Index",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Class",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Class.ClassItem",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Class.ClassItemsContainer",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Class.Header",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Class.Meta",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Docs",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Docs.Github",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Docs.Sidebar",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.File",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Header",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Module",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Shared.CoreSVG",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Shared.RuntimeDescription",
+      "type": "classes"
+    },
+    {
+      "name": "Fountainhead",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadRoutes",
+      "type": "classes"
+    },
+    {
+      "name": "Helper.Eq",
+      "type": "classes"
+    },
+    {
+      "name": "Index",
+      "type": "classes"
+    },
+    {
+      "name": "createDirs",
+      "type": "classes"
+    },
+    {
+      "name": "decorateConfig",
+      "type": "classes"
+    },
+    {
+      "name": "generateFountainheadData",
+      "type": "classes"
+    },
+    {
+      "name": "parseMarkdown",
+      "type": "classes"
+    }
+  ]
+}

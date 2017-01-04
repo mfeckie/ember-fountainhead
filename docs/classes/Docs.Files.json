@@ -1,0 +1,39 @@
+{
+  "name": "Docs.Files",
+  "shortname": "Docs.Files",
+  "classitems": [
+    {
+      "file": "addon/routes/docs/files.js",
+      "line": 18,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/routes/docs/files.js",
+  "line": 4,
+  "description": "<p>This route handles fetching the data for an individual class using the id.</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Route",
+  "method": [],
+  "property": [],
+  "event": [
+    {
+      "file": "addon/routes/docs/files.js",
+      "line": 18,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
+    }
+  ],
+  "srcFileId": "addon_routes_docs_files.js"
+}

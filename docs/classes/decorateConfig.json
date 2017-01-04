@@ -1,0 +1,87 @@
+{
+  "name": "decorateConfig",
+  "shortname": "decorateConfig",
+  "classitems": [
+    {
+      "file": "lib/decorate-config.js",
+      "line": 21,
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "itemtype": "property",
+      "name": "entry",
+      "type": "{Array}",
+      "default": "['app'] | ['addon']",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    },
+    {
+      "file": "lib/decorate-config.js",
+      "line": 29,
+      "description": "<p>Configuration output path should be a directory path. The default is <code>public/docs</code>\nwhen the consumer is an application and <code>tests/dummy/public/docs</code> when the\nconsumer is an addon (Outputting the docs to <code>/public</code> in an addon signals\nEmber CLI to bundle your docs into any consuming applications <code>/public</code> dir\nwhich is not the default behavior we want).</p>\n",
+      "itemtype": "property",
+      "name": "outputPath",
+      "type": "{string}",
+      "default": "'public/docs' | 'tests/dummy/public/docs'",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [
+    "Index"
+  ],
+  "module": "Lib",
+  "namespace": "",
+  "file": "lib/decorate-config.js",
+  "line": 4,
+  "description": "<p>Handle adding default values to config and validating required properties\nare present</p>\n",
+  "is_constructor": 1,
+  "params": [
+    {
+      "name": "config",
+      "description": "Project configuration file",
+      "type": "Object"
+    },
+    {
+      "name": "packageJSON",
+      "description": "Project package.json file",
+      "type": "Object"
+    }
+  ],
+  "return": {
+    "description": "Fully decorated and validated project configuration file",
+    "type": "Object"
+  },
+  "method": [],
+  "property": [
+    {
+      "file": "lib/decorate-config.js",
+      "line": 21,
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "itemtype": "property",
+      "name": "entry",
+      "type": "{Array}",
+      "default": "['app'] | ['addon']",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    },
+    {
+      "file": "lib/decorate-config.js",
+      "line": 29,
+      "description": "<p>Configuration output path should be a directory path. The default is <code>public/docs</code>\nwhen the consumer is an application and <code>tests/dummy/public/docs</code> when the\nconsumer is an addon (Outputting the docs to <code>/public</code> in an addon signals\nEmber CLI to bundle your docs into any consuming applications <code>/public</code> dir\nwhich is not the default behavior we want).</p>\n",
+      "itemtype": "property",
+      "name": "outputPath",
+      "type": "{string}",
+      "default": "'public/docs' | 'tests/dummy/public/docs'",
+      "class": "decorateConfig",
+      "module": "Lib",
+      "srcFileId": "lib_decorate-config.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "lib_decorate-config.js"
+}
