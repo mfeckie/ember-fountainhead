@@ -1,22 +1,25 @@
 import Route from 'ember-route';
+import inject from 'ember-service/inject';
 import $ from 'jquery';
 
 /**
- * This route handles fetching the data for an individual class using the id.
+ * Route handles fetching data for an individual class.
  * @class Docs.Classes
  * @constructor
  * @extends Ember.Route
  */
 export default Route.extend({
+  fountainhead: inject(),
+
   /**
-   * Classes route model fetches classes JSON saved in `/docs/classes`.
+   * Fetches class' JSON at: `${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`
    * @method model
    * @param {Object} params
    * @param {string} params.class_id Name of this class, use to fetch data
    * @return {Promise} jQuery ajax promise
    */
   model(params) {
-    return $.ajax(`/docs/classes/${params.class_id}.json`);
+    return $.ajax(`${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`);
   },
 
   // Actions

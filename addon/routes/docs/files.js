@@ -1,15 +1,25 @@
 import Route from 'ember-route';
+import inject from 'ember-service/inject';
 import $ from 'jquery';
 
 /**
- * This route handles fetching the data for an individual class using the id.
+ * Route handles fetching data for a source file.
  * @class Docs.Files
  * @constructor
  * @extends Ember.Route
  */
 export default Route.extend({
+  fountainhead: inject(),
+
+  /**
+   * Fetches file's JSON at: `${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json`
+   * @method model
+   * @param {Object} params
+   * @param {string} params.file_id Name of this class, use to fetch data
+   * @return {Promise} jQuery ajax promise
+   */
   model(params) {
-    return $.ajax(`/docs/files/${params.file_id}.json`);
+    return $.ajax(`${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json`);
   },
 
   // Actions

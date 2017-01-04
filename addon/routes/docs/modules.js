@@ -1,4 +1,5 @@
 import Route from 'ember-route';
+import inject from 'ember-service/inject';
 import $ from 'jquery';
 
 /**
@@ -8,15 +9,17 @@ import $ from 'jquery';
  * @extends Ember.Route
  */
 export default Route.extend({
+  fountainhead: inject(),
+
   /**
-   * Modules route model fetches modules JSON saved in `/docs/modules`.
+   * Fetches modules's JSON at: `${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json`
    * @method model
    * @param {Object} params
    * @param {string} params.module_id Name of this class, use to fetch data
    * @return {Promise} jQuery ajax promise
    */
   model(params) {
-    return $.ajax(`/docs/modules/${params.module_id}.json`);
+    return $.ajax(`${this.get('fountainhead.apiNamespace')}/modules/${params.module_id}.json`);
   },
 
   // Actions
