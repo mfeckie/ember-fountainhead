@@ -1,5 +1,3 @@
-/* jshint node: true */
-
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dummy',
@@ -38,8 +36,12 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  /**
+   * The production env for this demo app is the gh-pages application. All
+   * assets need to be served from that root in production
+   */
   if (environment === 'production') {
-
+    ENV.rootURL = '/ember-fountainhead';
   }
 
   return ENV;
