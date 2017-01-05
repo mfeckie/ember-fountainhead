@@ -25,7 +25,7 @@ export default Component.extend({
     {{! If meta isn't found then we know the user hasn't run the doc scripts yet.
     {{! --------------------------------------------------------------------- }}
     {{#if meta}}
-      <h1 class="align-center">Welcome</h1>
+      <h1 class="text-center">Welcome</h1>
       <p>Browse to a module or class using the sidebar to view its API documentation.</p>
       <h4>Keyboard Shortcuts</h4>
       <ul>

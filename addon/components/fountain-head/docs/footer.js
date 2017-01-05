@@ -27,6 +27,6 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <p class="align-right">Made with {{fountain-head/shared/fountainhead-svg svgId='heart'}} by HealthSparq Open Source Labs</p>
+    <p class="text-right">Made with {{fountain-head/shared/fountainhead-svg svgId='heart'}} by HealthSparq Open Source Labs</p>
   `
 });
