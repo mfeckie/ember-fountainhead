@@ -44,7 +44,6 @@
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
-    "ember-radical": "git://github.com/healthsparq/ember-radical.git#135a4d062f08682365091144242d23d4497ed7cf",
     "ember-resolver": "^2.0.3",
     "gh-pages": "^0.12.0",
     "loader.js": "^4.0.10",
