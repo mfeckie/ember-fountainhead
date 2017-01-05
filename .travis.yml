@@ -25,6 +25,7 @@ matrix:
 
 before_install:
   - npm config set spin false
+  - npm config set registry http://registry.npmjs.org/
   - npm install -g bower
   - bower --version
   - npm install phantomjs-prebuilt
