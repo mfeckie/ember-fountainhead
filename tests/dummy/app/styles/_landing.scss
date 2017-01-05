@@ -19,3 +19,19 @@
     font-size: 60px;
   }
 }
+
+// Page logo styles
+.document-logo {
+  width: 55px;
+  height: 55px;
+
+  .outline {
+    fill: white;
+  }
+
+  .line-a { fill: #ffcc95; }
+  .line-b { fill: #FF9AC1; }
+  .line-c { fill: #7cfce9; }
+  .line-d { fill: #6FC1FF; }
+  .line-e { fill: #B084EB; }
+}
