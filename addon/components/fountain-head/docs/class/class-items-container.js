@@ -146,7 +146,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{#core-tabs
+    {{#fountain-head/shared/tabs
       defaultTab='indexPanel'
       activeId=activeTab
       onChange=(action 'tabsChanged')
@@ -160,9 +160,9 @@ export default Component.extend({
           <ul class="fh-index-list">
             {{#each method as |method|}}
               <li class="fh-index-item">
-                {{#core-button link=true click=(action 'goToItem' method)}}
+                {{#fountain-head/shared/button link=true click=(action 'goToItem' method)}}
                   {{method.name}}
-                {{/core-button}}
+                {{/fountain-head/shared/button}}
               </li>
             {{/each}}
           </ul>
@@ -173,9 +173,9 @@ export default Component.extend({
           <ul class="fh-index-list">
             {{#each property as |property|}}
               <li class="fh-index-item">
-                {{#core-button link=true click=(action 'goToItem' property)}}
+                {{#fountain-head/shared/button link=true click=(action 'goToItem' property)}}
                   {{property.name}}
-                {{/core-button}}
+                {{/fountain-head/shared/button}}
               </li>
             {{/each}}
           </ul>
@@ -186,9 +186,9 @@ export default Component.extend({
           <ul class="fh-index-list">
             {{#each event as |event|}}
               <li class="fh-index-item">
-                {{#core-button link=true click=(action 'goToItem' event)}}
+                {{#fountain-head/shared/button link=true click=(action 'goToItem' event)}}
                   {{event.name}}
-                {{/core-button}}
+                {{/fountain-head/shared/button}}
               </li>
             {{/each}}
           </ul>
@@ -213,6 +213,6 @@ export default Component.extend({
           {{fountain-head/docs/class/class-item classItem=event}}
         {{/each}}
       {{/components.content}}
-    {{/core-tabs}}
+    {{/fountain-head/shared/tabs}}
   `
 });
