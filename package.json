@@ -40,6 +40,7 @@
     "ember-cli-release": "^0.2.9",
     "ember-cli-sass": "^5.5.2",
     "ember-cli-sri": "^2.1.0",
+    "ember-cli-template-lint": "^0.4.8",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-disable-prototype-extensions": "^1.1.0",
@@ -61,7 +62,7 @@
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
-    "ember-radical": "git://github.com/healthsparq/ember-radical.git#135a4d062f08682365091144242d23d4497ed7cf",
+    "ember-radical": "git://github.com/healthsparq/ember-radical.git#a7e41872c18f4d83ffd7c7fe12b3c3d4157b19a7",
     "markdown-it": "^8.0.0",
     "prismjs": "^1.5.1",
     "yuidocjs": "^0.10.2"
