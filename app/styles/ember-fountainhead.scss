@@ -22,13 +22,13 @@
 // ---------------------------------------------------------------------------
 @import 'ember-fountainhead/components/header';
 @import 'ember-fountainhead/components/footer';
-// @import 'ember-fountainhead/components/sidebar';
+@import 'ember-fountainhead/components/sidebar';
 
 // Doc/Module/Class Page
-// @import 'ember-fountainhead/components/docs';
+@import 'ember-fountainhead/components/docs';
 @import 'ember-fountainhead/components/modules';
 @import 'ember-fountainhead/components/class/meta';
-// @import 'ember-fountainhead/components/class/class-items-container';
+@import 'ember-fountainhead/components/class/class-items-container';
 @import 'ember-fountainhead/components/class/class-item';
 
 // Prism Panda Syntax Highlighting // TODO: make this optional && configurable
