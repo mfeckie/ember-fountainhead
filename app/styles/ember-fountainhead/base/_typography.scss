@@ -12,7 +12,6 @@
     letter-spacing: 0;
     margin-bottom: .5rem;
     margin-top: .2rem;
-    text-rendering: optimizeLegibility;
   }
 
   h1 { font-size: $h1-size; line-height: 1.25; }
@@ -63,7 +62,6 @@
   p {
     margin: 3px 0 22px;
     line-height: 1.5rem;
-    text-rendering: optimizeLegibility;
   }
 
   small {
