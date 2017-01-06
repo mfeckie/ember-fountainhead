@@ -1,19 +1,18 @@
 // ========================================================
-// Ember Fountainhead Documentation Site Styles
+// GH-Pages Demo Site Styles
 // ========================================================
+
+// Base line set by Ember Radical styles
+// ---------------------------------------------------------------------------
+@import 'ember-radical';
 
 // Import Fountainhead styles directly for live reload in dev
 // ---------------------------------------------------------------------------
 @import 'ember-fountainhead';
 
-// Github Documentation Site Styles
+// Demo Site Elements
 // ---------------------------------------------------------------------------
 @import 'landing';
 
-
-// TODO: Remove when added to Radical
+// Keep paragraphs at a readable length
 p { max-width: 750px; }
-.wrapper, .element { padding: 10px; }
-.italic { font-style: italic; }
-.uppercase { text-transform: uppercase; }
-.text-left { text-align: left; }
