@@ -1,37 +1,62 @@
 <div class="hero">
-  <div class="hero-message">
-    <svg class="document-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="32" viewBox="0 0 24 32">
-      <path class="outline" d="M16,1.82,22.39,9H16.5c-.22,0-.5-.42-.5-.75Z"/>
-      <path class="outline" d="M24,9.45a.48.48,0,0,0,0-.07.49.49,0,0,0-.09-.19v0l-8-9h0A.49.49,0,0,0,15.64,0h-.06L15.5,0H1.5A1.5,1.5,0,0,0,0,1.5v29A1.5,1.5,0,0,0,1.5,32h21A1.5,1.5,0,0,0,24,30.5V9.5S24,9.47,24,9.45Zm-1,21a.5.5,0,0,1-.5.5H1.5a.5.5,0,0,1-.5-.5V1.5A.5.5,0,0,1,1.5,1H15V8.25A1.73,1.73,0,0,0,16.5,10H23Z"/>
-      <path class="line-a" d="M5.5,14h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
-      <path class="line-b" d="M5.5,18h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
-      <path class="line-c" d="M5.5,10h6a.5.5,0,0,0,0-1h-6a.5.5,0,0,0,0,1Z"/>
-      <path class="line-d" d="M5.5,22h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
-      <path class="line-e" d="M5.5,26h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
-    </svg>
-    <h1 class="text-left">Ember<br>Fountainhead</h1>
-    <br>
-    <span class="italic">Create beautiful, dynamic documentation.</span>
+  <div class="hero-wrapper">
+    <div class="logo">
+      <svg class="document-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="32" viewBox="0 0 24 32">
+        <path class="outline" d="M16,1.82,22.39,9H16.5c-.22,0-.5-.42-.5-.75Z"/>
+        <path class="outline" d="M24,9.45a.48.48,0,0,0,0-.07.49.49,0,0,0-.09-.19v0l-8-9h0A.49.49,0,0,0,15.64,0h-.06L15.5,0H1.5A1.5,1.5,0,0,0,0,1.5v29A1.5,1.5,0,0,0,1.5,32h21A1.5,1.5,0,0,0,24,30.5V9.5S24,9.47,24,9.45Zm-1,21a.5.5,0,0,1-.5.5H1.5a.5.5,0,0,1-.5-.5V1.5A.5.5,0,0,1,1.5,1H15V8.25A1.73,1.73,0,0,0,16.5,10H23Z"/>
+        <path class="line-a" d="M5.5,14h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
+        <path class="line-b" d="M5.5,18h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
+        <path class="line-c" d="M5.5,10h6a.5.5,0,0,0,0-1h-6a.5.5,0,0,0,0,1Z"/>
+        <path class="line-d" d="M5.5,22h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
+        <path class="line-e" d="M5.5,26h13a.5.5,0,0,0,0-1H5.5a.5.5,0,0,0,0,1Z"/>
+      </svg>
+    </div>
+    <div class="message">
+      <h1>Ember<br>Fountainhead</h1>
+      <br>
+      <span class="italic">Create beautiful, dynamic documentation.</span>
+      <div class="home-shortcuts">
+        {{link-to 'Getting Started' 'getting-started' classNames='hero-link'}}
+        {{link-to 'Demo' 'docs' classNames='hero-link'}}
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="fh-wrapper">
-  {{! Demo site sidebar navigation }}
-  {{sidebar-nav}}
+<div class="landing-elements-container fh-wrapper">
+  <div class="fh-element showcase">
+    {{! Empty div prevents flexbox from seeing 4 items to spread }}
+    <div>
+      <h5>What is it?</h5>
+      <p>Ember Fountainhead is an Ember addon that generates documentation JSON files and renders them using a REST API and a modern, readable interface in your application. It is designed to be drop in ready with the ability for full customization through exported components and configuration for custom use cases.</p>
 
-  <div class="introduction element">
-    <h4 class="uppercase">Introduction</h4>
-    <p>Ember Fountainhead is a documentation application that generates documentation JSON files and a modern, readable interface in your application. It is designed to be drop in ready for simple applications with the ability for full customization through exported components and configuration for custom use cases.</p>
-
-    <h4>Runtime Template Compilation</h4>
-    <p>One of the most exciting features of Fountainhead is that all documentation descriptions are compiled to Glimmer templates and registered with your application during run time. This means that you are not limited to a pre defined set of components in your documentation. Any component from your application can be included as a live example in your documentation.</p>
-
-    <h4 class="uppercase">Is Ember Fountainhead For You?</h4>
-    <p>If your Ember project has any collaboration or users other than yourself, then Fountainhead is for you! Great documenation helps contributors navigate your codebase and make smarter pull requests. It helps users understand your API and easily troubleshoot issues. Great documentation makes your project more accessible to everyone.</p>
+      <h5>Is Ember Fountainhead For You?</h5>
+      <p>Does your Ember project have collaborators? Does your Ember project have users? If so, then Fountainhead is for you! Great documenation helps contributors navigate your codebase and make smarter pull requests. It helps users understand your API and easily troubleshoot issues. Great documentation makes your project more accessible to everyone.</p>
+    </div>
   </div>
 
-  <div class="features element">
-    <h4 class="uppercase">Features</h4>
+  <div class="fh-element showcase">
+    <div class="feature-logo fh-element">
+      <img src="gears.svg">
+    </div>
+    <div class="feature-description fh-element">
+      <h4 class="uppercase">Runtime Template Compilation</h4>
+      <p>Documentation in Fountainhead is compiled to Glimmer templates and registered with your application at during run time.This means that you are not limited to a pre defined set of addon components in your documentation. Any component from <strong>your</strong> application can be included as a live example in your documentation.</p>
+    </div>
+  </div>
+
+  <div class="fh-element showcase">
+    <div class="feature-description fh-element">
+      <h4 class="uppercase">Fully Customizable && Extendable</h4>
+      <p>Fountainhead's interface is a set of components exported with the addon. This makes it easy to customize any part of the documentation by extending one of the addon components. Combined with YUIDoc's custom tag parsing Fountainhead is a platform that you can build any feature on top of.</p>
+    </div>
+    <div class="feature-logo fh-element">
+      <img src="expand.svg">
+    </div>
+  </div>
+
+  <div class="fh-element showcase">
+    <h4 class="uppercase text-center">Additional Features</h4>
     <ul class="list-unstyled">
       <li>Comment parsing using YUIDoc syntax</li>
       <li>Dynamic documentation driven by your Ember application</li>

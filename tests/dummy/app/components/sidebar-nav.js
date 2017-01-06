@@ -1,13 +1,14 @@
-import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
+import Sidebar from 'ember-fountainhead/components/fountainhead-sidebar/sidebar'
 
-export default Component.extend({
+export default Sidebar.extend({
   layout: hbs`
-    <div>Sidebar Nav</div>
-    <ul>
-      <li>{{link-to 'Home' 'application'}}</li>
-      <li>{{link-to 'Getting Started' 'getting-started'}}</li>
-      <li>{{link-to 'Demo' 'docs'}}</li>
-    </ul>
+    {{#fountainhead-sidebar/section title='Ember Fountainhead'}}
+      <ul class="item-group">
+        <li class="item-group-item">{{link-to 'Home' 'application' classNames='item-link'}}</li>
+        <li class="item-group-item">{{link-to 'Getting Started' 'getting-started' classNames='item-link'}}</li>
+        <li class="item-group-item">{{link-to 'Demo' 'docs' classNames='item-link'}}</li>
+      </ul>
+    {{/fountainhead-sidebar/section}}
   `
 });

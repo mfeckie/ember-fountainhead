@@ -85,6 +85,10 @@
   .bold { font-weight: bold; }
   .normal { font-weight: normal; }
 
+  .mono {
+    font-family: $font-family-mono;
+  }
+
   .text-right { text-align: right; }
   .text-center { text-align: center; }
   .text-left { text-align: left; }
