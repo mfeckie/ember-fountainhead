@@ -53,14 +53,6 @@ pre[class*="language-"] {
 	line-height: 1.5;
 	tab-size: 4;
 	hyphens: none;
-
-  &::-moz-selection,
-  & ::-moz-selection,
-  &::selection,
-  & ::selection {
-    text-shadow: none;
-  	background: #b3d4fc;
-  }
 }
 
 /* Prism Code blocks */

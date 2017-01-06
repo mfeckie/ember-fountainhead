@@ -6,7 +6,7 @@ moduleForComponent('fountain-head/docs/class/header', 'Integration | Component |
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{fountain-head/docs/class/header}}`);
+  this.render(hbs`{{fountainhead-class/header}}`);
 
   assert.ok(this.$().text().includes('[source]'));
 });

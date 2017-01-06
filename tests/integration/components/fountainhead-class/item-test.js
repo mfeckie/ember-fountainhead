@@ -6,7 +6,7 @@ moduleForComponent('fountain-head/docs/class/class-item', 'Integration | Compone
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{fountain-head/docs/class/class-item}}`);
+  this.render(hbs`{{fountainhead-class/item}}`);
 
   assert.equal(this.$().text().trim().replace(/\s\s+/g, ''), '()');
 });

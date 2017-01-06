@@ -6,7 +6,7 @@ moduleForComponent('fountain-head/docs/sidebar/item-group', 'Integration | Compo
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{fountain-head/docs/sidebar/item-group}}`);
+  this.render(hbs`{{fountainhead-sidebar/group}}`);
 
   assert.equal(this.$().text().trim(), 'Give me some items to display!');
 });

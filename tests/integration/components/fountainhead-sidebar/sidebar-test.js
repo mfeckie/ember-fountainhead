@@ -6,7 +6,7 @@ moduleForComponent('fountain-head/docs/sidebar', 'Integration | Component | foun
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{fountain-head/docs/sidebar}}`);
+  this.render(hbs`{{fountainhead-sidebar/sidebar}}`);
 
   assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '), 'Made with lots of heart icon by HealthSparq Open Source Labs');
 });

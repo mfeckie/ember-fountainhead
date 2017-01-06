@@ -12,7 +12,7 @@ if (!/PhantomJS/.test(window.navigator.userAgent)) {
   test('it renders', function(assert) {
     this.set('descriptionText', '<p>Fountainhead is neato!</p>');
 
-    this.render(hbs`{{fountain-head/shared/runtime-description description=descriptionText}}`);
+    this.render(hbs`{{fountainhead-runtime-description description=descriptionText}}`);
 
     assert.equal(this.$().text().trim(), 'Fountainhead is neato!');
   });

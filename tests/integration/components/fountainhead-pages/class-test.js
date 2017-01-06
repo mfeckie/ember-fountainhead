@@ -13,7 +13,7 @@ test('it renders', function(assert) {
   // Docs page REQUIRES content
   this.set('content', docClass);
 
-  this.render(hbs`{{fountain-head/docs/class class=content}}`);
+  this.render(hbs`{{fountainhead-pages/class class=content}}`);
 
   assert.equal(this.$().text().trim().replace(/\s\s+/g, ' '), 'Class [source]');
 });

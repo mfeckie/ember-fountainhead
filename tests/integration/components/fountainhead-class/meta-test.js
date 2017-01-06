@@ -6,7 +6,7 @@ moduleForComponent('fountain-head/docs/class/meta', 'Integration | Component | f
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{fountain-head/docs/class/meta}}`);
+  this.render(hbs`{{fountainhead-class/meta}}`);
 
   assert.equal(this.$().text().trim(), '');
 });
