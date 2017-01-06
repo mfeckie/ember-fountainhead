@@ -53,14 +53,6 @@ pre[class*="language-"] {
 	line-height: 1.5;
 	tab-size: 4;
 	hyphens: none;
-
-  &::-moz-selection,
-  & ::-moz-selection,
-  &::selection,
-  & ::selection {
-    text-shadow: none;
-  	background: #b3d4fc;
-  }
 }
 
 /* Prism Code blocks */
@@ -176,10 +168,6 @@ div.prism-show-language > div.prism-show-language-label {
 	text-shadow: none;
 	z-index: 1;
 	box-shadow: none;
-	-webkit-transform: none;
-	-moz-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
 	transform: none;
 }
 

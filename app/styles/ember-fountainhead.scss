@@ -13,23 +13,20 @@
 @import 'ember-fountainhead/base/typography';
 @import 'ember-fountainhead/base/code-blocks';
 
-// Radical Styles
-// ---------------------------------------------------------------------------
-@import 'ember-fountainhead/ember-radical/tabs';
-@import 'ember-fountainhead/ember-radical/svg';
-
 // Fountainhead Components
 // ---------------------------------------------------------------------------
-@import 'ember-fountainhead/components/header';
-@import 'ember-fountainhead/components/footer';
+@import 'ember-fountainhead/components/tabs';
+@import 'ember-fountainhead/components/svg';
 @import 'ember-fountainhead/components/sidebar';
 
-// Doc/Module/Class Page
+// Pages
 @import 'ember-fountainhead/components/docs';
 @import 'ember-fountainhead/components/modules';
+
+// Class Page
 @import 'ember-fountainhead/components/class/meta';
-@import 'ember-fountainhead/components/class/class-items-container';
-@import 'ember-fountainhead/components/class/class-item';
+@import 'ember-fountainhead/components/class/items-container';
+@import 'ember-fountainhead/components/class/item';
 
 // Prism Panda Syntax Highlighting // TODO: make this optional && configurable
 @import 'ember-fountainhead/prism/prism-panda';
