@@ -15,7 +15,7 @@
       <h1>Ember<br>Fountainhead</h1>
       <br>
       <span class="italic">Create beautiful, dynamic documentation.</span>
-      <div class="home-shortcuts">
+      <div class="hero-links">
         {{link-to 'Getting Started' 'getting-started' classNames='hero-link'}}
         {{link-to 'Demo' 'docs' classNames='hero-link'}}
       </div>
@@ -23,40 +23,38 @@
   </div>
 </div>
 
-<div class="landing-elements-container fh-wrapper">
-  <div class="fh-element showcase">
-    {{! Empty div prevents flexbox from seeing 4 items to spread }}
-    <div>
-      <h5>What is it?</h5>
-      <p>Ember Fountainhead is an Ember addon that generates documentation JSON files and renders them using a REST API and a modern, readable interface in your application. It is designed to be drop in ready with the ability for full customization through exported components and configuration for custom use cases.</p>
+<div class="landing-features-container fh-wrapper">
+  <div class="feature no-logo">
+    <div class="description fh-element">
+      <p>Does your Ember project have collaborators? Does your project have users? If so, then Ember Fountainhead is for you! Great documenation helps contributors navigate your codebase and make smarter pull requests. It helps users understand your API and easily troubleshoot issues. Great documentation makes your project more accessible to everyone.</p>
 
-      <h5>Is Ember Fountainhead For You?</h5>
-      <p>Does your Ember project have collaborators? Does your Ember project have users? If so, then Fountainhead is for you! Great documenation helps contributors navigate your codebase and make smarter pull requests. It helps users understand your API and easily troubleshoot issues. Great documentation makes your project more accessible to everyone.</p>
+      <p>Ember Fountainhead is an Ember addon that generates and renders documentation in a modern, readable interface. It is designed to be drop in ready with the ability for full customization through exported components and parsing configuration.</p>
     </div>
+    <h4 class="uppercase text-center fh-element title">Is Ember Fountainhead for you?</h4>
   </div>
 
-  <div class="fh-element showcase">
-    <div class="feature-logo fh-element">
-      <img src="gears.svg">
+  <div class="feature">
+    <div class="fh-element">
+      <img src="gears.svg" class="logo">
     </div>
-    <div class="feature-description fh-element">
+    <div class="fh-element">
       <h4 class="uppercase">Runtime Template Compilation</h4>
       <p>Documentation in Fountainhead is compiled to Glimmer templates and registered with your application at during run time.This means that you are not limited to a pre defined set of addon components in your documentation. Any component from <strong>your</strong> application can be included as a live example in your documentation.</p>
     </div>
   </div>
 
-  <div class="fh-element showcase">
-    <div class="feature-description fh-element">
+  <div class="feature">
+    <div class="fh-element">
       <h4 class="uppercase">Fully Customizable && Extendable</h4>
       <p>Fountainhead's interface is a set of components exported with the addon. This makes it easy to customize any part of the documentation by extending one of the addon components. Combined with YUIDoc's custom tag parsing Fountainhead is a platform that you can build any feature on top of.</p>
     </div>
-    <div class="feature-logo fh-element">
-      <img src="expand.svg">
+    <div class="fh-element">
+      <img src="expand.svg" class="logo">
     </div>
   </div>
 
-  <div class="fh-element showcase">
-    <h4 class="uppercase text-center">Additional Features</h4>
+  <div class="feature no-logo">
+    <h4 class="uppercase text-center fh-element title">Additional Features</h4>
     <ul class="list-unstyled">
       <li>Comment parsing using YUIDoc syntax</li>
       <li>Dynamic documentation driven by your Ember application</li>
