@@ -50,47 +50,47 @@ export default Component.extend({
     {{! --------------------------------------------------------------------- }}
     {{! Item Header
     {{! --------------------------------------------------------------------- }}
-    <h4 class="fh-header">
+    <h4 class='fh-header'>
       {{classItem.name}}
-      {{!-- <span class="item-type">{{classItem.itemtype}}</span> --}}
+      {{!-- <span class='item-type'>{{classItem.itemtype}}</span> --}}
       {{#if classItem.params}}
-        <span class="header-params">(
+        <span class='header-params'>(
           {{#each classItem.params as |param index|}}
             {{if index ', '}}{{param.name}}
           {{/each}}
           )</span>
       {{else}}
-        <span class="header-params">(&nbsp;&nbsp;&nbsp;)</span>
+        <span class='header-params'>(&nbsp;&nbsp;&nbsp;)</span>
       {{/if}}
       {{#if classItem.return.type}}
-        <span class="return-type">{{classItem.return.type}}</span>
+        <span class='return-type'>{{classItem.return.type}}</span>
       {{/if}}
       {{! Show type for props only }}
       {{#if (eq classItem.itemtype 'property')}}
         {{#if classItem.type}}
-          <span class="item-type">{{classItem.type}}</span>
+          <span class='item-type'>{{classItem.type}}</span>
         {{/if}}
       {{/if}}
       {{! Begin Info Badges (access, static, deprecated) }}
       {{#if classItem.access}}
-        <span class="item-access {{if (eq classItem.access 'public') 'fh-success' 'fh-alert'}}">
+        <span class='item-access {{if (eq classItem.access 'public') 'fh-success' 'fh-alert'}}'>
           {{classItem.access}}
         </span>
       {{/if}}
       {{#if classItem.static}}
-        <span class="item-static fh-info">Static</span>
+        <span class='item-static fh-info'>Static</span>
       {{/if}}
       {{#if classItem.deprecated}}
-        <span class="item-static fh-alert">Deprecated</span>
+        <span class='item-static fh-alert'>Deprecated</span>
       {{/if}}
     </h4>
 
     {{! --------------------------------------------------------------------- }}
     {{! Classitem Meta
     {{! --------------------------------------------------------------------- }}
-    <div class="fh-meta">
+    <div class='fh-meta'>
       {{#if classItem.file}}
-        <small class="fh-defined">Defined in:
+        <small class='fh-defined'>Defined in:
           {{#link-to 'docs.files' classItem.srcFileId (query-params line=classItem.line)}}
             {{classItem.file}}:{{classItem.line}}
           {{/link-to}}
@@ -100,15 +100,15 @@ export default Component.extend({
       {{! TODO: Where is this coming from? }}
       {{! CHECKING INHERITED PROPS! TODO MAKE THIS WORK }}
       {{#if classItem.inherited}}
-        <small class="fh-inherited">Inherited from: {{classItem.inherited}}</small>
+        <small class='fh-inherited'>Inherited from: {{classItem.inherited}}</small>
       {{/if}}
 
       {{#if classItem.since}}
-        <small class="fh-since">Available since: {{classItem.since}}</small>
+        <small class='fh-since'>Available since: {{classItem.since}}</small>
       {{/if}}
 
       {{#if classItem.default}}
-        <p class="fh-default"><span class="uppercase">Default: </span> <code>{{classItem.default}}</code></p>
+        <p class='fh-default'><span class='uppercase'>Default: </span> <code>{{classItem.default}}</code></p>
       {{/if}}
     </div>
 
@@ -116,9 +116,9 @@ export default Component.extend({
     {{! Deprecation Warning
     {{! --------------------------------------------------------------------- }}
     {{#if classItem.deprecated}}
-      <div class="fh-deprecation-container">
-        <h4 class="fh-deprecation-header">This {{classItem.itemtype}} is deprecated</h4>
-        <div class="fh-deprecation-message">{{{classItem.deprecationMessage}}}</div>
+      <div class='fh-deprecation-container'>
+        <h4 class='fh-deprecation-header'>This {{classItem.itemtype}} is deprecated</h4>
+        <div class='fh-deprecation-message'>{{{classItem.deprecationMessage}}}</div>
       </div>
     {{/if}}
 
@@ -133,11 +133,11 @@ export default Component.extend({
     {{! Classitem Params
     {{! --------------------------------------------------------------------- }}
     {{#if classItem.params}}
-      <h4 class="fh-item-header">Parameters</h4>
-      <ul class="fh-params">
+      <h4 class='fh-item-header'>Parameters</h4>
+      <ul class='fh-params'>
         {{#each classItem.params as |param|}}
-          <li class="fh-classitem-params">
-            <span class="param-meta">
+          <li class='fh-classitem-params'>
+            <span class='param-meta'>
               <strong>
                 {{! Surround optional params with brackets to denote they're optional}}
                 {{! TODO: Visual flag for optional? }}
@@ -147,13 +147,13 @@ export default Component.extend({
                   {{param.name}}
                 {{/if}}
               </strong>
-              {{#if param.type}}<span class="param-type">{{param.type}}</span>{{/if}}
+              {{#if param.type}}<span class='param-type'>{{param.type}}</span>{{/if}}
             </span>
             {{#if param.props.length}}
-              <ul class="fh-params">
+              <ul class='fh-params'>
                 {{#each param.props as |prop|}}
-                  <li class="fh-classitem-params">
-                    <span class="param-meta">
+                  <li class='fh-classitem-params'>
+                    <span class='param-meta'>
                       <strong>
                         {{! Surround optional params with brackets to denote they're optional}}
                         {{! TODO: Visual flag for optional? }}
@@ -163,16 +163,16 @@ export default Component.extend({
                           {{prop.name}}
                         {{/if}}
                       </strong>
-                      {{#if param.type}}<span class="param-type">{{param.type}}</span>{{/if}}
+                      {{#if param.type}}<span class='param-type'>{{param.type}}</span>{{/if}}
                     </span>
-                    <span class="param-description">
+                    <span class='param-description'>
                       {{{prop.description}}}
                     </span>
                   </li>
                 {{/each}}
               </ul>
             {{/if}}
-            <span class="param-description">
+            <span class='param-description'>
               {{{param.description}}}
             </span>
           </li>
@@ -181,12 +181,12 @@ export default Component.extend({
     {{/if}}
 
     {{#if classItem.return}}
-      <h4 class="fh-item-header">Returns:</h4>
+      <h4 class='fh-item-header'>Returns:</h4>
       {{#if classItem.return.description}}
-        <p class="fh-return-description">{{classItem.return.description}}</p>
+        <p class='fh-return-description'>{{classItem.return.description}}</p>
       {{/if}}
       {{#if classItem.return.type}}
-        <p class="fh-return-type">{{classItem.return.type}}</p>
+        <p class='fh-return-type'>{{classItem.return.type}}</p>
       {{/if}}
     {{/if}}
   `

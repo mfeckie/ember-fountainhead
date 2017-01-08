@@ -103,31 +103,31 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{#if access}}
-      <p class="fh-meta">
-        <span class="meta-access">Access:</span> <span class="fh-{{access}}">{{access}}</span>
+      <p class='fh-meta'>
+        <span class='meta-access'>Access:</span> <span class='fh-{{access}}'>{{access}}</span>
       </p>
     {{/if}}
 
     {{#if extends}}
-      <p class="fh-meta">
-        <span class="meta-extends">Extends:</span>
+      <p class='fh-meta'>
+        <span class='meta-extends'>Extends:</span>
         {{link-to extends 'docs.classes' extends}}
       </p>
     {{/if}}
 
     {{#if uses.length}}
       {{#each uses as |use|}}
-        <p class="fh-meta">
-          <span class="meta-uses">Uses:</span>
+        <p class='fh-meta'>
+          <span class='meta-uses'>Uses:</span>
           {{link-to use 'docs.classes' use}}
         </p>
       {{/each}}
     {{/if}}
 
     {{#if file}}
-      <p class="fh-meta">
+      <p class='fh-meta'>
         {{! @TODO: Need a config for internal vs external src file linking }}
-        <span class="meta-defined">Defined In:</span>
+        <span class='meta-defined'>Defined In:</span>
         {{#link-to 'docs.files' srcFileId (query-params line=line)}}
           {{file}}:{{line}}
         {{/link-to}}
@@ -140,13 +140,13 @@ export default Component.extend({
     {{! submodule than the module
     {{! --------------------------------------------------------------------- }}
     {{#if submodule}}
-      <p class="fh-meta">
-        <span class="meta-module">Module:</span>
+      <p class='fh-meta'>
+        <span class='meta-module'>Module:</span>
         {{link-to submodule 'docs.modules' submodule}}
       </p>
     {{else if module}}
-      <p class="fh-meta">
-        <span class="meta-module">Module:</span>
+      <p class='fh-meta'>
+        <span class='meta-module'>Module:</span>
         {{link-to module 'docs.modules' module}}
       </p>
     {{/if}}

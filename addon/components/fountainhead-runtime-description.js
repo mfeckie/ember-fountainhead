@@ -157,7 +157,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class="partial-wrapper">
+    <div class='partial-wrapper'>
       {{partial partialName}}
     </div>
   `

@@ -28,17 +28,17 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class="fh-page-in-page-wrapper">
+    <div class='fh-page-in-page-wrapper'>
       {{! Octocat page corner SVG logo }}
       {{fountainhead-repo-link repository=fountainhead.meta.repository}}
 
       {{! Layout for sidebar and content containers }}
-      <main class="fh-container">
-        <div class="fh-sidebar-container">
+      <main class='fh-container'>
+        <div class='fh-sidebar-container'>
           {{fountainhead-sidebar/sidebar meta=fountainhead.meta}}
         </div>
-        <div class="fh-content-container">
-          <div class="fh-content">
+        <div class='fh-content-container'>
+          <div class='fh-content'>
             {{! This is where subroutes are rendered through the outlet }}
             {{yield}}
           </div>

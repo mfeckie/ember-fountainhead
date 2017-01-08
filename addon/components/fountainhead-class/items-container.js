@@ -156,10 +156,10 @@ export default Component.extend({
       {{! --------------------------------------------------------------------- }}
       {{#components.content label='Index' elementId='indexPanel'}}
         {{#if method.length}}
-          <h4 class="fh-docs-category uppercase">Methods</h4>
-          <ul class="fh-index-list">
+          <h4 class='fh-docs-category uppercase'>Methods</h4>
+          <ul class='fh-index-list'>
             {{#each method as |method|}}
-              <li class="fh-index-item">
+              <li class='fh-index-item'>
                 {{#fountainhead-button link=true click=(action 'goToItem' method)}}
                   {{method.name}}
                 {{/fountainhead-button}}
@@ -169,10 +169,10 @@ export default Component.extend({
         {{/if}}
 
         {{#if property.length}}
-          <h4 class="fh-docs-category uppercase">Properties</h4>
-          <ul class="fh-index-list">
+          <h4 class='fh-docs-category uppercase'>Properties</h4>
+          <ul class='fh-index-list'>
             {{#each property as |property|}}
-              <li class="fh-index-item">
+              <li class='fh-index-item'>
                 {{#fountainhead-button link=true click=(action 'goToItem' property)}}
                   {{property.name}}
                 {{/fountainhead-button}}
@@ -182,10 +182,10 @@ export default Component.extend({
         {{/if}}
 
         {{#if event.length}}
-          <h4 class="fh-docs-category uppercase">Events</h4>
-          <ul class="fh-index-list">
+          <h4 class='fh-docs-category uppercase'>Events</h4>
+          <ul class='fh-index-list'>
             {{#each event as |event|}}
-              <li class="fh-index-item">
+              <li class='fh-index-item'>
                 {{#fountainhead-button link=true click=(action 'goToItem' event)}}
                   {{event.name}}
                 {{/fountainhead-button}}

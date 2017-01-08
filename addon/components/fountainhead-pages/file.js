@@ -20,7 +20,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h2 class="fh-page-header">{{file.file}}</h2>
+    <h2 class='fh-page-header'>{{file.file}}</h2>
     {{{file.content}}}
   `
 });

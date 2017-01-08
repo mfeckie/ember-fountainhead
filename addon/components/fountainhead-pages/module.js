@@ -43,7 +43,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h2 class="fh-page-header">
+    <h2 class='fh-page-header'>
       {{module.name}}
       <small>
         {{! @TODO: Link component needed to handle external vs internal file links }}
@@ -53,7 +53,7 @@ export default Component.extend({
     {{! Not sure if this is right, attempting to match Ember docs, see ember-routing}}
     {{#if module.is_submodule}}
       {{! TODO: Module parent should be a link }}
-      <p class="fh-parent">Parent: {{link-to module.module 'docs.modules' module.module}}</p>
+      <p class='fh-parent'>Parent: {{link-to module.module 'docs.modules' module.module}}</p>
     {{/if}}
 
     {{! TODO: Move description out of class to general }}
@@ -61,8 +61,8 @@ export default Component.extend({
       description=module.description}}
 
     {{#if module.submodules}}
-      <h4 class="fh-docs-category uppercase">Submodules</h4>
-      <ul class="fh-module-category">
+      <h4 class='fh-docs-category uppercase'>Submodules</h4>
+      <ul class='fh-module-category'>
         {{#each-in module.submodules as |key|}}
           <li>{{link-to key 'docs.modules' key}}</li>
         {{/each-in}}
@@ -70,8 +70,8 @@ export default Component.extend({
     {{/if}}
 
     {{#if module.classes}}
-      <h4 class="fh-docs-category uppercase">Classes and Namespaces</h4>
-      <ul class="fh-module-category">
+      <h4 class='fh-docs-category uppercase'>Classes and Namespaces</h4>
+      <ul class='fh-module-category'>
         {{#each-in module.classes as |key|}}
           <li>{{link-to key 'docs.classes' key}}</li>
         {{/each-in}}
