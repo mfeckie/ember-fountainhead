@@ -1,0 +1,25 @@
+// ========================================================
+// Demo App Styles for Guide Pages
+// ========================================================
+
+// Page wrapper
+.guide-page {
+  display: flex;
+}
+
+.page-title {
+  background-color: #50676B;
+  padding: 100px;
+  width: 100%;
+  color: $white;
+}
+
+// Page content wrapper
+.guide-content {
+  width: 800px;
+  margin-left: 200px;
+
+  section {
+    margin: 60px 0;
+  }
+}
