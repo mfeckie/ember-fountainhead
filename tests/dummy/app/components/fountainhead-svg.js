@@ -1,5 +1,5 @@
-import FountainheadSVG from 'ember-fountainhead/components/fountain-head/shared/fountainhead-svg';
-import config from '../../../config/environment';
+import FountainheadSVG from 'ember-fountainhead/components/fountainhead-svg';
+import config from '../../config/environment';
 
 const filePath = config.environment === 'production'
     ? '/ember-fountainhead/ember-fountainhead/svg/symbol-defs.svg'
