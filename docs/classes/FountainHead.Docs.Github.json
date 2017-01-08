@@ -3,17 +3,7 @@
   "shortname": "FountainHead.Docs.Github",
   "classitems": [
     {
-      "file": "addon/components/fountain-head/docs/footer.js",
-      "line": 14,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-addon-footer']",
-      "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_footer.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/github.js",
+      "file": "addon/components/fountainhead-repo-link.js",
       "line": 14,
       "description": "<p>Repository URL from fountainhead configurations. If a URL has been specified\nin the configs or the <code>package.json</code> this github logo will show with a link\nto the repo</p>\n",
       "itemtype": "property",
@@ -21,17 +11,7 @@
       "type": "{string}",
       "default": "''",
       "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_github.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/footer.js",
-      "line": 20,
-      "itemtype": "property",
-      "name": "tagName",
-      "type": "{string}",
-      "default": "'footer'",
-      "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_footer.js"
+      "srcFileId": "addon_components_fountainhead-repo-link.js"
     }
   ],
   "plugins": [],
@@ -41,7 +21,7 @@
     "FountainHead.Docs"
   ],
   "module": "Addon",
-  "file": "addon/components/fountain-head/docs/github.js",
+  "file": "addon/components/fountainhead-repo-link.js",
   "line": 4,
   "description": "<p>Github octocat logo in the top right corner.</p>\n",
   "is_constructor": 1,
@@ -49,17 +29,7 @@
   "method": [],
   "property": [
     {
-      "file": "addon/components/fountain-head/docs/footer.js",
-      "line": 14,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-addon-footer']",
-      "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_footer.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/github.js",
+      "file": "addon/components/fountainhead-repo-link.js",
       "line": 14,
       "description": "<p>Repository URL from fountainhead configurations. If a URL has been specified\nin the configs or the <code>package.json</code> this github logo will show with a link\nto the repo</p>\n",
       "itemtype": "property",
@@ -67,19 +37,9 @@
       "type": "{string}",
       "default": "''",
       "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_github.js"
-    },
-    {
-      "file": "addon/components/fountain-head/docs/footer.js",
-      "line": 20,
-      "itemtype": "property",
-      "name": "tagName",
-      "type": "{string}",
-      "default": "'footer'",
-      "class": "FountainHead.Docs.Github",
-      "srcFileId": "addon_components_fountain-head_docs_footer.js"
+      "srcFileId": "addon_components_fountainhead-repo-link.js"
     }
   ],
   "event": [],
-  "srcFileId": "addon_components_fountain-head_docs_github.js"
+  "srcFileId": "addon_components_fountainhead-repo-link.js"
 }

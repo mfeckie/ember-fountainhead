@@ -26,6 +26,14 @@
   ],
   "classes": [
     {
+      "name": "CoreTabs",
+      "type": "classes"
+    },
+    {
+      "name": "CoreTabs.Content",
+      "type": "classes"
+    },
+    {
       "name": "DataTypes.GenerateClasses",
       "type": "classes"
     },
@@ -95,6 +103,10 @@
     },
     {
       "name": "FountainHead.Module",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHead.Shared.Button",
       "type": "classes"
     },
     {

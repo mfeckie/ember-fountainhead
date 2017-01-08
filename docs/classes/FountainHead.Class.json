@@ -3,14 +3,14 @@
   "shortname": "FountainHead.Class",
   "classitems": [
     {
-      "file": "addon/components/fountain-head/docs/class.js",
+      "file": "addon/components/fountainhead-pages/class.js",
       "line": 15,
       "description": "<p>Class model content.</p>\n",
       "itemtype": "property",
       "name": "class",
       "type": "{Object}",
       "class": "FountainHead.Class",
-      "srcFileId": "addon_components_fountain-head_docs_class.js"
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
     }
   ],
   "plugins": [],
@@ -18,7 +18,7 @@
   "plugin_for": [],
   "extension_for": [],
   "module": "Addon",
-  "file": "addon/components/fountain-head/docs/class.js",
+  "file": "addon/components/fountainhead-pages/class.js",
   "line": 4,
   "description": "<p>Fountainhead <code>/doc/class</code> page component</p>\n",
   "is_constructor": 1,
@@ -26,16 +26,16 @@
   "method": [],
   "property": [
     {
-      "file": "addon/components/fountain-head/docs/class.js",
+      "file": "addon/components/fountainhead-pages/class.js",
       "line": 15,
       "description": "<p>Class model content.</p>\n",
       "itemtype": "property",
       "name": "class",
       "type": "{Object}",
       "class": "FountainHead.Class",
-      "srcFileId": "addon_components_fountain-head_docs_class.js"
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
     }
   ],
   "event": [],
-  "srcFileId": "addon_components_fountain-head_docs_class.js"
+  "srcFileId": "addon_components_fountainhead-pages_class.js"
 }

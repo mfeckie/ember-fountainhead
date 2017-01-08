@@ -3,27 +3,27 @@
   "shortname": "FountainHead.Docs.Sidebar",
   "classitems": [
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 30,
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
       "default": "['stringForAriaHidden:aria-hidden']",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 36,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-sidebar']",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 71,
       "description": "<p>Method to filter on doc elements for search.</p>\n",
       "itemtype": "method",
@@ -40,10 +40,10 @@
         "type": "Undefined"
       },
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 18,
       "description": "<p>Fountainhead meta passed from service. Used to calculate <code>stringForAriaHidden</code>\nto hide sidebar when there is no data.</p>\n",
       "itemtype": "property",
@@ -51,10 +51,10 @@
       "type": "{?Object}",
       "default": "null",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 52,
       "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
       "itemtype": "property",
@@ -72,17 +72,17 @@
           "type": "Object"
         }
       ],
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 42,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
       "default": "'nav'",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],
   "plugins": [],
@@ -92,14 +92,14 @@
     "FountainHead.Docs"
   ],
   "module": "Addon",
-  "file": "addon/components/fountain-head/docs/sidebar.js",
+  "file": "addon/components/fountainhead-sidebar/sidebar.js",
   "line": 5,
   "description": "<p>Wrapper component for the sidebar components. Expects the entire docs meta\nobject.</p>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 71,
       "description": "<p>Method to filter on doc elements for search.</p>\n",
       "itemtype": "method",
@@ -116,32 +116,32 @@
         "type": "Undefined"
       },
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],
   "property": [
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 30,
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
       "default": "['stringForAriaHidden:aria-hidden']",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 36,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-sidebar']",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 18,
       "description": "<p>Fountainhead meta passed from service. Used to calculate <code>stringForAriaHidden</code>\nto hide sidebar when there is no data.</p>\n",
       "itemtype": "property",
@@ -149,10 +149,10 @@
       "type": "{?Object}",
       "default": "null",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 52,
       "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
       "itemtype": "property",
@@ -170,19 +170,19 @@
           "type": "Object"
         }
       ],
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
-      "file": "addon/components/fountain-head/docs/sidebar.js",
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 42,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
       "default": "'nav'",
       "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],
   "event": [],
-  "srcFileId": "addon_components_fountain-head_docs_sidebar.js"
+  "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
 }

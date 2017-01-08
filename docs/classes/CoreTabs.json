@@ -1,0 +1,381 @@
+{
+  "name": "CoreTabs",
+  "shortname": "CoreTabs",
+  "classitems": [
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 165,
+      "description": "<p>Internal method that can be used with a <code>run.once</code> call to only add new tabs\nonce per run loop. Simply iterates through <code>_tabsToCreate</code> and pushes them\ninto the <code>tabList</code>. This is needed to prevent multiple renders in a single\nrun loop when all of the <code>content</code> subcomponents register themselves with\nthe container during init.</p>\n",
+      "itemtype": "method",
+      "name": "_createTabsList",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 85,
+      "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab’s content to display. If this is empty, no tabs are open.</p>\n",
+      "itemtype": "property",
+      "name": "activeId",
+      "type": "{String}",
+      "default": "''",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 140,
+      "description": "<p>Bound attributes:</p>\n<ul>\n<li><code>data-test</code>: for precise testing identification</li>\n</ul>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 93,
+      "description": "<p>Pass false to use tab style without primary color tabs.</p>\n",
+      "itemtype": "property",
+      "name": "buttonStyle",
+      "type": "{Boolean}",
+      "default": "true",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 147,
+      "description": "<p>Class names: <code>core-tabs</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 100,
+      "description": "<p>The optional elementId of the tab that should be shown by default. This is\nuseful for cases where the user has come into a page and is expecting one\nof the tabs to be shown by default.</p>\n",
+      "itemtype": "property",
+      "name": "defaultTab",
+      "type": "{String}",
+      "default": "''",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 183,
+      "description": "<p>When the component initializes, we set the <code>tabList</code> property to an array.\nThis prevents multiple instances of core-tabs on a given page from\ninheriting the same tabList array through prototype inheritance.</p>\n",
+      "itemtype": "event",
+      "name": "init",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 109,
+      "description": "<p>Optional closure action that will be called whenever a tab is opened with\nthe id of that tab. Use this to create a controlled tabs instance.</p>\n",
+      "itemtype": "property",
+      "name": "onChange",
+      "type": "{function}",
+      "default": "null",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 230,
+      "description": "<p>Closure action passed to content subcomponents that is called on init.\nEach child tab will register itself with this container. To ensure the\ntabList is only updated once per render, we proxy new tabs to the\n<code>_tabsToCreate</code> array and then push all of them to <code>tabList</code> using a\n<code>run.once</code> call to <code>_createTabsList</code></p>\n",
+      "itemtype": "method",
+      "name": "registerTab",
+      "params": [
+        {
+          "name": "tab",
+          "description": "<p>Object model of tab to be registered</p>\n",
+          "type": "Object"
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 117,
+      "description": "<p>Whether the page should scroll the tab context back to the top when one of\nthe tabs is clicked. This can be a nice convenience for usabilitee.</p>\n",
+      "itemtype": "property",
+      "name": "scrollOnClick",
+      "type": "{Boolean}",
+      "default": "false",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 125,
+      "description": "<p>What the target of the <code>scrollOnClick</code> behavior should be. By default,\nthe entire page/body scrolls, however if this instance of <code>core-tabs</code> is\ncontained within a modal or some other scrollable sub-container, it may\nbe more desirable to execute a scroll against that instead of the entire\npage. Simply pass a standard jQuery-like selector in as a string.</p>\n",
+      "itemtype": "property",
+      "name": "scrollTarget",
+      "type": "{string}",
+      "default": "'body, html'",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 208,
+      "description": "<p>Action to show a tab. Set <code>activeId</code> to the passed elementId. <code>activeId</code>\nis passed down to children content components</p>\n",
+      "itemtype": "method",
+      "name": "showTab",
+      "params": [
+        {
+          "name": "elementId",
+          "description": "<p>HTML id of the tab to show</p>\n",
+          "type": "String"
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 153,
+      "description": "<p>List of tabs to display. This is iterated through in the template to\nrendered the buttons that are used to change tabs.</p>\n",
+      "itemtype": "property",
+      "name": "tabList",
+      "type": "{Array.<Object>}",
+      "default": "null",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 244,
+      "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab’s <code>hidden</code> status changes.</p>\n",
+      "itemtype": "method",
+      "name": "updateTab",
+      "params": [
+        {
+          "name": "tab",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "elementId",
+              "description": "HTML id of tab to update",
+              "type": "String"
+            },
+            {
+              "name": "hidden",
+              "description": "Hidden status of changed tab",
+              "type": "Boolean"
+            }
+          ]
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountainhead-tabs.js",
+  "line": 8,
+  "description": "<p>A++ Accessible tabs. The <code>core-tabs</code> component is the parent container for\na given set of tabs and handles managing the active state of the tabs and tab\npanels. The <code>core-tabs</code> component yields a <code>content</code> contextual component\ninside of the <code>components</code> hash.</p>\n<h4>Usage</h4>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Fresh Water\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    Boy I sure did work up a thirst after eating all them shramps<span class=\"token punctuation\">.</span> Time to\n    wash it down <span class=\"token keyword\">with</span> a cool glass <span class=\"token keyword\">of</span> marina water<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>You can include any number of <code>components.content</code> contextual components.\n<em>(However keep in mind that adding too many <code>content</code> components may result in\nthe tab labels becoming unreadable depending on the space alotted for\ndisplaying them.)</em></p>\n<p>You can also specify a default tab by setting the <code>defaultTab</code> parameter to\nmatch one of content components’ HTML id property:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs defaultTab<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span> <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Shrimp\"</span> elementId<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    BRINGO<span class=\"token operator\">!</span> There<span class=\"token string\">'s some pretty good lil'</span> shrimpers <span class=\"token keyword\">in</span> here<span class=\"token punctuation\">,</span> lets check it out<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<h3>Controlled Tabs</h3>\n<p>If you need to programatically open tabs within your application you can\ncreate a controlled instance of <code>core-tabs</code> by specifying the <code>activeId</code> for\nthe component. This means that you need to track the <code>activeId</code> in a parent\ncomponent or service and pass it down into the controlled tab instance. To do\nthis pass an <code>onChange</code> closure into the component. It will be called with\nthe <code>elementId</code> of the selected tab any time a user changes tabs.</p>\n<p>TODO: Template &amp;&amp; JS Examples</p>\n<p>Configuration | Type | Default | Description\n— | — | —\n<code>activeId</code> | string | null | The <code>elementId</code> of the tab that should be opened\n<code>buttonStyle</code> | boolean | true | Set to false for tab buttons without primary background-color\n<code>defaultTab</code> | string | null | Tab to render shown by default\n<code>onChange</code> | function | null | Optional closure that will be called when any tab is opened\n<code>scrollOnClick</code> | boolean | false | Set to true to scroll page to top on tab click\n<code>scrollTarget</code> | jQuery selector | ‘body, html’ | Specify scroll animation target</p>\n<h3>A++ Accessibility</h3>\n<ul>\n<li>Tabs have <code>aria-controls</code> set to the <code>elementId</code> of the <code>tabpanel</code> they show.</li>\n<li>Tabs have <code>role=tab</code> for role identification</li>\n<li>Tabs are instances of <code>core-button</code> for keyboard access</li>\n<li>Show/hide of tabs and panels are managed through <code>aria-hidden</code> attr</li>\n</ul>\n<h3>Feature Notes:</h3>\n<ul>\n<li>The tab list is a flexbox container with flex-grow 1 for each tab. This auto\nmagically grows the tabs to fill the entire width of tab container.</li>\n</ul>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 165,
+      "description": "<p>Internal method that can be used with a <code>run.once</code> call to only add new tabs\nonce per run loop. Simply iterates through <code>_tabsToCreate</code> and pushes them\ninto the <code>tabList</code>. This is needed to prevent multiple renders in a single\nrun loop when all of the <code>content</code> subcomponents register themselves with\nthe container during init.</p>\n",
+      "itemtype": "method",
+      "name": "_createTabsList",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 230,
+      "description": "<p>Closure action passed to content subcomponents that is called on init.\nEach child tab will register itself with this container. To ensure the\ntabList is only updated once per render, we proxy new tabs to the\n<code>_tabsToCreate</code> array and then push all of them to <code>tabList</code> using a\n<code>run.once</code> call to <code>_createTabsList</code></p>\n",
+      "itemtype": "method",
+      "name": "registerTab",
+      "params": [
+        {
+          "name": "tab",
+          "description": "<p>Object model of tab to be registered</p>\n",
+          "type": "Object"
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 208,
+      "description": "<p>Action to show a tab. Set <code>activeId</code> to the passed elementId. <code>activeId</code>\nis passed down to children content components</p>\n",
+      "itemtype": "method",
+      "name": "showTab",
+      "params": [
+        {
+          "name": "elementId",
+          "description": "<p>HTML id of the tab to show</p>\n",
+          "type": "String"
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 244,
+      "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab’s <code>hidden</code> status changes.</p>\n",
+      "itemtype": "method",
+      "name": "updateTab",
+      "params": [
+        {
+          "name": "tab",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "elementId",
+              "description": "HTML id of tab to update",
+              "type": "String"
+            },
+            {
+              "name": "hidden",
+              "description": "Hidden status of changed tab",
+              "type": "Boolean"
+            }
+          ]
+        }
+      ],
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    }
+  ],
+  "property": [
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 85,
+      "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab’s content to display. If this is empty, no tabs are open.</p>\n",
+      "itemtype": "property",
+      "name": "activeId",
+      "type": "{String}",
+      "default": "''",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 140,
+      "description": "<p>Bound attributes:</p>\n<ul>\n<li><code>data-test</code>: for precise testing identification</li>\n</ul>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 93,
+      "description": "<p>Pass false to use tab style without primary color tabs.</p>\n",
+      "itemtype": "property",
+      "name": "buttonStyle",
+      "type": "{Boolean}",
+      "default": "true",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 147,
+      "description": "<p>Class names: <code>core-tabs</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 100,
+      "description": "<p>The optional elementId of the tab that should be shown by default. This is\nuseful for cases where the user has come into a page and is expecting one\nof the tabs to be shown by default.</p>\n",
+      "itemtype": "property",
+      "name": "defaultTab",
+      "type": "{String}",
+      "default": "''",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 109,
+      "description": "<p>Optional closure action that will be called whenever a tab is opened with\nthe id of that tab. Use this to create a controlled tabs instance.</p>\n",
+      "itemtype": "property",
+      "name": "onChange",
+      "type": "{function}",
+      "default": "null",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 117,
+      "description": "<p>Whether the page should scroll the tab context back to the top when one of\nthe tabs is clicked. This can be a nice convenience for usabilitee.</p>\n",
+      "itemtype": "property",
+      "name": "scrollOnClick",
+      "type": "{Boolean}",
+      "default": "false",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 125,
+      "description": "<p>What the target of the <code>scrollOnClick</code> behavior should be. By default,\nthe entire page/body scrolls, however if this instance of <code>core-tabs</code> is\ncontained within a modal or some other scrollable sub-container, it may\nbe more desirable to execute a scroll against that instead of the entire\npage. Simply pass a standard jQuery-like selector in as a string.</p>\n",
+      "itemtype": "property",
+      "name": "scrollTarget",
+      "type": "{string}",
+      "default": "'body, html'",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 153,
+      "description": "<p>List of tabs to display. This is iterated through in the template to\nrendered the buttons that are used to change tabs.</p>\n",
+      "itemtype": "property",
+      "name": "tabList",
+      "type": "{Array.<Object>}",
+      "default": "null",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    }
+  ],
+  "event": [
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 183,
+      "description": "<p>When the component initializes, we set the <code>tabList</code> property to an array.\nThis prevents multiple instances of core-tabs on a given page from\ninheriting the same tabList array through prototype inheritance.</p>\n",
+      "itemtype": "event",
+      "name": "init",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
+    }
+  ],
+  "srcFileId": "addon_components_fountainhead-tabs.js"
+}

@@ -3,14 +3,14 @@
   "shortname": "FountainHead.Header",
   "classitems": [
     {
-      "file": "addon/components/fountain-head/docs/index/landing.js",
+      "file": "addon/components/fountainhead-get-started.js",
       "line": 15,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "default": "['fh-landing']",
+      "default": "['fh-get-started']",
       "class": "FountainHead.Header",
-      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+      "srcFileId": "addon_components_fountainhead-get-started.js"
     }
   ],
   "plugins": [],
@@ -18,7 +18,7 @@
   "plugin_for": [],
   "extension_for": [],
   "module": "Addon",
-  "file": "addon/components/fountain-head/docs/index/landing.js",
+  "file": "addon/components/fountainhead-welcome.js",
   "line": 4,
   "description": "<p>The landing message is rendered on the <code>/docs/index</code> route and shows either a\nhelpful getting started or docs related message depending on if the user has\ngenerated docs or not. We know by passing in the meta information in the\n<code>/docs/index</code> template</p>\n",
   "is_constructor": 1,
@@ -26,16 +26,16 @@
   "method": [],
   "property": [
     {
-      "file": "addon/components/fountain-head/docs/index/landing.js",
+      "file": "addon/components/fountainhead-get-started.js",
       "line": 15,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "default": "['fh-landing']",
+      "default": "['fh-get-started']",
       "class": "FountainHead.Header",
-      "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+      "srcFileId": "addon_components_fountainhead-get-started.js"
     }
   ],
   "event": [],
-  "srcFileId": "addon_components_fountain-head_docs_index_landing.js"
+  "srcFileId": "addon_components_fountainhead-welcome.js"
 }
