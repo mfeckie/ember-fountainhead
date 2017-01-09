@@ -98,6 +98,16 @@ module.exports = {
       }
       // TODO: Help and init config commands
     };
+  },
+  /**
+   * Generates fountainhead output before a build is run for live editing. This
+   * is can be turned on/off using the `liveEdit` property in the
+   * `fountainhead.js` configuration file.
+   * @method preBuild
+   * @return {undefined}
+   */
+  preBuild() {
+    if (config.liveEdit) { generateDocs(); }
   }
 
   // Fallback exclude feature if we need to nix using
