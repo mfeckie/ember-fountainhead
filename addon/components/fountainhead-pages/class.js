@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Fountainhead `/doc/class` page component
- * @class FountainHead.Class
+ * @class FountainHeadPages.Class
  * @constructor
  * @extends Ember.Component
  */
@@ -15,9 +15,20 @@ export default Component.extend({
   /**
    * Class model content.
    * @property class
-   * @type {Object}
+   * @type {?Object}
+   * @passed
    */
   class: null,
+  /**
+   * Item query param passed down from controller. Passed to the
+   * {{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}
+   * component to scroll to linked item after load.
+   * @property item
+   * @type {?string}
+   * @default null
+   * @passed
+   */
+  item: null,
 
   // Layout
   // ---------------------------------------------------------------------------
@@ -45,6 +56,7 @@ export default Component.extend({
         property=class.property
         method=class.method
         event=class.event
+        item=item
         name=class.name}}
     {{/if}}
   `

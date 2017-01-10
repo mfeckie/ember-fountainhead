@@ -12,7 +12,7 @@ import get from 'ember-metal/get';
  * The active tab is reset to the index panel anytime that the `name` (of the
  * class) changes.
  *
- * @class FountainHead.Class.ClassItemsContainer
+ * @class FountainHeadClass.ItemsContainer
  * @constructor
  * @extends Ember.Component
  */
@@ -22,24 +22,30 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
-   * This class' array of property documentation items.
-   * @property property
-   * @type {Array}
-   * @default []
-   */
-  property: [],
-  /**
    * This class' array of event documentation items.
    * @property event
    * @type {Array}
    * @default []
+   * @passed
    */
   event: [],
+  /**
+   * Item query param passed down from controller. When this property is present,
+   * or changes handle scrolling to the item. When the specified doc class is
+   * the same but the item query param is different the model hooks will not be
+   * called, so we need to handle scrolling to the item when it changes.
+   * @property item
+   * @type {?string}
+   * @default null
+   * @passed
+   */
+  item: null,
   /**
    * This class' array of method documentation items.
    * @property method
    * @type {Array}
    * @default []
+   * @passed
    */
   method: [],
   /**
@@ -47,8 +53,17 @@ export default Component.extend({
    * should be reset to the index panel
    * @property name
    * @type {string}
+   * @passed
    */
   name: '',
+  /**
+   * This class' array of property documentation items.
+   * @property property
+   * @type {Array}
+   * @default []
+   * @passed
+   */
+  property: [],
 
   // Properties
   // ---------------------------------------------------------------------------
