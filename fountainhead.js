@@ -5,6 +5,7 @@
 
 // Common configs for all environments
 const common = {
+  liveEdit: true, // Generate fountainhead docs before a build is run for live reloading
   includeVendorStyles: false, // We directly import styles for dev hot reloading
   entry: [
     'addon', 'app', 'blueprints', 'lib'
