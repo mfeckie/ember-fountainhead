@@ -7,6 +7,14 @@ The enclosing `{}` are optional for YUIDoc, but we recommend using them in case
 we are able to upgrade to JSDoc at some point in the future (where they are
 required.)
 
+### Nullable Type Shorthand
+Fountainhead recommends following the JSDoc convention for nullable types where
+`{?number}` indicates the type is a number or null.
+
+### Non-Nullable Type Shorthand
+Fountainhead recommends following the JSDoc convention for non-nullable types where
+`{!number}` indicates the type is a number that CANNOT be null.
+
 ### Types of Classes or Native Types
 If your type matches a class or JavaScript native type, the default behavior is
 to create a link to the documentation for that class/type. This can be disabled
