@@ -265,12 +265,12 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{! A list of buttons that are all automagically added to the tabList based on the number of core-tabs.content components are nested inside the component. }}
-    <ul class="tab-list{{if buttonStyle ' button-style'}}" role="tablist" data-test="tab-list">
+    <ul class='tab-list button-style' role='tablist' data-test='tab-list'>
       {{#each tabList as |tab|}}
-        <li class="tab-li"
-          aria-hidden="{{if tab.hidden true false}}">
+        <li class='tab-li'
+          aria-hidden='{{if tab.hidden true false}}'>
           {{#fountainhead-button
-            ariaRole="tab"
+            ariaRole='tab'
             aria-controls=tab.elementId
             class=(concat 'tab' (if (eq tab.elementId activeId) ' active'))
             link=true
@@ -284,7 +284,7 @@ export default Component.extend({
         </li>
       {{/each}}
     </ul>
-    <div class="content-container">
+    <div class='content-container'>
       {{! Yield the core-tabs/content component pre-bound with internal props }}
       {{yield (hash
         content=(component 'fountainhead-tabs-content'

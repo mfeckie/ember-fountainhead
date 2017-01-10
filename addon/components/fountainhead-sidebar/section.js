@@ -16,7 +16,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <h4 class="section-header fh-element">{{title}}</h4>
+    <h4 class='section-header fh-element'>{{title}}</h4>
     {{yield}}
   `
 });
