@@ -5,9 +5,11 @@ const { HTMLBars, getOwner } = Ember;
 
 /**
  * Generates a description during runtime by using HTMLBars to compile any
- * string to a partial. This allows us to create descriptions form JSON
+ * string to a partial. This allows us to create descriptions from JSON
  * responses with components inside of them.
- * @class FountainHead.Shared.RuntimeDescription
+ *
+ * TODO: Name partials by class+type+name for re-use
+ * @class Fountainhead.RuntimeDescription
  * @constructor
  * @extends Ember.Component
  */
@@ -17,10 +19,19 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
+   * The content string that should be rendered. This string is passed to the
+   * runtime compiler and registered as a partial if compilation is successful.
+   * @property content
+   * @type {string}
+   * @default ''
+   */
+  content: '',
+  /**
    * The string that should be converted to a partial
    * @property description
    * @type {string}
    * @default ''
+   * @deprecated
    */
   description: '',
 
@@ -33,6 +44,15 @@ export default Component.extend({
    * @default ['fh-description']
    */
   classNames: ['fh-description'],
+  /**
+   * If there is a parsing error during the template compilation the catch block
+   * will set it as the `compilerError`. This parsing error is rendered for
+   * easier debugging of invalid content.
+   * @property compilerError
+   * @type {?string}
+   * @default null
+   */
+  compilerError: null,
   /**
    * Name of generated partial that is used in the template.
    * @property partialName
@@ -161,6 +181,7 @@ export default Component.extend({
     <div class='partial-wrapper'>
       {{partial partialName}}
 
+      {{! Render parsing errors for debugging. Can be hidden with CSS if desired }}
       {{#if compilerError}}
         {{#fountainhead-alert brand="danger"}}
           <h4>Compiler Error</h4>
