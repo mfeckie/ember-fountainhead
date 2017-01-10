@@ -15,21 +15,21 @@ import hbs from 'htmlbars-inline-precompile';
  *
  * #### Examples:
  * Generate a link to module 'YourModule'
- * ```
+ * ```glimmer
  * {{cross-link module='YourModule'}}
  * ```
  *
  * Generate a link to class 'YourClass'
- * ```
+ * ```glimmer
  * {{cross-link class='YourClass'}}
  * ```
  *
  * Generate a link to 'someMethod' on 'YourClass'
- * ```
+ * ```glimmer
  * {{cross-link class='YourClass' item='someMethod'}}
  * ```
  *
- * **NOTE** Component requires either a `class` or `module` passed in.
+ * *NOTE* Component requires either a `class` or `module` passed in.
  * An `item` may be passed to link to a specific class item.
  * @class CrossLink
  * @constructor
