@@ -117,7 +117,7 @@ export default Component.extend({
     {{! --------------------------------------------------------------------- }}
     {{#if classItem.deprecated}}
       <div class='fh-deprecation-container'>
-        <h4 class='fh-deprecation-header'>This {{classItem.itemtype}} is deprecated</h4>
+        <h4 class='fh-deprecation-header'>Warning: This {{classItem.itemtype}} is deprecated</h4>
         <div class='fh-deprecation-message'>{{{classItem.deprecationMessage}}}</div>
       </div>
     {{/if}}
