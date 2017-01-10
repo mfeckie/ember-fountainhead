@@ -105,6 +105,7 @@ export default Component.extend({
       this.set('partialName', `partials/live-preview-${timestamp}`);
       this.set('compilerError', '');
     } catch(ex) {
+      this.set('partialName', '');
       this.set('compilerError', ex);
     }
   },
@@ -159,6 +160,18 @@ export default Component.extend({
   layout: hbs`
     <div class='partial-wrapper'>
       {{partial partialName}}
+
+      {{#if compilerError}}
+        {{#fountainhead-alert brand="danger"}}
+          <h4>Compiler Error</h4>
+          <p>
+          There was a problem compiling the handlebars syntax in the
+          markdown description for this class. <b>Note:</b> Any line numbers
+          referenced below start from the first line of the class description.
+          </p>
+          <p><b>{{compilerError}}</b></p>
+        {{/fountainhead-alert}}
+      {{/if}}
     </div>
   `
 });
