@@ -57,7 +57,7 @@ export default Component.extend({
     {{/if}}
 
     {{! TODO: Move description out of class to general }}
-    {{fountain-head/shared/runtime-description
+    {{fountainhead-runtime-description
       description=module.description}}
 
     {{#if module.submodules}}
