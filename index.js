@@ -100,14 +100,14 @@ module.exports = {
     };
   },
   /**
-   * Generates fountainhead output before a build is run for live editing. This
-   * is can be turned on/off using the `liveEdit` property in the
-   * `fountainhead.js` configuration file.
+   * Generates fountainhead output before a build is run for live editing.
+   * Feature is enabled by default and can be disabled by setting `liveEdit` to
+   * `false` in your `fountainhead.js` configuration.
    * @method preBuild
    * @return {undefined}
    */
   preBuild() {
-    if (config.liveEdit) { generateDocs(); }
+    if (config.liveEdit !== false) { generateDocs(); }
   }
 
   // Fallback exclude feature if we need to nix using

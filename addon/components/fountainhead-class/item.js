@@ -149,6 +149,9 @@ export default Component.extend({
               </strong>
               {{#if param.type}}<span class='param-type'>{{param.type}}</span>{{/if}}
             </span>
+            <span class='param-description'>
+              {{{param.description}}}
+            </span>
             {{#if param.props.length}}
               <ul class='fh-params'>
                 {{#each param.props as |prop|}}
@@ -172,9 +175,6 @@ export default Component.extend({
                 {{/each}}
               </ul>
             {{/if}}
-            <span class='param-description'>
-              {{{param.description}}}
-            </span>
           </li>
         {{/each}}
       </ul>

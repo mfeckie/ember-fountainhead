@@ -73,6 +73,7 @@
     'no-underscore-dangle': 0,
     'quote-props': [1, 'as-needed'],
     'quotes': [1, 'single'],
-    'semi': 1
+    'semi': 1,
+    'object-curly-spacing': [1, 'always']
   }
 }

@@ -22,6 +22,14 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
+   * Array of *ALL* items for this class. Used to find the type when an item is
+   * specified in a query param.
+   * @property classitems
+   * @type {Array}
+   * @default []
+   */
+  classitems: [],
+  /**
    * This class' array of event documentation items.
    * @property event
    * @type {Array}
@@ -74,6 +82,7 @@ export default Component.extend({
    * panel.
    * @property activeTab
    * @type {string}
+   * @protected
    * @default indexPanel
    */
   activeTab: 'indexPanel',
@@ -83,13 +92,90 @@ export default Component.extend({
    * @default ['fh-tabs-container']
    */
   classNames: ['fh-tabs-container'],
+  /**
+   * The panel that that the tabs should render on creation. The tabs component
+   * tracks this separately and it needs to be updated separately when a class
+   * page is loaded with an item query parameter.
+   * @property defaultTab
+   * @type {string}
+   * @default 'indexPanel'
+   */
+  defaultTab: 'indexPanel',
+
+  // Methods
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Internal method to handle selecting a tab panel and then scrolling to an
+   * item in that panel.
+   *
+   * Method will:
+   * - Change to the panel matching the doc item type
+   * - Scroll to that item using the itemtype and name to construct the DOM id
+   * @method _scrollToItem
+   * @protected
+   * @param {Object} classitem          Backing class item
+   * @param {string} classitem.itemtype Type for item of: `method`/`property`/`event`
+   * @param {string} classitem.name     Name of item
+   */
+  _scrollToItem({ itemtype, name }) {
+    /*
+     * Named function for scrolling to selected item after the tab change has
+     * been rendered. VERY IMPORTANT: Fountainhead is rendered inside of a
+     * fake wrapper page, so we have to scroll that wrapper page instead of
+     * the body. We also need to get the current scrollTop of that containing
+     * wrapper before adding the new scrollTop, b/c we're really just scrolling
+     * that div
+     */
+    function scrollTo() {
+      let scrollTop =
+        $('.fh-page-in-page-wrapper').scrollTop() // Current scrolltop
+        + $(`#${itemtype}_${name}`).offset().top // Offset to desired element
+        - 75; // Minus a little for an easier visual transition
+
+      $('.fh-page-in-page-wrapper').animate({ scrollTop }, 350);
+    }
+
+    // Change to the selected tab using the itemtype to build the tab's id
+    this.set('activeTab', `${itemtype}Panel`);
+
+    // We can't scroll until after the next render has udpated the current tab
+    scheduleOnce('afterRender', this, scrollTo);
+  },
+
+  /**
+   * Handles finding the classitem model using the `item` query param value.
+   * If a classitem is found, initiate a scroll.
+   * @method _scrollToQueryParamItem
+   * @protected
+   * @param {!string} item The item query param identifying which classitem to scroll to
+   */
+  _scrollToQueryParamItem(item) {
+    // Find specific classitem data in complete classitems array
+    let targetItem = this.get('classitems').filter(classitem => classitem.name === item);
+
+    // Only attempt to scroll to item if we found it
+    if (targetItem.length) {
+      targetItem = targetItem[0];
+      /*
+       * This is only required on the first load of the tabs, but there isn't
+       * an easy way to track that and it's ok to set it every time b/c the tabs
+       * only uses it in the `init` hook. Setting this ensures that the first
+       * time the tabs renders the passed `defaultTab` matches the passed
+       * `activeTab`. If these don't match the first render of the tabs is blank.
+       */
+      this.set('defaultTab', `${targetItem.itemtype}Panel`);
+      // The `targetItem` structure matches expected `itemtype` and `name` of `_scrollToItem`
+      this._scrollToItem(targetItem);
+    }
+  },
 
   // Hooks
   // ---------------------------------------------------------------------------
 
   /**
    * Handle resetting tabs container to the index panel any time that this
-   * component receives attrs. The only props passed in to this component are
+   * component's attrs update. The only props passed in to this component are
    * the class items for the container, so we know if they change in any way
    * that this is the right time to update the tabs panel.
    *
@@ -98,13 +184,31 @@ export default Component.extend({
    * and only ONCE when an internal property changes after the props for this
    * component has changed. Super weird. For now we're 'fixing' it by also
    * passing in the class name and using that as a check to reset the `activeTab`
-   * @event didReceiveAttrs
+   * @event didUpdateAttrs
+   * @param {Object} attrs Object with `oldAttrs` and `newAttrs`
    */
   didUpdateAttrs({ oldAttrs, newAttrs }) {
     this._super(...arguments);
+    let item = get(newAttrs, 'item.value');
 
-    if (get(oldAttrs, 'name.value') !== get(newAttrs, 'name.value')) {
+    if (item && get(oldAttrs, 'item.value') !== get(newAttrs, 'item.value')) {
+      this._scrollToQueryParamItem(item);
+    } else if (get(oldAttrs, 'name.value') !== get(newAttrs, 'name.value')) {
       this.set('activeTab', 'indexPanel');
+    }
+  },
+
+
+  /**
+   * Check for a passed `item` query param. When it exists call
+   * {{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}
+   * to scroll to that cross linked item.
+   * @method init
+   */
+  init() {
+    this._super(...arguments);
+    if (this.get('item')) {
+      this._scrollToQueryParamItem(this.get('item'));
     }
   },
 
@@ -114,42 +218,24 @@ export default Component.extend({
     /**
      * Action bound to each documentation item in the index panel. Clicking any
      * item will trigger this with the documentation item as an argument. Use
-     * the passed doc item to:
-     * - Change to the panel matching the doc item type
-     * - Scroll to that item using the itemtype and name to construct the DOM id
+     * the passed doc item to internally call
+     * {{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}
+     * to scroll to clicked item.
      * @method goToItem
+     * @action
      * @param {Object} classitem          Backing classitem
      * @param {string} classitem.itemtype Type for item of: `method`/`property`/`event`
      * @param {string} classitem.name     Name for classitem
      */
-    goToItem({itemtype, name}) {
-      /*
-       * Named function for scrolling to selected item after the tab change has
-       * been rendered. VERY IMPORTANT: Fountainhead is rendered inside of a
-       * fake wrapper page, so we have to scroll that wrapper page instead of
-       * the body. We also need to get the current scrollTop of that containing
-       * wrapper before adding the new scrollTop, b/c we're really just scrolling
-       * that div
-       */
-      function scrollTo() {
-        let scrollTop = $('.fh-page-in-page-wrapper').scrollTop()
-          + $(`#${itemtype}_${name}`).offset().top
-          - 75;
-
-        $('.fh-page-in-page-wrapper').animate({ scrollTop }, 350);
-      }
-
-      // Change to the selected tab using the itemtype to build the tab's id
-      this.set('activeTab', `${itemtype}Panel`);
-
-      // We can't scroll until after the next render has udpated the current tab
-      scheduleOnce('afterRender', this, scrollTo);
+    goToItem({ itemtype, name }) {
+      this._scrollToItem({ itemtype, name });
     },
     /**
      * Closure action passed into the tab component. This action is called
      * whenever a tab is clicked with the id of the tab. Use this to update the
      * controlling `activeTab` property for the tabs DDAU style.
      * @method tabsChanged
+     * @action
      * @param {Object} tab           Backing object for a given tab
      * @param {string} tab.elementId The id of the tab, controls current tab displayed
      */
@@ -162,7 +248,7 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{#fountainhead-tabs
-      defaultTab='indexPanel'
+      defaultTab=defaultTab
       activeId=activeTab
       onChange=(action 'tabsChanged')
       as |components|}}

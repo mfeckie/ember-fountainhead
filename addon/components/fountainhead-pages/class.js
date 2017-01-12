@@ -57,7 +57,8 @@ export default Component.extend({
         method=class.method
         event=class.event
         item=item
-        name=class.name}}
+        name=class.name
+        classitems=class.classitems}}
     {{/if}}
   `
 });

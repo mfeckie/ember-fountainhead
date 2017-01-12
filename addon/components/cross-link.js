@@ -96,7 +96,7 @@ export default Component.extend({
    * prevents the component from creating an invalid `link-to`.
    *
    * Checks for a passed
-   * {{cross-link class='FountainheadCrosslink' item='text'}} and sets default
+   * {{cross-link class='Crosslink' item='text'}} and sets default
    * text if unspecified
    * @method init
    */

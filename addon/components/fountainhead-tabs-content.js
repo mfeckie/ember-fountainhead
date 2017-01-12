@@ -141,7 +141,7 @@ export default Component.extend({
    * _(Currently the only change we're notifying on is the `hidden` prop)_
    * @event didUpdateAttrs
    */
-  didUpdateAttrs({ oldAttrs = {}, newAttrs = {}}) {
+  didUpdateAttrs({ oldAttrs = {}, newAttrs = {} }) {
     let oldHidden = oldAttrs.hidden ? oldAttrs.hidden.value : null;
     let newHidden = newAttrs.hidden ? newAttrs.hidden.value : null;
 

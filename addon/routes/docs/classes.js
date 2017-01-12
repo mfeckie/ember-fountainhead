@@ -11,6 +11,9 @@ import $ from 'jquery';
 export default Route.extend({
   fountainhead: inject(),
 
+  // Hooks
+  // ---------------------------------------------------------------------------
+
   /**
    * Fetches class' JSON at: `${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`
    * @method model
@@ -20,6 +23,22 @@ export default Route.extend({
    */
   model(params) {
     return $.ajax(`${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`);
+  },
+  /**
+   * We don't want the class `item` query param to be sticky. If it is, then you
+   * can end up pre-scrolled to some previously crosslinked item when returning
+   * to a class.
+   *
+   * The `resetController` hook is called anytime a route's model changes or the
+   * route is exited, and is the recommended time to reset query param values on
+   * a controller.
+   * @method resetController
+   * @param {Object}  controller
+   * @param {Boolean} isExiting
+   * @param {Object}  transition
+   */
+  resetController(controller, isExiting, transition) {
+    controller.set('item', null);
   },
 
   // Actions
