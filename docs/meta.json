@@ -3,9 +3,8 @@
   "namespaces": [],
   "name": "ember-fountainhead",
   "description": "Robust interactive documentation for your Ember application's source code",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0-beta.7",
   "repository": "https://github.com/healthsparq/ember-fountainhead",
-  "logo": "/ember-fountainhead/ember-fountainhead/img/ember-logo.png",
   "modules": [
     {
       "name": "Addon",
@@ -31,6 +30,10 @@
     },
     {
       "name": "CoreTabs.Content",
+      "type": "classes"
+    },
+    {
+      "name": "CrossLink",
       "type": "classes"
     },
     {
@@ -62,15 +65,7 @@
       "type": "classes"
     },
     {
-      "name": "FountainHead.Class",
-      "type": "classes"
-    },
-    {
       "name": "FountainHead.Class.ClassItem",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Class.ClassItemsContainer",
       "type": "classes"
     },
     {
@@ -106,6 +101,10 @@
       "type": "classes"
     },
     {
+      "name": "FountainHead.Shared.Alert",
+      "type": "classes"
+    },
+    {
       "name": "FountainHead.Shared.Button",
       "type": "classes"
     },
@@ -114,11 +113,19 @@
       "type": "classes"
     },
     {
-      "name": "FountainHead.Shared.RuntimeDescription",
+      "name": "FountainHeadClass.ItemsContainer",
+      "type": "classes"
+    },
+    {
+      "name": "FountainHeadPages.Class",
       "type": "classes"
     },
     {
       "name": "Fountainhead",
+      "type": "classes"
+    },
+    {
+      "name": "Fountainhead.RuntimeDescription",
       "type": "classes"
     },
     {

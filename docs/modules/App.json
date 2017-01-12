@@ -10,5 +10,5 @@
   "tag": "module",
   "file": "app/instance-initializers/fountainhead-routes.js",
   "line": 11,
-  "description": "<p>Fountainhead’s routes are automatically mounted to the consuming application’s\nrouter through an <code>instance-initializer</code>. We’re currently directly importing\nthe consuming application’s router by declaring this initializer in the <code>/app</code>\ndirectory instead of the <code>/addon</code> directory.</p>\n"
+  "description": "<p>Fountainhead's routes are automatically mounted to the consuming application's\nrouter through an <code>instance-initializer</code>. We're currently directly importing\nthe consuming application's router by declaring this initializer in the <code>/app</code>\ndirectory instead of the <code>/addon</code> directory.</p>\n"
 }

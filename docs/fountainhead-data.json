@@ -23,7 +23,7 @@
       "name": "addon/components/fountainhead-class/items-container.js",
       "modules": {},
       "classes": {
-        "FountainHead.Class.ClassItemsContainer": 1
+        "FountainHeadClass.ItemsContainer": 1
       },
       "fors": {},
       "namespaces": {}
@@ -41,7 +41,7 @@
       "name": "addon/components/fountainhead-pages/class.js",
       "modules": {},
       "classes": {
-        "FountainHead.Class": 1
+        "FountainHeadPages.Class": 1
       },
       "fors": {},
       "namespaces": {}
@@ -82,6 +82,24 @@
       "fors": {},
       "namespaces": {}
     },
+    "addon/components/cross-link.js": {
+      "name": "addon/components/cross-link.js",
+      "modules": {},
+      "classes": {
+        "CrossLink": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/components/fountainhead-alert.js": {
+      "name": "addon/components/fountainhead-alert.js",
+      "modules": {},
+      "classes": {
+        "FountainHead.Shared.Alert": 1
+      },
+      "fors": {},
+      "namespaces": {}
+    },
     "addon/components/fountainhead-button.js": {
       "name": "addon/components/fountainhead-button.js",
       "modules": {},
@@ -111,7 +129,7 @@
       "name": "addon/components/fountainhead-runtime-description.js",
       "modules": {},
       "classes": {
-        "FountainHead.Shared.RuntimeDescription": 1
+        "Fountainhead.RuntimeDescription": 1
       },
       "fors": {},
       "namespaces": {}
@@ -149,6 +167,13 @@
       "classes": {
         "FountainHead.Header": 1
       },
+      "fors": {},
+      "namespaces": {}
+    },
+    "addon/controllers/docs/classes.js": {
+      "name": "addon/controllers/docs/classes.js",
+      "modules": {},
+      "classes": {},
       "fors": {},
       "namespaces": {}
     },
@@ -318,22 +343,24 @@
       "classes": {
         "FountainHead.Class.Header": 1,
         "FountainHead.Class.ClassItem": 1,
-        "FountainHead.Class.ClassItemsContainer": 1,
+        "FountainHeadClass.ItemsContainer": 1,
         "FountainHead.Class.Meta": 1,
-        "FountainHead.Class": 1,
+        "FountainHeadPages.Class": 1,
         "FountainHead.Docs": 1,
         "FountainHead.File": 1,
         "FountainHead.Module": 1,
         "FountainHead.Docs.Sidebar": 1,
+        "CrossLink": 1,
+        "FountainHead.Shared.Alert": 1,
         "FountainHead.Shared.Button": 1,
         "FountainHead.Header": 1,
         "FountainHead.Docs.Github": 1,
-        "FountainHead.Shared.RuntimeDescription": 1,
+        "Fountainhead.RuntimeDescription": 1,
         "FountainHead.Shared.CoreSVG": 1,
         "CoreTabs.Content": 1,
         "CoreTabs": 1,
-        "Helper.Eq": 1,
         "Docs.Classes": 1,
+        "Helper.Eq": 1,
         "Docs.Files": 1,
         "Docs.Modules": 1,
         "Fountainhead": 1
@@ -357,7 +384,7 @@
       "tag": "module",
       "file": "app/instance-initializers/fountainhead-routes.js",
       "line": 11,
-      "description": "<p>Fountainhead’s routes are automatically mounted to the consuming application’s\nrouter through an <code>instance-initializer</code>. We’re currently directly importing\nthe consuming application’s router by declaring this initializer in the <code>/app</code>\ndirectory instead of the <code>/addon</code> directory.</p>\n"
+      "description": "<p>Fountainhead's routes are automatically mounted to the consuming application's\nrouter through an <code>instance-initializer</code>. We're currently directly importing\nthe consuming application's router by declaring this initializer in the <code>/app</code>\ndirectory instead of the <code>/addon</code> directory.</p>\n"
     },
     "Blueprints": {
       "name": "Blueprints",
@@ -391,7 +418,7 @@
       "namespaces": {},
       "tag": "module",
       "file": "lib/parse-markdown.js",
-      "line": 24,
+      "line": 28,
       "description": "<p>Modules in the <code>./lib</code> directory handle generating -&gt; parsing -&gt; decorating -&gt;\nsaving all data required for Fountainhead. Fountainhead is backed by REST APIs\nrather than static file generation. Each module, class and file are saved as\nJSON fetched on demand by the client.</p>\n<p>See this module for details/classes on the Node data generation application.\nSee below for a high level overview of the flow of the application through\nthe related modules.</p>\n<h2>Lib Classes Overview:</h2>\n<h4>Validation &amp;&amp; Preparation</h4>\n<ul>\n<li><code>index.js</code>: Primary entry point to Node application</li>\n<li><code>decorate-config</code>: Validate and merge addon configs, package JSON and default configs</li>\n<li><code>create-dirs</code>: Create directories required for JSON files</li>\n</ul>\n<h4>Generation &amp;&amp; Decoration</h4>\n<ul>\n<li><code>generate-fountainhead-data</code>: Coordinates parsing raw YUIDoc using <code>data-types</code> modules</li>\n<li><code>data-types/generate-modules</code>: Parse &amp;&amp; decorate raw modules data</li>\n<li><code>data-types/generate-classes</code>: Parse &amp;&amp; decorate raw class &amp;&amp; class items data</li>\n<li><code>data-types/generate-file</code>: Parse &amp;&amp; decorate source files</li>\n<li><code>parse-markdown</code>: Called for every description, parses markdown contents to HTML</li>\n</ul>\n"
     }
   },
@@ -581,57 +608,138 @@
       "event": [],
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
-    "FountainHead.Class.ClassItemsContainer": {
-      "name": "FountainHead.Class.ClassItemsContainer",
-      "shortname": "FountainHead.Class.ClassItemsContainer",
+    "FountainHeadClass.ItemsContainer": {
+      "name": "FountainHeadClass.ItemsContainer",
+      "shortname": "FountainHeadClass.ItemsContainer",
       "classitems": [
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 56,
+          "line": 108,
+          "description": "<p>Internal method to handle selecting a tab panel and then scrolling to an\nitem in that panel.</p>\n<p>Method will:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "itemtype": "method",
+          "name": "_scrollToItem",
+          "access": "protected",
+          "tagname": "",
+          "params": [
+            {
+              "name": "classitem",
+              "description": "<p>Backing class item</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "itemtype",
+                  "description": "Type for item of: `method`/`property`/`event`",
+                  "type": "String"
+                },
+                {
+                  "name": "name",
+                  "description": "Name of item",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 146,
+          "description": "<p>Handles finding the classitem model using the <code>item</code> query param value.\nIf a classitem is found, initiate a scroll.</p>\n",
+          "itemtype": "method",
+          "name": "_scrollToQueryParamItem",
+          "access": "protected",
+          "tagname": "",
+          "params": [
+            {
+              "name": "item",
+              "description": "<p>The item query param identifying which classitem to scroll to</p>\n",
+              "type": "!string"
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 79,
           "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
           "itemtype": "property",
           "name": "activeTab",
           "type": "{string}",
+          "access": "protected",
+          "tagname": "",
           "default": "indexPanel",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 65,
+          "line": 89,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
           "default": "['fh-tabs-container']",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 75,
-          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+          "line": 24,
+          "description": "<p>Array of <em>ALL</em> items for this class. Used to find the type when an item is\nspecified in a query param.</p>\n",
+          "itemtype": "property",
+          "name": "classitems",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 95,
+          "description": "<p>The panel that that the tabs should render on creation. The tabs component\ntracks this separately and it needs to be updated separately when a class\npage is loaded with an item query parameter.</p>\n",
+          "itemtype": "property",
+          "name": "defaultTab",
+          "type": "{string}",
+          "default": "'indexPanel'",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 176,
+          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent's attrs update. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens't only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we're 'fixing' it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
           "itemtype": "event",
-          "name": "didReceiveAttrs",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "name": "didUpdateAttrs",
+          "params": [
+            {
+              "name": "attrs",
+              "description": "<p>Object with <code>oldAttrs</code> and <code>newAttrs</code></p>\n",
+              "type": "Object"
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 31,
-          "description": "<p>This class’ array of event documentation items.</p>\n",
+          "line": 32,
+          "description": "<p>This class' array of event documentation items.</p>\n",
           "itemtype": "property",
           "name": "event",
           "type": "{Array}",
           "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 99,
-          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "line": 218,
+          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
           "itemtype": "method",
           "name": "goToItem",
+          "action": "",
           "params": [
             {
               "name": "classitem",
@@ -651,47 +759,72 @@
               ]
             }
           ],
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 38,
-          "description": "<p>This class’ array of method documentation items.</p>\n",
+          "line": 202,
+          "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 40,
+          "description": "<p>Item query param passed down from controller. When this property is present,\nor changes handle scrolling to the item. When the specified doc class is\nthe same but the item query param is different the model hooks will not be\ncalled, so we need to handle scrolling to the item when it changes.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 51,
+          "description": "<p>This class' array of method documentation items.</p>\n",
           "itemtype": "property",
           "name": "method",
           "type": "{Array}",
           "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 45,
+          "line": 59,
           "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
           "itemtype": "property",
           "name": "name",
           "type": "{string}",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 24,
-          "description": "<p>This class’ array of property documentation items.</p>\n",
+          "line": 67,
+          "description": "<p>This class' array of property documentation items.</p>\n",
           "itemtype": "property",
           "name": "property",
           "type": "{Array}",
           "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 133,
+          "line": 233,
           "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
           "itemtype": "method",
           "name": "tabsChanged",
+          "action": "",
           "params": [
             {
               "name": "tab",
@@ -706,7 +839,7 @@
               ]
             }
           ],
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         }
       ],
@@ -717,16 +850,65 @@
       "module": "Addon",
       "file": "addon/components/fountainhead-class/items-container.js",
       "line": 7,
-      "description": "<p>Tab container for the class’ documentation items. Component handles running\na controlled instance of <code>core-tabs</code> by tracking <code>activeTab</code> internally and\npassing <code>tabsChanged</code> to the <code>core-tabs</code> instance.</p>\n<p>The active tab is reset to the index panel anytime that the <code>name</code> (of the\nclass) changes.</p>\n",
+      "description": "<p>Tab container for the class' documentation items. Component handles running\na controlled instance of <code>core-tabs</code> by tracking <code>activeTab</code> internally and\npassing <code>tabsChanged</code> to the <code>core-tabs</code> instance.</p>\n<p>The active tab is reset to the index panel anytime that the <code>name</code> (of the\nclass) changes.</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Component",
       "method": [
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 99,
-          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "line": 108,
+          "description": "<p>Internal method to handle selecting a tab panel and then scrolling to an\nitem in that panel.</p>\n<p>Method will:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+          "itemtype": "method",
+          "name": "_scrollToItem",
+          "access": "protected",
+          "tagname": "",
+          "params": [
+            {
+              "name": "classitem",
+              "description": "<p>Backing class item</p>\n",
+              "type": "Object",
+              "props": [
+                {
+                  "name": "itemtype",
+                  "description": "Type for item of: `method`/`property`/`event`",
+                  "type": "String"
+                },
+                {
+                  "name": "name",
+                  "description": "Name of item",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 146,
+          "description": "<p>Handles finding the classitem model using the <code>item</code> query param value.\nIf a classitem is found, initiate a scroll.</p>\n",
+          "itemtype": "method",
+          "name": "_scrollToQueryParamItem",
+          "access": "protected",
+          "tagname": "",
+          "params": [
+            {
+              "name": "item",
+              "description": "<p>The item query param identifying which classitem to scroll to</p>\n",
+              "type": "!string"
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 218,
+          "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
           "itemtype": "method",
           "name": "goToItem",
+          "action": "",
           "params": [
             {
               "name": "classitem",
@@ -746,15 +928,25 @@
               ]
             }
           ],
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 133,
+          "line": 202,
+          "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 233,
           "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
           "itemtype": "method",
           "name": "tabsChanged",
+          "action": "",
           "params": [
             {
               "name": "tab",
@@ -769,84 +961,131 @@
               ]
             }
           ],
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         }
       ],
       "property": [
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 56,
+          "line": 79,
           "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
           "itemtype": "property",
           "name": "activeTab",
           "type": "{string}",
+          "access": "protected",
+          "tagname": "",
           "default": "indexPanel",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 65,
+          "line": 89,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
           "default": "['fh-tabs-container']",
-          "class": "FountainHead.Class.ClassItemsContainer",
-          "srcFileId": "addon_components_fountainhead-class_items-container.js"
-        },
-        {
-          "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 31,
-          "description": "<p>This class’ array of event documentation items.</p>\n",
-          "itemtype": "property",
-          "name": "event",
-          "type": "{Array}",
-          "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
-          "srcFileId": "addon_components_fountainhead-class_items-container.js"
-        },
-        {
-          "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 38,
-          "description": "<p>This class’ array of method documentation items.</p>\n",
-          "itemtype": "property",
-          "name": "method",
-          "type": "{Array}",
-          "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
-          "srcFileId": "addon_components_fountainhead-class_items-container.js"
-        },
-        {
-          "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 45,
-          "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
-          "itemtype": "property",
-          "name": "name",
-          "type": "{string}",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         },
         {
           "file": "addon/components/fountainhead-class/items-container.js",
           "line": 24,
-          "description": "<p>This class’ array of property documentation items.</p>\n",
+          "description": "<p>Array of <em>ALL</em> items for this class. Used to find the type when an item is\nspecified in a query param.</p>\n",
+          "itemtype": "property",
+          "name": "classitems",
+          "type": "{Array}",
+          "default": "[]",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 95,
+          "description": "<p>The panel that that the tabs should render on creation. The tabs component\ntracks this separately and it needs to be updated separately when a class\npage is loaded with an item query parameter.</p>\n",
+          "itemtype": "property",
+          "name": "defaultTab",
+          "type": "{string}",
+          "default": "'indexPanel'",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 32,
+          "description": "<p>This class' array of event documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "event",
+          "type": "{Array}",
+          "default": "[]",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 40,
+          "description": "<p>Item query param passed down from controller. When this property is present,\nor changes handle scrolling to the item. When the specified doc class is\nthe same but the item query param is different the model hooks will not be\ncalled, so we need to handle scrolling to the item when it changes.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 51,
+          "description": "<p>This class' array of method documentation items.</p>\n",
+          "itemtype": "property",
+          "name": "method",
+          "type": "{Array}",
+          "default": "[]",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 59,
+          "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
+          "itemtype": "property",
+          "name": "name",
+          "type": "{string}",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
+          "srcFileId": "addon_components_fountainhead-class_items-container.js"
+        },
+        {
+          "file": "addon/components/fountainhead-class/items-container.js",
+          "line": 67,
+          "description": "<p>This class' array of property documentation items.</p>\n",
           "itemtype": "property",
           "name": "property",
           "type": "{Array}",
           "default": "[]",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "passed": "",
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         }
       ],
       "event": [
         {
           "file": "addon/components/fountainhead-class/items-container.js",
-          "line": 75,
-          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+          "line": 176,
+          "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent's attrs update. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens't only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we're 'fixing' it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
           "itemtype": "event",
-          "name": "didReceiveAttrs",
-          "class": "FountainHead.Class.ClassItemsContainer",
+          "name": "didUpdateAttrs",
+          "params": [
+            {
+              "name": "attrs",
+              "description": "<p>Object with <code>oldAttrs</code> and <code>newAttrs</code></p>\n",
+              "type": "Object"
+            }
+          ],
+          "class": "FountainHeadClass.ItemsContainer",
           "srcFileId": "addon_components_fountainhead-class_items-container.js"
         }
       ],
@@ -1093,9 +1332,9 @@
       "event": [],
       "srcFileId": "addon_components_fountainhead-class_meta.js"
     },
-    "FountainHead.Class": {
-      "name": "FountainHead.Class",
-      "shortname": "FountainHead.Class",
+    "FountainHeadPages.Class": {
+      "name": "FountainHeadPages.Class",
+      "shortname": "FountainHeadPages.Class",
       "classitems": [
         {
           "file": "addon/components/fountainhead-pages/class.js",
@@ -1103,8 +1342,21 @@
           "description": "<p>Class model content.</p>\n",
           "itemtype": "property",
           "name": "class",
-          "type": "{Object}",
-          "class": "FountainHead.Class",
+          "type": "{?Object}",
+          "passed": "",
+          "class": "FountainHeadPages.Class",
+          "srcFileId": "addon_components_fountainhead-pages_class.js"
+        },
+        {
+          "file": "addon/components/fountainhead-pages/class.js",
+          "line": 22,
+          "description": "<p>Item query param passed down from controller. Passed to the\n{{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}\ncomponent to scroll to linked item after load.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "passed": "",
+          "class": "FountainHeadPages.Class",
           "srcFileId": "addon_components_fountainhead-pages_class.js"
         }
       ],
@@ -1126,8 +1378,21 @@
           "description": "<p>Class model content.</p>\n",
           "itemtype": "property",
           "name": "class",
-          "type": "{Object}",
-          "class": "FountainHead.Class",
+          "type": "{?Object}",
+          "passed": "",
+          "class": "FountainHeadPages.Class",
+          "srcFileId": "addon_components_fountainhead-pages_class.js"
+        },
+        {
+          "file": "addon/components/fountainhead-pages/class.js",
+          "line": 22,
+          "description": "<p>Item query param passed down from controller. Passed to the\n{{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}\ncomponent to scroll to linked item after load.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "passed": "",
+          "class": "FountainHeadPages.Class",
           "srcFileId": "addon_components_fountainhead-pages_class.js"
         }
       ],
@@ -1145,7 +1410,7 @@
       "module": "Addon",
       "file": "addon/components/fountainhead-pages/docs.js",
       "line": 5,
-      "description": "<p>Fountainhead <code>/doc</code> page component serves as the wrapping template for all of\nFountainhead. The <code>outlet</code> for the route is yielded by this component, which\nis how we use components to handle rendering all of our markup, even with\nsubroutes.</p>\n<p>Because we want the default setup of Fountainhead to look like it’s own app\nwe render everything in a <code>fh-page-in-page-wrapper</code> wrapper which is position\nfixed to cover the entire screen. This allows us to have our own header and\nfooter even if a consuming application has one in their <code>application.hbs</code>\ntemplate.</p>\n<p>The <code>fountainhead</code> service is the primary store for the addon and handles\nfetching the meta data for the docs.</p>\n",
+      "description": "<p>Fountainhead <code>/doc</code> page component serves as the wrapping template for all of\nFountainhead. The <code>outlet</code> for the route is yielded by this component, which\nis how we use components to handle rendering all of our markup, even with\nsubroutes.</p>\n<p>Because we want the default setup of Fountainhead to look like it's own app\nwe render everything in a <code>fh-page-in-page-wrapper</code> wrapper which is position\nfixed to cover the entire screen. This allows us to have our own header and\nfooter even if a consuming application has one in their <code>application.hbs</code>\ntemplate.</p>\n<p>The <code>fountainhead</code> service is the primary store for the addon and handles\nfetching the meta data for the docs.</p>\n",
       "uses": [
         "FountainHead.Docs.Github",
         "FountainHead.Docs.Sidebar"
@@ -1207,7 +1472,7 @@
         {
           "file": "addon/components/fountainhead-pages/module.js",
           "line": 24,
-          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
           "itemtype": "event",
           "name": "didReceiveAttrs",
           "class": "FountainHead.Module",
@@ -1232,7 +1497,7 @@
       "module": "Addon",
       "file": "addon/components/fountainhead-pages/module.js",
       "line": 4,
-      "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere’s nothing here yet.</p>\n",
+      "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere's nothing here yet.</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Component",
       "method": [],
@@ -1253,7 +1518,7 @@
         {
           "file": "addon/components/fountainhead-pages/module.js",
           "line": 24,
-          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+          "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
           "itemtype": "event",
           "name": "didReceiveAttrs",
           "class": "FountainHead.Module",
@@ -1320,7 +1585,7 @@
         {
           "file": "addon/components/fountainhead-sidebar/sidebar.js",
           "line": 52,
-          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven't run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
           "itemtype": "property",
           "name": "stringForAriaHidden",
           "type": "{string}",
@@ -1418,7 +1683,7 @@
         {
           "file": "addon/components/fountainhead-sidebar/sidebar.js",
           "line": 52,
-          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+          "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven't run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
           "itemtype": "property",
           "name": "stringForAriaHidden",
           "type": "{string}",
@@ -1449,6 +1714,462 @@
       ],
       "event": [],
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
+    },
+    "CrossLink": {
+      "name": "CrossLink",
+      "shortname": "CrossLink",
+      "classitems": [
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 43,
+          "description": "<p>Documentation Class to crosslink to.</p>\n",
+          "itemtype": "property",
+          "name": "class",
+          "type": "{string}",
+          "required": 1,
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 94,
+          "description": "<p>Validate passed properties during init and warn if they're invalid. This\nprevents the component from creating an invalid <code>link-to</code>.</p>\n<p>Checks for a passed\n{{cross-link class='Crosslink' item='text'}} and sets default\ntext if unspecified</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 51,
+          "description": "<p>Class item to cross link to.\nas well.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{string}",
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 59,
+          "description": "<p>Documentation module to crosslink to.</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "required": 1,
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 84,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "''",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 67,
+          "description": "<p>Anchor text for generated <code>link-to</code>. You can pass specific text if needed,\notherwise default text is generated:</p>\n<h4>Defaults:</h4>\n<ul>\n<li>if module: <em>MODULE_NAME Module</em></li>\n<li>if class: <em>CLASS_NAME Class</em></li>\n<li>if class &amp;&amp; item: <em>CLASS_NAME:ITEM_NAME Class</em></li>\n</ul>\n",
+          "itemtype": "property",
+          "name": "text",
+          "type": "{string}",
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/cross-link.js",
+      "line": 4,
+      "description": "<p>Use a <code>cross-link</code> component to handle cross referencing another documentation\nitem in your application. Internally the component handles creating a <code>link-to</code>\nusing the passed properties.</p>\n<table>\n<thead>\n<tr>\n<th>Property</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>text</code></td>\n<td>Inner HTML for link</td>\n</tr>\n<tr>\n<td><code>class</code></td>\n<td>Documentation class to link to</td>\n</tr>\n<tr>\n<td><code>module</code></td>\n<td>Documentation module to link to</td>\n</tr>\n<tr>\n<td><code>item</code></td>\n<td>Specific documentation item to link to, appended as a query param</td>\n</tr>\n</tbody>\n</table>\n<h4>Examples:</h4>\n<p>Generate a link to module 'YourModule'</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>cross<span class=\"token operator\">-</span>link module<span class=\"token operator\">=</span><span class=\"token string\">'YourModule'</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>Generate a link to class 'YourClass'</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>cross<span class=\"token operator\">-</span>link <span class=\"token keyword\">class</span><span class=\"token operator\">=</span><span class=\"token string\">'YourClass'</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>Generate a link to 'someMethod' on 'YourClass'</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>cross<span class=\"token operator\">-</span>link <span class=\"token keyword\">class</span><span class=\"token operator\">=</span><span class=\"token string\">'YourClass'</span> item<span class=\"token operator\">=</span><span class=\"token string\">'someMethod'</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p><em>NOTE</em> Component requires either a <code>class</code> or <code>module</code> passed in.\nAn <code>item</code> may be passed to link to a specific class item.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 94,
+          "description": "<p>Validate passed properties during init and warn if they're invalid. This\nprevents the component from creating an invalid <code>link-to</code>.</p>\n<p>Checks for a passed\n{{cross-link class='Crosslink' item='text'}} and sets default\ntext if unspecified</p>\n",
+          "itemtype": "method",
+          "name": "init",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 43,
+          "description": "<p>Documentation Class to crosslink to.</p>\n",
+          "itemtype": "property",
+          "name": "class",
+          "type": "{string}",
+          "required": 1,
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 51,
+          "description": "<p>Class item to cross link to.\nas well.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{string}",
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 59,
+          "description": "<p>Documentation module to crosslink to.</p>\n",
+          "itemtype": "property",
+          "name": "module",
+          "type": "{string}",
+          "required": 1,
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 84,
+          "itemtype": "property",
+          "name": "tagName",
+          "type": "{string}",
+          "default": "''",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        },
+        {
+          "file": "addon/components/cross-link.js",
+          "line": 67,
+          "description": "<p>Anchor text for generated <code>link-to</code>. You can pass specific text if needed,\notherwise default text is generated:</p>\n<h4>Defaults:</h4>\n<ul>\n<li>if module: <em>MODULE_NAME Module</em></li>\n<li>if class: <em>CLASS_NAME Class</em></li>\n<li>if class &amp;&amp; item: <em>CLASS_NAME:ITEM_NAME Class</em></li>\n</ul>\n",
+          "itemtype": "property",
+          "name": "text",
+          "type": "{string}",
+          "passed": "",
+          "class": "CrossLink",
+          "srcFileId": "addon_components_cross-link.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_cross-link.js"
+    },
+    "FountainHead.Shared.Alert": {
+      "name": "FountainHead.Shared.Alert",
+      "shortname": "FountainHead.Shared.Alert",
+      "classitems": [
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 108,
+          "description": "<p>Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.</p>\n",
+          "itemtype": "method",
+          "name": "_selfDestruct",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 127,
+          "description": "<p>Actions hash</p>\n",
+          "itemtype": "property",
+          "name": "actions",
+          "type": "{Object}",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 76,
+          "description": "<p>Attribute bindings applied to the component.</p>\n",
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 15,
+          "description": "<p>Specify brand, component handles assigning correct css class</p>\n",
+          "itemtype": "property",
+          "name": "brand",
+          "default": "''",
+          "type": "{string}",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 54,
+          "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+          "itemtype": "property",
+          "name": "brandClass",
+          "type": "{string}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "subprops": [
+            {
+              "name": "'brand'",
+              "description": ""
+            }
+          ],
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 23,
+          "description": "<p>Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.</p>\n<p><strong>Usage:</strong>\nOverride by passing <code>false</code> into this param in your handlebars template:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>alert canDismiss<span class=\"token operator\">=</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">!</span> Standard template content goes here <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>alert<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+          "itemtype": "property",
+          "name": "canDismiss",
+          "type": "{boolean}",
+          "default": "true",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 93,
+          "description": "<p>A set of dynamic classes whose output is bound to the associated values\non the component.</p>\n",
+          "itemtype": "property",
+          "name": "classNameBindings",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 85,
+          "description": "<p>Static class names applied to the component that must always exist. This\nreally should not need to be overridden or extended.</p>\n",
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 133,
+          "description": "<p>A proxy action for the selfDestruct method</p>\n",
+          "itemtype": "method",
+          "name": "dismiss",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 42,
+          "description": "<p>Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.</p>\n",
+          "itemtype": "property",
+          "name": "onDismiss",
+          "type": "{function}",
+          "default": "() => {}",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 65,
+          "description": "<p>A++ accessibility. Tells a screen this component is an alert.</p>\n",
+          "itemtype": "property",
+          "name": "role",
+          "type": "{string}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 5,
+      "description": "<p>Fountainhead Alert Component copied from Radical</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Component",
+      "method": [
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 108,
+          "description": "<p>Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.</p>\n",
+          "itemtype": "method",
+          "name": "_selfDestruct",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 133,
+          "description": "<p>A proxy action for the selfDestruct method</p>\n",
+          "itemtype": "method",
+          "name": "dismiss",
+          "return": {
+            "description": "",
+            "type": "Undefined"
+          },
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 127,
+          "description": "<p>Actions hash</p>\n",
+          "itemtype": "property",
+          "name": "actions",
+          "type": "{Object}",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 76,
+          "description": "<p>Attribute bindings applied to the component.</p>\n",
+          "itemtype": "property",
+          "name": "attributeBindings",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 15,
+          "description": "<p>Specify brand, component handles assigning correct css class</p>\n",
+          "itemtype": "property",
+          "name": "brand",
+          "default": "''",
+          "type": "{string}",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 54,
+          "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+          "itemtype": "property",
+          "name": "brandClass",
+          "type": "{string}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "subprops": [
+            {
+              "name": "'brand'",
+              "description": ""
+            }
+          ],
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 23,
+          "description": "<p>Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.</p>\n<p><strong>Usage:</strong>\nOverride by passing <code>false</code> into this param in your handlebars template:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>alert canDismiss<span class=\"token operator\">=</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">!</span> Standard template content goes here <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>alert<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+          "itemtype": "property",
+          "name": "canDismiss",
+          "type": "{boolean}",
+          "default": "true",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 93,
+          "description": "<p>A set of dynamic classes whose output is bound to the associated values\non the component.</p>\n",
+          "itemtype": "property",
+          "name": "classNameBindings",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 85,
+          "description": "<p>Static class names applied to the component that must always exist. This\nreally should not need to be overridden or extended.</p>\n",
+          "itemtype": "property",
+          "name": "classNames",
+          "type": "{Array}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 42,
+          "description": "<p>Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.</p>\n",
+          "itemtype": "property",
+          "name": "onDismiss",
+          "type": "{function}",
+          "default": "() => {}",
+          "access": "public",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        },
+        {
+          "file": "addon/components/fountainhead-alert.js",
+          "line": 65,
+          "description": "<p>A++ accessibility. Tells a screen this component is an alert.</p>\n",
+          "itemtype": "property",
+          "name": "role",
+          "type": "{string}",
+          "access": "private",
+          "tagname": "",
+          "class": "FountainHead.Shared.Alert",
+          "srcFileId": "addon_components_fountainhead-alert.js"
+        }
+      ],
+      "event": [],
+      "srcFileId": "addon_components_fountainhead-alert.js"
     },
     "FountainHead.Shared.Button": {
       "name": "FountainHead.Shared.Button",
@@ -1525,7 +2246,7 @@
         {
           "file": "addon/components/fountainhead-button.js",
           "line": 105,
-          "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don’t trigger\nit, which is a convenient way to know we’re good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
+          "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
           "itemtype": "event",
           "name": "mouseDown",
           "return": {
@@ -1665,7 +2386,7 @@
         {
           "file": "addon/components/fountainhead-button.js",
           "line": 105,
-          "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don’t trigger\nit, which is a convenient way to know we’re good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
+          "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
           "itemtype": "event",
           "name": "mouseDown",
           "return": {
@@ -1683,14 +2404,14 @@
       "shortname": "FountainHead.Header",
       "classitems": [
         {
-          "file": "addon/components/fountainhead-get-started.js",
+          "file": "addon/components/fountainhead-welcome.js",
           "line": 15,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
-          "default": "['fh-get-started']",
+          "default": "['fh-welcome']",
           "class": "FountainHead.Header",
-          "srcFileId": "addon_components_fountainhead-get-started.js"
+          "srcFileId": "addon_components_fountainhead-welcome.js"
         }
       ],
       "plugins": [],
@@ -1706,14 +2427,14 @@
       "method": [],
       "property": [
         {
-          "file": "addon/components/fountainhead-get-started.js",
+          "file": "addon/components/fountainhead-welcome.js",
           "line": 15,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
-          "default": "['fh-get-started']",
+          "default": "['fh-welcome']",
           "class": "FountainHead.Header",
-          "srcFileId": "addon_components_fountainhead-get-started.js"
+          "srcFileId": "addon_components_fountainhead-welcome.js"
         }
       ],
       "event": [],
@@ -1764,14 +2485,14 @@
       "event": [],
       "srcFileId": "addon_components_fountainhead-repo-link.js"
     },
-    "FountainHead.Shared.RuntimeDescription": {
-      "name": "FountainHead.Shared.RuntimeDescription",
-      "shortname": "FountainHead.Shared.RuntimeDescription",
+    "Fountainhead.RuntimeDescription": {
+      "name": "Fountainhead.RuntimeDescription",
+      "shortname": "Fountainhead.RuntimeDescription",
       "classitems": [
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 46,
-          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+          "line": 66,
+          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component's context so that the application doesn't explode\nwhen trying to reference a non-existent action.</p>\n",
           "itemtype": "method",
           "name": "_checkActionRefs",
           "params": [
@@ -1785,13 +2506,13 @@
             "description": "",
             "type": "Undefined"
           },
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 80,
-          "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+          "line": 100,
+          "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
           "itemtype": "method",
           "name": "_generateDescription",
           "params": [
@@ -1801,33 +2522,56 @@
               "type": "String"
             }
           ],
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 30,
+          "line": 41,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
           "default": "['fh-description']",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 19,
+          "line": 47,
+          "description": "<p>If there is a parsing error during the template compilation the catch block\nwill set it as the <code>compilerError</code>. This parsing error is rendered for\neasier debugging of invalid content.</p>\n",
+          "itemtype": "property",
+          "name": "compilerError",
+          "type": "{?string}",
+          "default": "null",
+          "class": "Fountainhead.RuntimeDescription",
+          "srcFileId": "addon_components_fountainhead-runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountainhead-runtime-description.js",
+          "line": 21,
+          "description": "<p>The content string that should be rendered. This string is passed to the\nruntime compiler and registered as a partial if compilation is successful.</p>\n",
+          "itemtype": "property",
+          "name": "content",
+          "type": "{string}",
+          "default": "''",
+          "class": "Fountainhead.RuntimeDescription",
+          "srcFileId": "addon_components_fountainhead-runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountainhead-runtime-description.js",
+          "line": 29,
           "description": "<p>The string that should be converted to a partial</p>\n",
           "itemtype": "property",
           "name": "description",
           "type": "{string}",
           "default": "''",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "deprecated": true,
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 139,
+          "line": 160,
           "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
           "itemtype": "event",
           "name": "didReceiveAttrs",
@@ -1845,26 +2589,26 @@
               ]
             }
           ],
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 115,
-          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+          "line": 136,
+          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
           "itemtype": "method",
           "name": "init",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 36,
+          "line": 56,
           "description": "<p>Name of generated partial that is used in the template.</p>\n",
           "itemtype": "property",
           "name": "partialName",
           "type": "{string}",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         }
       ],
@@ -1875,14 +2619,14 @@
       "module": "Addon",
       "file": "addon/components/fountainhead-runtime-description.js",
       "line": 6,
-      "description": "<p>Generates a description during runtime by using HTMLBars to compile any\nstring to a partial. This allows us to create descriptions form JSON\nresponses with components inside of them.</p>\n",
+      "description": "<p>Generates a description during runtime by using HTMLBars to compile any\nstring to a partial. This allows us to create descriptions from JSON\nresponses with components inside of them.</p>\n<p>TODO: Name partials by class+type+name for re-use</p>\n",
       "is_constructor": 1,
       "extends": "Ember.Component",
       "method": [
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 46,
-          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+          "line": 66,
+          "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component's context so that the application doesn't explode\nwhen trying to reference a non-existent action.</p>\n",
           "itemtype": "method",
           "name": "_checkActionRefs",
           "params": [
@@ -1896,13 +2640,13 @@
             "description": "",
             "type": "Undefined"
           },
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 80,
-          "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+          "line": 100,
+          "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
           "itemtype": "method",
           "name": "_generateDescription",
           "params": [
@@ -1912,56 +2656,79 @@
               "type": "String"
             }
           ],
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 115,
-          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+          "line": 136,
+          "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
           "itemtype": "method",
           "name": "init",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         }
       ],
       "property": [
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 30,
+          "line": 41,
           "itemtype": "property",
           "name": "classNames",
           "type": "{Array}",
           "default": "['fh-description']",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 19,
+          "line": 47,
+          "description": "<p>If there is a parsing error during the template compilation the catch block\nwill set it as the <code>compilerError</code>. This parsing error is rendered for\neasier debugging of invalid content.</p>\n",
+          "itemtype": "property",
+          "name": "compilerError",
+          "type": "{?string}",
+          "default": "null",
+          "class": "Fountainhead.RuntimeDescription",
+          "srcFileId": "addon_components_fountainhead-runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountainhead-runtime-description.js",
+          "line": 21,
+          "description": "<p>The content string that should be rendered. This string is passed to the\nruntime compiler and registered as a partial if compilation is successful.</p>\n",
+          "itemtype": "property",
+          "name": "content",
+          "type": "{string}",
+          "default": "''",
+          "class": "Fountainhead.RuntimeDescription",
+          "srcFileId": "addon_components_fountainhead-runtime-description.js"
+        },
+        {
+          "file": "addon/components/fountainhead-runtime-description.js",
+          "line": 29,
           "description": "<p>The string that should be converted to a partial</p>\n",
           "itemtype": "property",
           "name": "description",
           "type": "{string}",
           "default": "''",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "deprecated": true,
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         },
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 36,
+          "line": 56,
           "description": "<p>Name of generated partial that is used in the template.</p>\n",
           "itemtype": "property",
           "name": "partialName",
           "type": "{string}",
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         }
       ],
       "event": [
         {
           "file": "addon/components/fountainhead-runtime-description.js",
-          "line": 139,
+          "line": 160,
           "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
           "itemtype": "event",
           "name": "didReceiveAttrs",
@@ -1979,7 +2746,7 @@
               ]
             }
           ],
-          "class": "FountainHead.Shared.RuntimeDescription",
+          "class": "Fountainhead.RuntimeDescription",
           "srcFileId": "addon_components_fountainhead-runtime-description.js"
         }
       ],
@@ -2201,7 +2968,7 @@
         {
           "file": "addon/components/fountainhead-tabs-content.js",
           "line": 136,
-          "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we’re notifying on is the <code>hidden</code> prop)</em></p>\n",
+          "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we're notifying on is the <code>hidden</code> prop)</em></p>\n",
           "itemtype": "event",
           "name": "didUpdateAttrs",
           "class": "CoreTabs.Content",
@@ -2220,7 +2987,7 @@
         {
           "file": "addon/components/fountainhead-tabs-content.js",
           "line": 118,
-          "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab’s data.</p>\n",
+          "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab's data.</p>\n",
           "itemtype": "event",
           "name": "init",
           "class": "CoreTabs.Content",
@@ -2363,7 +3130,7 @@
         {
           "file": "addon/components/fountainhead-tabs-content.js",
           "line": 136,
-          "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we’re notifying on is the <code>hidden</code> prop)</em></p>\n",
+          "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we're notifying on is the <code>hidden</code> prop)</em></p>\n",
           "itemtype": "event",
           "name": "didUpdateAttrs",
           "class": "CoreTabs.Content",
@@ -2372,7 +3139,7 @@
         {
           "file": "addon/components/fountainhead-tabs-content.js",
           "line": 118,
-          "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab’s data.</p>\n",
+          "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab's data.</p>\n",
           "itemtype": "event",
           "name": "init",
           "class": "CoreTabs.Content",
@@ -2397,7 +3164,7 @@
         {
           "file": "addon/components/fountainhead-tabs.js",
           "line": 85,
-          "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab’s content to display. If this is empty, no tabs are open.</p>\n",
+          "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab's content to display. If this is empty, no tabs are open.</p>\n",
           "itemtype": "property",
           "name": "activeId",
           "type": "{String}",
@@ -2539,7 +3306,7 @@
         {
           "file": "addon/components/fountainhead-tabs.js",
           "line": 244,
-          "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab’s <code>hidden</code> status changes.</p>\n",
+          "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab's <code>hidden</code> status changes.</p>\n",
           "itemtype": "method",
           "name": "updateTab",
           "params": [
@@ -2572,7 +3339,7 @@
       "module": "Addon",
       "file": "addon/components/fountainhead-tabs.js",
       "line": 8,
-      "description": "<p>A++ Accessible tabs. The <code>core-tabs</code> component is the parent container for\na given set of tabs and handles managing the active state of the tabs and tab\npanels. The <code>core-tabs</code> component yields a <code>content</code> contextual component\ninside of the <code>components</code> hash.</p>\n<h4>Usage</h4>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Fresh Water\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    Boy I sure did work up a thirst after eating all them shramps<span class=\"token punctuation\">.</span> Time to\n    wash it down <span class=\"token keyword\">with</span> a cool glass <span class=\"token keyword\">of</span> marina water<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>You can include any number of <code>components.content</code> contextual components.\n<em>(However keep in mind that adding too many <code>content</code> components may result in\nthe tab labels becoming unreadable depending on the space alotted for\ndisplaying them.)</em></p>\n<p>You can also specify a default tab by setting the <code>defaultTab</code> parameter to\nmatch one of content components’ HTML id property:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs defaultTab<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span> <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Shrimp\"</span> elementId<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    BRINGO<span class=\"token operator\">!</span> There<span class=\"token string\">'s some pretty good lil'</span> shrimpers <span class=\"token keyword\">in</span> here<span class=\"token punctuation\">,</span> lets check it out<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<h3>Controlled Tabs</h3>\n<p>If you need to programatically open tabs within your application you can\ncreate a controlled instance of <code>core-tabs</code> by specifying the <code>activeId</code> for\nthe component. This means that you need to track the <code>activeId</code> in a parent\ncomponent or service and pass it down into the controlled tab instance. To do\nthis pass an <code>onChange</code> closure into the component. It will be called with\nthe <code>elementId</code> of the selected tab any time a user changes tabs.</p>\n<p>TODO: Template &amp;&amp; JS Examples</p>\n<p>Configuration | Type | Default | Description\n— | — | —\n<code>activeId</code> | string | null | The <code>elementId</code> of the tab that should be opened\n<code>buttonStyle</code> | boolean | true | Set to false for tab buttons without primary background-color\n<code>defaultTab</code> | string | null | Tab to render shown by default\n<code>onChange</code> | function | null | Optional closure that will be called when any tab is opened\n<code>scrollOnClick</code> | boolean | false | Set to true to scroll page to top on tab click\n<code>scrollTarget</code> | jQuery selector | ‘body, html’ | Specify scroll animation target</p>\n<h3>A++ Accessibility</h3>\n<ul>\n<li>Tabs have <code>aria-controls</code> set to the <code>elementId</code> of the <code>tabpanel</code> they show.</li>\n<li>Tabs have <code>role=tab</code> for role identification</li>\n<li>Tabs are instances of <code>core-button</code> for keyboard access</li>\n<li>Show/hide of tabs and panels are managed through <code>aria-hidden</code> attr</li>\n</ul>\n<h3>Feature Notes:</h3>\n<ul>\n<li>The tab list is a flexbox container with flex-grow 1 for each tab. This auto\nmagically grows the tabs to fill the entire width of tab container.</li>\n</ul>\n",
+      "description": "<p>A++ Accessible tabs. The <code>core-tabs</code> component is the parent container for\na given set of tabs and handles managing the active state of the tabs and tab\npanels. The <code>core-tabs</code> component yields a <code>content</code> contextual component\ninside of the <code>components</code> hash.</p>\n<h4>Usage</h4>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Fresh Water\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    Boy I sure did work up a thirst after eating all them shramps<span class=\"token punctuation\">.</span> Time to\n    wash it down <span class=\"token keyword\">with</span> a cool glass <span class=\"token keyword\">of</span> marina water<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>You can include any number of <code>components.content</code> contextual components.\n<em>(However keep in mind that adding too many <code>content</code> components may result in\nthe tab labels becoming unreadable depending on the space alotted for\ndisplaying them.)</em></p>\n<p>You can also specify a default tab by setting the <code>defaultTab</code> parameter to\nmatch one of content components' HTML id property:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>tabs defaultTab<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span> <span class=\"token keyword\">as</span> <span class=\"token operator\">|</span>components<span class=\"token operator\">|</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Shrimp\"</span> elementId<span class=\"token operator\">=</span><span class=\"token string\">\"shrimpers\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    BRINGO<span class=\"token operator\">!</span> There<span class=\"token string\">'s some pretty good lil'</span> shrimpers <span class=\"token keyword\">in</span> here<span class=\"token punctuation\">,</span> lets check it out<span class=\"token punctuation\">.</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#components<span class=\"token punctuation\">.</span>content label<span class=\"token operator\">=</span><span class=\"token string\">\"Delgrango's\"</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n    This is my favorite resaurant at the marinara<span class=\"token punctuation\">,</span> name <span class=\"token keyword\">of</span> Delgrango's\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>components<span class=\"token punctuation\">.</span>content<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>tabs<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<h3>Controlled Tabs</h3>\n<p>If you need to programatically open tabs within your application you can\ncreate a controlled instance of <code>core-tabs</code> by specifying the <code>activeId</code> for\nthe component. This means that you need to track the <code>activeId</code> in a parent\ncomponent or service and pass it down into the controlled tab instance. To do\nthis pass an <code>onChange</code> closure into the component. It will be called with\nthe <code>elementId</code> of the selected tab any time a user changes tabs.</p>\n<p>TODO: Template &amp;&amp; JS Examples</p>\n<p>Configuration | Type | Default | Description\n— | — | —\n<code>activeId</code> | string | null | The <code>elementId</code> of the tab that should be opened\n<code>buttonStyle</code> | boolean | true | Set to false for tab buttons without primary background-color\n<code>defaultTab</code> | string | null | Tab to render shown by default\n<code>onChange</code> | function | null | Optional closure that will be called when any tab is opened\n<code>scrollOnClick</code> | boolean | false | Set to true to scroll page to top on tab click\n<code>scrollTarget</code> | jQuery selector | 'body, html' | Specify scroll animation target</p>\n<h3>A++ Accessibility</h3>\n<ul>\n<li>Tabs have <code>aria-controls</code> set to the <code>elementId</code> of the <code>tabpanel</code> they show.</li>\n<li>Tabs have <code>role=tab</code> for role identification</li>\n<li>Tabs are instances of <code>core-button</code> for keyboard access</li>\n<li>Show/hide of tabs and panels are managed through <code>aria-hidden</code> attr</li>\n</ul>\n<h3>Feature Notes:</h3>\n<ul>\n<li>The tab list is a flexbox container with flex-grow 1 for each tab. This auto\nmagically grows the tabs to fill the entire width of tab container.</li>\n</ul>\n",
       "is_constructor": 1,
       "extends": "Ember.Component",
       "method": [
@@ -2620,7 +3387,7 @@
         {
           "file": "addon/components/fountainhead-tabs.js",
           "line": 244,
-          "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab’s <code>hidden</code> status changes.</p>\n",
+          "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab's <code>hidden</code> status changes.</p>\n",
           "itemtype": "method",
           "name": "updateTab",
           "params": [
@@ -2650,7 +3417,7 @@
         {
           "file": "addon/components/fountainhead-tabs.js",
           "line": 85,
-          "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab’s content to display. If this is empty, no tabs are open.</p>\n",
+          "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab's content to display. If this is empty, no tabs are open.</p>\n",
           "itemtype": "property",
           "name": "activeId",
           "type": "{String}",
@@ -2762,6 +3529,195 @@
       ],
       "srcFileId": "addon_components_fountainhead-tabs.js"
     },
+    "Docs.Classes": {
+      "name": "Docs.Classes",
+      "shortname": "Docs.Classes",
+      "classitems": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 47,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        },
+        {
+          "file": "addon/controllers/docs/classes.js",
+          "line": 17,
+          "description": "<p>Item query param is available for scrolling to a doc item.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_controllers_docs_classes.js"
+        },
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 17,
+          "description": "<p>Fetches class' JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "class_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        },
+        {
+          "file": "addon/controllers/docs/classes.js",
+          "line": 11,
+          "itemtype": "property",
+          "name": "queryParams",
+          "type": "{Array}",
+          "default": "['item']",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_controllers_docs_classes.js"
+        },
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 27,
+          "description": "<p>We don't want the class <code>item</code> query param to be sticky. If it is, then you\ncan end up pre-scrolled to some previously crosslinked item when returning\nto a class.</p>\n<p>The <code>resetController</code> hook is called anytime a route's model changes or the\nroute is exited, and is the recommended time to reset query param values on\na controller.</p>\n",
+          "itemtype": "method",
+          "name": "resetController",
+          "params": [
+            {
+              "name": "controller",
+              "description": null,
+              "type": "Object"
+            },
+            {
+              "name": "isExiting",
+              "description": null,
+              "type": "Boolean"
+            },
+            {
+              "name": "transition",
+              "description": null,
+              "type": "Object"
+            }
+          ],
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "Addon",
+      "file": "addon/routes/docs/classes.js",
+      "line": 5,
+      "description": "<p>Route handles fetching data for an individual class.</p>\n",
+      "is_constructor": 1,
+      "extends": "Ember.Controller",
+      "method": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 17,
+          "description": "<p>Fetches class' JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
+          "itemtype": "method",
+          "name": "model",
+          "params": [
+            {
+              "name": "params",
+              "description": null,
+              "type": "Object",
+              "props": [
+                {
+                  "name": "class_id",
+                  "description": "Name of this class, use to fetch data",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "return": {
+            "description": "jQuery ajax promise",
+            "type": "Promise"
+          },
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        },
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 27,
+          "description": "<p>We don't want the class <code>item</code> query param to be sticky. If it is, then you\ncan end up pre-scrolled to some previously crosslinked item when returning\nto a class.</p>\n<p>The <code>resetController</code> hook is called anytime a route's model changes or the\nroute is exited, and is the recommended time to reset query param values on\na controller.</p>\n",
+          "itemtype": "method",
+          "name": "resetController",
+          "params": [
+            {
+              "name": "controller",
+              "description": null,
+              "type": "Object"
+            },
+            {
+              "name": "isExiting",
+              "description": null,
+              "type": "Boolean"
+            },
+            {
+              "name": "transition",
+              "description": null,
+              "type": "Object"
+            }
+          ],
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "property": [
+        {
+          "file": "addon/controllers/docs/classes.js",
+          "line": 17,
+          "description": "<p>Item query param is available for scrolling to a doc item.</p>\n",
+          "itemtype": "property",
+          "name": "item",
+          "type": "{?string}",
+          "default": "null",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_controllers_docs_classes.js"
+        },
+        {
+          "file": "addon/controllers/docs/classes.js",
+          "line": 11,
+          "itemtype": "property",
+          "name": "queryParams",
+          "type": "{Array}",
+          "default": "['item']",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_controllers_docs_classes.js"
+        }
+      ],
+      "event": [
+        {
+          "file": "addon/routes/docs/classes.js",
+          "line": 47,
+          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+          "itemtype": "event",
+          "name": "didTransition",
+          "class": "Docs.Classes",
+          "srcFileId": "addon_routes_docs_classes.js"
+        }
+      ],
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
     "Helper.Eq": {
       "name": "Helper.Eq",
       "shortname": "Helper.Eq",
@@ -2791,100 +3747,6 @@
       "event": [],
       "srcFileId": "addon_helpers_eq.js"
     },
-    "Docs.Classes": {
-      "name": "Docs.Classes",
-      "shortname": "Docs.Classes",
-      "classitems": [
-        {
-          "file": "addon/routes/docs/classes.js",
-          "line": 28,
-          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
-          "itemtype": "event",
-          "name": "didTransition",
-          "class": "Docs.Classes",
-          "srcFileId": "addon_routes_docs_classes.js"
-        },
-        {
-          "file": "addon/routes/docs/classes.js",
-          "line": 14,
-          "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
-          "itemtype": "method",
-          "name": "model",
-          "params": [
-            {
-              "name": "params",
-              "description": null,
-              "type": "Object",
-              "props": [
-                {
-                  "name": "class_id",
-                  "description": "Name of this class, use to fetch data",
-                  "type": "String"
-                }
-              ]
-            }
-          ],
-          "return": {
-            "description": "jQuery ajax promise",
-            "type": "Promise"
-          },
-          "class": "Docs.Classes",
-          "srcFileId": "addon_routes_docs_classes.js"
-        }
-      ],
-      "plugins": [],
-      "extensions": [],
-      "plugin_for": [],
-      "extension_for": [],
-      "module": "Addon",
-      "file": "addon/routes/docs/classes.js",
-      "line": 5,
-      "description": "<p>Route handles fetching data for an individual class.</p>\n",
-      "is_constructor": 1,
-      "extends": "Ember.Route",
-      "method": [
-        {
-          "file": "addon/routes/docs/classes.js",
-          "line": 14,
-          "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
-          "itemtype": "method",
-          "name": "model",
-          "params": [
-            {
-              "name": "params",
-              "description": null,
-              "type": "Object",
-              "props": [
-                {
-                  "name": "class_id",
-                  "description": "Name of this class, use to fetch data",
-                  "type": "String"
-                }
-              ]
-            }
-          ],
-          "return": {
-            "description": "jQuery ajax promise",
-            "type": "Promise"
-          },
-          "class": "Docs.Classes",
-          "srcFileId": "addon_routes_docs_classes.js"
-        }
-      ],
-      "property": [],
-      "event": [
-        {
-          "file": "addon/routes/docs/classes.js",
-          "line": 28,
-          "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
-          "itemtype": "event",
-          "name": "didTransition",
-          "class": "Docs.Classes",
-          "srcFileId": "addon_routes_docs_classes.js"
-        }
-      ],
-      "srcFileId": "addon_routes_docs_classes.js"
-    },
     "Docs.Files": {
       "name": "Docs.Files",
       "shortname": "Docs.Files",
@@ -2901,7 +3763,7 @@
         {
           "file": "addon/routes/docs/files.js",
           "line": 14,
-          "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+          "description": "<p>Fetches file's JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2940,7 +3802,7 @@
         {
           "file": "addon/routes/docs/files.js",
           "line": 14,
-          "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+          "description": "<p>Fetches file's JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -2995,7 +3857,7 @@
         {
           "file": "addon/routes/docs/modules.js",
           "line": 14,
-          "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
+          "description": "<p>Fetches modules's JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -3034,7 +3896,7 @@
         {
           "file": "addon/routes/docs/modules.js",
           "line": 14,
-          "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
+          "description": "<p>Fetches modules's JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
           "itemtype": "method",
           "name": "model",
           "params": [
@@ -3080,7 +3942,7 @@
         {
           "file": "addon/services/fountainhead.js",
           "line": 18,
-          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.</p>\n",
           "itemtype": "property",
           "name": "apiNamespace",
           "type": "{string}",
@@ -3091,7 +3953,7 @@
         {
           "file": "addon/services/fountainhead.js",
           "line": 51,
-          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
           "itemtype": "method",
           "name": "init",
           "class": "Fountainhead",
@@ -3134,7 +3996,7 @@
         {
           "file": "addon/services/fountainhead.js",
           "line": 51,
-          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+          "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
           "itemtype": "method",
           "name": "init",
           "class": "Fountainhead",
@@ -3145,7 +4007,7 @@
         {
           "file": "addon/services/fountainhead.js",
           "line": 18,
-          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+          "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.</p>\n",
           "itemtype": "property",
           "name": "apiNamespace",
           "type": "{string}",
@@ -3206,7 +4068,7 @@
       "namespace": "",
       "file": "app/instance-initializers/fountainhead-routes.js",
       "line": 11,
-      "description": "<p>Automagically mount Fountainhead routes through an <code>instance-initializer</code>.</p>\n<p>NOTE: this initializer needs to be in the <code>/app</code> directory so that the the\nconsuming application’s router can be directly imported and manipulated.</p>\n<p>TODO: See if we can use some kind of lookup to do this from within an\ninitializer in the <code>/addon</code> directory</p>\n",
+      "description": "<p>Automagically mount Fountainhead routes through an <code>instance-initializer</code>.</p>\n<p>NOTE: this initializer needs to be in the <code>/app</code> directory so that the the\nconsuming application's router can be directly imported and manipulated.</p>\n<p>TODO: See if we can use some kind of lookup to do this from within an\ninitializer in the <code>/addon</code> directory</p>\n",
       "is_constructor": 1,
       "method": [
         {
@@ -3235,7 +4097,7 @@
         {
           "file": "blueprints/ember-fountainhead/index.js",
           "line": 29,
-          "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+          "description": "<p>After install of addon read in consuming application's gitignore. If there\nisn't an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
           "itemtype": "method",
           "name": "afterInstall",
           "return": {
@@ -3255,14 +4117,14 @@
       "namespace": "",
       "file": "blueprints/ember-fountainhead/index.js",
       "line": 12,
-      "description": "<p>Fountainhead index blueprint is used to update the consuming application’s\n<code>.gitignore</code> to ignore the auto generated <code>vendor/feature-flags.js</code> file\ncreated by <code>ember-radical</code>. This file is used to create global variables if\nthe consuming application has turned off JSUglify code stripping.</p>\n",
+      "description": "<p>Fountainhead index blueprint is used to update the consuming application's\n<code>.gitignore</code> to ignore the auto generated <code>vendor/feature-flags.js</code> file\ncreated by <code>ember-radical</code>. This file is used to create global variables if\nthe consuming application has turned off JSUglify code stripping.</p>\n",
       "is_constructor": 1,
       "extends": "EmberCLI.Blueprint",
       "method": [
         {
           "file": "blueprints/ember-fountainhead/index.js",
           "line": 29,
-          "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+          "description": "<p>After install of addon read in consuming application's gitignore. If there\nisn't an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
           "itemtype": "method",
           "name": "afterInstall",
           "return": {
@@ -3457,7 +4319,7 @@
         {
           "file": "lib/decorate-config.js",
           "line": 21,
-          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can't\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
           "itemtype": "property",
           "name": "entry",
           "type": "{Array}",
@@ -3512,7 +4374,7 @@
         {
           "file": "lib/decorate-config.js",
           "line": 21,
-          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+          "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can't\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
           "itemtype": "property",
           "name": "entry",
           "type": "{Array}",
@@ -3759,7 +4621,7 @@
       "module": "Lib",
       "namespace": "",
       "file": "lib/parse-markdown.js",
-      "line": 24,
+      "line": 28,
       "description": "<p>Handle parsing markdown using <a href=\"http://prismjs.com/\">Prism</a></p>\n",
       "is_constructor": 1,
       "params": [
@@ -3783,8 +4645,8 @@
   "classitems": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 46,
-      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+      "line": 66,
+      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component's context so that the application doesn't explode\nwhen trying to reference a non-existent action.</p>\n",
       "itemtype": "method",
       "name": "_checkActionRefs",
       "params": [
@@ -3798,7 +4660,7 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -3812,8 +4674,8 @@
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 80,
-      "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+      "line": 100,
+      "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
       "itemtype": "method",
       "name": "_generateDescription",
       "params": [
@@ -3823,7 +4685,7 @@
           "type": "String"
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -3852,6 +4714,67 @@
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
     },
     {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 108,
+      "description": "<p>Internal method to handle selecting a tab panel and then scrolling to an\nitem in that panel.</p>\n<p>Method will:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+      "itemtype": "method",
+      "name": "_scrollToItem",
+      "access": "protected",
+      "tagname": "",
+      "params": [
+        {
+          "name": "classitem",
+          "description": "<p>Backing class item</p>\n",
+          "type": "Object",
+          "props": [
+            {
+              "name": "itemtype",
+              "description": "Type for item of: `method`/`property`/`event`",
+              "type": "String"
+            },
+            {
+              "name": "name",
+              "description": "Name of item",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 146,
+      "description": "<p>Handles finding the classitem model using the <code>item</code> query param value.\nIf a classitem is found, initiate a scroll.</p>\n",
+      "itemtype": "method",
+      "name": "_scrollToQueryParamItem",
+      "access": "protected",
+      "tagname": "",
+      "params": [
+        {
+          "name": "item",
+          "description": "<p>The item query param identifying which classitem to scroll to</p>\n",
+          "type": "!string"
+        }
+      ],
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 108,
+      "description": "<p>Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.</p>\n",
+      "itemtype": "method",
+      "name": "_selfDestruct",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
       "file": "addon/components/fountainhead-class/meta.js",
       "line": 17,
       "description": "<p>The access property is set by using either of the tags:</p>\n<ul>\n<li><code>@private</code></li>\n<li><code>@public</code></li>\n</ul>\n<p>The value for access matches the tag used</p>\n",
@@ -3861,6 +4784,27 @@
       "default": "''",
       "class": "FountainHead.Class.Meta",
       "srcFileId": "addon_components_fountainhead-class_meta.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 127,
+      "description": "<p>Actions hash</p>\n",
+      "itemtype": "property",
+      "name": "actions",
+      "type": "{Object}",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 85,
+      "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab's content to display. If this is empty, no tabs are open.</p>\n",
+      "itemtype": "property",
+      "name": "activeId",
+      "type": "{String}",
+      "default": "''",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
     },
     {
       "file": "addon/components/fountainhead-tabs-content.js",
@@ -3874,31 +4818,22 @@
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
     },
     {
-      "file": "addon/components/fountainhead-tabs.js",
-      "line": 85,
-      "description": "<p>The elementId of the currently opened tab. This determines which tab is active and\nwhich tab’s content to display. If this is empty, no tabs are open.</p>\n",
-      "itemtype": "property",
-      "name": "activeId",
-      "type": "{String}",
-      "default": "''",
-      "class": "CoreTabs",
-      "srcFileId": "addon_components_fountainhead-tabs.js"
-    },
-    {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 56,
+      "line": 79,
       "description": "<p>The currently active tab. This is controlled by this component to allow\nus to change the tab whenever a documentation item is clicked in the index\npanel.</p>\n",
       "itemtype": "property",
       "name": "activeTab",
       "type": "{string}",
+      "access": "protected",
+      "tagname": "",
       "default": "indexPanel",
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "blueprints/ember-fountainhead/index.js",
       "line": 29,
-      "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+      "description": "<p>After install of addon read in consuming application's gitignore. If there\nisn't an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
       "itemtype": "method",
       "name": "afterInstall",
       "return": {
@@ -3912,7 +4847,7 @@
     {
       "file": "addon/services/fountainhead.js",
       "line": 18,
-      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.</p>\n",
       "itemtype": "property",
       "name": "apiNamespace",
       "type": "{string}",
@@ -3930,6 +4865,26 @@
       "default": "tabpanel",
       "class": "CoreTabs.Content",
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
+    },
+    {
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
+      "line": 30,
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "default": "['stringForAriaHidden:aria-hidden']",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs.js",
+      "line": 140,
+      "description": "<p>Bound attributes:</p>\n<ul>\n<li><code>data-test</code>: for precise testing identification</li>\n</ul>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "class": "CoreTabs",
+      "srcFileId": "addon_components_fountainhead-tabs.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
@@ -3952,6 +4907,18 @@
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
     },
     {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 76,
+      "description": "<p>Attribute bindings applied to the component.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
       "file": "addon/components/fountainhead-svg.js",
       "line": 30,
       "description": "<p>Allow direct binding of <code>data-test</code> attributes so that icons can be\ndirectly targeted in automated testing.</p>\n",
@@ -3960,26 +4927,6 @@
       "type": "{Array}",
       "class": "FountainHead.Shared.CoreSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
-    },
-    {
-      "file": "addon/components/fountainhead-tabs.js",
-      "line": 140,
-      "description": "<p>Bound attributes:</p>\n<ul>\n<li><code>data-test</code>: for precise testing identification</li>\n</ul>\n",
-      "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "class": "CoreTabs",
-      "srcFileId": "addon_components_fountainhead-tabs.js"
-    },
-    {
-      "file": "addon/components/fountainhead-sidebar/sidebar.js",
-      "line": 30,
-      "itemtype": "property",
-      "name": "attributeBindings",
-      "type": "{Array}",
-      "default": "['stringForAriaHidden:aria-hidden']",
-      "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
@@ -3991,6 +4938,19 @@
       "default": "''",
       "class": "FountainHead.Shared.Button",
       "srcFileId": "addon_components_fountainhead-button.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 15,
+      "description": "<p>Specify brand, component handles assigning correct css class</p>\n",
+      "itemtype": "property",
+      "name": "brand",
+      "default": "''",
+      "type": "{string}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
@@ -4009,6 +4969,24 @@
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 54,
+      "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+      "itemtype": "property",
+      "name": "brandClass",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "subprops": [
+        {
+          "name": "'brand'",
+          "description": ""
+        }
+      ],
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
       "file": "addon/components/fountainhead-tabs.js",
       "line": 93,
       "description": "<p>Pass false to use tab style without primary color tabs.</p>\n",
@@ -4020,14 +4998,40 @@
       "srcFileId": "addon_components_fountainhead-tabs.js"
     },
     {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 23,
+      "description": "<p>Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.</p>\n<p><strong>Usage:</strong>\nOverride by passing <code>false</code> into this param in your handlebars template:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>alert canDismiss<span class=\"token operator\">=</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">!</span> Standard template content goes here <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>alert<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+      "itemtype": "property",
+      "name": "canDismiss",
+      "type": "{boolean}",
+      "default": "true",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
       "file": "addon/components/fountainhead-pages/class.js",
       "line": 15,
       "description": "<p>Class model content.</p>\n",
       "itemtype": "property",
       "name": "class",
-      "type": "{Object}",
-      "class": "FountainHead.Class",
+      "type": "{?Object}",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
       "srcFileId": "addon_components_fountainhead-pages_class.js"
+    },
+    {
+      "file": "addon/components/cross-link.js",
+      "line": 43,
+      "description": "<p>Documentation Class to crosslink to.</p>\n",
+      "itemtype": "property",
+      "name": "class",
+      "type": "{string}",
+      "required": 1,
+      "passed": "",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "addon/components/fountainhead-class/item.js",
@@ -4040,6 +5044,16 @@
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
     {
+      "file": "addon/components/fountainhead-button.js",
+      "line": 78,
+      "description": "<p>Handle binding brand and link related css class names</p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "class": "FountainHead.Shared.Button",
+      "srcFileId": "addon_components_fountainhead-button.js"
+    },
+    {
       "file": "addon/components/fountainhead-svg.js",
       "line": 44,
       "description": "<p>Bound classNames: <code>svgId</code></p>\n",
@@ -4050,11 +5064,124 @@
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
-      "file": "addon/components/fountainhead-button.js",
-      "line": 78,
-      "description": "<p>Handle binding brand and link related css class names</p>\n",
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 93,
+      "description": "<p>A set of dynamic classes whose output is bound to the associated values\non the component.</p>\n",
       "itemtype": "property",
       "name": "classNameBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 89,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-tabs-container']",
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/components/fountainhead-sidebar/sidebar.js",
+      "line": 36,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-sidebar']",
+      "class": "FountainHead.Docs.Sidebar",
+      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
+    },
+    {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 41,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-description']",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/meta.js",
+      "line": 89,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array.<string>}",
+      "default": "['fh-class-meta']",
+      "class": "FountainHead.Class.Meta",
+      "srcFileId": "addon_components_fountainhead-class_meta.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 85,
+      "description": "<p>Static class names applied to the component that must always exist. This\nreally should not need to be overridden or extended.</p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-get-started.js",
+      "line": 15,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-get-started']",
+      "class": "FountainHead.Header"
+    },
+    {
+      "file": "addon/components/fountainhead-class/header.js",
+      "line": 34,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-page-header']",
+      "class": "FountainHead.Class.Header",
+      "srcFileId": "addon_components_fountainhead-class_header.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/item.js",
+      "line": 25,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-classitem']",
+      "class": "FountainHead.Class.ClassItem",
+      "srcFileId": "addon_components_fountainhead-class_item.js"
+    },
+    {
+      "file": "addon/components/fountainhead-welcome.js",
+      "line": 15,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-welcome']",
+      "class": "FountainHead.Header",
+      "srcFileId": "addon_components_fountainhead-welcome.js"
+    },
+    {
+      "file": "addon/components/fountainhead-tabs-content.js",
+      "line": 74,
+      "description": "<p>Class names: <code>tabs-content</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "class": "CoreTabs.Content",
+      "srcFileId": "addon_components_fountainhead-tabs-content.js"
+    },
+    {
+      "file": "addon/components/fountainhead-button.js",
+      "line": 69,
+      "description": "<p>Bind standard core classname for component: <code>core-button</code></p>\n",
+      "itemtype": "property",
+      "name": "classNames",
       "type": "{Array}",
       "class": "FountainHead.Shared.Button",
       "srcFileId": "addon_components_fountainhead-button.js"
@@ -4070,66 +5197,6 @@
       "srcFileId": "addon_components_fountainhead-tabs.js"
     },
     {
-      "file": "addon/components/fountainhead-sidebar/sidebar.js",
-      "line": 36,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-sidebar']",
-      "class": "FountainHead.Docs.Sidebar",
-      "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
-    },
-    {
-      "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 65,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-tabs-container']",
-      "class": "FountainHead.Class.ClassItemsContainer",
-      "srcFileId": "addon_components_fountainhead-class_items-container.js"
-    },
-    {
-      "file": "addon/components/fountainhead-class/meta.js",
-      "line": 89,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array.<string>}",
-      "default": "['fh-class-meta']",
-      "class": "FountainHead.Class.Meta",
-      "srcFileId": "addon_components_fountainhead-class_meta.js"
-    },
-    {
-      "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 30,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-description']",
-      "class": "FountainHead.Shared.RuntimeDescription",
-      "srcFileId": "addon_components_fountainhead-runtime-description.js"
-    },
-    {
-      "file": "addon/components/fountainhead-tabs-content.js",
-      "line": 74,
-      "description": "<p>Class names: <code>tabs-content</code></p>\n",
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "class": "CoreTabs.Content",
-      "srcFileId": "addon_components_fountainhead-tabs-content.js"
-    },
-    {
-      "file": "addon/components/fountainhead-class/item.js",
-      "line": 25,
-      "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-classitem']",
-      "class": "FountainHead.Class.ClassItem",
-      "srcFileId": "addon_components_fountainhead-class_item.js"
-    },
-    {
       "file": "addon/components/fountainhead-svg.js",
       "line": 38,
       "description": "<p>Class names: <code>core-svg</code></p>\n",
@@ -4140,43 +5207,48 @@
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
-      "file": "addon/components/fountainhead-class/header.js",
-      "line": 34,
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 24,
+      "description": "<p>Array of <em>ALL</em> items for this class. Used to find the type when an item is\nspecified in a query param.</p>\n",
       "itemtype": "property",
-      "name": "classNames",
+      "name": "classitems",
       "type": "{Array}",
-      "default": "['fh-page-header']",
-      "class": "FountainHead.Class.Header",
-      "srcFileId": "addon_components_fountainhead-class_header.js"
+      "default": "[]",
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
-      "file": "addon/components/fountainhead-button.js",
-      "line": 69,
-      "description": "<p>Bind standard core classname for component: <code>core-button</code></p>\n",
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 47,
+      "description": "<p>If there is a parsing error during the template compilation the catch block\nwill set it as the <code>compilerError</code>. This parsing error is rendered for\neasier debugging of invalid content.</p>\n",
       "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
-      "srcFileId": "addon_components_fountainhead-button.js"
+      "name": "compilerError",
+      "type": "{?string}",
+      "default": "null",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
-      "file": "addon/components/fountainhead-welcome.js",
-      "line": 15,
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 21,
+      "description": "<p>The content string that should be rendered. This string is passed to the\nruntime compiler and registered as a partial if compilation is successful.</p>\n",
       "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-welcome']",
-      "class": "FountainHead.Header"
+      "name": "content",
+      "type": "{string}",
+      "default": "''",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
-      "file": "addon/components/fountainhead-get-started.js",
-      "line": 15,
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 95,
+      "description": "<p>The panel that that the tabs should render on creation. The tabs component\ntracks this separately and it needs to be updated separately when a class\npage is loaded with an item query parameter.</p>\n",
       "itemtype": "property",
-      "name": "classNames",
-      "type": "{Array}",
-      "default": "['fh-get-started']",
-      "class": "FountainHead.Header",
-      "srcFileId": "addon_components_fountainhead-get-started.js"
+      "name": "defaultTab",
+      "type": "{string}",
+      "default": "'indexPanel'",
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-tabs.js",
@@ -4191,27 +5263,19 @@
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 19,
+      "line": 29,
       "description": "<p>The string that should be converted to a partial</p>\n",
       "itemtype": "property",
       "name": "description",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "deprecated": true,
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
-      "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 75,
-      "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent receives attrs. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens’t only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we’re ‘fixing’ it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
-      "itemtype": "event",
-      "name": "didReceiveAttrs",
-      "class": "FountainHead.Class.ClassItemsContainer",
-      "srcFileId": "addon_components_fountainhead-class_items-container.js"
-    },
-    {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 139,
+      "line": 160,
       "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
@@ -4229,26 +5293,17 @@
           ]
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-pages/module.js",
       "line": 24,
-      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
       "class": "FountainHead.Module",
       "srcFileId": "addon_components_fountainhead-pages_module.js"
-    },
-    {
-      "file": "addon/routes/docs/files.js",
-      "line": 28,
-      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
-      "itemtype": "event",
-      "name": "didTransition",
-      "class": "Docs.Files",
-      "srcFileId": "addon_routes_docs_files.js"
     },
     {
       "file": "addon/routes/docs/modules.js",
@@ -4261,7 +5316,7 @@
     },
     {
       "file": "addon/routes/docs/classes.js",
-      "line": 28,
+      "line": 47,
       "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
       "itemtype": "event",
       "name": "didTransition",
@@ -4269,13 +5324,51 @@
       "srcFileId": "addon_routes_docs_classes.js"
     },
     {
+      "file": "addon/routes/docs/files.js",
+      "line": 28,
+      "description": "<p>Reset page scroll on any transition. Note that Fountainhead is inside of\na fake page, so we scroll that instead of the body</p>\n",
+      "itemtype": "event",
+      "name": "didTransition",
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 176,
+      "description": "<p>Handle resetting tabs container to the index panel any time that this\ncomponent's attrs update. The only props passed in to this component are\nthe class items for the container, so we know if they change in any way\nthat this is the right time to update the tabs panel.</p>\n<p>NOTE: GUESS WHAT! This hook doens't only get called when passed props\nchange! There is some crazy behavior where this hook will get called ONCE\nand only ONCE when an internal property changes after the props for this\ncomponent has changed. Super weird. For now we're 'fixing' it by also\npassing in the class name and using that as a check to reset the <code>activeTab</code></p>\n",
+      "itemtype": "event",
+      "name": "didUpdateAttrs",
+      "params": [
+        {
+          "name": "attrs",
+          "description": "<p>Object with <code>oldAttrs</code> and <code>newAttrs</code></p>\n",
+          "type": "Object"
+        }
+      ],
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
       "file": "addon/components/fountainhead-tabs-content.js",
       "line": 136,
-      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we’re notifying on is the <code>hidden</code> prop)</em></p>\n",
+      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we're notifying on is the <code>hidden</code> prop)</em></p>\n",
       "itemtype": "event",
       "name": "didUpdateAttrs",
       "class": "CoreTabs.Content",
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 133,
+      "description": "<p>A proxy action for the selfDestruct method</p>\n",
+      "itemtype": "method",
+      "name": "dismiss",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
     },
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
@@ -4311,7 +5404,7 @@
     {
       "file": "lib/decorate-config.js",
       "line": 21,
-      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can't\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
       "itemtype": "property",
       "name": "entry",
       "type": "{Array}",
@@ -4322,13 +5415,14 @@
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 31,
-      "description": "<p>This class’ array of event documentation items.</p>\n",
+      "line": 32,
+      "description": "<p>This class' array of event documentation items.</p>\n",
       "itemtype": "property",
       "name": "event",
       "type": "{Array}",
       "default": "[]",
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "passed": "",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -4388,10 +5482,11 @@
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 99,
-      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to:</p>\n<ul>\n<li>Change to the panel matching the doc item type</li>\n<li>Scroll to that item using the itemtype and name to construct the DOM id</li>\n</ul>\n",
+      "line": 218,
+      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
       "itemtype": "method",
       "name": "goToItem",
+      "action": "",
       "params": [
         {
           "name": "classitem",
@@ -4411,7 +5506,7 @@
           ]
         }
       ],
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -4425,13 +5520,13 @@
       "srcFileId": "addon_components_fountainhead-tabs-content.js"
     },
     {
-      "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 115,
-      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
-      "itemtype": "method",
+      "file": "addon/components/fountainhead-tabs-content.js",
+      "line": 118,
+      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab's data.</p>\n",
+      "itemtype": "event",
       "name": "init",
-      "class": "FountainHead.Shared.RuntimeDescription",
-      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+      "class": "CoreTabs.Content",
+      "srcFileId": "addon_components_fountainhead-tabs-content.js"
     },
     {
       "file": "addon/components/fountainhead-tabs.js",
@@ -4447,9 +5542,18 @@
       "srcFileId": "addon_components_fountainhead-tabs.js"
     },
     {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 136,
+      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
       "file": "addon/services/fountainhead.js",
       "line": 51,
-      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
       "itemtype": "method",
       "name": "init",
       "class": "Fountainhead",
@@ -4465,13 +5569,22 @@
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
     {
-      "file": "addon/components/fountainhead-tabs-content.js",
-      "line": 118,
-      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab’s data.</p>\n",
-      "itemtype": "event",
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 202,
+      "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
+      "itemtype": "method",
       "name": "init",
-      "class": "CoreTabs.Content",
-      "srcFileId": "addon_components_fountainhead-tabs-content.js"
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/components/cross-link.js",
+      "line": 94,
+      "description": "<p>Validate passed properties during init and warn if they're invalid. This\nprevents the component from creating an invalid <code>link-to</code>.</p>\n<p>Checks for a passed\n{{cross-link class='Crosslink' item='text'}} and sets default\ntext if unspecified</p>\n",
+      "itemtype": "method",
+      "name": "init",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "app/instance-initializers/fountainhead-routes.js",
@@ -4486,6 +5599,52 @@
       "class": "FountainheadRoutes",
       "module": "App",
       "srcFileId": "app_instance-initializers_fountainhead-routes.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 40,
+      "description": "<p>Item query param passed down from controller. When this property is present,\nor changes handle scrolling to the item. When the specified doc class is\nthe same but the item query param is different the model hooks will not be\ncalled, so we need to handle scrolling to the item when it changes.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{?string}",
+      "default": "null",
+      "passed": "",
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/controllers/docs/classes.js",
+      "line": 17,
+      "description": "<p>Item query param is available for scrolling to a doc item.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{?string}",
+      "default": "null",
+      "class": "Docs.Classes",
+      "srcFileId": "addon_controllers_docs_classes.js"
+    },
+    {
+      "file": "addon/components/fountainhead-pages/class.js",
+      "line": 22,
+      "description": "<p>Item query param passed down from controller. Passed to the\n{{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}\ncomponent to scroll to linked item after load.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{?string}",
+      "default": "null",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
+    },
+    {
+      "file": "addon/components/cross-link.js",
+      "line": 51,
+      "description": "<p>Class item to cross link to.\nas well.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{string}",
+      "passed": "",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "addon/components/fountainhead-tabs-content.js",
@@ -4555,13 +5714,14 @@
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 38,
-      "description": "<p>This class’ array of method documentation items.</p>\n",
+      "line": 51,
+      "description": "<p>This class' array of method documentation items.</p>\n",
       "itemtype": "property",
       "name": "method",
       "type": "{Array}",
       "default": "[]",
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "passed": "",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -4586,63 +5746,9 @@
       "srcFileId": "lib_create-dirs.js"
     },
     {
-      "file": "addon/routes/docs/classes.js",
-      "line": 14,
-      "description": "<p>Fetches class’ JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
-      "itemtype": "method",
-      "name": "model",
-      "params": [
-        {
-          "name": "params",
-          "description": null,
-          "type": "Object",
-          "props": [
-            {
-              "name": "class_id",
-              "description": "Name of this class, use to fetch data",
-              "type": "String"
-            }
-          ]
-        }
-      ],
-      "return": {
-        "description": "jQuery ajax promise",
-        "type": "Promise"
-      },
-      "class": "Docs.Classes",
-      "srcFileId": "addon_routes_docs_classes.js"
-    },
-    {
-      "file": "addon/routes/docs/files.js",
-      "line": 14,
-      "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
-      "itemtype": "method",
-      "name": "model",
-      "params": [
-        {
-          "name": "params",
-          "description": null,
-          "type": "Object",
-          "props": [
-            {
-              "name": "file_id",
-              "description": "Name of this class, use to fetch data",
-              "type": "String"
-            }
-          ]
-        }
-      ],
-      "return": {
-        "description": "jQuery ajax promise",
-        "type": "Promise"
-      },
-      "class": "Docs.Files",
-      "srcFileId": "addon_routes_docs_files.js"
-    },
-    {
       "file": "addon/routes/docs/modules.js",
       "line": 14,
-      "description": "<p>Fetches modules’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
+      "description": "<p>Fetches modules's JSON at: <code>${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -4667,15 +5773,70 @@
       "srcFileId": "addon_routes_docs_modules.js"
     },
     {
-      "file": "addon/components/fountainhead-pages/module.js",
-      "line": 13,
-      "description": "<p>Module model content</p>\n",
+      "file": "addon/routes/docs/files.js",
+      "line": 14,
+      "description": "<p>Fetches file's JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "file_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Files",
+      "srcFileId": "addon_routes_docs_files.js"
+    },
+    {
+      "file": "addon/routes/docs/classes.js",
+      "line": 17,
+      "description": "<p>Fetches class' JSON at: <code>${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json</code></p>\n",
+      "itemtype": "method",
+      "name": "model",
+      "params": [
+        {
+          "name": "params",
+          "description": null,
+          "type": "Object",
+          "props": [
+            {
+              "name": "class_id",
+              "description": "Name of this class, use to fetch data",
+              "type": "String"
+            }
+          ]
+        }
+      ],
+      "return": {
+        "description": "jQuery ajax promise",
+        "type": "Promise"
+      },
+      "class": "Docs.Classes",
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
+    {
+      "file": "addon/components/cross-link.js",
+      "line": 59,
+      "description": "<p>Documentation module to crosslink to.</p>\n",
       "itemtype": "property",
       "name": "module",
       "type": "{string}",
-      "default": "''",
-      "class": "FountainHead.Module",
-      "srcFileId": "addon_components_fountainhead-pages_module.js"
+      "required": 1,
+      "passed": "",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "addon/components/fountainhead-class/meta.js",
@@ -4689,9 +5850,20 @@
       "srcFileId": "addon_components_fountainhead-class_meta.js"
     },
     {
+      "file": "addon/components/fountainhead-pages/module.js",
+      "line": 13,
+      "description": "<p>Module model content</p>\n",
+      "itemtype": "property",
+      "name": "module",
+      "type": "{string}",
+      "default": "''",
+      "class": "FountainHead.Module",
+      "srcFileId": "addon_components_fountainhead-pages_module.js"
+    },
+    {
       "file": "addon/components/fountainhead-button.js",
       "line": 105,
-      "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don’t trigger\nit, which is a convenient way to know we’re good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
+      "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
       "itemtype": "event",
       "name": "mouseDown",
       "return": {
@@ -4700,6 +5872,17 @@
       },
       "class": "FountainHead.Shared.Button",
       "srcFileId": "addon_components_fountainhead-button.js"
+    },
+    {
+      "file": "addon/components/fountainhead-class/items-container.js",
+      "line": 59,
+      "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
+      "itemtype": "property",
+      "name": "name",
+      "type": "{string}",
+      "passed": "",
+      "class": "FountainHeadClass.ItemsContainer",
+      "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-class/header.js",
@@ -4713,16 +5896,6 @@
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
-      "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 45,
-      "description": "<p>Name of the class. Is checked in <code>didUpdateAttrs</code> to know if the tabs\nshould be reset to the index panel</p>\n",
-      "itemtype": "property",
-      "name": "name",
-      "type": "{string}",
-      "class": "FountainHead.Class.ClassItemsContainer",
-      "srcFileId": "addon_components_fountainhead-class_items-container.js"
-    },
-    {
       "file": "addon/components/fountainhead-tabs.js",
       "line": 109,
       "description": "<p>Optional closure action that will be called whenever a tab is opened with\nthe id of that tab. Use this to create a controlled tabs instance.</p>\n",
@@ -4732,6 +5905,19 @@
       "default": "null",
       "class": "CoreTabs",
       "srcFileId": "addon_components_fountainhead-tabs.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 42,
+      "description": "<p>Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.</p>\n",
+      "itemtype": "property",
+      "name": "onDismiss",
+      "type": "{function}",
+      "default": "() => {}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
     },
     {
       "file": "lib/decorate-config.js",
@@ -4758,24 +5944,35 @@
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 36,
+      "line": 56,
       "description": "<p>Name of generated partial that is used in the template.</p>\n",
       "itemtype": "property",
       "name": "partialName",
       "type": "{string}",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 24,
-      "description": "<p>This class’ array of property documentation items.</p>\n",
+      "line": 67,
+      "description": "<p>This class' array of property documentation items.</p>\n",
       "itemtype": "property",
       "name": "property",
       "type": "{Array}",
       "default": "[]",
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "passed": "",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
+    },
+    {
+      "file": "addon/controllers/docs/classes.js",
+      "line": 11,
+      "itemtype": "property",
+      "name": "queryParams",
+      "type": "{Array}",
+      "default": "['item']",
+      "class": "Docs.Classes",
+      "srcFileId": "addon_controllers_docs_classes.js"
     },
     {
       "file": "addon/components/fountainhead-tabs.js",
@@ -4803,6 +6000,44 @@
       "default": "''",
       "class": "FountainHead.Docs.Github",
       "srcFileId": "addon_components_fountainhead-repo-link.js"
+    },
+    {
+      "file": "addon/routes/docs/classes.js",
+      "line": 27,
+      "description": "<p>We don't want the class <code>item</code> query param to be sticky. If it is, then you\ncan end up pre-scrolled to some previously crosslinked item when returning\nto a class.</p>\n<p>The <code>resetController</code> hook is called anytime a route's model changes or the\nroute is exited, and is the recommended time to reset query param values on\na controller.</p>\n",
+      "itemtype": "method",
+      "name": "resetController",
+      "params": [
+        {
+          "name": "controller",
+          "description": null,
+          "type": "Object"
+        },
+        {
+          "name": "isExiting",
+          "description": null,
+          "type": "Boolean"
+        },
+        {
+          "name": "transition",
+          "description": null,
+          "type": "Object"
+        }
+      ],
+      "class": "Docs.Classes",
+      "srcFileId": "addon_routes_docs_classes.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 65,
+      "description": "<p>A++ accessibility. Tells a screen this component is an alert.</p>\n",
+      "itemtype": "property",
+      "name": "role",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
     },
     {
       "file": "lib/generate-fountainhead-data.js",
@@ -4895,7 +6130,7 @@
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 52,
-      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven't run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
       "itemtype": "property",
       "name": "stringForAriaHidden",
       "type": "{string}",
@@ -4957,10 +6192,11 @@
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
-      "line": 133,
+      "line": 233,
       "description": "<p>Closure action passed into the tab component. This action is called\nwhenever a tab is clicked with the id of the tab. Use this to update the\ncontrolling <code>activeTab</code> property for the tabs DDAU style.</p>\n",
       "itemtype": "method",
       "name": "tabsChanged",
+      "action": "",
       "params": [
         {
           "name": "tab",
@@ -4975,19 +6211,18 @@
           ]
         }
       ],
-      "class": "FountainHead.Class.ClassItemsContainer",
+      "class": "FountainHeadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
-      "file": "addon/components/fountainhead-button.js",
-      "line": 87,
-      "description": "<p>Button DOM element</p>\n",
+      "file": "addon/components/cross-link.js",
+      "line": 84,
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "default": "'button'",
-      "class": "FountainHead.Shared.Button",
-      "srcFileId": "addon_components_fountainhead-button.js"
+      "default": "''",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
@@ -5010,6 +6245,16 @@
       "srcFileId": "addon_components_fountainhead-class_meta.js"
     },
     {
+      "file": "addon/components/fountainhead-svg.js",
+      "line": 50,
+      "description": "<p>SVG DOM element</p>\n",
+      "itemtype": "property",
+      "name": "tagName",
+      "type": "{string}",
+      "class": "FountainHead.Shared.CoreSVG",
+      "srcFileId": "addon_components_fountainhead-svg.js"
+    },
+    {
       "file": "addon/components/fountainhead-class/header.js",
       "line": 40,
       "itemtype": "property",
@@ -5020,14 +6265,26 @@
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
-      "file": "addon/components/fountainhead-svg.js",
-      "line": 50,
-      "description": "<p>SVG DOM element</p>\n",
+      "file": "addon/components/fountainhead-button.js",
+      "line": 87,
+      "description": "<p>Button DOM element</p>\n",
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "class": "FountainHead.Shared.CoreSVG",
-      "srcFileId": "addon_components_fountainhead-svg.js"
+      "default": "'button'",
+      "class": "FountainHead.Shared.Button",
+      "srcFileId": "addon_components_fountainhead-button.js"
+    },
+    {
+      "file": "addon/components/cross-link.js",
+      "line": 67,
+      "description": "<p>Anchor text for generated <code>link-to</code>. You can pass specific text if needed,\notherwise default text is generated:</p>\n<h4>Defaults:</h4>\n<ul>\n<li>if module: <em>MODULE_NAME Module</em></li>\n<li>if class: <em>CLASS_NAME Class</em></li>\n<li>if class &amp;&amp; item: <em>CLASS_NAME:ITEM_NAME Class</em></li>\n</ul>\n",
+      "itemtype": "property",
+      "name": "text",
+      "type": "{string}",
+      "passed": "",
+      "class": "CrossLink",
+      "srcFileId": "addon_components_cross-link.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
@@ -5043,7 +6300,7 @@
     {
       "file": "addon/components/fountainhead-tabs.js",
       "line": 244,
-      "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab’s <code>hidden</code> status changes.</p>\n",
+      "description": "<p>Closure action passed to content subcomponents that is called whenever\na tab has updated in a way this container needs to know of. Currently\nthis is only when a tab's <code>hidden</code> status changes.</p>\n",
       "itemtype": "method",
       "name": "updateTab",
       "params": [
@@ -5092,6 +6349,58 @@
     }
   ],
   "warnings": [
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-class/items-container.js:32"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-class/items-container.js:40"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-class/items-container.js:51"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-class/items-container.js:59"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-class/items-container.js:67"
+    },
+    {
+      "message": "unknown tag: action",
+      "line": " addon/components/fountainhead-class/items-container.js:218"
+    },
+    {
+      "message": "unknown tag: action",
+      "line": " addon/components/fountainhead-class/items-container.js:233"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-pages/class.js:15"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/fountainhead-pages/class.js:22"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/cross-link.js:43"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/cross-link.js:51"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/cross-link.js:59"
+    },
+    {
+      "message": "unknown tag: passed",
+      "line": " addon/components/cross-link.js:67"
+    },
     {
       "message": "replacing incorrect tag: returns with return",
       "line": " addon/components/fountainhead-button.js:105"

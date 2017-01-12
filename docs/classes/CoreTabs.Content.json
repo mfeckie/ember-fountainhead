@@ -72,7 +72,7 @@
     {
       "file": "addon/components/fountainhead-tabs-content.js",
       "line": 136,
-      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we’re notifying on is the <code>hidden</code> prop)</em></p>\n",
+      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we're notifying on is the <code>hidden</code> prop)</em></p>\n",
       "itemtype": "event",
       "name": "didUpdateAttrs",
       "class": "CoreTabs.Content",
@@ -91,7 +91,7 @@
     {
       "file": "addon/components/fountainhead-tabs-content.js",
       "line": 118,
-      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab’s data.</p>\n",
+      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab's data.</p>\n",
       "itemtype": "event",
       "name": "init",
       "class": "CoreTabs.Content",
@@ -234,7 +234,7 @@
     {
       "file": "addon/components/fountainhead-tabs-content.js",
       "line": 136,
-      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we’re notifying on is the <code>hidden</code> prop)</em></p>\n",
+      "description": "<p>Actions Up: When something changes in this component we need to let the\ncontainer tabs know by firing the <code>updateTab</code> closure action with this\ntabs changed data.</p>\n<p><em>(Currently the only change we're notifying on is the <code>hidden</code> prop)</em></p>\n",
       "itemtype": "event",
       "name": "didUpdateAttrs",
       "class": "CoreTabs.Content",
@@ -243,7 +243,7 @@
     {
       "file": "addon/components/fountainhead-tabs-content.js",
       "line": 118,
-      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab’s data.</p>\n",
+      "description": "<p>Handle registering with the tabs container on int by firing <code>registerTab</code>\nclosure action with this tab's data.</p>\n",
       "itemtype": "event",
       "name": "init",
       "class": "CoreTabs.Content",

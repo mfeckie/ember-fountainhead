@@ -1,0 +1,67 @@
+{
+  "name": "FountainHeadPages.Class",
+  "shortname": "FountainHeadPages.Class",
+  "classitems": [
+    {
+      "file": "addon/components/fountainhead-pages/class.js",
+      "line": 15,
+      "description": "<p>Class model content.</p>\n",
+      "itemtype": "property",
+      "name": "class",
+      "type": "{?Object}",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
+    },
+    {
+      "file": "addon/components/fountainhead-pages/class.js",
+      "line": 22,
+      "description": "<p>Item query param passed down from controller. Passed to the\n{{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}\ncomponent to scroll to linked item after load.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{?string}",
+      "default": "null",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountainhead-pages/class.js",
+  "line": 4,
+  "description": "<p>Fountainhead <code>/doc/class</code> page component</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/fountainhead-pages/class.js",
+      "line": 15,
+      "description": "<p>Class model content.</p>\n",
+      "itemtype": "property",
+      "name": "class",
+      "type": "{?Object}",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
+    },
+    {
+      "file": "addon/components/fountainhead-pages/class.js",
+      "line": 22,
+      "description": "<p>Item query param passed down from controller. Passed to the\n{{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}\ncomponent to scroll to linked item after load.</p>\n",
+      "itemtype": "property",
+      "name": "item",
+      "type": "{?string}",
+      "default": "null",
+      "passed": "",
+      "class": "FountainHeadPages.Class",
+      "srcFileId": "addon_components_fountainhead-pages_class.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_fountainhead-pages_class.js"
+}

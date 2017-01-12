@@ -5,7 +5,7 @@
     {
       "file": "addon/services/fountainhead.js",
       "line": 18,
-      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.</p>\n",
       "itemtype": "property",
       "name": "apiNamespace",
       "type": "{string}",
@@ -16,7 +16,7 @@
     {
       "file": "addon/services/fountainhead.js",
       "line": 51,
-      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
       "itemtype": "method",
       "name": "init",
       "class": "Fountainhead",
@@ -59,7 +59,7 @@
     {
       "file": "addon/services/fountainhead.js",
       "line": 51,
-      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven’t\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
+      "description": "<p>When this service is loaded, handle fetching documentation meta data that\ndrives the sidebar &amp;&amp; header. If there is an error we know tha we haven't\ngenerated documentation yet. The docs template will pick up the error and\ndisplay the getting started instructions.</p>\n<p>NOTE: the meta request needs to be wrapped in a <code>run.next</code> so that if a\nconsuming application needs to override the <code>apiNamespace</code> the meta call\nis made with the new namespace. Without the run loop, attempting to set\nthe namespace will initialize this service and call for meta before the\nnamespace update is complete and the request will use the default <code>/docs</code>\nnamespace.</p>\n",
       "itemtype": "method",
       "name": "init",
       "class": "Fountainhead",
@@ -70,7 +70,7 @@
     {
       "file": "addon/services/fountainhead.js",
       "line": 18,
-      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint’s root url namespace.</p>\n",
+      "description": "<p>All Fountainhead API requests are prefixed with this namespace. If you\nexport your docs JSON files to a non-default location, or your application\nis served under a namespace you can overwrite this property to match your\nendpoint's root url namespace.</p>\n",
       "itemtype": "property",
       "name": "apiNamespace",
       "type": "{string}",

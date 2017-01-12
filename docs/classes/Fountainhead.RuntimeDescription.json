@@ -1,11 +1,11 @@
 {
-  "name": "FountainHead.Shared.RuntimeDescription",
-  "shortname": "FountainHead.Shared.RuntimeDescription",
+  "name": "Fountainhead.RuntimeDescription",
+  "shortname": "Fountainhead.RuntimeDescription",
   "classitems": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 46,
-      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+      "line": 66,
+      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component's context so that the application doesn't explode\nwhen trying to reference a non-existent action.</p>\n",
       "itemtype": "method",
       "name": "_checkActionRefs",
       "params": [
@@ -19,13 +19,13 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 80,
-      "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+      "line": 100,
+      "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
       "itemtype": "method",
       "name": "_generateDescription",
       "params": [
@@ -35,33 +35,56 @@
           "type": "String"
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 30,
+      "line": 41,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-description']",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 19,
+      "line": 47,
+      "description": "<p>If there is a parsing error during the template compilation the catch block\nwill set it as the <code>compilerError</code>. This parsing error is rendered for\neasier debugging of invalid content.</p>\n",
+      "itemtype": "property",
+      "name": "compilerError",
+      "type": "{?string}",
+      "default": "null",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 21,
+      "description": "<p>The content string that should be rendered. This string is passed to the\nruntime compiler and registered as a partial if compilation is successful.</p>\n",
+      "itemtype": "property",
+      "name": "content",
+      "type": "{string}",
+      "default": "''",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 29,
       "description": "<p>The string that should be converted to a partial</p>\n",
       "itemtype": "property",
       "name": "description",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "deprecated": true,
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 139,
+      "line": 160,
       "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
@@ -79,26 +102,26 @@
           ]
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 115,
-      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+      "line": 136,
+      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 36,
+      "line": 56,
       "description": "<p>Name of generated partial that is used in the template.</p>\n",
       "itemtype": "property",
       "name": "partialName",
       "type": "{string}",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
@@ -109,14 +132,14 @@
   "module": "Addon",
   "file": "addon/components/fountainhead-runtime-description.js",
   "line": 6,
-  "description": "<p>Generates a description during runtime by using HTMLBars to compile any\nstring to a partial. This allows us to create descriptions form JSON\nresponses with components inside of them.</p>\n",
+  "description": "<p>Generates a description during runtime by using HTMLBars to compile any\nstring to a partial. This allows us to create descriptions from JSON\nresponses with components inside of them.</p>\n<p>TODO: Name partials by class+type+name for re-use</p>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 46,
-      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component’s context so that the application doesn’t explode\nwhen trying to reference a non-existent action.</p>\n",
+      "line": 66,
+      "description": "<p>Looks through the passed-in template string and checks for action helpers;\nwhen it finds some, it checks for the actions referenced and registers no-ops\nfor them on this component's context so that the application doesn't explode\nwhen trying to reference a non-existent action.</p>\n",
       "itemtype": "method",
       "name": "_checkActionRefs",
       "params": [
@@ -130,13 +153,13 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 80,
-      "description": "<p>Grabs the input from the parent instance’s code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component’s template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
+      "line": 100,
+      "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
       "itemtype": "method",
       "name": "_generateDescription",
       "params": [
@@ -146,56 +169,79 @@
           "type": "String"
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 115,
-      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent’s actions hash to ensure they’re available at compile time.</p>\n",
+      "line": 136,
+      "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
   "property": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 30,
+      "line": 41,
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-description']",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 19,
+      "line": 47,
+      "description": "<p>If there is a parsing error during the template compilation the catch block\nwill set it as the <code>compilerError</code>. This parsing error is rendered for\neasier debugging of invalid content.</p>\n",
+      "itemtype": "property",
+      "name": "compilerError",
+      "type": "{?string}",
+      "default": "null",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 21,
+      "description": "<p>The content string that should be rendered. This string is passed to the\nruntime compiler and registered as a partial if compilation is successful.</p>\n",
+      "itemtype": "property",
+      "name": "content",
+      "type": "{string}",
+      "default": "''",
+      "class": "Fountainhead.RuntimeDescription",
+      "srcFileId": "addon_components_fountainhead-runtime-description.js"
+    },
+    {
+      "file": "addon/components/fountainhead-runtime-description.js",
+      "line": 29,
       "description": "<p>The string that should be converted to a partial</p>\n",
       "itemtype": "property",
       "name": "description",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "deprecated": true,
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 36,
+      "line": 56,
       "description": "<p>Name of generated partial that is used in the template.</p>\n",
       "itemtype": "property",
       "name": "partialName",
       "type": "{string}",
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
   "event": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 139,
+      "line": 160,
       "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
@@ -213,7 +259,7 @@
           ]
         }
       ],
-      "class": "FountainHead.Shared.RuntimeDescription",
+      "class": "Fountainhead.RuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],

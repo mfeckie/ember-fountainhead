@@ -1,0 +1,304 @@
+{
+  "name": "FountainHead.Shared.Alert",
+  "shortname": "FountainHead.Shared.Alert",
+  "classitems": [
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 108,
+      "description": "<p>Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.</p>\n",
+      "itemtype": "method",
+      "name": "_selfDestruct",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 127,
+      "description": "<p>Actions hash</p>\n",
+      "itemtype": "property",
+      "name": "actions",
+      "type": "{Object}",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 76,
+      "description": "<p>Attribute bindings applied to the component.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 15,
+      "description": "<p>Specify brand, component handles assigning correct css class</p>\n",
+      "itemtype": "property",
+      "name": "brand",
+      "default": "''",
+      "type": "{string}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 54,
+      "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+      "itemtype": "property",
+      "name": "brandClass",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "subprops": [
+        {
+          "name": "'brand'",
+          "description": ""
+        }
+      ],
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 23,
+      "description": "<p>Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.</p>\n<p><strong>Usage:</strong>\nOverride by passing <code>false</code> into this param in your handlebars template:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>alert canDismiss<span class=\"token operator\">=</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">!</span> Standard template content goes here <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>alert<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+      "itemtype": "property",
+      "name": "canDismiss",
+      "type": "{boolean}",
+      "default": "true",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 93,
+      "description": "<p>A set of dynamic classes whose output is bound to the associated values\non the component.</p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 85,
+      "description": "<p>Static class names applied to the component that must always exist. This\nreally should not need to be overridden or extended.</p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 133,
+      "description": "<p>A proxy action for the selfDestruct method</p>\n",
+      "itemtype": "method",
+      "name": "dismiss",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 42,
+      "description": "<p>Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.</p>\n",
+      "itemtype": "property",
+      "name": "onDismiss",
+      "type": "{function}",
+      "default": "() => {}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 65,
+      "description": "<p>A++ accessibility. Tells a screen this component is an alert.</p>\n",
+      "itemtype": "property",
+      "name": "role",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountainhead-alert.js",
+  "line": 5,
+  "description": "<p>Fountainhead Alert Component copied from Radical</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 108,
+      "description": "<p>Allows for quick and easy dismissal of the alert. The alert is faded from\nview, then totally removed from the DOM and the component instance is\ndestroyed.</p>\n",
+      "itemtype": "method",
+      "name": "_selfDestruct",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 133,
+      "description": "<p>A proxy action for the selfDestruct method</p>\n",
+      "itemtype": "method",
+      "name": "dismiss",
+      "return": {
+        "description": "",
+        "type": "Undefined"
+      },
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    }
+  ],
+  "property": [
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 127,
+      "description": "<p>Actions hash</p>\n",
+      "itemtype": "property",
+      "name": "actions",
+      "type": "{Object}",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 76,
+      "description": "<p>Attribute bindings applied to the component.</p>\n",
+      "itemtype": "property",
+      "name": "attributeBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 15,
+      "description": "<p>Specify brand, component handles assigning correct css class</p>\n",
+      "itemtype": "property",
+      "name": "brand",
+      "default": "''",
+      "type": "{string}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 54,
+      "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
+      "itemtype": "property",
+      "name": "brandClass",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "subprops": [
+        {
+          "name": "'brand'",
+          "description": ""
+        }
+      ],
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 23,
+      "description": "<p>Whether this alert can be dismissed via the close button in the upper right\ncorner. Defaults to true. Adds an interactive close button to the alert.</p>\n<p><strong>Usage:</strong>\nOverride by passing <code>false</code> into this param in your handlebars template:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#core<span class=\"token operator\">-</span>alert canDismiss<span class=\"token operator\">=</span><span class=\"token boolean\">false</span><span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n  <span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">!</span> Standard template content goes here <span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>core<span class=\"token operator\">-</span>alert<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
+      "itemtype": "property",
+      "name": "canDismiss",
+      "type": "{boolean}",
+      "default": "true",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 93,
+      "description": "<p>A set of dynamic classes whose output is bound to the associated values\non the component.</p>\n",
+      "itemtype": "property",
+      "name": "classNameBindings",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 85,
+      "description": "<p>Static class names applied to the component that must always exist. This\nreally should not need to be overridden or extended.</p>\n",
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 42,
+      "description": "<p>Contains optional action that is executed when the alert is dismissed.\nThis action will be executed before the alert is destroyed.</p>\n",
+      "itemtype": "property",
+      "name": "onDismiss",
+      "type": "{function}",
+      "default": "() => {}",
+      "access": "public",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    },
+    {
+      "file": "addon/components/fountainhead-alert.js",
+      "line": 65,
+      "description": "<p>A++ accessibility. Tells a screen this component is an alert.</p>\n",
+      "itemtype": "property",
+      "name": "role",
+      "type": "{string}",
+      "access": "private",
+      "tagname": "",
+      "class": "FountainHead.Shared.Alert",
+      "srcFileId": "addon_components_fountainhead-alert.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_fountainhead-alert.js"
+}

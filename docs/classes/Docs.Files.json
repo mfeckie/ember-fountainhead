@@ -14,7 +14,7 @@
     {
       "file": "addon/routes/docs/files.js",
       "line": 14,
-      "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+      "description": "<p>Fetches file's JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [
@@ -53,7 +53,7 @@
     {
       "file": "addon/routes/docs/files.js",
       "line": 14,
-      "description": "<p>Fetches file’s JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
+      "description": "<p>Fetches file's JSON at: <code>${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json</code></p>\n",
       "itemtype": "method",
       "name": "model",
       "params": [

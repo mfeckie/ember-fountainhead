@@ -5,7 +5,7 @@
     {
       "file": "blueprints/ember-fountainhead/index.js",
       "line": 29,
-      "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+      "description": "<p>After install of addon read in consuming application's gitignore. If there\nisn't an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
       "itemtype": "method",
       "name": "afterInstall",
       "return": {
@@ -25,14 +25,14 @@
   "namespace": "",
   "file": "blueprints/ember-fountainhead/index.js",
   "line": 12,
-  "description": "<p>Fountainhead index blueprint is used to update the consuming application’s\n<code>.gitignore</code> to ignore the auto generated <code>vendor/feature-flags.js</code> file\ncreated by <code>ember-radical</code>. This file is used to create global variables if\nthe consuming application has turned off JSUglify code stripping.</p>\n",
+  "description": "<p>Fountainhead index blueprint is used to update the consuming application's\n<code>.gitignore</code> to ignore the auto generated <code>vendor/feature-flags.js</code> file\ncreated by <code>ember-radical</code>. This file is used to create global variables if\nthe consuming application has turned off JSUglify code stripping.</p>\n",
   "is_constructor": 1,
   "extends": "EmberCLI.Blueprint",
   "method": [
     {
       "file": "blueprints/ember-fountainhead/index.js",
       "line": 29,
-      "description": "<p>After install of addon read in consuming application’s gitignore. If there\nisn’t an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
+      "description": "<p>After install of addon read in consuming application's gitignore. If there\nisn't an entry for <code>vendor/feature-flags.js</code>, use node <code>fs</code> to append it.</p>\n",
       "itemtype": "method",
       "name": "afterInstall",
       "return": {

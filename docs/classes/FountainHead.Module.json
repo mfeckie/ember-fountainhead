@@ -5,7 +5,7 @@
     {
       "file": "addon/components/fountainhead-pages/module.js",
       "line": 24,
-      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
       "class": "FountainHead.Module",
@@ -30,7 +30,7 @@
   "module": "Addon",
   "file": "addon/components/fountainhead-pages/module.js",
   "line": 4,
-  "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere’s nothing here yet.</p>\n",
+  "description": "<p>Fountainhead <code>/doc/module</code> page component\nThere's nothing here yet.</p>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [],
@@ -51,7 +51,7 @@
     {
       "file": "addon/components/fountainhead-pages/module.js",
       "line": 24,
-      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don’t have\nany keys.</p>\n",
+      "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
       "class": "FountainHead.Module",

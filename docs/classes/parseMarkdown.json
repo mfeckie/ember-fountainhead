@@ -9,7 +9,7 @@
   "module": "Lib",
   "namespace": "",
   "file": "lib/parse-markdown.js",
-  "line": 24,
+  "line": 28,
   "description": "<p>Handle parsing markdown using <a href=\"http://prismjs.com/\">Prism</a></p>\n",
   "is_constructor": 1,
   "params": [

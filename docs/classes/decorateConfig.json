@@ -5,7 +5,7 @@
     {
       "file": "lib/decorate-config.js",
       "line": 21,
-      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can't\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
       "itemtype": "property",
       "name": "entry",
       "type": "{Array}",
@@ -60,7 +60,7 @@
     {
       "file": "lib/decorate-config.js",
       "line": 21,
-      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can’t\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
+      "description": "<p>Configuration entry should be an array of directory paths (YUIDoc can't\nparse individual files unfortunately). The default entry is <code>app</code> when the\nconsumer is an application and <code>addon</code> when the consumer is an addon.</p>\n",
       "itemtype": "property",
       "name": "entry",
       "type": "{Array}",

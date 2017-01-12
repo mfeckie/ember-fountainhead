@@ -56,7 +56,7 @@
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 52,
-      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven't run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
       "itemtype": "property",
       "name": "stringForAriaHidden",
       "type": "{string}",
@@ -154,7 +154,7 @@
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
       "line": 52,
-      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven’t run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
+      "description": "<p>Fountainhead meta is passed into the sidebar. When there is no data, then\nwe haven't run the documentation scripts yet, so we need to hide the sidebar\nusing aria-hidden. Convert presence of meta data to string of boolean that\ncan be used for aria-hidden</p>\n",
       "itemtype": "property",
       "name": "stringForAriaHidden",
       "type": "{string}",
