@@ -1,5 +1,7 @@
 'use strict';
 const EOL = require('os').EOL;
+const readWatchmanConfig = require('./read-watchman-config');
+const updateWatchmanConfig = require('./update-watchman-config');
 
 /**
  * When an addon has an `index.js` file under `/blueprints/ADDON_NAME`, Ember
@@ -33,6 +35,17 @@ module.exports = {
    * @return {undefined}
    */
   afterInstall() {
+    let watchmanConfig;
+
+    if (this.project.isEmberCLIAddon()) {
+      // Reads the project's .watchmanconfig file
+      watchmanConfig = readWatchmanConfig();
+      // Adds the public folder in a test dummy app to the ignore_dirs prop
+      // in the .watchmanconfig file to prevent infinite rerenders when docs
+      // are built on live reload.
+      updateWatchmanConfig(watchmanConfig);
+    }
+
     console.log(`Thanks for installing Ember Fountainhead${EOL}You can run 'ember-docs' to generate you documentation`);
   }
 };
