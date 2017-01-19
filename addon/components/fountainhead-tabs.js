@@ -1,3 +1,5 @@
+/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/core-tabs/component.js */
+
 import Ember from 'ember';
 import Component from 'ember-component';
 import run from 'ember-runloop';
@@ -73,7 +75,7 @@ const { $ } = Ember;
  * - The tab list is a flexbox container with flex-grow 1 for each tab. This auto
  *   magically grows the tabs to fill the entire width of tab container.
  *
- * @class CoreTabs
+ * @class FountainHead.Shared.Tabs
  * @constructor
  * @extends Ember.Component
  */
