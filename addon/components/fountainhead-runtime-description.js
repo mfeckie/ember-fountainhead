@@ -92,11 +92,10 @@ export default Component.extend({
     actionNames.forEach(action => {
       if (!this.get(`actions.${action}`)) {
         this.set(`actions.${action}`, function() {});
-        console.log(`Setting up a no-op for action name of ${action}`);
+        console.log(`Setting up a no-op for action name of ${action}`); //:brule:
       }
     });
   },
-
   /**
    * Grabs the input from the parent instance's code editor, compiles it into a
    * real-live HTMLBars template, registers it on the container as a partial

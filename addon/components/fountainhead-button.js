@@ -1,3 +1,5 @@
+/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/core-button/component.js */
+
 import Component from 'ember-component';
 import computed from 'ember-computed';
 import hbs from 'htmlbars-inline-precompile';
@@ -5,6 +7,19 @@ import hbs from 'htmlbars-inline-precompile';
 /**
  * Fountainhead button component pulled from `ember-radical` addon.
  * TODO: One day use nested addons, _trepidation_
+ *
+ * Here, this is a button:
+ *
+ * ```glimmer
+ * {{#fountainhead-button}}Check me out{{/fountainhead-button}}
+ * ```
+ *
+ * This button will not get auto-rendered, as it is just an example:
+ *
+ * ```handlebars
+ * {{#fountainhead-button}}NO DICE, HOMBRE{{/fountainhead-button}}
+ * ```
+ *
  * @class FountainHead.Shared.Button
  * @constructor
  * @extends Ember.Component

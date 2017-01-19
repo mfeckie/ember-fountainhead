@@ -1,3 +1,5 @@
+/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/core-tabs/content/component.js */
+
 import Component from 'ember-component';
 import computed from 'ember-computed';
 import hbs from 'htmlbars-inline-precompile';
@@ -24,7 +26,7 @@ import hbs from 'htmlbars-inline-precompile';
  * `elementId` | string | null | Set a specific id for this component when using container `defaultTab`
  * `tabDataTest` | string | null | `data-test` for the tab button
  *
- * @class CoreTabs.Content
+ * @class FountainHead.Shared.Tabs.Content
  * @constructor
  * @extends Ember.Component
  */
