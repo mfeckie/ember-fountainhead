@@ -107,7 +107,9 @@ module.exports = {
    * @return {undefined}
    */
   preBuild() {
-    if (config.liveEdit !== false) { generateDocs(); }
+    const env = process.env.EMBER_ENV || 'development';
+
+    if (env === 'development' && config.liveEdit !== false) { generateDocs(); }
   }
 
   // Fallback exclude feature if we need to nix using
