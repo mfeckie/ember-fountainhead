@@ -1,7 +1,7 @@
 'use strict';
 const EOL = require('os').EOL;
-const readWatchmanConfig = require('./read-watchman-config');
-const updateWatchmanConfig = require('./update-watchman-config');
+const readWatchmanConfig = require('../../lib/read-watchman-config.js');
+const updateWatchmanConfig = require('../../lib/update-watchman-config.js');
 
 /**
  * When an addon has an `index.js` file under `/blueprints/ADDON_NAME`, Ember
