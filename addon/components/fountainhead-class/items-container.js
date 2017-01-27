@@ -2,7 +2,6 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 import $ from 'jquery';
 import { scheduleOnce } from 'ember-runloop';
-import get from 'ember-metal/get';
 
 /**
  * Tab container for the class' documentation items. Component handles running
@@ -185,17 +184,25 @@ export default Component.extend({
    * component has changed. Super weird. For now we're 'fixing' it by also
    * passing in the class name and using that as a check to reset the `activeTab`
    * @event didUpdateAttrs
-   * @param {Object} attrs Object with `oldAttrs` and `newAttrs`
    */
-  didUpdateAttrs({ oldAttrs, newAttrs }) {
-    this._super(...arguments);
-    let item = get(newAttrs, 'item.value');
+  didUpdateAttrs() {
+    let item = this.get('item'),
+        name = this.get('name'),
+        oldItem = this.get('_item'),
+        oldName = this.get('_name');
 
-    if (item && get(oldAttrs, 'item.value') !== get(newAttrs, 'item.value')) {
+    if (item && oldItem !== item) {
       this._scrollToQueryParamItem(item);
-    } else if (get(oldAttrs, 'name.value') !== get(newAttrs, 'name.value')) {
+    } else if (oldName !== name) {
       this.set('activeTab', 'indexPanel');
     }
+
+    // Store the new props into the private old props values so they can be
+    // use for comparison on the next attrs update
+    this.setProperties({
+      _item: item,
+      _name: name
+    });
   },
 
 
