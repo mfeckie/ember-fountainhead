@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1 (01-27-2017)
+Fixed:
+- Removes use of deprecated args in component lifecycle hook methods
+- Removes empty tests
+
 ## 2.0.0 (01-27-2017)
 Version 2 Release: Fountainhead component structure and addon integration stabilized.
 Highlights:
