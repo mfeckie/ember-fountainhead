@@ -138,7 +138,7 @@ export default Component.extend({
     this.$().css({ outline: 'none' });
     this.$().on('blur', () => {
       // If this button instance is destroying/destroyed, don't bother
-      // (This is an issue with instances of `{{core-alert}}`)
+      // (This is an issue with instances of `{{fountainhead-alert}}`)
       if (this.get('isDestroying') || this.get('isDestroyed')) { return; }
       this.$().off('blur').css('outline', '');
     });
