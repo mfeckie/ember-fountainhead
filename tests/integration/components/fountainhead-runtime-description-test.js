@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountainhead-runtime-description', 'Integration | Component | fountainhead-runtime-description', {
+moduleForComponent('fountainhead-runtime-description', 'Integration | Component | fountainhead runtime description', {
   integration: true
 });
 

@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountain-head/docs/class/meta', 'Integration | Component | foutnain head/docs/class/meta', {
+moduleForComponent('fountainhead-class/meta', 'Integration | Component | fountainhead class/meta', {
   integration: true
 });
 

@@ -6,7 +6,7 @@ const { HTMLBars, getOwner } = Ember;
 /**
  * Generates a description during runtime by using HTMLBars to compile any
  * string to a partial. This allows us to create descriptions from JSON
- * responses with components inside of them.<p>
+ * responses with components inside of them.
  *
  * TODO: Name partials by class+type+name for re-use
  * @class FountainheadRuntimeDescription

@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountain-head/docs/class/header', 'Integration | Component | fountain head/docs/class/header', {
+moduleForComponent('fountainhead-class/header', 'Integration | Component | fountainhead class//header', {
   integration: true
 });
 
