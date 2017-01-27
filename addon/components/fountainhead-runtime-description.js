@@ -9,7 +9,7 @@ const { HTMLBars, getOwner } = Ember;
  * responses with components inside of them.
  *
  * TODO: Name partials by class+type+name for re-use
- * @class Fountainhead.RuntimeDescription
+ * @class FountainheadRuntimeDescription
  * @constructor
  * @extends Ember.Component
  */

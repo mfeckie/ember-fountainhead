@@ -1,6 +1,12 @@
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
+/**
+ * Group Component for {{crosslink class='FountainheadSidebar.Sidebar'}}
+ * @class FountainheadSidebar.Group
+ * @constructor
+ * @extends Ember.Component
+ */
 export default Component.extend({
 
   // Passed Properties

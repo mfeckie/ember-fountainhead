@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 /**
  * Docs Page class header. Contains class name with a link to source file for
  * class.
- * @class FountainHead.Class.Header
+ * @class FountaineadClass.Header
  * @constructor
  * @extends Ember.Component
  */

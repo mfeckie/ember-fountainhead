@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Individual class property or method documentation item
- * @class FountainHead.Class.ClassItem
+ * @class FountaineadClass.Item
  * @constructor
  * @extends Ember.Component
  */

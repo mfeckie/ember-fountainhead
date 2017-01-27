@@ -6,7 +6,7 @@ import hbs from 'htmlbars-inline-precompile';
  * helpful getting started or docs related message depending on if the user has
  * generated docs or not. We know by passing in the meta information in the
  * `/docs/index` template
- * @class FountainHead.Header
+ * @class FountainheadGetStarted
  * @constructor
  * @extends Ember.Component
  */

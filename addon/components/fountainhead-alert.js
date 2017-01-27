@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Fountainhead Alert Component copied from Radical
- * @class FountainHead.Shared.Alert
+ * @class FountainheadAlert
  * @constructor
  * @extends Ember.Component
  */

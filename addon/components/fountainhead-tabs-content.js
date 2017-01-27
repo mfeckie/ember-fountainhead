@@ -26,7 +26,7 @@ import hbs from 'htmlbars-inline-precompile';
  * `elementId` | string | null | Set a specific id for this component when using container `defaultTab`
  * `tabDataTest` | string | null | `data-test` for the tab button
  *
- * @class FountainHead.Shared.Tabs.Content
+ * @class FountainheadTabsContent
  * @constructor
  * @extends Ember.Component
  */
@@ -86,7 +86,7 @@ export default Component.extend({
    * @property _hidden
    * @param {string} activeId
    * @param {boolean} hidden
-   * @returns {string} String of true/false for use with `aria-hidden` binding
+   * @return {string} String of true/false for use with `aria-hidden` binding
    */
   _hidden: computed('activeId', 'hidden', function() {
     if (this.get('hidden') || this.get('activeId') !== this.get('elementId')) {

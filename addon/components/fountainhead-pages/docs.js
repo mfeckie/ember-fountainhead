@@ -16,9 +16,9 @@ import inject from 'ember-service/inject';
  *
  * The `fountainhead` service is the primary store for the addon and handles
  * fetching the meta data for the docs.
- * @class FountainHead.Docs
- * @uses FountainHead.Docs.Github
- * @uses FountainHead.Docs.Sidebar
+ * @class FountainheadPages.Docs
+ * @uses FountainheadRepoLink
+ * @uses FountainheadSidebar.Sidebar
  * @constructor
  * @extends Ember.Component
  */

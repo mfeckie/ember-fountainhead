@@ -6,7 +6,7 @@ import computed from 'ember-computed';
  * Wrapper component for the sidebar components. Expects the entire docs meta
  * object.
  *
- * @class FountainHead.Docs.Sidebar
+ * @class FountainheadSidebar.Sidebar
  * @constructor
  * @extends Ember.Component
  */
