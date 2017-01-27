@@ -1,6 +1,6 @@
 {
-  "name": "FountainHeadPages.Class",
-  "shortname": "FountainHeadPages.Class",
+  "name": "FountainheadPages.Class",
+  "shortname": "FountainheadPages.Class",
   "classitems": [
     {
       "file": "addon/components/fountainhead-pages/class.js",
@@ -10,7 +10,7 @@
       "name": "class",
       "type": "{?Object}",
       "passed": "",
-      "class": "FountainHeadPages.Class",
+      "class": "FountainheadPages.Class",
       "srcFileId": "addon_components_fountainhead-pages_class.js"
     },
     {
@@ -22,7 +22,7 @@
       "type": "{?string}",
       "default": "null",
       "passed": "",
-      "class": "FountainHeadPages.Class",
+      "class": "FountainheadPages.Class",
       "srcFileId": "addon_components_fountainhead-pages_class.js"
     }
   ],
@@ -46,7 +46,7 @@
       "name": "class",
       "type": "{?Object}",
       "passed": "",
-      "class": "FountainHeadPages.Class",
+      "class": "FountainheadPages.Class",
       "srcFileId": "addon_components_fountainhead-pages_class.js"
     },
     {
@@ -58,7 +58,7 @@
       "type": "{?string}",
       "default": "null",
       "passed": "",
-      "class": "FountainHeadPages.Class",
+      "class": "FountainheadPages.Class",
       "srcFileId": "addon_components_fountainhead-pages_class.js"
     }
   ],

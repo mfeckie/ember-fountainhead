@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Docs.Sidebar",
-  "shortname": "FountainHead.Docs.Sidebar",
+  "name": "FountainheadSidebar.Sidebar",
+  "shortname": "FountainheadSidebar.Sidebar",
   "classitems": [
     {
       "file": "addon/components/fountainhead-sidebar/sidebar.js",
@@ -9,7 +9,7 @@
       "name": "attributeBindings",
       "type": "{Array}",
       "default": "['stringForAriaHidden:aria-hidden']",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -19,7 +19,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-sidebar']",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -39,7 +39,7 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -50,7 +50,7 @@
       "name": "meta",
       "type": "{?Object}",
       "default": "null",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -64,7 +64,7 @@
         "description": "Returns either string of `true` or `false` dependent on\n                 presence of meta",
         "type": "String"
       },
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "subprops": [
         {
           "name": "meta",
@@ -81,7 +81,7 @@
       "name": "tagName",
       "type": "{string}",
       "default": "'nav'",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],
@@ -89,7 +89,7 @@
   "extensions": [],
   "plugin_for": [],
   "extension_for": [
-    "FountainHead.Docs"
+    "FountainheadPages.Docs"
   ],
   "module": "Addon",
   "file": "addon/components/fountainhead-sidebar/sidebar.js",
@@ -115,7 +115,7 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],
@@ -127,7 +127,7 @@
       "name": "attributeBindings",
       "type": "{Array}",
       "default": "['stringForAriaHidden:aria-hidden']",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -137,7 +137,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-sidebar']",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -148,7 +148,7 @@
       "name": "meta",
       "type": "{?Object}",
       "default": "null",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     },
     {
@@ -162,7 +162,7 @@
         "description": "Returns either string of `true` or `false` dependent on\n                 presence of meta",
         "type": "String"
       },
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "subprops": [
         {
           "name": "meta",
@@ -179,7 +179,7 @@
       "name": "tagName",
       "type": "{string}",
       "default": "'nav'",
-      "class": "FountainHead.Docs.Sidebar",
+      "class": "FountainheadSidebar.Sidebar",
       "srcFileId": "addon_components_fountainhead-sidebar_sidebar.js"
     }
   ],

@@ -1,0 +1,19 @@
+{
+  "name": "FountainheadSidebar.SearchBar",
+  "shortname": "FountainheadSidebar.SearchBar",
+  "classitems": [],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountainhead-sidebar/search-bar.js",
+  "line": 4,
+  "description": "<p>Not operational sidebar search component</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [],
+  "event": [],
+  "srcFileId": "addon_components_fountainhead-sidebar_search-bar.js"
+}

@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Docs.Github",
-  "shortname": "FountainHead.Docs.Github",
+  "name": "FountainheadRepoLink",
+  "shortname": "FountainheadRepoLink",
   "classitems": [
     {
       "file": "addon/components/fountainhead-repo-link.js",
@@ -10,7 +10,7 @@
       "name": "repository",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Docs.Github",
+      "class": "FountainheadRepoLink",
       "srcFileId": "addon_components_fountainhead-repo-link.js"
     }
   ],
@@ -18,7 +18,7 @@
   "extensions": [],
   "plugin_for": [],
   "extension_for": [
-    "FountainHead.Docs"
+    "FountainheadPages.Docs"
   ],
   "module": "Addon",
   "file": "addon/components/fountainhead-repo-link.js",
@@ -36,7 +36,7 @@
       "name": "repository",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Docs.Github",
+      "class": "FountainheadRepoLink",
       "srcFileId": "addon_components_fountainhead-repo-link.js"
     }
   ],

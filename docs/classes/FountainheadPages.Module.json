@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Module",
-  "shortname": "FountainHead.Module",
+  "name": "FountainheadPages.Module",
+  "shortname": "FountainheadPages.Module",
   "classitems": [
     {
       "file": "addon/components/fountainhead-pages/module.js",
@@ -8,7 +8,7 @@
       "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
-      "class": "FountainHead.Module",
+      "class": "FountainheadPages.Module",
       "srcFileId": "addon_components_fountainhead-pages_module.js"
     },
     {
@@ -19,7 +19,7 @@
       "name": "module",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Module",
+      "class": "FountainheadPages.Module",
       "srcFileId": "addon_components_fountainhead-pages_module.js"
     }
   ],
@@ -43,7 +43,7 @@
       "name": "module",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Module",
+      "class": "FountainheadPages.Module",
       "srcFileId": "addon_components_fountainhead-pages_module.js"
     }
   ],
@@ -54,7 +54,7 @@
       "description": "<p>Handle nulling out properties <code>submodules</code> and <code>classes</code> if they don't have\nany keys.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
-      "class": "FountainHead.Module",
+      "class": "FountainheadPages.Module",
       "srcFileId": "addon_components_fountainhead-pages_module.js"
     }
   ],

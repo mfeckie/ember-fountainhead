@@ -1,6 +1,6 @@
 {
-  "name": "FountainHeadClass.ItemsContainer",
-  "shortname": "FountainHeadClass.ItemsContainer",
+  "name": "FountainheadClass.ItemsContainer",
+  "shortname": "FountainheadClass.ItemsContainer",
   "classitems": [
     {
       "file": "addon/components/fountainhead-class/items-container.js",
@@ -29,7 +29,7 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -47,7 +47,7 @@
           "type": "!string"
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -60,7 +60,7 @@
       "access": "protected",
       "tagname": "",
       "default": "indexPanel",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -70,7 +70,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-tabs-container']",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -81,7 +81,7 @@
       "name": "classitems",
       "type": "{Array}",
       "default": "[]",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -92,7 +92,7 @@
       "name": "defaultTab",
       "type": "{string}",
       "default": "'indexPanel'",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -108,7 +108,7 @@
           "type": "Object"
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -120,13 +120,13 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
       "line": 218,
-      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
+      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
       "itemtype": "method",
       "name": "goToItem",
       "action": "",
@@ -149,16 +149,16 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
       "line": 202,
-      "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
+      "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -170,7 +170,7 @@
       "type": "{?string}",
       "default": "null",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -182,7 +182,7 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -193,7 +193,7 @@
       "name": "name",
       "type": "{string}",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -205,7 +205,7 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -229,7 +229,7 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     }
   ],
@@ -271,7 +271,7 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -289,13 +289,13 @@
           "type": "!string"
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
       "line": 218,
-      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
+      "description": "<p>Action bound to each documentation item in the index panel. Clicking any\nitem will trigger this with the documentation item as an argument. Use\nthe passed doc item to internally call\n{{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToItem'}}\nto scroll to clicked item.</p>\n",
       "itemtype": "method",
       "name": "goToItem",
       "action": "",
@@ -318,16 +318,16 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
       "file": "addon/components/fountainhead-class/items-container.js",
       "line": 202,
-      "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
+      "description": "<p>Check for a passed <code>item</code> query param. When it exists call\n{{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToQueryParamItem'}}\nto scroll to that cross linked item.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -351,7 +351,7 @@
           ]
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     }
   ],
@@ -366,7 +366,7 @@
       "access": "protected",
       "tagname": "",
       "default": "indexPanel",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -376,7 +376,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-tabs-container']",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -387,7 +387,7 @@
       "name": "classitems",
       "type": "{Array}",
       "default": "[]",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -398,7 +398,7 @@
       "name": "defaultTab",
       "type": "{string}",
       "default": "'indexPanel'",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -410,7 +410,7 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -422,7 +422,7 @@
       "type": "{?string}",
       "default": "null",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -434,7 +434,7 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -445,7 +445,7 @@
       "name": "name",
       "type": "{string}",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     },
     {
@@ -457,7 +457,7 @@
       "type": "{Array}",
       "default": "[]",
       "passed": "",
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     }
   ],
@@ -475,7 +475,7 @@
           "type": "Object"
         }
       ],
-      "class": "FountainHeadClass.ItemsContainer",
+      "class": "FountainheadClass.ItemsContainer",
       "srcFileId": "addon_components_fountainhead-class_items-container.js"
     }
   ],

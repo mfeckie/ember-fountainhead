@@ -3,8 +3,9 @@
   "namespaces": [],
   "name": "ember-fountainhead",
   "description": "Robust interactive documentation for your Ember application's source code",
-  "version": "2.0.0-beta.7",
+  "version": "2.0.0",
   "repository": "https://github.com/healthsparq/ember-fountainhead",
+  "logo": "/ember-fountainhead/ember-fountainhead/img/ember-logo.png",
   "modules": [
     {
       "name": "Addon",
@@ -24,14 +25,6 @@
     }
   ],
   "classes": [
-    {
-      "name": "CoreTabs",
-      "type": "classes"
-    },
-    {
-      "name": "CoreTabs.Content",
-      "type": "classes"
-    },
     {
       "name": "CrossLink",
       "type": "classes"
@@ -65,59 +58,15 @@
       "type": "classes"
     },
     {
-      "name": "FountainHead.Class.ClassItem",
+      "name": "FountaineadClass.Header",
       "type": "classes"
     },
     {
-      "name": "FountainHead.Class.Header",
+      "name": "FountaineadClass.Item",
       "type": "classes"
     },
     {
-      "name": "FountainHead.Class.Meta",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Docs",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Docs.Github",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Docs.Sidebar",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.File",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Header",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Module",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Shared.Alert",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Shared.Button",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHead.Shared.CoreSVG",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHeadClass.ItemsContainer",
-      "type": "classes"
-    },
-    {
-      "name": "FountainHeadPages.Class",
+      "name": "FountaineadClass.Meta",
       "type": "classes"
     },
     {
@@ -125,11 +74,83 @@
       "type": "classes"
     },
     {
-      "name": "Fountainhead.RuntimeDescription",
+      "name": "FountainheadAlert",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadButton",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadClass.ItemsContainer",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadGetStarted",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadPages.Class",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadPages.Docs",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadPages.DocsIndex",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadPages.File",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadPages.Module",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadRepoLink",
       "type": "classes"
     },
     {
       "name": "FountainheadRoutes",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadRuntimeDescription",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadSVG",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadSidebar.Group",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadSidebar.SearchBar",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadSidebar.Section",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadSidebar.Sidebar",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadTabs",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadTabsContent",
+      "type": "classes"
+    },
+    {
+      "name": "FountainheadWelcome",
       "type": "classes"
     },
     {
@@ -154,6 +175,14 @@
     },
     {
       "name": "parseMarkdown",
+      "type": "classes"
+    },
+    {
+      "name": "readWatchmanConfig",
+      "type": "classes"
+    },
+    {
+      "name": "updateWatchmanConfig",
       "type": "classes"
     }
   ]

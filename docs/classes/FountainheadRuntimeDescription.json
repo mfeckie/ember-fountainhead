@@ -1,6 +1,6 @@
 {
-  "name": "Fountainhead.RuntimeDescription",
-  "shortname": "Fountainhead.RuntimeDescription",
+  "name": "FountainheadRuntimeDescription",
+  "shortname": "FountainheadRuntimeDescription",
   "classitems": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
@@ -19,12 +19,12 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 100,
+      "line": 99,
       "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
       "itemtype": "method",
       "name": "_generateDescription",
@@ -35,7 +35,7 @@
           "type": "String"
         }
       ],
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -45,7 +45,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-description']",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -56,7 +56,7 @@
       "name": "compilerError",
       "type": "{?string}",
       "default": "null",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -67,7 +67,7 @@
       "name": "content",
       "type": "{string}",
       "default": "''",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -79,12 +79,12 @@
       "type": "{string}",
       "default": "''",
       "deprecated": true,
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 160,
+      "line": 159,
       "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
@@ -102,16 +102,16 @@
           ]
         }
       ],
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 136,
+      "line": 135,
       "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -121,7 +121,7 @@
       "itemtype": "property",
       "name": "partialName",
       "type": "{string}",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
@@ -153,12 +153,12 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 100,
+      "line": 99,
       "description": "<p>Grabs the input from the parent instance's code editor, compiles it into a\nreal-live HTMLBars template, registers it on the container as a partial\nand makes it available as output for the preview component's template to\nrender.</p>\n<p>New partials are created for every change, using a date string as the\npartial name to avoid collisions.</p>\n<p>TODO: Use lookup partial names that can be mapped and retrieved instead of\nmaking new ones each time</p>\n",
       "itemtype": "method",
       "name": "_generateDescription",
@@ -169,16 +169,16 @@
           "type": "String"
         }
       ],
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 136,
+      "line": 135,
       "description": "<p>On init we map the passed <code>contextActions</code> to real actions in this\ncomponent's actions hash to ensure they're available at compile time.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
@@ -190,7 +190,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-description']",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -201,7 +201,7 @@
       "name": "compilerError",
       "type": "{?string}",
       "default": "null",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -212,7 +212,7 @@
       "name": "content",
       "type": "{string}",
       "default": "''",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -224,7 +224,7 @@
       "type": "{string}",
       "default": "''",
       "deprecated": true,
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     },
     {
@@ -234,14 +234,14 @@
       "itemtype": "property",
       "name": "partialName",
       "type": "{string}",
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],
   "event": [
     {
       "file": "addon/components/fountainhead-runtime-description.js",
-      "line": 160,
+      "line": 159,
       "description": "<p>Whenever attrs are received fire the <code>_generateDescription</code> method to\ngenerate a partial that will be rendered.</p>\n",
       "itemtype": "event",
       "name": "didReceiveAttrs",
@@ -259,7 +259,7 @@
           ]
         }
       ],
-      "class": "Fountainhead.RuntimeDescription",
+      "class": "FountainheadRuntimeDescription",
       "srcFileId": "addon_components_fountainhead-runtime-description.js"
     }
   ],

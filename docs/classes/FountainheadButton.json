@@ -1,36 +1,36 @@
 {
-  "name": "FountainHead.Shared.Button",
-  "shortname": "FountainHead.Shared.Button",
+  "name": "FountainheadButton",
+  "shortname": "FountainheadButton",
   "classitems": [
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 51,
+      "line": 66,
       "description": "<p>ALLLLLLLLLLL the attributes you might need.\nNOTE: <code>role</code> should not be bound here. You can set the role of a button\nby passing an <a href=\"http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole\">ariaRole</a> prop.</p>\n",
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 18,
+      "line": 33,
       "description": "<p>Pass a brand to have <code>btn-${brand}</code> class applied</p>\n",
       "itemtype": "property",
       "name": "brand",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 37,
+      "line": 52,
       "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{string}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "subprops": [
         {
           "name": "'brand'",
@@ -41,38 +41,38 @@
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 78,
+      "line": 93,
       "description": "<p>Handle binding brand and link related css class names</p>\n",
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 69,
+      "line": 84,
       "description": "<p>Bind standard core classname for component: <code>core-button</code></p>\n",
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 25,
+      "line": 40,
       "description": "<p>Pass true to create a button that looks and behaves like a link. This is\nuseful for creating accessible interaction targets.</p>\n",
       "itemtype": "property",
       "name": "link",
       "type": "{Boolean}",
       "default": "false",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 105,
+      "line": 120,
       "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
       "itemtype": "event",
       "name": "mouseDown",
@@ -80,29 +80,29 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 87,
+      "line": 102,
       "description": "<p>Button DOM element</p>\n",
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
       "default": "'button'",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 94,
+      "line": 109,
       "description": "<p>Include type button for usability.</p>\n",
       "itemtype": "property",
       "name": "type",
       "type": "{string}",
       "default": "'button'",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     }
   ],
@@ -112,41 +112,41 @@
   "extension_for": [],
   "module": "Addon",
   "file": "addon/components/fountainhead-button.js",
-  "line": 5,
-  "description": "<p>Fountainhead button component pulled from <code>ember-radical</code> addon.\nTODO: One day use nested addons, <em>trepidation</em></p>\n",
+  "line": 7,
+  "description": "<p>Fountainhead button component pulled from <code>ember-radical</code> addon.\nTODO: One day use nested addons, <em>trepidation</em></p>\n<p>Here, this is a button:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#fountainhead<span class=\"token operator\">-</span>button<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>Check me out<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>fountainhead<span class=\"token operator\">-</span>button<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n<p>{{#fountainhead-button}}Check me out{{/fountainhead-button}}</p>\n<p>This button will not get auto-rendered, as it is just an example:</p>\n<pre class=\"language-handlebars\"><code class=\"language-handlebars\"><span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span>#fountainhead<span class=\"token operator\">-</span>button<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>NO DICE<span class=\"token punctuation\">,</span> HOMBRE<span class=\"token punctuation\">{</span><span class=\"token punctuation\">{</span><span class=\"token operator\">/</span>fountainhead<span class=\"token operator\">-</span>button<span class=\"token punctuation\">}</span><span class=\"token punctuation\">}</span>\n</code></pre>\n",
   "is_constructor": 1,
   "extends": "Ember.Component",
   "method": [],
   "property": [
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 51,
+      "line": 66,
       "description": "<p>ALLLLLLLLLLL the attributes you might need.\nNOTE: <code>role</code> should not be bound here. You can set the role of a button\nby passing an <a href=\"http://emberjs.com/api/classes/Ember.Component.html#property_ariaRole\">ariaRole</a> prop.</p>\n",
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 18,
+      "line": 33,
       "description": "<p>Pass a brand to have <code>btn-${brand}</code> class applied</p>\n",
       "itemtype": "property",
       "name": "brand",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 37,
+      "line": 52,
       "description": "<p>Computed css class bound to component. Handled by component to allow for\nflexibility in future updates to branding class names</p>\n",
       "itemtype": "property",
       "name": "brandClass",
       "type": "{string}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "subprops": [
         {
           "name": "'brand'",
@@ -157,62 +157,62 @@
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 78,
+      "line": 93,
       "description": "<p>Handle binding brand and link related css class names</p>\n",
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 69,
+      "line": 84,
       "description": "<p>Bind standard core classname for component: <code>core-button</code></p>\n",
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 25,
+      "line": 40,
       "description": "<p>Pass true to create a button that looks and behaves like a link. This is\nuseful for creating accessible interaction targets.</p>\n",
       "itemtype": "property",
       "name": "link",
       "type": "{Boolean}",
       "default": "false",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 87,
+      "line": 102,
       "description": "<p>Button DOM element</p>\n",
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
       "default": "'button'",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     },
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 94,
+      "line": 109,
       "description": "<p>Include type button for usability.</p>\n",
       "itemtype": "property",
       "name": "type",
       "type": "{string}",
       "default": "'button'",
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     }
   ],
   "event": [
     {
       "file": "addon/components/fountainhead-button.js",
-      "line": 105,
+      "line": 120,
       "description": "<p>The <code>mouseDown</code> event is used for some utility/housekeeping methods because\nwe use the <code>click</code> event to pass in actions.</p>\n<p>Handle setting the outline on this element to <code>none</code> because we know this\nevent is only triggered by actual mouse clicks. Keyboard events don't trigger\nit, which is a convenient way to know we're good to hide the outline and\nmaintain usability for keyboard users. A++ accessibility!</p>\n<p>Handle checking for a tagging category and if one exists, fire a tag.</p>\n<p>If you need to override this event, be sure to call <code>this._super();</code></p>\n",
       "itemtype": "event",
       "name": "mouseDown",
@@ -220,7 +220,7 @@
         "description": "",
         "type": "Undefined"
       },
-      "class": "FountainHead.Shared.Button",
+      "class": "FountainheadButton",
       "srcFileId": "addon_components_fountainhead-button.js"
     }
   ],

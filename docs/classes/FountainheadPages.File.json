@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.File",
-  "shortname": "FountainHead.File",
+  "name": "FountainheadPages.File",
+  "shortname": "FountainheadPages.File",
   "classitems": [
     {
       "file": "addon/components/fountainhead-pages/file.js",
@@ -10,7 +10,7 @@
       "name": "file",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.File",
+      "class": "FountainheadPages.File",
       "srcFileId": "addon_components_fountainhead-pages_file.js"
     }
   ],
@@ -34,7 +34,7 @@
       "name": "file",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.File",
+      "class": "FountainheadPages.File",
       "srcFileId": "addon_components_fountainhead-pages_file.js"
     }
   ],

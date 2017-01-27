@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Shared.CoreSVG",
-  "shortname": "FountainHead.Shared.CoreSVG",
+  "name": "FountainheadSVG",
+  "shortname": "FountainheadSVG",
   "classitems": [
     {
       "file": "addon/components/fountainhead-svg.js",
@@ -9,7 +9,7 @@
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -19,7 +19,7 @@
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -29,7 +29,7 @@
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -40,7 +40,7 @@
       "name": "filePath",
       "type": "{string}",
       "default": "assets/svg-defs.svg",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -50,7 +50,7 @@
       "itemtype": "property",
       "name": "svgId",
       "type": "{string}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -60,7 +60,7 @@
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     }
   ],
@@ -82,7 +82,7 @@
       "itemtype": "property",
       "name": "attributeBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -92,7 +92,7 @@
       "itemtype": "property",
       "name": "classNameBindings",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -102,7 +102,7 @@
       "itemtype": "property",
       "name": "classNames",
       "type": "{Array}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -113,7 +113,7 @@
       "name": "filePath",
       "type": "{string}",
       "default": "assets/svg-defs.svg",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -123,7 +123,7 @@
       "itemtype": "property",
       "name": "svgId",
       "type": "{string}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     },
     {
@@ -133,7 +133,7 @@
       "itemtype": "property",
       "name": "tagName",
       "type": "{string}",
-      "class": "FountainHead.Shared.CoreSVG",
+      "class": "FountainheadSVG",
       "srcFileId": "addon_components_fountainhead-svg.js"
     }
   ],

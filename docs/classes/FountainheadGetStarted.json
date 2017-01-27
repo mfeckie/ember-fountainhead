@@ -1,0 +1,41 @@
+{
+  "name": "FountainheadGetStarted",
+  "shortname": "FountainheadGetStarted",
+  "classitems": [
+    {
+      "file": "addon/components/fountainhead-get-started.js",
+      "line": 13,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-get-started']",
+      "class": "FountainheadGetStarted",
+      "srcFileId": "addon_components_fountainhead-get-started.js"
+    }
+  ],
+  "plugins": [],
+  "extensions": [],
+  "plugin_for": [],
+  "extension_for": [],
+  "module": "Addon",
+  "file": "addon/components/fountainhead-get-started.js",
+  "line": 4,
+  "description": "<p>Component determines the 'Getting Started' message displayed to consumers\nthat don't have documentation meta available.</p>\n",
+  "is_constructor": 1,
+  "extends": "Ember.Component",
+  "method": [],
+  "property": [
+    {
+      "file": "addon/components/fountainhead-get-started.js",
+      "line": 13,
+      "itemtype": "property",
+      "name": "classNames",
+      "type": "{Array}",
+      "default": "['fh-get-started']",
+      "class": "FountainheadGetStarted",
+      "srcFileId": "addon_components_fountainhead-get-started.js"
+    }
+  ],
+  "event": [],
+  "srcFileId": "addon_components_fountainhead-get-started.js"
+}

@@ -4,7 +4,7 @@
   "classitems": [
     {
       "file": "lib/index.js",
-      "line": 34,
+      "line": 33,
       "description": "<p>Optional configs pulled from <code>fountainhead.js</code></p>\n",
       "itemtype": "property",
       "name": "fountainheadConfig",
@@ -15,7 +15,7 @@
     },
     {
       "file": "lib/index.js",
-      "line": 39,
+      "line": 38,
       "description": "<p>Package JSON for project. Used to populate project description if not\ndefined in <code>fountainhead.js</code> config.</p>\n",
       "itemtype": "property",
       "name": "packageJSON",
@@ -26,7 +26,7 @@
     },
     {
       "file": "lib/index.js",
-      "line": 68,
+      "line": 66,
       "description": "<p>Raw YUIDoc JSON data generated using constructor exported by <code>yuidocjs</code>.\nCall new with options from config to pass configs to YUIDoc and call <code>run</code>\nto generate JSON</p>\n",
       "itemtype": "property",
       "name": "yuidocJSON",
@@ -43,7 +43,7 @@
   "module": "Lib",
   "namespace": "",
   "file": "lib/index.js",
-  "line": 10,
+  "line": 9,
   "description": "<p>Fountainhead documentation data generation lib entry. Configuration is set\nthrough <code>fountainhead.js</code> file. (TODO: Add default configs to decorate-config)\nclass and link.</p>\n<p>The entry handles:</p>\n<ol>\n<li>Safe require of <code>package.json</code> &amp;&amp; <code>fountainhead.js</code> files for configs</li>\n<li>Decoration &amp;&amp; validation of project configs</li>\n<li>Generation of raw YUIDoc JSON through YUIDoc module directly</li>\n<li>Decoration of raw data in <code>generate-fountainhead-data</code> module.</li>\n</ol>\n<p>The primary module is the <code>generate-fountainhead-data</code> which handles all of\nthe decoration and file creation required for Fountainhead.</p>\n",
   "is_constructor": 1,
   "uses": [
@@ -55,7 +55,7 @@
   "property": [
     {
       "file": "lib/index.js",
-      "line": 34,
+      "line": 33,
       "description": "<p>Optional configs pulled from <code>fountainhead.js</code></p>\n",
       "itemtype": "property",
       "name": "fountainheadConfig",
@@ -66,7 +66,7 @@
     },
     {
       "file": "lib/index.js",
-      "line": 39,
+      "line": 38,
       "description": "<p>Package JSON for project. Used to populate project description if not\ndefined in <code>fountainhead.js</code> config.</p>\n",
       "itemtype": "property",
       "name": "packageJSON",
@@ -77,7 +77,7 @@
     },
     {
       "file": "lib/index.js",
-      "line": 68,
+      "line": 66,
       "description": "<p>Raw YUIDoc JSON data generated using constructor exported by <code>yuidocjs</code>.\nCall new with options from config to pass configs to YUIDoc and call <code>run</code>\nto generate JSON</p>\n",
       "itemtype": "property",
       "name": "yuidocJSON",

@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Class.ClassItem",
-  "shortname": "FountainHead.Class.ClassItem",
+  "name": "FountaineadClass.Item",
+  "shortname": "FountaineadClass.Item",
   "classitems": [
     {
       "file": "addon/components/fountainhead-class/item.js",
@@ -9,7 +9,7 @@
       "itemtype": "property",
       "name": "classItem",
       "type": "{Object}",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
     {
@@ -19,7 +19,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-classitem']",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
     {
@@ -28,7 +28,7 @@
       "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     }
   ],
@@ -49,7 +49,7 @@
       "description": "<p>Set the unique id that the <code>class-items-container</code> expects for each class\nitem in init. Id is the <code>itemtype_name</code> and is used to scroll to the\nitem when the name is clicked in the index list panel.</p>\n",
       "itemtype": "method",
       "name": "init",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     }
   ],
@@ -61,7 +61,7 @@
       "itemtype": "property",
       "name": "classItem",
       "type": "{Object}",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     },
     {
@@ -71,7 +71,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-classitem']",
-      "class": "FountainHead.Class.ClassItem",
+      "class": "FountaineadClass.Item",
       "srcFileId": "addon_components_fountainhead-class_item.js"
     }
   ],

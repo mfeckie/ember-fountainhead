@@ -1,6 +1,6 @@
 {
-  "name": "FountainHead.Class.Header",
-  "shortname": "FountainHead.Class.Header",
+  "name": "FountaineadClass.Header",
+  "shortname": "FountaineadClass.Header",
   "classitems": [
     {
       "file": "addon/components/fountainhead-class/header.js",
@@ -9,7 +9,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-page-header']",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -20,7 +20,7 @@
       "name": "name",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -31,7 +31,7 @@
       "name": "srcFileId",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -41,7 +41,7 @@
       "name": "tagName",
       "type": "{string}",
       "default": "'h2'",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     }
   ],
@@ -64,7 +64,7 @@
       "name": "classNames",
       "type": "{Array}",
       "default": "['fh-page-header']",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -75,7 +75,7 @@
       "name": "name",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -86,7 +86,7 @@
       "name": "srcFileId",
       "type": "{string}",
       "default": "''",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     },
     {
@@ -96,7 +96,7 @@
       "name": "tagName",
       "type": "{string}",
       "default": "'h2'",
-      "class": "FountainHead.Class.Header",
+      "class": "FountaineadClass.Header",
       "srcFileId": "addon_components_fountainhead-class_header.js"
     }
   ],
