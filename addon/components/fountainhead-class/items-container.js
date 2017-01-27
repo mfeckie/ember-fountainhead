@@ -2,7 +2,6 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 import $ from 'jquery';
 import { scheduleOnce } from 'ember-runloop';
-import get from 'ember-metal/get';
 
 /**
  * Tab container for the class' documentation items. Component handles running
