@@ -31,7 +31,7 @@ import hbs from 'htmlbars-inline-precompile';
  *
  * *NOTE* Component requires either a `class` or `module` passed in.
  * An `item` may be passed to link to a specific class item.
- * @class FountainHead.Shared.CrossLink
+ * @class CrossLink
  * @constructor
  * @extends Ember.Component
  */

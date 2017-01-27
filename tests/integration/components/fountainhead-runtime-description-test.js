@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountainhead-runtime-description', 'Integration | Component | fountainhead-runtime-description', {
+moduleForComponent('fountainhead-runtime-description', 'Integration | Component | fountainhead runtime description', {
   integration: true
 });
 
@@ -23,8 +23,8 @@ if (!/PhantomJS/.test(window.navigator.userAgent)) {
 
     this.render(hbs`{{fountainhead-runtime-description description=descriptionText}}`);
 
-    assert.ok(this.$('.compiler-error').length, 'compiler error message div is rendered');
-    assert.ok(this.$('.compiler-error').text().includes('Error: Parse error '),
-      'error message div has compile error inside');
+    assert.ok(this.$('.compiler-error').length, 'error alert message rendered');
+    assert.ok(this.$('.compiler-error').text().includes('Compiler Error'),
+      'error alert has compiler error inside');
   });
 }

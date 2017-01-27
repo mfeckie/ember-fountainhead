@@ -2,7 +2,7 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * @class FountainHead.Shared.CoreSVG
+ * @class FountainheadSVG
  * @constructor
  * @extends Ember.Component
  */

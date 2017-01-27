@@ -3,7 +3,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Github octocat logo in the top right corner.
- * @class FountainHead.Docs.Github
+ * @class FountainheadRepoLink
  * @constructor
  * @extends Ember.Component
  */

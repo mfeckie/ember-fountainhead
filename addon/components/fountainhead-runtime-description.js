@@ -9,7 +9,7 @@ const { HTMLBars, getOwner } = Ember;
  * responses with components inside of them.
  *
  * TODO: Name partials by class+type+name for re-use
- * @class Fountainhead.RuntimeDescription
+ * @class FountainheadRuntimeDescription
  * @constructor
  * @extends Ember.Component
  */
@@ -182,12 +182,12 @@ export default Component.extend({
 
       {{! Render parsing errors for debugging. Can be hidden with CSS if desired }}
       {{#if compilerError}}
-        {{#fountainhead-alert brand="danger"}}
+        {{#fountainhead-alert brand='danger' classNames='compiler-error'}}
           <h4>Compiler Error</h4>
           <p>
           There was a problem compiling the handlebars syntax in the
           markdown description for this class. <b>Note:</b> Any line numbers
-          referenced below start from the first line of the class description.
+          referenced below start from the first line of the markdown description.
           </p>
           <p><b>{{compilerError}}</b></p>
         {{/fountainhead-alert}}

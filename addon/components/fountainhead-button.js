@@ -20,7 +20,7 @@ import hbs from 'htmlbars-inline-precompile';
  * {{#fountainhead-button}}NO DICE, HOMBRE{{/fountainhead-button}}
  * ```
  *
- * @class FountainHead.Shared.Button
+ * @class FountainheadButton
  * @constructor
  * @extends Ember.Component
  */
@@ -130,7 +130,7 @@ export default Component.extend({
    *
    * If you need to override this event, be sure to call `this._super();`
    * @event mouseDown
-   * @returns {undefined}
+   * @return {undefined}
    */
   mouseDown() {
     // Hide outline b/c this was a legit mouse click
@@ -138,7 +138,7 @@ export default Component.extend({
     this.$().css({ outline: 'none' });
     this.$().on('blur', () => {
       // If this button instance is destroying/destroyed, don't bother
-      // (This is an issue with instances of `{{core-alert}}`)
+      // (This is an issue with instances of `{{fountainhead-alert}}`)
       if (this.get('isDestroying') || this.get('isDestroyed')) { return; }
       this.$().off('blur').css('outline', '');
     });

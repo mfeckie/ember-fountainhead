@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 /**
  * Fountainhead `/doc/module` page component
  * There's nothing here yet.
- * @class FountainHead.Module
+ * @class FountainheadPages.Module
  * @constructor
  * @extends Ember.Component
  */

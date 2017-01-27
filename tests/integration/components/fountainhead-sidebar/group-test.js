@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountain-head/docs/sidebar/item-group', 'Integration | Component | fountain head/docs/sidebar/item group', {
+moduleForComponent('fountainhead-sidebar/group', 'Integration | Component | fountainhead sidebar/group', {
   integration: true
 });
 

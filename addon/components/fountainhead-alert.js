@@ -4,7 +4,7 @@ import hbs from 'htmlbars-inline-precompile';
 
 /**
  * Fountainhead Alert Component copied from Radical
- * @class FountainHead.Shared.Alert
+ * @class FountainheadAlert
  * @constructor
  * @extends Ember.Component
  */
@@ -28,9 +28,9 @@ export default Component.extend({
    * Override by passing `false` into this param in your handlebars template:
    *
    * ```handlebars
-   * {{#core-alert canDismiss=false}}
+   * {{#fountainhead-alert canDismiss=false}}
    *   {{! Standard template content goes here }}
-   * {{/core-alert}}
+   * {{/fountainhead-alert}}
    * ```
    *
    * @property canDismiss
@@ -62,45 +62,38 @@ export default Component.extend({
   brandClass: computed('brand', function() {
     return this.get('brand') ? `alert-${this.get('brand')}` : null;
   }),
-  /**
-   * A++ accessibility. Tells a screen this component is an alert.
-   * @property role
-   * @type {string}
-   * @private
-   */
-  role: 'alert',
 
   // Ember Properties
   // ---------------------------------------------------------------------------
 
   /**
-   * Attribute bindings applied to the component.
    * @property attributeBindings
    * @type {Array}
-   * @private
+   * @default ['role']
    */
-  attributeBindings: [
-    'role'
-  ],
+  attributeBindings: ['role'],
   /**
-   * Static class names applied to the component that must always exist. This
-   * really should not need to be overridden or extended.
    * @property classNames
    * @type {Array}
-   * @private
+   * @default ['fh-alert']
    */
-  classNames: ['core-alert'],
+  classNames: ['fh-alert'],
   /**
-   * A set of dynamic classes whose output is bound to the associated values
-   * on the component.
    * @property classNameBindings
    * @type {Array}
-   * @private
+   * @default ['brandClass', 'canDismiss:alert-dismissible']
    */
   classNameBindings: [
     'brandClass',
     'canDismiss:alert-dismissible'
   ],
+  /**
+   * A++ accessibility. Tells a screen this component is an alert.
+   * @property role
+   * @type {string}
+   * @default 'alert'
+   */
+  role: 'alert',
 
   // Methods
   // ---------------------------------------------------------------------------

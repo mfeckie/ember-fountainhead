@@ -1,8 +1,8 @@
 // ========================================================
-// Alert Styles
+// Fountainhead Alerts
 // ========================================================
 
-.core-alert {
+.fh-alert {
   position: relative;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -14,21 +14,21 @@
   > ul {
     margin-bottom: 0;
   }
-}
 
-.alert-dismissible {
-  padding-right: (1rem + 1.5);
+  &.alert-dismissible {
+    padding-right: (1rem + 1.5);
 
-  .close {
-    color: inherit;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    .close {
+      color: inherit;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
   }
-}
 
-.alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: darken(adjust-hue(#f2dede, -10), 5%);
+  &.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: darken(adjust-hue(#f2dede, -10), 5%);
+  }
 }

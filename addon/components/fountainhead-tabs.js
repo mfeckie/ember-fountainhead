@@ -75,7 +75,7 @@ const { $ } = Ember;
  * - The tab list is a flexbox container with flex-grow 1 for each tab. This auto
  *   magically grows the tabs to fill the entire width of tab container.
  *
- * @class FountainHead.Shared.Tabs
+ * @class FountainheadTabs
  * @constructor
  * @extends Ember.Component
  */

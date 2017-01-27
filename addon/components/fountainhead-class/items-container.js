@@ -12,7 +12,7 @@ import get from 'ember-metal/get';
  * The active tab is reset to the index panel anytime that the `name` (of the
  * class) changes.
  *
- * @class FountainHeadClass.ItemsContainer
+ * @class FountainheadClass.ItemsContainer
  * @constructor
  * @extends Ember.Component
  */
@@ -201,7 +201,7 @@ export default Component.extend({
 
   /**
    * Check for a passed `item` query param. When it exists call
-   * {{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToQueryParamItem'}}
+   * {{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToQueryParamItem'}}
    * to scroll to that cross linked item.
    * @method init
    */
@@ -219,7 +219,7 @@ export default Component.extend({
      * Action bound to each documentation item in the index panel. Clicking any
      * item will trigger this with the documentation item as an argument. Use
      * the passed doc item to internally call
-     * {{cross-link class='FountainHeadClass.ItemsContainer' item='_scrollToItem'}}
+     * {{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToItem'}}
      * to scroll to clicked item.
      * @method goToItem
      * @action

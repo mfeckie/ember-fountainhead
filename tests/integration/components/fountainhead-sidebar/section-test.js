@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('fountain-head/docs/sidebar/section', 'Integration | Component | fountain head/docs/sidebar/section', {
+moduleForComponent('fountainhead-sidebar/section', 'Integration | Component | fountainhead sidebar/section', {
   integration: true
 });
 

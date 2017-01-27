@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('cross-link', 'Integration | Component | cross-link', {
+moduleForComponent('cross-link', 'Integration | Component | cross link', {
   integration: true
 });
 
