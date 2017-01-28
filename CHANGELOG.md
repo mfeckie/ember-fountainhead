@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0 (01-27-2017)
+Added:
+- Ability to suppress error logging using `quiet` config.
+- Support for Fountainhead tags using `whiteListTags`
+
+Fixed:
+- Class names for fountainhead SVGs scoped to project to fix CSS clashes
+
 ## 2.0.1 (01-27-2017)
 Fixed:
 - Removes use of deprecated args in component lifecycle hook methods
