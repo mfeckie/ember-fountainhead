@@ -14,43 +14,44 @@ export default Component.extend({
    * File path to svg definitions file
    * @property filePath
    * @type {string}
+   * @passed
+   * @optional
    * @default assets/svg-defs.svg
    */
   filePath: '/ember-fountainhead/svg/symbol-defs.svg',
   /**
-   * The id of the svg.
+   * External SVG definitions file reference SVG id.
    * @property svgId
    * @type {string}
+   * @passed
+   * @required
    */
-  svgId: '',
 
   // Properties
   // ---------------------------------------------------------------------------
 
   /**
-   * Allow direct binding of `data-test` attributes so that icons can be
-   * directly targeted in automated testing.
-   *
    * @property attributeBindings
    * @type {Array}
+   * @default ['data-test']
    */
   attributeBindings: ['data-test'],
   /**
-   * Class names: `core-svg`
    * @property classNames
    * @type {Array}
+   * @default ['fh-svg']
    */
-  classNames: ['core-svg'],
+  classNames: ['fh-svg'],
   /**
-   * Bound classNames: `svgId`
    * @property classNameBindings
    * @type {Array}
+   * @default ['svgId']
    */
   classNameBindings: ['svgId'],
   /**
-   * SVG DOM element
    * @property tagName
    * @type {string}
+   * @default 'svg'
    */
   tagName: 'svg',
 
