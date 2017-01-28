@@ -161,12 +161,10 @@ export default Component.extend({
    * generate a partial that will be rendered.
    *
    * @event didReceiveAttrs
-   * @param {Object} attrs          Ember attrs object
-   * @param {Object} attrs.newAttrs The new attrs received
    */
-  didReceiveAttrs({ newAttrs }) {
-    if (!newAttrs.description.value) { newAttrs.description.value = ''; }
-    this._generateDescription(newAttrs.description.value);
+  didReceiveAttrs() {
+    let description = this.get('description') || '';
+    this._generateDescription(description);
   },
 
   // Actions

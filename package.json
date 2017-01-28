@@ -1,6 +1,6 @@
 {
   "name": "ember-fountainhead",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Robust interactive documentation for your Ember application's source code",
   "directories": {
     "doc": "doc",
@@ -54,8 +54,10 @@
   "keywords": [
     "ember-addon",
     "documentation",
-    "yuidoc"
+    "yuidoc",
+    "docs"
   ],
+  "homepage": "https://healthsparq.github.io/ember-fountainhead",
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
     "ember-cli-htmlbars": "^1.0.10",
