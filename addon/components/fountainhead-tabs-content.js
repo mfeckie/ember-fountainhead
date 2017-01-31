@@ -1,23 +1,23 @@
-/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/core-tabs/content/component.js */
+/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/rad-tabs/content/component.js */
 
 import Component from 'ember-component';
 import computed from 'ember-computed';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * This component is yielded by the `core-tabs` component. The `activeId` and
+ * This component is yielded by the `fountainhead-tabs` component. The `activeId` and
  * actions `registerTab` and `updateTab` are privately bound for internal use.
  *
- * On init each tab will register itself with the `core-tabs` wrapping container,
- * passing all its data. The `core-tabs` container uses this to build out the
+ * On init each tab will register itself with the `fountainhead-tabs` wrapping container,
+ * passing all its data. The `fountainhead-tabs` container uses this to build out the
  * tab buttons.
  *
  * ```handlebars
- * {{#core-tabs defaultTab="dumpsterShrimp" as |components|}}
+ * {{#fountainhead-tabs defaultTab="dumpsterShrimp" as |components|}}
  *   {{#components.content label="Shrimp" elementId="dumpsterShrimp" tabDataTest="a-nifty-tab-button"}}
  *     BRINGO! There's some pretty good lil' shrimpers in here, lets check it out.
  *   {{/components.content}}
- * {{/core-tabs}}
+ * {{/fountainhead-tabs}}
  * ```
  *
  * Configuration | Type | Default | Description
@@ -36,8 +36,9 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
 
   /**
-   * The id of the currently active tab in the scope of the core-tabs component.
-   * This is provided privately in the `core-tabs` yield hash.
+   * The id of the currently active tab in the scope of the
+   * `fountainhead-tabs` component. This is provided privately in the
+   * `fountainhead-tabs` yield hash.
    * @property activeId
    * @type {String}
    * @default ''
@@ -97,7 +98,7 @@ export default Component.extend({
   }),
   /**
    * The button label text of this tab. This will be passed up via a closure
-   * action to the containing `core-tabs` component.
+   * action to the containing `fountainhead-tabs` component.
    *
    * @property label
    * @type {String}
@@ -145,7 +146,7 @@ export default Component.extend({
    */
   didUpdateAttrs() {
     let hidden = this.get('hidden'),
-        oldHidden = this.get('_hidden');
+        oldHidden = this.get('_oldHidden');
 
     if (oldHidden !== hidden) {
       this.updateTab(this.getProperties('elementId', 'hidden'));
@@ -153,7 +154,7 @@ export default Component.extend({
 
     // Update the private hidden state so it can be used for comparison
     // on the next attrs update
-    this.set('_hidden', hidden);
+    this.set('_oldHidden', hidden);
   },
 
   // Layout

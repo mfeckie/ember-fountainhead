@@ -1,4 +1,4 @@
-/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/core-tabs/component.js */
+/* Source: https://github.com/healthsparq/ember-radical/blob/master/addon/components/rad-tabs/component.js */
 
 import Ember from 'ember';
 import Component from 'ember-component';
@@ -8,15 +8,15 @@ import hbs from 'htmlbars-inline-precompile';
 const { $ } = Ember;
 
 /**
- * A++ Accessible tabs. The `core-tabs` component is the parent container for
- * a given set of tabs and handles managing the active state of the tabs and tab
- * panels. The `core-tabs` component yields a `content` contextual component
- * inside of the `components` hash.
+ * A++ Accessible tabs. The `fountainhead-tabs` component is the parent
+ * container for a given set of tabs and handles managing the active state of
+ * the tabs and tab panels. The `fountainhead-tabs` component yields a `content`
+ * contextual component inside of the `components` hash.
  *
  * #### Usage
  *
  * ```handlebars
- * {{#core-tabs as |components|}}
+ * {{#fountainhead-tabs as |components|}}
  *   {{#components.content label="Delgrango's"}}
  *     This is my favorite resaurant at the marinara, name of Delgrango's
  *   {{/components.content}}
@@ -24,7 +24,7 @@ const { $ } = Ember;
  *     Boy I sure did work up a thirst after eating all them shramps. Time to
  *     wash it down with a cool glass of marina water.
  *   {{/components.content}}
- * {{/core-tabs}}
+ * {{/fountainhead-tabs}}
  * ```
  *
  * You can include any number of `components.content` contextual components.
@@ -36,25 +36,26 @@ const { $ } = Ember;
  * match one of content components' HTML id property:
  *
  * ```handlebars
- * {{#core-tabs defaultTab="shrimpers" as |components|}}
+ * {{#fountainhead-tabs defaultTab="shrimpers" as |components|}}
  *   {{#components.content label="Shrimp" elementId="shrimpers"}}
  *     BRINGO! There's some pretty good lil' shrimpers in here, lets check it out.
  *   {{/components.content}}
  *   {{#components.content label="Delgrango's"}}
  *     This is my favorite resaurant at the marinara, name of Delgrango's
  *   {{/components.content}}
- * {{/core-tabs}}
+ * {{/fountainhead-tabs}}
  * ```
  *
  * ### Controlled Tabs
  * If you need to programatically open tabs within your application you can
- * create a controlled instance of `core-tabs` by specifying the `activeId` for
- * the component. This means that you need to track the `activeId` in a parent
- * component or service and pass it down into the controlled tab instance. To do
- * this pass an `onChange` closure into the component. It will be called with
- * the `elementId` of the selected tab any time a user changes tabs.
+ * create a controlled instance of `fountainhead-tabs` by specifying the
+ * `activeId` for the component. This means that you need to track the
+ * `activeId` in a parent component or service and pass it down into the
+ * controlled tab instance. To do this pass an `onChange` closure into the
+ * component. It will be called with the `elementId` of the selected tab any
+ * time a user changes tabs.
  *
- * TODO: Template && JS Examples
+ * TODO: Template & JS Examples
  *
  * Configuration | Type | Default | Description
  * --- | --- | ---
@@ -68,7 +69,7 @@ const { $ } = Ember;
  * ### A++ Accessibility
  * - Tabs have `aria-controls` set to the `elementId` of the `tabpanel` they show.
  * - Tabs have `role=tab` for role identification
- * - Tabs are instances of `core-button` for keyboard access
+ * - Tabs are instances of `fountainhead-button` for keyboard access
  * - Show/hide of tabs and panels are managed through `aria-hidden` attr
  *
  * ### Feature Notes:
@@ -126,10 +127,11 @@ export default Component.extend({
   scrollOnClick: false,
   /**
    * What the target of the `scrollOnClick` behavior should be. By default,
-   * the entire page/body scrolls, however if this instance of `core-tabs` is
-   * contained within a modal or some other scrollable sub-container, it may
-   * be more desirable to execute a scroll against that instead of the entire
-   * page. Simply pass a standard jQuery-like selector in as a string.
+   * the entire page/body scrolls, however if this instance of
+   * `fountainhead-tabs` is contained within a modal or some other scrollable
+   * sub-container, it may be more desirable to execute a scroll against that
+   * instead of the entire page. Simply pass a standard jQuery-like selector in
+   * as a string.
    * @property scrollTarget
    * @type {string}
    * @default 'body, html'
@@ -147,11 +149,11 @@ export default Component.extend({
    */
   attributeBindings: ['data-test'],
   /**
-   * Class names: `core-tabs`
+   * Class names: `fountainhead-tabs`
    * @property classNames
    * @type {Array}
    */
-  classNames: ['core-tabs'],
+  classNames: ['fountainhead-tabs'],
   /**
    * List of tabs to display. This is iterated through in the template to
    * rendered the buttons that are used to change tabs.
@@ -184,8 +186,8 @@ export default Component.extend({
 
   /**
    * When the component initializes, we set the `tabList` property to an array.
-   * This prevents multiple instances of core-tabs on a given page from
-   * inheriting the same tabList array through prototype inheritance.
+   * This prevents multiple instances of `fountainhead-tabs` on a given page
+   * from inheriting the same tabList array through prototype inheritance.
    * @event init
    * @return {undefined}
    */
@@ -266,7 +268,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{! A list of buttons that are all automagically added to the tabList based on the number of core-tabs.content components are nested inside the component. }}
+    {{! A list of buttons that are all automagically added to the tabList based on the number of fountainhead-tabs.content components are nested inside the component. }}
     <ul class='tab-list button-style' role='tablist' data-test='tab-list'>
       {{#each tabList as |tab|}}
         <li class='tab-li'
@@ -287,7 +289,7 @@ export default Component.extend({
       {{/each}}
     </ul>
     <div class='content-container'>
-      {{! Yield the core-tabs/content component pre-bound with internal props }}
+      {{! Yield the fountainhead-tabs/content component pre-bound with internal props }}
       {{yield (hash
         content=(component 'fountainhead-tabs-content'
           registerTab=(action 'registerTab')

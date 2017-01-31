@@ -2,34 +2,34 @@
 // Tabs Styles
 // ========================================================
 
-.core-tabs {
-  width: 100%;
+.fountainhead-tabs {
   min-height: 200px;
+  width: 100%;
   margin-bottom: 50px;
 
   .tab-list {
     display: flex;
+    list-style: none; // override skeleton
     width: 100%;
     margin-bottom: 0;
-    list-style: none; // override skeleton
     padding-left: 0;
   }
 
   .tab-li {
+    margin-bottom: 0;
+
     flex-basis: auto;
     flex-grow: 1;
-    margin-bottom: 0;
   }
 
   .tab {
+    height: auto; // override skeleton
     width: 100%;
-    text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid $border-color;
-
-    height: auto; // override skeleton
     line-height: 1; // override skeleton
+    text-align: center;
 
     &.active {
       border: 1px solid $border-color;
@@ -53,7 +53,7 @@
     }
 
     .tab-li {
-      background-color: #fff;
+      background-color: #FFFFFF;
       border-bottom: 4px solid $primary;
     }
 
@@ -61,7 +61,7 @@
       background-color: $primary;
       border: 1px solid $primary;
       border-bottom: 1px solid $primary;
-      color : #fff;
+      color: #FFFFFF;
     }
   }
 }
