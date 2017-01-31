@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1 (01-31-2017)
+Fixed:
+- Parameter destructuring in logger removed to support Node v4
+
 ## 2.1.0 (01-27-2017)
 Added:
 - Ability to suppress error logging using `quiet` config.
