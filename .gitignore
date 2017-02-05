@@ -1,11 +1,10 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
 /dist
 /tmp
 /tests/dummy/public/docs
-vendor/feature-flags.js
-vendor/ember-fountainhead.css
+/vendor/ember-fountainhead.css
 
 # dependencies
 /node_modules
@@ -16,5 +15,5 @@ vendor/ember-fountainhead.css
 /connect.lock
 /coverage/*
 /libpeerconnection.log
-npm-debug.log
+npm-debug.log*
 testem.log
