@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.0 (02-4-2017)
+Added:
+- Handle importing the template compiler from npm or bower depending on the
+  consuming app's Ember version
+
 ## 2.1.2 (01-31-2017)
 Fixed:
 - Stops overwriting a computed prop vital to tabs functioning properly; uses `_oldHidden` instead of `_hidden`
