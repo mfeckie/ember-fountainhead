@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const VersionChecker = require('ember-cli-version-checker');
 const generateDocs = require('./lib/index.js');
 
 let config;
@@ -36,15 +37,28 @@ module.exports = {
    * @param {Object} app Consuming application
    */
   _importBrowserDependencies(app) {
-    const vendor = this.treePaths.vendor;
-
-    // Required to compile templates at runtime
-    app.import('bower_components/ember/ember-template-compiler.js');
+    const checker = new VersionChecker(this);
 
     // Unless `includeVendorStyles` is explicitly set to false, we auto bundle
     // Fountainhead's styles into the vendor.css file here
     if (config.includeVendorStyles !== false) {
-      app.import(`${vendor}/ember-fountainhead.css`);
+      app.import(path.join(this.treePaths.vendor, 'ember-fountainhead.css'));
+    }
+
+    // We need to import the template compiler to the bundle in order to compile
+    // templates at runtime. Use Ember version to construct correct path
+    if (checker.forEmber().satisfies('>= 2.11.0')) {
+      // Normally you can't app.import node deps and need to use a `treeForVendor`
+      // like this: http://stackoverflow.com/questions/28201036/add-node-module-to-ember-cli-app
+      // to Funnel node deps into the vendor dir AND THEN you can app.import them
+      // in the include hook. For some reason though, this appears to work now,
+      // hopefully this is part of the 2.11 improvements. If this ends up not
+      // working for some people we'll need to conditionally do a treeFor Funnel
+      // and then import from the /vendor dir here.
+      // tl;dr: full resolve needed for cli and node_modules import, Ember 🔮
+      app.import(path.resolve('node_modules', 'ember-source', 'dist', 'ember-template-compiler.js'));
+    } else {
+      app.import(path.join(app.bowerDirectory, 'ember', 'ember-template-compiler.js'));
     }
   },
 
