@@ -5,8 +5,8 @@ import { scheduleOnce } from 'ember-runloop';
 
 /**
  * Tab container for the class' documentation items. Component handles running
- * a controlled instance of `core-tabs` by tracking `activeTab` internally and
- * passing `tabsChanged` to the `core-tabs` instance.
+ * a controlled instance of `fountainhead-tabs` by tracking `activeTab`
+ * internally and passing `tabsChanged` to the `fountainhead-tabs` instance.
  *
  * The active tab is reset to the index panel anytime that the `name` (of the
  * class) changes.

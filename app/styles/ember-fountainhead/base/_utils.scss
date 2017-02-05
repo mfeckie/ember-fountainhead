@@ -10,22 +10,22 @@ span[aria-hidden="true"],
 div[aria-hidden="true"],
 li[aria-hidden="true"] {
   display: none;
-  pointer-events: none;
   visibility: hidden;
+  pointer-events: none;
 }
 span[aria-hidden="false"],
 div[aria-hidden="false"],
 li[aria-hidden="false"] {
   display: block;
-  pointer-events: auto;
   visibility: visible;
+  pointer-events: auto;
 }
 span[role="presentation"],
 div[role="presentation"],
 li[role="presentation"] {
   display: initial;
-  pointer-events: auto;
-  visibility: visible;;
+  visibility: visible;
+  pointer-events: auto;;
 }
 
 // Spacing
@@ -36,20 +36,20 @@ li[role="presentation"] {
 }
 
 .fh-element-full-row {
-  margin-left: -15px;
   margin-right: -15px;
-  padding-left: 30px;
+  margin-left: -15px;
   padding-right: 30px;
+  padding-left: 30px;
 }
 
 // Link Buttons
 // ---------------------------------------------------------------------------
 button.btn-link {
-  font-weight: normal;
-  color: $link-color;
-  border-radius: 0;
   margin: 0;
   padding: 0;
+  border-radius: 0;
+  font-weight: normal;
+  color: $link-color;
   cursor: pointer;
 
   &,
@@ -69,8 +69,8 @@ button.btn-link {
   }
   &:hover,
   &:focus {
+    background-color: transparent;
     color: $link-hover-color;
     text-decoration: underline;;
-    background-color: transparent;
   }
 }

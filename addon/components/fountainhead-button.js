@@ -82,12 +82,12 @@ export default Component.extend({
     'type'
   ],
   /**
-   * Bind standard core classname for component: `core-button`
+   * Bind standard core classname for component: `fountainhead-button`
    * @property classNames
    * @type {Array}
    */
   classNames: [
-    'core-button',
+    'fountainhead-button',
     'btn'
   ],
   /**

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.2 (01-31-2017)
+Fixed:
+- Stops overwriting a computed prop vital to tabs functioning properly; uses `_oldHidden` instead of `_hidden`
+
 ## 2.1.1 (01-31-2017)
 Fixed:
 - Parameter destructuring in logger removed to support Node v4
