@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.0 (02-6-2017)
+Added:
+- Use Ember 2.11 within Fountainhead demo app
+- Simpler solution for importing template compiler thanks to @mfeckie
+
 ## 2.2.0 (02-4-2017)
 Added:
 - Handle importing the template compiler from npm or bower depending on the
