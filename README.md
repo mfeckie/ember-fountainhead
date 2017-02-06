@@ -1,4 +1,5 @@
-# Ember Fountainhead [![Build Status](https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop)](https://travis-ci.org/healthsparq/ember-fountainhead)
+# Ember Fountainhead
+[![Build Status](https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop)](https://travis-ci.org/healthsparq/ember-fountainhead) [![Ember Observer Score](https://emberobserver.com/badges/ember-fountainhead.svg)](https://emberobserver.com/addons/ember-fountainhead)
 
 Ember Fountainhead is an in-app solution for creating robust documentation for
 your Ember application's source code. Fountainhead uses YUIDoc to parse your
