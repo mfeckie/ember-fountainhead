@@ -34,6 +34,8 @@ export default Component.extend({
    * Pass a brand to have `btn-${brand}` class applied
    * @property brand
    * @type {string}
+   * @passed
+   * @optional
    * @default ''
    */
   brand: '',
@@ -42,6 +44,8 @@ export default Component.extend({
    * useful for creating accessible interaction targets.
    * @property link
    * @type {Boolean}
+   * @passed
+   * @optional
    * @default false
    */
   link: false,
@@ -85,9 +89,10 @@ export default Component.extend({
    * Bind standard core classname for component: `fountainhead-button`
    * @property classNames
    * @type {Array}
+   * @default ['fh-button', 'btn']
    */
   classNames: [
-    'fountainhead-button',
+    'fh-button',
     'btn'
   ],
   /**

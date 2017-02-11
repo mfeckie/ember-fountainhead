@@ -6,26 +6,23 @@
 // Show/Hide Classes
 // -----------------------------------------------------------------------------
 
-span[aria-hidden="true"],
-div[aria-hidden="true"],
-li[aria-hidden="true"] {
-  display: none;
-  visibility: hidden;
-  pointer-events: none;
-}
-span[aria-hidden="false"],
-div[aria-hidden="false"],
-li[aria-hidden="false"] {
-  display: block;
-  visibility: visible;
-  pointer-events: auto;
-}
-span[role="presentation"],
-div[role="presentation"],
-li[role="presentation"] {
-  display: initial;
-  visibility: visible;
-  pointer-events: auto;;
+.fh-page-in-page-wrapper {
+ *[aria-hidden="true"] {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  *[aria-hidden="false"] {
+    display: block;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  *[role="presentation"] {
+    display: initial;
+    visibility: visible;
+    pointer-events: auto;;
+  }
 }
 
 // Spacing
@@ -44,7 +41,7 @@ li[role="presentation"] {
 
 // Link Buttons
 // ---------------------------------------------------------------------------
-button.btn-link {
+.fh-button.btn-link {
   margin: 0;
   padding: 0;
   border-radius: 0;
