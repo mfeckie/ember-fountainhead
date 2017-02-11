@@ -14,7 +14,7 @@ const common = {
   ],
   output: {
     filename: 'fountainhead-data.json',
-    path: 'tests/dummy/public/docs'
+    path: 'docs'
   },
   external: {
     data: [

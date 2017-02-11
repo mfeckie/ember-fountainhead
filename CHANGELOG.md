@@ -1,5 +1,30 @@
 # Changelog
 
+TODO: Are we good to go with only grabbing the repo url? what about BB vs GH repos?
+TODO: Scope button css
+TODO: Make this work: `{{cross-link 'serverMiddleware'}}`
+
+# 3.0.0
+Ember Fountainhead v3 includes some fixes and cleanup to the addon.
+The release should require very little change in consuming apps, but
+we're releasing it as a major so there's visibility around the
+changes.
+
+#### Release Notes:
+- Fountainhead no longer causes a full reload when CSS changes
+  trigger a new build. This was fixed by moving the default output
+  path for Fountainhead data files outside of the `/public` dir.
+  _(This should also solve a bug with an infinite build loop that
+  required a watchman shutdown when first starting to use
+  Fountianhead)_
+  
+  **Action required:** If you're ignoring the data files generated
+  by Fountainhead you'll need to update your `.gitignore` to `/docs`.
+  You can also remove the public directory paths from your
+  `.watchmanconfig`
+
+
+
 ## 2.3.0 (02-6-2017)
 Added:
 - Use Ember 2.11 within Fountainhead demo app

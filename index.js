@@ -1,6 +1,10 @@
 'use strict';
 const path = require('path');
 const VersionChecker = require('ember-cli-version-checker');
+const Funnel = require('broccoli-funnel');
+const mergeTrees = require('broccoli-merge-trees');
+const express = require('express');
+
 const generateDocs = require('./lib/index.js');
 
 let config;
@@ -78,12 +82,81 @@ module.exports = {
     let projectOptions = app.options;
 
     this.app = app;
+    this.env = env;
     this.projectConfiguration = projectConfiguration;
     this.projectOptions = projectOptions;
 
     // Pulls in dependencies to /vendor, we always run this b/c the entire addon
     // should be blacklisted if not wanted in production
     this._importBrowserDependencies(app);
+
+    // B/c the `preBuild` hook gets called AFTER `treeForPublic`,
+    // we need to generate docs in the `included` hook for prod
+    // builds. 😑
+    if (this.env === 'production') { generateDocs({ env: this.env }); }
+  },
+  /**
+   * Generates fountainhead output before a build is run for live editing.
+   * Feature is enabled by default and can be disabled by setting `liveEdit` to
+   * `false` in your `fountainhead.js` configuration.
+   * @method preBuild
+   * @return {undefined}
+   */
+  preBuild() {
+    if (this.env === 'development' && config.liveEdit !== false) {
+      generateDocs({ env: this.env });
+    }
+  },
+  /**
+   * For production builds we need to include the `/docs` directory
+   * using a Funnel. We return the default addon tree in non-prod
+   * builds b/c docs are served through express middleware mounted
+   * in {{cross-link 'serverMiddleware'}}
+   * @method treeForPublic
+   * @return {Object} Default public addon tree in dev builds. A
+   *                  Broccoli merged tree with `/docs` dir for
+   *                  prod builds
+   */
+  treeForPublic() {
+    let trees = [];
+    let addonTree = this._super.treeForPublic.apply(this, arguments);
+
+    // In dev docs is included through `serverMiddleware`
+    if (this.env !== 'production') { return addonTree; }
+
+    if (addonTree) {
+      trees.push(addonTree);
+    }
+
+    trees.push(new Funnel('docs', {
+      destDir: 'docs'
+    }));
+
+    return mergeTrees(trees);
+  },
+  /**
+   * The `serverMiddleware` hook is used for enabled live editing of
+   * documentation. We started by generating the data files into the consuming
+   * app's `/public` directory so that ember-cli could serve them. H/e this had
+   * two issues:
+   * - The first time that an app started w/ Fountainhead it would cause an
+   *   infinite build loop that required a watchman server shutdown b/c the
+   *   `/public` dir is watched for changes and starts a rebuild on change.
+   * - Any CSS changes in an app would cause a full reload b/c Fountinhead would
+   *   `generateDocs` in the called `preBuild` hook. The newly generated docs
+   *   output to the `/public` dir would then cause a full reload.
+   *
+   * Docs are now default generated to the `/docs` directory in the project root
+   * so that file generation doesn't interfere with cli's directory watching.
+   * Then we make the data files available for consumption in dev by mounting
+   * middleware that sets the `/docs` dir as a static resource for the cli
+   * express app.
+   * @method serverMiddleware
+   * @param {object} startOptions     Set of configurations for ember-cli
+   * @param {object} startOptions.app Express server instance run by emer-cli
+   */
+  serverMiddleware(startOptions) {
+    startOptions.app.use('/docs', express.static('docs'));
   },
   /**
    * Define cli commands in return object. Check out http://thejsguy.com/2016/07/10/creating-a-custom-ember-cli-command.html for a
@@ -99,42 +172,11 @@ module.exports = {
         name: 'docs',
         description: 'Generate Fountainhead documentation data and files',
         run(commandOptions, rawArgs) {
-          generateDocs();
+          // TODO: process.env?
+          generateDocs({ env: 'development' });
         }
       }
       // TODO: Help and init config commands
     };
-  },
-  /**
-   * Generates fountainhead output before a build is run for live editing.
-   * Feature is enabled by default and can be disabled by setting `liveEdit` to
-   * `false` in your `fountainhead.js` configuration.
-   * @method preBuild
-   * @return {undefined}
-   */
-  preBuild() {
-    const env = process.env.EMBER_ENV || 'development';
-
-    if (env === 'development' && config.liveEdit !== false) { generateDocs(); }
   }
-
-  // Fallback exclude feature if we need to nix using
-  // app/instance-initializers/fountainhead-routes to setup fountainhead routes
-  // automagically
-  // postprocessTree(type, tree) {
-  //   if (type !== 'js') { return tree; }
-  //
-  //   return new Funnel(tree, {
-  //     exclude: [
-  //       /components\/core-/, /* radical */
-  //       /components\/fountain-head/,
-  //       /routes\/docs/, /* works */
-  //       /services\/fountainhead/,
-  //       /services\/tagging/, /* radical */
-  //       // /utils\/route-setup/, /* this is directly imported */
-  //       /templates\/docs/
-  //     ],
-  //     description: 'Funnel: Conditionally Filtered Fountainhead'
-  //   });
-  // }
 };
