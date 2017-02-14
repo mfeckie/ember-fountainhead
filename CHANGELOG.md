@@ -22,6 +22,8 @@ changes.
   by Fountainhead you'll need to update your `.gitignore` to `/docs`.
   You can also remove the public directory paths from your
   `.watchmanconfig`
+- `fountainhead.js` configuration file can now export an object or function when
+  env specific builds are required.
 
 
 
