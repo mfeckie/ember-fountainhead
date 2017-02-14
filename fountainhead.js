@@ -1,8 +1,3 @@
-/*
- * This file drives the configuration for you Fountainhead instance.
- * TODO: Document config options in demo app
- */
-
 // Common configs for all environments
 const common = {
   liveEdit: true, // Generate fountainhead docs before a build is run for live reloading
@@ -26,14 +21,19 @@ const common = {
   }
 };
 
-// Production only configs
+// PRODUCTION: The demo app is a gh-pages app that is served from
+// `/ember-fountainhead/`, and b/c it's a static site all assets
+// need to be prefixed, including the logo.
 const production = {
-  // The demo app is a gh-pages app that is served from `/ember-fountainhead/`
   logo: '/ember-fountainhead/ember-fountainhead/img/ember-logo.png'
 };
 
-if (process.env.NODE_ENV === 'production') {
-  Object.assign(common, production);
-}
-
-module.exports = common;
+// Similar to webpack, you can export a function that receives the
+// the environemnt
+module.exports = env => {
+  if (env === 'production') {
+    return Object.assign(common, production);
+  } else {
+    return common;
+  }
+};
