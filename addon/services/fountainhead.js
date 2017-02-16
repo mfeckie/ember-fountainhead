@@ -1,11 +1,15 @@
 import Ember from 'ember';
 import Service from 'ember-service';
-import { next } from 'ember-runloop';
 import $ from 'jquery';
 const { ActionHandler } = Ember;
 
 /**
- * Fountainhead application service.
+ * The Fountainhead service handles fetching the meta data for Fountainhead.
+ * This is triggered in the `beforeModel` of either the `docs` or `guides`
+ * route.
+ *
+ * The namespace that all API request fire with is defined as `apiNamespace`.
+ * If you need to route requests under a different namespace it can be udpated.
  * @class Fountainhead
  * @constructor
  * @extends Ember.Service
@@ -22,6 +26,7 @@ export default Service.extend(ActionHandler, {
    * endpoint's root url namespace.
    * @property apiNamespace
    * @type {string}
+   * @public
    * @default '/docs'
    */
   apiNamespace: '/docs',
@@ -41,33 +46,29 @@ export default Service.extend(ActionHandler, {
    * documentation meta fails.
    * @property metaError
    * @type {Boolean}
+   * @public
    * @default false
    */
   metaError: false,
 
-  // Hooks
+  // Methods
   // ---------------------------------------------------------------------------
 
   /**
-   * When this service is loaded, handle fetching documentation meta data that
-   * drives the sidebar && header. If there is an error we know tha we haven't
-   * generated documentation yet. The docs template will pick up the error and
-   * display the getting started instructions.
+   * Fires request for documentation meta data and returns the promise. This
+   * method is called in the `beforeModel` of either the `docs` or `guides`
+   * route, whichever is entered first.
    *
-   * NOTE: the meta request needs to be wrapped in a `run.next` so that if a
-   * consuming application needs to override the `apiNamespace` the meta call
-   * is made with the new namespace. Without the run loop, attempting to set
-   * the namespace will initialize this service and call for meta before the
-   * namespace update is complete and the request will use the default `/docs`
-   * namespace.
-   * @method init
+   * NOTE: If the request fails service property {{cross-link item='metaError'}}
+   * will be set to `true`.
+   * @method fetchMeta
+   * @protected
+   * @return {Promise}
    */
-  init() {
-    next(() => {
-      $.get(`${this.get('apiNamespace')}/meta.json`).then(
-        meta => this.set('meta', meta),
-        err => this.set('metaError', true)
-      );
-    });
+  fetchMeta() {
+    return $.get(`${this.get('apiNamespace')}/meta.json`).then(
+      meta => this.set('meta', meta),
+      err => this.set('metaError', true)
+    );
   }
 });

@@ -1,3 +1,9 @@
+---
+id: fountainhead-configuration
+linkLabel: Configuring Fountainhead
+title: Configuring Fountainhead
+---
+
 Configuration Notes:
 
 - Fountainhead has sane defaults for all config options. Standard apps/addons should

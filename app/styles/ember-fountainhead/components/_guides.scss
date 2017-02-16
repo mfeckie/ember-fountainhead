@@ -1,5 +1,5 @@
 // ========================================================
-// Demo App Styles for Guide Pages
+// Guide Pages Styles
 // ========================================================
 
 // Page wrapper
@@ -8,9 +8,10 @@
 }
 
 .page-title {
-  background-color: #50676B;
+  background-color: $primary;
   padding: 100px;
   width: 100%;
+  margin-bottom: 30px;
   color: $white;
 }
 
@@ -19,7 +20,7 @@
   width: 800px;
   margin-left: 200px;
 
-  section {
+  .section-header {
     margin: 60px 0;
   }
 }

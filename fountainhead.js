@@ -7,6 +7,13 @@ const common = {
   entry: [
     'addon', 'app', 'blueprints', 'lib'
   ],
+  guides: [
+    'guides/getting-started.md',
+    'guides/writing-guides.md',
+    'guides/markdown-in-fountainhead.md',
+    'guides/type-tag.md',
+    'guides/test.md'
+  ],
   output: {
     filename: 'fountainhead-data.json',
     path: 'docs'

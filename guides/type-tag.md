@@ -1,4 +1,8 @@
-## `@type` Tag Reference
+---
+id: tag-type
+linkLabel: type Tag
+title: Using @type YUIDoc tag
+---
 
 On using the `@type` tag:
 
@@ -25,3 +29,9 @@ by setting `linkNatives` to false in `fountainhead.js`. Eg:
 ### Capitalization
 YUIDoc `@type` is case insensitive. You can use titlecase or all lower case
 depending on your preference.
+
+```handlebars
+<div>
+  {{#rad-button}}Button{{/rad-button}}
+</div>
+```
