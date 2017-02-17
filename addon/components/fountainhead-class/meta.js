@@ -5,7 +5,7 @@ import hbs from 'htmlbars-inline-precompile';
  * Creates meta information for a documentation class.
  *
  * TODO: Document which YUIDoc tags generate what meta data
- * @class FountaineadClass.Meta
+ * @class FountainheadClass.Meta
  * @constructor
  * @extends Ember.Component
  */

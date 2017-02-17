@@ -35,7 +35,8 @@ export default Component.extend({
     </div>
     <main class="guide-page fh-wrapper">
       <div class="guide-content">
-        {{{guide.body}}}
+        {{fountainhead-runtime-description
+          description=guide.body}}
       </div>
       {{! TODO: side nav }}
     </main>

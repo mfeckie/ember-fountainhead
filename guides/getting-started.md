@@ -75,6 +75,6 @@ See the themes in `app/styles/ember-fountianhead/themes` for variables you can
 override.
 
 #### Ember Component Playground
-The [Ember Component Playground](https://github.com/healthsparq/ember-component-playground){target="_blank"}
+The [Ember Component Playground](https://github.com/healthsparq/ember-component-playground)
 addon is a great compliment to this addon that allows real time examples of
 components. See the repo for installation.

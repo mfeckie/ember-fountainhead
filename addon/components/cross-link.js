@@ -1,86 +1,111 @@
 import Component from 'ember-component';
+import getOwner from 'ember-owner/get';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * Use a `cross-link` component to handle cross referencing another documentation
- * item in your application. Internally the component handles creating a `link-to`
- * using the passed properties.
+ * The `{{cross-link}}` component lets you easily reference other classes,
+ * modules, properties and methods in your documentation.
+ *
+ * #### Example
+ * ```glimmer
+ * Check out {{cross-link class='FountainheadClass.Meta' item='access'}}
+ * ```
+ * When used as an inline component, the rendered link-to's text will be the
+ * ID of the module or class along with any passed query params. If you want
+ * different link text you can use the component in block form.
+ *
+ * ```glimmer
+ * {{#cross-link class='FountainheadClass.Meta' item='access'}}
+ *   Check out the FountainheadClass.Meta components access property
+ * {{/cross-link}}
+ * ```
+ *
+ * #### Positional Params
+ * The component can also be used with positional parameters when referencing a
+ * property or method on the same class.
+ * ```glimmer
+ * Check out this components init method: {{cross-link 'init'}}
+ * ```
+ *
+ * #### Alternate Invocation
+ * For _maximum_ terseness Fountainhead also exports the cross link component as
+ * `{{c-l}}`
+ * ```glimmer
+ * Check out this components init method: {{c-l 'init'}}
+ * ```
  *
  * Property | Description
  * --- | ---
- * `text` | Inner HTML for link
  * `class` | Documentation class to link to
  * `module` | Documentation module to link to
  * `item` | Specific documentation item to link to, appended as a query param
  *
- * #### Examples:
- * Generate a link to module 'YourModule'
- * ```glimmer
- * {{cross-link module='YourModule'}}
- * ```
+ * {{! --------------------------------------------------------------------- }}
+ * {{! TEST CASES: B/c Ember Integration Tests + link-to === 💣              }}
+ * {{! Uncomment cases below and check in browser                            }}
+ * {{! --------------------------------------------------------------------- }}
+ * {{! Postional Params }}
+ * {{!-- {{c-l 'init'}}<br> --}}
+ * {{!-- {{#c-l 'init'}}BLOCK TEXT{{/c-l}}<br> --}}
+ * {{! Passed Item }}
+ * {{!-- {{c-l item='init'}}<br> --}}
+ * {{!-- {{#c-l item='init'}}BLOCK TEXT{{/c-l}}<br> --}}
+ * {{! Passed Module }}
+ * {{!-- {{c-l module='Addon'}}<br> --}}
+ * {{!-- {{#c-l module='Addon'}}ADDON MODULE{{/c-l}}<br> --}}
+ * {{! Passed Class }}
+ * {{!-- {{c-l class='CrossLink' item='init'}} <br> --}}
+ * {{!-- {{#c-l class='CrossLink' item='init'}}BLOCK TEXT{{/c-l}}<br> --}}
+ * {{!-- {{c-l class='FountainheadWelcome'}}<br> --}}
+ * {{!-- {{c-l class='FountainheadWelcome' item='classNames'}}<br> --}}
+ * {{!-- {{#c-l class='FountainheadWelcome' item='classNames'}}BLOCK TEXT{{/c-l}}<br> --}}
  *
- * Generate a link to class 'YourClass'
- * ```glimmer
- * {{cross-link class='YourClass'}}
- * ```
- *
- * Generate a link to 'someMethod' on 'YourClass'
- * ```glimmer
- * {{cross-link class='YourClass' item='someMethod'}}
- * ```
- *
- * *NOTE* Component requires either a `class` or `module` passed in.
- * An `item` may be passed to link to a specific class item.
  * @class CrossLink
  * @constructor
  * @extends Ember.Component
  */
-export default Component.extend({
+const CrossLink = Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Documentation Class to crosslink to.
    * @property class
-   * @type {string}
-   * @required
+   * @type {?string}
    * @passed
    */
-  class: '',
+  class: null,
   /**
-   * Class item to cross link to.
-   * as well.
+   * Optionally specify an item (property/method) to cross link to on a class.
    * @property item
-   * @type {string}
+   * @type {?string}
    * @passed
    */
-  item: '',
+  item: null,
   /**
    * Documentation module to crosslink to.
    * @property module
-   * @type {string}
-   * @required
+   * @type {?string}
    * @passed
    */
-  module: '',
-  /**
-   * Anchor text for generated `link-to`. You can pass specific text if needed,
-   * otherwise default text is generated:
-   *
-   * #### Defaults:
-   * - if module: _MODULE_NAME Module_
-   * - if class: _CLASS_NAME Class_
-   * - if class && item: _CLASS_NAME:ITEM_NAME Class_
-   * @property text
-   * @type {string}
-   * @passed
-   */
-  text: '',
+  module: null,
 
   // Properties
   // ---------------------------------------------------------------------------
-
+  /**
+   * Computed route passed to rendered `link-to` defined in {{c-l 'init'}}
+   * @property _route
+   * @type {?string}
+   * @private
+   */
+  _route: null,
+  /**
+   * Computed model ID passed to rendered `link-to` defined in {{c-l 'init'}}
+   * @property _modelID
+   * @type {?string}
+   * @private
+   */
+  _modelID: null,
   /**
    * @property tagName
    * @type {string}
@@ -90,46 +115,57 @@ export default Component.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
-   * Validate passed properties during init and warn if they're invalid. This
-   * prevents the component from creating an invalid `link-to`.
-   *
-   * Checks for a passed
-   * {{cross-link class='Crosslink' item='text'}} and sets default
-   * text if unspecified
+   * Handle picking the link to route and model id based on presence of passed
+   * properties. If a module or class is not passed look up the current route
+   * and model id on the router.
    * @method init
    */
   init() {
     this._super(...arguments);
-    const { item, module } = this.getProperties('item', 'module', 'type');
-    const klass = this.get('class');
+    let currentRouteName, currentModelId, text;
+    const { item, module, class: _class } = this.getProperties('item', 'module', 'class');
 
-    if (!klass && !module) { console.warn('Crosslink requires a class or module'); }
+    // Handle assigning internal route and model id props based on presence of
+    // passed attributes. Lookup on router if not passed
+    if (module || _class) {
+      this.setProperties({
+        _route: `api.${module ? 'modules' : 'classes'}`,
+        _model: module || _class
+      });
+    } else {
+      currentRouteName = getOwner(this).lookup('router:main').get('currentRouteName');
+      currentModelId = getOwner(this).lookup(`route:${currentRouteName}`).get('currentModel.name');
 
-    // Set default anchor text if it wasn't specified in component creation
-    if (!this.get('text')) {
-      let text;
-
-      if (module) { text = `${module} Module`; }
-      if (klass && item) { text = `${klass}:${item}`; }
-      if (klass && !item) { text = `${klass} Class`; }
-      this.set('text', text);
+      this.setProperties({
+        _route: currentRouteName,
+        _model: currentModelId
+      });
     }
+
+    // Handle assigning anchor text in case block params weren't used
+    text = module || _class || currentModelId;
+    if (item) { text += `:${item}`; }
+
+    this.set('text', text);
   },
 
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{! Only output link-to if data was passed }}
-    {{#if module}}
-      {{link-to text 'api.modules' module}}
-    {{else if class}}
-      {{#if item}}
-        {{link-to text 'api.classes' class (query-params item=item type=type)}}
+    {{#link-to _route _model (query-params item=item)}}
+      {{#if hasBlock}}
+        {{yield}}
       {{else}}
-        {{link-to text 'api.classes' class}}
+        {{text}}
       {{/if}}
-    {{/if}}
+    {{/link-to}}
   `
 });
+
+// SOME SWEET MAGIC TO ALLOW US TO USE POSITIONAL PARAMS WITH COMPONENT
+CrossLink.reopenClass({
+  positionalParams: ['item']
+});
+
+export default CrossLink;

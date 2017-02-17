@@ -10,24 +10,29 @@ moduleForComponent('cross-link', 'Integration | Component | cross link', {
  * running in integration tests and trying to start it throws some fun errors. 😞
  */
 
-test('it doesnt return a link-to if without a class or module', function(assert) {
-  this.render(hbs`{{cross-link}}`);
-
-  assert.equal(this.$().text().trim(), '', 'If a required module or class is not passed, do less');
-});
-
-test('it makes a link-to for passed classes', function(assert) {
+test('it uses class id as anchor text for inline usage', function(assert) {
   this.render(hbs`{{cross-link class='SomeDoc.Class'}}`);
   let anchor = this.$('a');
 
   assert.ok(anchor.length, 'Returns an anchor');
-  assert.equal(anchor.text(), 'SomeDoc.Class Class');
+  assert.ok(anchor.text().includes('SomeDoc.Class'),
+    'inline template uses class id as anchor text');
 });
 
-test('it makes a link-to for passed modules', function(assert) {
-  this.render(hbs`{{cross-link module='SomeModule'}}`);
+test('it uses class id and query params as anchor text for inline usage', function(assert) {
+  this.render(hbs`{{cross-link class='SomeDoc.Class' item='init'}}`);
   let anchor = this.$('a');
 
   assert.ok(anchor.length, 'Returns an anchor');
-  assert.equal(anchor.text(), 'SomeModule Module');
+  assert.ok(anchor.text().includes('SomeDoc.Class:init'),
+    'inline template uses class id and item query param as anchor text');
+});
+
+test('it yields block form as anchor text', function(assert) {
+  this.render(hbs`{{#cross-link class='SomeDoc.Class'}}BLOCK TEXT{{/cross-link}}`);
+  let anchor = this.$('a');
+
+  assert.ok(anchor.length, 'Returns an anchor');
+  assert.ok(anchor.text().includes('BLOCK TEXT'),
+    'block template yields content as anchor text');
 });

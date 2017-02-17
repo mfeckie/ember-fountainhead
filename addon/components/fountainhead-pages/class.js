@@ -2,7 +2,7 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
- * Fountainhead `/doc/class` page component
+ * Fountainhead `/api/class` page component.
  * @class FountainheadPages.Class
  * @constructor
  * @extends Ember.Component
