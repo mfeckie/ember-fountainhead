@@ -47,13 +47,13 @@ export default Component.extend({
       {{module.name}}
       <small>
         {{! @TODO: Link component needed to handle external vs internal file links }}
-        {{link-to '[source]' 'docs.files' module.srcFileId classNames='source-icon'}}
+        {{link-to '[source]' 'api.files' module.srcFileId classNames='source-icon'}}
       </small>
     </h2>
     {{! Not sure if this is right, attempting to match Ember docs, see ember-routing}}
     {{#if module.is_submodule}}
       {{! TODO: Module parent should be a link }}
-      <p class='fh-parent'>Parent: {{link-to module.module 'docs.modules' module.module}}</p>
+      <p class='fh-parent'>Parent: {{link-to module.module 'api.modules' module.module}}</p>
     {{/if}}
 
     {{! TODO: Move description out of class to general }}
@@ -64,7 +64,7 @@ export default Component.extend({
       <h4 class='fh-docs-category uppercase'>Submodules</h4>
       <ul class='fh-module-category'>
         {{#each-in module.submodules as |key|}}
-          <li>{{link-to key 'docs.modules' key}}</li>
+          <li>{{link-to key 'api.modules' key}}</li>
         {{/each-in}}
       </ul>
     {{/if}}
@@ -73,7 +73,7 @@ export default Component.extend({
       <h4 class='fh-docs-category uppercase'>Classes and Namespaces</h4>
       <ul class='fh-module-category'>
         {{#each-in module.classes as |key|}}
-          <li>{{link-to key 'docs.classes' key}}</li>
+          <li>{{link-to key 'api.classes' key}}</li>
         {{/each-in}}
       </ul>
     {{/if}}

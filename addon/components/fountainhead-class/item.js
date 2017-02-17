@@ -91,7 +91,7 @@ export default Component.extend({
     <div class='fh-meta'>
       {{#if classItem.file}}
         <small class='fh-defined'>Defined in:
-          {{#link-to 'docs.files' classItem.srcFileId (query-params line=classItem.line)}}
+          {{#link-to 'api.files' classItem.srcFileId (query-params line=classItem.line)}}
             {{classItem.file}}:{{classItem.line}}
           {{/link-to}}
         </small>

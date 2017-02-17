@@ -3,9 +3,10 @@ import hbs from 'htmlbars-inline-precompile';
 import inject from 'ember-service/inject';
 
 /**
- * Fountainhead `/doc` page component serves as the wrapping template for all of
- * Fountainhead. The `outlet` for the route is yielded by this component, which
- * is how we use components to handle rendering all of our markup, even with
+ * Fountainhead `/api` page component handles rendering the API sidebar, welcome
+ * messaging and all API related subroutes including modules, classes and source
+ * files. The `outlet` for this route is yielded by this component, which
+ * is how we use components to handle rendering all of our pages, even with
  * subroutes.
  *
  * Because we want the default setup of Fountainhead to look like it's own app
@@ -14,9 +15,9 @@ import inject from 'ember-service/inject';
  * footer even if a consuming application has one in their `application.hbs`
  * template.
  *
- * The `fountainhead` service is the primary store for the addon and handles
- * fetching the meta data for the docs.
- * @class FountainheadPages.Docs
+ * Page data is passed from the `fountainhead` service, which is the primary
+ * store for the addon and handles fetching the meta data for the API docs.
+ * @class FountainheadPages.API
  * @uses FountainheadRepoLink
  * @uses FountainheadSidebar.Sidebar
  * @constructor

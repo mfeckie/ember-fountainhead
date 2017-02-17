@@ -3,8 +3,8 @@ import inject from 'ember-service/inject';
 import $ from 'jquery';
 
 /**
- * The docs route is the parent route for module and class documentation.
- * @class Docs
+ * Route handles fetching data for a source file.
+ * @class API.Files
  * @constructor
  * @extends Ember.Route
  */
@@ -12,20 +12,14 @@ export default Route.extend({
   fountainhead: inject(),
 
   /**
-   * We check for and fetch meta data if needed in the parent routes of
-   * Fountainhead. This lets consumers overwrite the `apiNamespace` if they
-   * need before we request the meta data that drives Fountainhead.
-   *
-   * NOTE: We only fetch meta data if it isn't present yet.
-   * @method beforeModel
-   * @return {Promise|true}
+   * Fetches file's JSON at: `${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json`
+   * @method model
+   * @param {Object} params
+   * @param {string} params.file_id Name of this class, use to fetch data
+   * @return {Promise} jQuery ajax promise
    */
-  beforeModel() {
-    if (!this.get('fountainhead.meta')) {
-      return this.get('fountainhead').fetchMeta();
-    }
-
-    return true;
+  model(params) {
+    return $.ajax(`${this.get('fountainhead.apiNamespace')}/files/${params.file_id}.json`);
   },
 
   // Actions

@@ -3,7 +3,7 @@ import Controller from 'ember-controller';
 /**
  * Classes controller is required to pass `item` query param to the page
  * component.
- * @class Docs.Classes
+ * @class API.Classes
  * @constructor
  * @extends Ember.Controller
  */

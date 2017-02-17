@@ -123,12 +123,12 @@ export default Component.extend({
   layout: hbs`
     {{! Only output link-to if data was passed }}
     {{#if module}}
-      {{link-to text 'docs.modules' module}}
+      {{link-to text 'api.modules' module}}
     {{else if class}}
       {{#if item}}
-        {{link-to text 'docs.classes' class (query-params item=item type=type)}}
+        {{link-to text 'api.classes' class (query-params item=item type=type)}}
       {{else}}
-        {{link-to text 'docs.classes' class}}
+        {{link-to text 'api.classes' class}}
       {{/if}}
     {{/if}}
   `

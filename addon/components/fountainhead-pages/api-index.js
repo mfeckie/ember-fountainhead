@@ -3,8 +3,8 @@ import hbs from 'htmlbars-inline-precompile';
 import inject from 'ember-service/inject';
 
 /**
- * Fountainhead `/doc/index` page component
- * @class FountainheadPages.DocsIndex
+ * Fountainhead `/api` index page component
+ * @class FountainheadPages.APIIndex
  * @constructor
  * @extends Ember.Component
  */

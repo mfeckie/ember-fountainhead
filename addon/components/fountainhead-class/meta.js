@@ -111,7 +111,7 @@ export default Component.extend({
     {{#if extends}}
       <p class='fh-meta'>
         <span class='meta-extends'>Extends:</span>
-        {{link-to extends 'docs.classes' extends}}
+        {{link-to extends 'api.classes' extends}}
       </p>
     {{/if}}
 
@@ -119,7 +119,7 @@ export default Component.extend({
       {{#each uses as |use|}}
         <p class='fh-meta'>
           <span class='meta-uses'>Uses:</span>
-          {{link-to use 'docs.classes' use}}
+          {{link-to use 'api.classes' use}}
         </p>
       {{/each}}
     {{/if}}
@@ -128,7 +128,7 @@ export default Component.extend({
       <p class='fh-meta'>
         {{! @TODO: Need a config for internal vs external src file linking }}
         <span class='meta-defined'>Defined In:</span>
-        {{#link-to 'docs.files' srcFileId (query-params line=line)}}
+        {{#link-to 'api.files' srcFileId (query-params line=line)}}
           {{file}}:{{line}}
         {{/link-to}}
       </p>
@@ -142,12 +142,12 @@ export default Component.extend({
     {{#if submodule}}
       <p class='fh-meta'>
         <span class='meta-module'>Module:</span>
-        {{link-to submodule 'docs.modules' submodule}}
+        {{link-to submodule 'api.modules' submodule}}
       </p>
     {{else if module}}
       <p class='fh-meta'>
         <span class='meta-module'>Module:</span>
-        {{link-to module 'docs.modules' module}}
+        {{link-to module 'api.modules' module}}
       </p>
     {{/if}}
   `

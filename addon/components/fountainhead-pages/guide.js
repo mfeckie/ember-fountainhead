@@ -6,6 +6,7 @@ import hbs from 'htmlbars-inline-precompile';
  * @class FountainheadPages.Guide
  * @constructor
  * @extends Ember.Component
+ * @experimental
  */
 export default Component.extend({
 
@@ -27,17 +28,16 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    {{log guide}}
-    {{#if guide.attributes.title}}
-      <div class="page-title">
+    <div class="page-title">
+      {{#if guide.attributes.title}}
         <h1>{{guide.attributes.title}}</h1>
-      </div>
-    {{/if}}
+      {{/if}}
+    </div>
     <main class="guide-page fh-wrapper">
       <div class="guide-content">
         {{{guide.body}}}
       </div>
-      {{! side nav}}
+      {{! TODO: side nav }}
     </main>
   `
 });
