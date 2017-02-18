@@ -9,6 +9,7 @@ const common = {
   ],
   guides: [
     'guides/getting-started.md',
+    'guides/fountainhead-configuration.md',
     'guides/writing-guides.md',
     'guides/tools.md',
     'guides/markdown-in-fountainhead.md',

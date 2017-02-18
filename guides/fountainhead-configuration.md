@@ -14,3 +14,17 @@ Configuration Notes:
   are needed (much like webpack). The function will be passed an `env` parameter.
   (Include example of this addon for GH pages)
 - List possible configuration options. See webpack for nice example.
+
+#### Fountainhead Service Namespace
+
+You can override the root namespace that all Fountainhead requests use by setting
+the {{c-l class='Fountainhead' item='apiNamespace'}}. The default value is `/docs`.
+
+```javascript
+// app.js
+import Fountainhead from 'ember-fountainhead/services/fountainhead';
+
+Fountainhead.reopen({ apiNamespace: '/special-namespace/v1/' });
+```
+
+The meta request would now use url: `/special-namespace/v1/meta.json`

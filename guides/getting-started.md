@@ -12,11 +12,12 @@ Install Ember Fountainhead using Ember CLI:
 _Currently Ember Fountainhead must be used inside of an Ember application._
 
 #### Documentation Generation
-If you already have documentation comments in your source code, generating your documentation files is an Ember command:
+If you already have documentation comments in your source code, generating your
+documentation files is an Ember command:
 
 `ember docs`
 
-If you haven't added documentation comments to your souce code, you'll need to
+If you haven't added documentation comments to your source code, you'll need to
 write some. Fountainhead uses [https://yui.github.io/yuidoc/](YUIDoc) for the
 source code comment parsing. YUIDoc uses a syntax similar to JSDoc, but does not
 parse your source code, only the comments.
@@ -55,6 +56,9 @@ module.exports = {
 }
 ```
 
+See [Configuring Fountainhead](/guides/fountainhead-configuration) for all
+possible configuration options.
+
 _Note that all paths are resolved using `path.resolve`, meaning that
 either a relative path or paths starting with `./` will resolve to
 your project's root directory._
@@ -66,12 +70,12 @@ your application's styles. You can disable style sheet bundling by setting
 `includeVendorStyles` to false in your `fountainhead.js` configuration file.
 
 If you'd like to extend Fountainhead's styles and your project uses SASS, you
-can turn off the auto bundle to the vendor file and directly import Fountianhead
+can turn off the auto bundle to the vendor file and directly import Fountainhead
 into your SASS:
 
 `@import 'ember-fountainhead'`
 
-See the themes in `app/styles/ember-fountianhead/themes` for variables you can
+See the themes in `app/styles/ember-fountainhead/themes` for variables you can
 override.
 
 #### Ember Component Playground
