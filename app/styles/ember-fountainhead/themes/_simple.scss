@@ -44,26 +44,35 @@ $ash: rgba(224, 224, 224, 0.65) !default;
 $smoke: #f1f1f1 !default;
 
 // Branding
-// $primary: #253B52 !default;
 $primary: #3E4855 !default; // rgb(62,72,85)
 $primary-bg: rgba(62, 72, 85, 0.3) !default;
+// $primary: #253B52 !default;
 // $primary: #6B8C92 !default;
 // $primary: #50676B !default;
 // $primary: #60628B !default;
 
 // Status Colors
-$alert: #D9534F !default;
-$warning: #FCF8E3 !default;
-$success: #93C54B !default;
+$danger-color: #D9534F !default;
+$danger-bg: #f2dede !default;
+$danger-border: #ebcccc !default;
+$warning-color: #8a6d3b !default;
+$warning-bg: #FCF8E3 !default;
+$warning-border: #faf2cc !default;
+$success-color: #93C54B !default;
+$success-bg: #dff0d8 !default;
+$success-border: #d0e9c6 !default;
+$info-color: #31708f !default;
+$info-bg: #d9edf7 !default;
+$info-border: #bcdff1 !default;
 
 // Links
 $link-color: #3F61A1 !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
 // Deprecation warnings
-$deprecated-bg: $warning !default;
-$deprecated-color: #8A6D3B !default;
-$deprecated-border: #FAEBCC !default;
+$deprecated-bg: $warning-bg !default;
+$deprecated-color: $warning-color !default;
+$deprecated-border: $warning-border !default;
 
 // Misc
 $fh-body-background: $white !default;

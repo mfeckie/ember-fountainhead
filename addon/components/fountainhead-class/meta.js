@@ -102,6 +102,7 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
+    {{! TODO: Make this an unstyled list }}
     {{#if access}}
       <p class='fh-meta'>
         <span class='meta-access'>Access:</span> <span class='fh-{{access}}'>{{access}}</span>

@@ -2,18 +2,18 @@
 // Fountainhead Alerts
 // ========================================================
 
+@mixin alert-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+}
+
 .fh-alert {
-  position: relative;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 15px;
+  margin-bottom: 15px;
   border-width: 1px;
   border-radius: 4px;
   border-style: solid;
-
-  > p,
-  > ul {
-    margin-bottom: 0;
-  }
 
   &.alert-dismissible {
     padding-right: (1rem + 1.5);
@@ -26,9 +26,24 @@
     }
   }
 
-  &.alert-danger {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: darken(adjust-hue(#f2dede, -10), 5%);
-  }
+  &.alert-primary { @include alert-variant(#fff, $primary, $primary); }
+  &.alert-info { @include alert-variant($info-color, $info-bg, $info-border); }
+  &.alert-success { @include alert-variant($success-color, $success-bg, $success-border); }
+  &.alert-warning { @include alert-variant($warning-color, $warning-bg, $warning-border); }
+  &.alert-danger { @include alert-variant($danger-color, $danger-bg, $danger-border); }
+}
+
+.fh-badge {
+  color: $white;
+  border: 1px solid $border-color;
+  padding: 3px 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: $radius;
+  display: inline-block;
+
+  &.fh-badge-primary { background-color: $primary; }
+  &.fh-badge-success { background-color: $success-color; }
+  &.fh-badge-alert { background-color: $danger-color; }
+  &.fh-badge-info { background-color: $info-color }
 }

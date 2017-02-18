@@ -73,15 +73,15 @@ export default Component.extend({
       {{/if}}
       {{! Begin Info Badges (access, static, deprecated) }}
       {{#if classItem.access}}
-        <span class='item-access {{if (eq classItem.access 'public') 'fh-success' 'fh-alert'}}'>
+        <span class='item-access fh-badge {{if (eq classItem.access 'public') 'fh-badge-success' 'fh-badge-alert'}}'>
           {{classItem.access}}
         </span>
       {{/if}}
       {{#if classItem.static}}
-        <span class='item-static fh-info'>Static</span>
+        <span class='item-static fh-badge fh-badge-primary'>Static</span>
       {{/if}}
       {{#if classItem.deprecated}}
-        <span class='item-static fh-alert'>Deprecated</span>
+        <span class='item-static fh-badge fh-badge-alert'>Deprecated</span>
       {{/if}}
     </h4>
 

@@ -5,7 +5,13 @@ title: Writing Guides with Ember Fountainhead
 ---
 
 Ember Fountainhead makes writing guides easy. Guides can be written with markdown
-and Ember components can be mixed in just like with your code descriptions.
+and Ember components can be mixed in just like with your code descriptions. Any
+guides saved in `/guides` will be observed by Ember CLI and live reload on change.
+
+{{#fountainhead-alert canDismiss=false brand='info'}}
+You can save guides in any location in your app, but if they are not in `/guides`
+or `/app` changes will not trigger live reloads.
+{{/fountainhead-alert}}
 
 #### Adding Meta Data
 

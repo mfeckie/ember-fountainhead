@@ -37,20 +37,3 @@
 
   table { margin-bottom: 30px; }
 }
-
-// Use to make badges for contextual information
-.fh-info,
-.fh-success,
-.fh-alert {
-  color: $white;
-  border: 1px solid $border-color;
-  padding: 3px 5px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: $radius;
-  display: inline-block;
-}
-
-.fh-success { background-color: $success; }
-.fh-alert { background-color: $alert; }
-.fh-info { background-color: $primary }

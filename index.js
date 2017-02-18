@@ -118,19 +118,27 @@ module.exports = {
    *                  prod builds
    */
   treeForPublic() {
-    let trees = [];
     let addonTree = this._super.treeForPublic.apply(this, arguments);
-
-    // In dev docs is included through `serverMiddleware`
-    if (this.env !== 'production') { return addonTree; }
+    let trees = [];
 
     if (addonTree) {
       trees.push(addonTree);
     }
 
-    trees.push(new Funnel('docs', {
-      destDir: 'docs'
-    }));
+    // In dev include /guides to trigger live reload on change, not needed for prod
+    // b/c guide contents are parsed as part of data generation
+    if (this.env !== 'production') {
+      trees.push(new Funnel('guides', {
+        destDir: 'guides'
+      }));
+    }
+
+    // In dev docs is included through `serverMiddleware`, prod must bundle them
+    if (this.env === 'production') {
+      trees.push(new Funnel('docs', {
+        destDir: 'docs'
+      }));
+    }
 
     return mergeTrees(trees);
   },
