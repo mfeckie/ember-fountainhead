@@ -176,7 +176,9 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     <div class='partial-wrapper'>
-      {{partial partialName}}
+      {{#fountainhead-state as |state stateActions|}}
+        {{partial partialName}}
+      {{/fountainhead-state}}
 
       {{! Render parsing errors for debugging. Can be hidden with CSS if desired }}
       {{#if compilerError}}
