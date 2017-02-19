@@ -27,7 +27,7 @@ light-pink     : #FF9AC1;
 */
 
 /* PRISM PANDA VARS */
-$background: #292a2b;
+$background: #373b41; // Use a slightly lighter bg than real Panda b/c of all the white around it
 $color: #e6e6e6;
 $token-keyword: #FF75B5;
 $token-string: #19f9d8;
@@ -43,6 +43,7 @@ pre[class*="language-"] {
 	color: $color;
 	background: $background;
 	border: none;
+	border-radius: 2px;
 	font-family: $font-family-mono;
   font-size: 13px;
 	text-align: left;
@@ -50,7 +51,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: 1.6;
 	tab-size: 4;
 	hyphens: none;
 }
@@ -58,7 +59,8 @@ pre[class*="language-"] {
 /* Prism Code blocks */
 pre[class*="language-"] {
 	background: $background;
-	padding: 1em;
+	border-radius: 2px;
+	padding: 1.75em;
 	margin: .5em 0;
 	overflow: auto;
 }
