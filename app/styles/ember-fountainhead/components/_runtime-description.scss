@@ -1,0 +1,21 @@
+// ========================================================
+// Runtime Compiled Descriptions
+// Note: styles declared without scoping will apply to
+// guide and api pages
+// ========================================================
+
+.fh-description {
+  a,
+  a:visited {
+    color: $description-link-color;
+  }
+
+  a:hover {
+    color: $description-link-hover-color;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}

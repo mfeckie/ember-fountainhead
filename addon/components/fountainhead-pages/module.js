@@ -10,6 +10,8 @@ import hbs from 'htmlbars-inline-precompile';
  */
 export default Component.extend({
 
+  // Passed Properties
+  // ---------------------------------------------------------------------------
   /**
    * Module model content
    * @property module
@@ -18,9 +20,17 @@ export default Component.extend({
    */
   module: {},
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * Handle nulling out properties `submodules` and `classes` if they don't have
    * any keys.

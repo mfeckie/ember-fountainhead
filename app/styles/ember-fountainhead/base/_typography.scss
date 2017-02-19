@@ -22,6 +22,22 @@
   // Header weights
   h1, h2, h3 { font-weight: 300; }
   h4 { font-weight: bold }
+
+  // h5s are intended to be file names only for code blocks in Fountainhead
+  // until we get a Prism plugin for file names setup.
+  h5 {
+    font-size: $h5-size;
+    line-height: 1.1;
+    text-align: right;
+    background: $ghost;
+    color: $battleship;
+    max-width: 750px;
+    font-family: $font-family-mono;
+    margin-bottom: 0;
+    padding: 7px 5px;
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+  }
 }
 
 // Anchors
@@ -67,11 +83,17 @@
   small {
     font-size: .85rem;
     line-height: 1.15rem;
+    a { font-size: .85rem; }
   }
 
   button {
     font-family: $font-family;
     font-size: $base-font-size * 1px;
+  }
+
+  // Keep things at a readable length
+  h2, h3, h4, h5, p, table {
+    max-width: 750px;
   }
 }
 

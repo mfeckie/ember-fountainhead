@@ -11,6 +11,17 @@ import inject from 'ember-service/inject';
 export default Component.extend({
   fountainhead: inject(),
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
+  // Layout
+  // ---------------------------------------------------------------------------
   layout: hbs`
     {{#if fountainhead.meta}}
       {{fountainhead-welcome}}

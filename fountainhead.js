@@ -9,12 +9,9 @@ const common = {
   ],
   guides: [
     'guides/getting-started.md',
-    'guides/fountainhead-configuration.md',
+    'guides/configuration.md',
     'guides/writing-guides.md',
-    'guides/tools.md',
-    'guides/markdown-in-fountainhead.md',
-    'guides/type-tag.md',
-    'guides/test.md'
+    'guides/tools.md'
   ],
   output: {
     filename: 'fountainhead-data.json',

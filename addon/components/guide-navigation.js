@@ -10,6 +10,9 @@ import hbs from 'htmlbars-inline-precompile';
  * @experimental
  */
 export default Component.extend({
+
+  // Passed Properties
+  // ---------------------------------------------------------------------------
   /**
    * Fountainhead documentation meta. Component uses the `guides` meta to create
    * links to each guide page.
@@ -19,6 +22,9 @@ export default Component.extend({
    * @required
    */
   meta: null,
+
+  // Properties
+  // ---------------------------------------------------------------------------
   /**
    * @property tagName
    * @type {string}

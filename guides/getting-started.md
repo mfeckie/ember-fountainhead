@@ -4,32 +4,35 @@ linkLabel: Getting Started
 title: Getting Started
 ---
 
-#### Installation
+## Installation
 Install Ember Fountainhead using Ember CLI:
 
 `ember install ember-fountainhead`
 
-_Currently Ember Fountainhead must be used inside of an Ember application._
+_<small>* Currently Ember Fountainhead must be used inside of an Ember application.</small>_
 
-#### Documentation Generation
-If you already have documentation comments in your source code, generating your
-documentation files is an Ember command:
+## Documentation Generation
+If you already have YUIDoc documentation comments block _(DocBlocks)_ in your
+source code, you can generate Fountainhead documentation data files with the
+command `ember docs`.
 
-`ember docs`
+By default Fountainhead will generate data files any time you build your app,
+as well as rebuild the files any time your app changes. This can be disabled
+using the [liveEdit](#configuration) configuration.
 
-If you haven't added documentation comments to your source code, you'll need to
-write some. Fountainhead uses [https://yui.github.io/yuidoc/](YUIDoc) for the
-source code comment parsing. YUIDoc uses a syntax similar to JSDoc, but does not
+If you don't have DocBlock comments to your source code, you can start adding
+them. Fountainhead uses [YUIDoc](https://yui.github.io/yuidoc/) for
+source code DocBlock parsing. YUIDoc uses a syntax similar to JSDoc, but does not
 parse your source code, only the comments.
 
-See [https://yui.github.io/yuidoc/syntax/index.html](YUIDoc Syntax) for details
-on YUIDoc tags.
+_<small>See [YUIDoc Syntax](https://yui.github.io/yuidoc/syntax/index.html) for details
+on YUIDoc tags.</small>_
 
-#### Excluding from Production
-To exclude Fountainhead from your production builds. You can **blacklist** it as
-part of your `ember-cli-build.js`configuration using the `addons.blacklist`
-array:
+## Excluding from Production
+To exclude Fountainhead from your production builds you can **blacklist** in your
+`ember-cli-build` configuration using the `addons.blacklist` array:
 
+##### ember-cli-build.js
 ```javascript
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -41,29 +44,30 @@ module.exports = function(defaults) {
   return app.toTree();
 };
 ```
+<!-- TODO: Delete when we add hash fragment nav handling -->
+<div id="configuration"></div>
 
-#### Configuration
-Configuration for this addon and the build scripts can be specified in a
-`fountainhead.js` file located in your repo's root.
+## Configuration
+The Ember Fountainhead addon as well as the data file generation process can
+be configured in a `fountainhead.js` file located in your repo's root:
 
+##### fountainhead.js
 ```javascript
 module.exports = {
   entry: ['app'], // Defaults to 'app' for apps and 'addon' for addons
   output: {
-    path: 'public/docs' // path to save generated docs to
+    path: 'docs' // path to save generated docs to
     filename: 'fountainhead-data.json' // name to save generated file to
   }
 }
 ```
 
-See [Configuring Fountainhead](/guides/fountainhead-configuration) for all
-possible configuration options.
+{{#fountainhead-alert brand='info' dismiss=false}}
+{{fountainhead-svg svgId='info'}}See [Configuring Fountainhead](/guides/configuration)
+for all possible configuration options.
+{{/fountainhead-alert}}
 
-_Note that all paths are resolved using `path.resolve`, meaning that
-either a relative path or paths starting with `./` will resolve to
-your project's root directory._
-
-#### Addon Styles
+## Addon Styles
 Ember Fountainhead's styles are bundled into your `vendor.css` by
 default. The styles are scoped to addon namespaces to prevent conflicts with
 your application's styles. You can disable style sheet bundling by setting
@@ -71,14 +75,12 @@ your application's styles. You can disable style sheet bundling by setting
 
 If you'd like to extend Fountainhead's styles and your project uses SASS, you
 can turn off the auto bundle to the vendor file and directly import Fountainhead
-into your SASS:
+into your SASS: `@import 'ember-fountainhead'`
 
-`@import 'ember-fountainhead'`
+_<small>See the [themes](https://github.com/healthsparq/ember-fountainhead/tree/master/app/styles/ember-fountainhead/themes)
+for variables you can override.</small>_
 
-See the themes in `app/styles/ember-fountainhead/themes` for variables you can
-override.
-
-#### Ember Component Playground
+## Ember Component Playground
 The [Ember Component Playground](https://github.com/healthsparq/ember-component-playground)
 addon is a great compliment to this addon that allows real time examples of
 components. See the repo for installation.

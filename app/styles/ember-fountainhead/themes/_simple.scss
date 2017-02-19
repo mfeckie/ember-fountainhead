@@ -22,9 +22,10 @@ $font-family: 'Libre Franklin', Arial, sans-serif !default;
 $font-family-mono: 'Source Code Pro', monospace !default;
 
 $h1-size: 48px !default;
-$h2-size: 36px !default;
+$h2-size: 30px !default;
 $h3-size: 24px !default;
 $h4-size: 18px !default;
+$h5-size: 0.9rem !default;
 
 
 // ========================================================
@@ -68,6 +69,8 @@ $info-border: #bcdff1 !default;
 // Links
 $link-color: #3F61A1 !default;
 $link-hover-color: darken($link-color, 15%) !default;
+$description-link-color: #1F6DC6 !default;
+$description-link-hover-color: darken($description-link-color, 15%) !default;
 
 // Deprecation warnings
 $deprecated-bg: $warning-bg !default;

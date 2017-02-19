@@ -12,7 +12,8 @@
   padding: 100px;
   width: 100%;
   margin-bottom: 30px;
-  color: $white;
+
+  h1 { color: $white; }
 }
 
 // Page content wrapper
@@ -23,4 +24,14 @@
   .section-header {
     margin: 60px 0;
   }
+
+  h2 {
+    border-bottom: 1px solid $ash;
+    margin-top: 1.5em;
+  }
+
+  small {
+    color: $rhino;
+  }
+
 }

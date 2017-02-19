@@ -26,6 +26,15 @@ import inject from 'ember-service/inject';
 export default Component.extend({
   fountainhead: inject(),
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
@@ -36,7 +45,7 @@ export default Component.extend({
       <main class='fh-container'>
         {{api-navigation meta=fountainhead.meta}}
         <div class='fh-content-container'>
-          <div class='fh-content'>
+          <div class='fh-content api-documentation'>
             {{! This is where subroutes are rendered through the outlet }}
             {{yield}}
           </div>

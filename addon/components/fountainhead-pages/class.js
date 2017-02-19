@@ -30,6 +30,15 @@ export default Component.extend({
    */
   item: null,
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`

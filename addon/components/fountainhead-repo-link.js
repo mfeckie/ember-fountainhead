@@ -21,6 +21,15 @@ export default Component.extend({
    */
   repository: '',
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`

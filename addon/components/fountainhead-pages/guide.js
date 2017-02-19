@@ -12,6 +12,8 @@ import hbs from 'htmlbars-inline-precompile';
 export default Component.extend({
   fountainhead: inject(),
 
+  // Passed Properties
+  // ---------------------------------------------------------------------------
   /**
    * Guide backing model matching structure:
    * ```javascript
@@ -27,20 +29,31 @@ export default Component.extend({
    */
   guide: null,
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * @property tagName
+   * @type {string}
+   * @default ''
+   */
+  tagName: '',
+
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class='page-title'>
-      {{#if guide.attributes.title}}
-        <h1>{{guide.attributes.title}}</h1>
-      {{/if}}
-    </div>
-    <main class='guide-page fh-wrapper'>
-      <div class='guide-content'>
-        {{fountainhead-runtime-description
-          description=guide.body}}
+    <div class='fh-page-in-page-wrapper'>
+      <div class='page-title'>
+        {{#if guide.attributes.title}}
+          <h1>{{guide.attributes.title}}</h1>
+        {{/if}}
       </div>
-      {{guide-navigation meta=fountainhead.meta}}
-    </main>
+      <main class='guide-page fh-wrapper'>
+        <div class='guide-content'>
+          {{fountainhead-runtime-description
+            description=guide.body}}
+        </div>
+        {{guide-navigation meta=fountainhead.meta}}
+      </main>
+    </div>
   `
 });
