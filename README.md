@@ -1,13 +1,20 @@
-# Ember Fountainhead
-[![Build Status](https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop)](https://travis-ci.org/healthsparq/ember-fountainhead) [![Ember Observer Score](https://emberobserver.com/badges/ember-fountainhead.svg)](https://emberobserver.com/addons/ember-fountainhead)
+<h1 align="center">
+  <a href="https://healthsparq.github.io/ember-fountainhead/">
+    <img width="110" src="https://cdn.rawgit.com/healthsparq/ember-fountainhead/master/public/fountainhead-logo.svg" />
+    <img width="450" src="https://cdn.rawgit.com/healthsparq/ember-fountainhead/master/public/fountainhead-logo-text.svg" />
+  </a>
+</h1>
+<p align="center">
+  <a href="https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop"><img src="https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop" alt="Build status"/></a>
+  <a href="https://emberobserver.com/badges/ember-fountainhead.svg"><img src="https://emberobserver.com/badges/ember-fountainhead.svg" alt="Ember Observer Score"/></a>
+  <a href="https://img.shields.io/badge/License-MIT-blue.svg"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Build status"/></a>
+</p>
 
-Ember Fountainhead is an in-app solution for creating robust documentation for
-your Ember application's source code. Fountainhead uses YUIDoc to parse your
-inline code documentation. Your documentation is rendered in your app, allowing
-you to include real, working examples of your component code that you can test
-and see functioning in the context of your docs.
-
-It Just Works™.
+Ember Fountainhead is an addon for creating robust documentation for
+your Ember application's source code. Documentation is available in application
+for easy reference and is compiled at runtime, allowing you to include real,
+working examples of your component code that you can see functioning in the
+context of your docs.
 
 ## Installation
 
@@ -16,4 +23,5 @@ ember install ember-fountainhead
 ember docs
 ```
 
-See [healthsparq.github.io/ember-fountainhead/](https://healthsparq.github.io/ember-fountainhead/) for details and a demo.
+See [healthsparq.github.io/ember-fountainhead/](https://healthsparq.github.io/ember-fountainhead/)
+for getting started guides and a demo.
