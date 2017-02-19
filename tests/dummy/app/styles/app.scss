@@ -10,3 +10,10 @@
 
 // Demo Site Elements
 @import 'landing';
+
+// Our prod logo is an svg and doesn't have styles applied, so we add them
+// in the demo app css.
+.logo-link .project-logo {
+  width: 300px;
+  margin: 0 10px;
+}
