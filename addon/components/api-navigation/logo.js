@@ -37,22 +37,11 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   layout: hbs`
     <div class='project-logo-wrapper fh-element'>
-      {{#if logo}}
-        {{#link-to 'index' classNames='logo-link'}}
-          <img src={{logo}}
-            class='project-logo'
-            alt='project logo' />
-        {{/link-to}}
-      {{else}}
-        {{#link-to 'index' classNames='fountainhead-logo-link'}}
-            <object
-              type="image/svg+xml"
-              data="/ember-fountainhead/fountainhead-logo.svg"
-              class='fountainhead-logo'>
-            </object>
-            <h3>Ember<br>Fountainhead</h3>
-          {{/link-to}}
-        {{/if}}
+      {{#link-to 'index' classNames='logo-link'}}
+        <img src={{if logo logo '/ember-fountainhead/fountainhead-logo-light.svg'}}
+          class='project-logo {{unless logo 'fountainhead-logo'}}'
+          alt='project logo' />
+      {{/link-to}}
     </div>
   `
 });

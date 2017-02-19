@@ -29,7 +29,7 @@ test('it renders meta logo if present and defaults to fountainhead logo', functi
 
   // When a logo isn't set, nav should default to fountainhead logo
   this.set('meta.logo', null);
-  assert.ok(this.$('.fountainhead-logo-link').length,
+  assert.ok(this.$('img.fountainhead-logo').length,
     'custom Fountainhead logo is rendered');
 });
 

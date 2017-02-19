@@ -31,7 +31,7 @@ const common = {
 // `/ember-fountainhead/`, and b/c it's a static site all assets
 // need to be prefixed, including the logo.
 const production = {
-  logo: '/ember-fountainhead/ember-fountainhead/img/ember-logo.png'
+  logo: '/ember-fountainhead/ember-fountainhead/fountainhead-logo-light.svg'
 };
 
 // Similar to webpack, you can export a function that receives the
