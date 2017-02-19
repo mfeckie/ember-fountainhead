@@ -29,11 +29,7 @@
 }
 
 // Container wrapping the sidebar and content containers
-.fh-container {
-  display: flex;
-  flex: 1;
-  margin: 0;
-}
+.fh-container { display: flex; }
 
 // Flex content-container to fill total screen minus navigation
 .fh-content-container { flex: 1; }
@@ -41,7 +37,7 @@
 // Constrain the content.
 // TODO: Handle updating to lego padding
 .fh-content {
-  padding: 40px 75px 40px;
+  margin: 40px 75px 40px;
   max-width: 1000px;
 }
 

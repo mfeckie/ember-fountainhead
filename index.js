@@ -45,7 +45,7 @@ module.exports = {
 
     // Unless `includeVendorStyles` is explicitly set to false, we auto bundle
     // Fountainhead's styles into the vendor.css file here
-    if (config.includeVendorStyles !== false) {
+    if (this.fountainheadConfiguration.includeVendorStyles !== false) {
       app.import(path.join('vendor/ember-fountainhead.css'));
     }
 
@@ -79,12 +79,17 @@ module.exports = {
 
     const env = process.env.EMBER_ENV || 'development';
     let projectConfiguration = this.project.config(env);
-    let projectOptions = app.options;
+    let appOptions = app.options;
+
+    if (typeof config === 'function') {
+      config = config(env);
+    }
 
     this.app = app;
     this.env = env;
     this.projectConfiguration = projectConfiguration;
-    this.projectOptions = projectOptions;
+    this.appOptions = appOptions;
+    this.fountainheadConfiguration = config;
 
     // Pulls in dependencies to /vendor, we always run this b/c the entire addon
     // should be blacklisted if not wanted in production
@@ -103,7 +108,7 @@ module.exports = {
    * @return {undefined}
    */
   preBuild() {
-    if (this.env === 'development' && config.liveEdit !== false) {
+    if (this.env === 'development' && this.fountainheadConfiguration.liveEdit !== false) {
       generateDocs({ env: this.env });
     }
   },
