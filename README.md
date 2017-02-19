@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://healthsparq.github.io/ember-fountainhead/">
-    <img width="500" src="https://cdn.rawgit.com/healthsparq/ember-fountainhead/master/public/fountainhead-logo-dark.svg" />
+    <img width="500" src="https://cdn.rawgit.com/healthsparq/ember-fountainhead/master/public/fountainhead-logo-dark.svg" alt="Ember Fountainhead"/>
   </a>
 </h1>
 <p align="center">

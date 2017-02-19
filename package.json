@@ -1,6 +1,6 @@
 {
   "name": "ember-fountainhead",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Robust interactive documentation for your Ember application's source code",
   "directories": {
     "doc": "doc",
@@ -9,8 +9,7 @@
   "scripts": {
     "prepublish": "npm run sass",
     "build": "ember build",
-    "docs:prod": "NODE_ENV=production ember docs",
-    "deploy": "npm run docs:prod && ember b -environment=production && gh-pages -d dist",
+    "deploy": "ember b -environment=production && gh-pages -d dist",
     "start": "ember server",
     "svgs": "svg-sprite --defs --defs-dest=public/svg --defs-sprite=symbol-defs.svg public/svg/svgs/*.svg",
     "test": "ember try:each",
