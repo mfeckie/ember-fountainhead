@@ -1,4 +1,5 @@
 import Component from 'ember-component';
+import inject from 'ember-service/inject';
 import hbs from 'htmlbars-inline-precompile';
 
 /**
@@ -9,6 +10,7 @@ import hbs from 'htmlbars-inline-precompile';
  * @experimental
  */
 export default Component.extend({
+  fountainhead: inject(),
 
   /**
    * Guide backing model matching structure:
@@ -28,17 +30,17 @@ export default Component.extend({
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
-    <div class="page-title">
+    <div class='page-title'>
       {{#if guide.attributes.title}}
         <h1>{{guide.attributes.title}}</h1>
       {{/if}}
     </div>
-    <main class="guide-page fh-wrapper">
-      <div class="guide-content">
+    <main class='guide-page fh-wrapper'>
+      <div class='guide-content'>
         {{fountainhead-runtime-description
           description=guide.body}}
       </div>
-      {{! TODO: side nav }}
+      {{guide-navigation meta=fountainhead.meta}}
     </main>
   `
 });

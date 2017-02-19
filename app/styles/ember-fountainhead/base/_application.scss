@@ -35,9 +35,7 @@
   margin: 0;
 }
 
-// fh-container is flex, we want the sidebar to keep width and allow main-content
-// to expand to fill container
-.fh-sidebar-container { flex: 0; }
+// Flex content-container to fill total screen minus navigation
 .fh-content-container { flex: 1; }
 
 // Constrain the content.

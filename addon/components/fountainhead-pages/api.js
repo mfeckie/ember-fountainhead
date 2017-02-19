@@ -33,11 +33,8 @@ export default Component.extend({
       {{! Octocat page corner SVG logo }}
       {{fountainhead-repo-link repository=fountainhead.meta.repository}}
 
-      {{! Layout for sidebar and content containers }}
       <main class='fh-container'>
-        <div class='fh-sidebar-container'>
-          {{fountainhead-sidebar/sidebar meta=fountainhead.meta}}
-        </div>
+        {{api-navigation meta=fountainhead.meta}}
         <div class='fh-content-container'>
           <div class='fh-content'>
             {{! This is where subroutes are rendered through the outlet }}

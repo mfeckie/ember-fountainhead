@@ -1,1 +1,1 @@
-export { default } from 'ember-fountainhead/components/fountainhead-sidebar/group';
+export { default } from 'ember-fountainhead/components/api-navigation/group';

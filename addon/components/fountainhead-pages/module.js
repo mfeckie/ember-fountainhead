@@ -56,7 +56,6 @@ export default Component.extend({
       <p class='fh-parent'>Parent: {{link-to module.module 'api.modules' module.module}}</p>
     {{/if}}
 
-    {{! TODO: Move description out of class to general }}
     {{fountainhead-runtime-description
       description=module.description}}
 
