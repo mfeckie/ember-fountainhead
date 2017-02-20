@@ -84,7 +84,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * The elementId of the currently opened tab. This determines which tab is active and
    * which tab's content to display. If this is empty, no tabs are open.
@@ -140,7 +139,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Bound attributes:
    * - `data-test`: for precise testing identification
@@ -165,7 +163,6 @@ export default Component.extend({
 
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Internal method that can be used with a `run.once` call to only add new tabs
    * once per run loop. Simply iterates through `_tabsToCreate` and pushes them
@@ -183,7 +180,6 @@ export default Component.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * When the component initializes, we set the `tabList` property to an array.
    * This prevents multiple instances of `fountainhead-tabs` on a given page
@@ -207,7 +203,6 @@ export default Component.extend({
 
   // Actions
   // ---------------------------------------------------------------------------
-
   actions: {
     /**
      * Action to show a tab. Set `activeId` to the passed elementId. `activeId`

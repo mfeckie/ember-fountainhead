@@ -29,7 +29,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * @property attributeBindings
    * @type {Array}

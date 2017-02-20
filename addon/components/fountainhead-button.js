@@ -29,7 +29,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Pass a brand to have `btn-${brand}` class applied
    * @property brand
@@ -52,7 +51,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Computed css class bound to component. Handled by component to allow for
    * flexibility in future updates to branding class names
@@ -66,7 +64,6 @@ export default Component.extend({
 
   // Ember Props
   // ---------------------------------------------------------------------------
-
   /**
    * ALLLLLLLLLLL the attributes you might need.
    * NOTE: `role` should not be bound here. You can set the role of a button
@@ -121,7 +118,6 @@ export default Component.extend({
 
   // Events
   // ---------------------------------------------------------------------------
-
   /**
    * The `mouseDown` event is used for some utility/housekeeping methods because
    * we use the `click` event to pass in actions.

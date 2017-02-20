@@ -12,7 +12,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Src file id for this file. Used for link to for source.
    * @property srcFileId
@@ -30,7 +29,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * @property classNames
    * @type {Array}

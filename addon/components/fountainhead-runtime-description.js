@@ -17,7 +17,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * The content string that should be rendered. This string is passed to the
    * runtime compiler and registered as a partial if compilation is successful.
@@ -37,7 +36,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * @property classNames
    * @type {Array}
@@ -62,7 +60,6 @@ export default Component.extend({
 
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Looks through the passed-in template string and checks for action helpers;
    * when it finds some, it checks for the actions referenced and registers no-ops
@@ -131,7 +128,6 @@ export default Component.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * On init we map the passed `contextActions` to real actions in this
    * component's actions hash to ensure they're available at compile time.
@@ -155,7 +151,6 @@ export default Component.extend({
       }
     }
   },
-
   /**
    * Whenever attrs are received fire the `_generateDescription` method to
    * generate a partial that will be rendered.
@@ -169,7 +164,6 @@ export default Component.extend({
 
   // Actions
   // ---------------------------------------------------------------------------
-
   actions: {},
 
   // Layout

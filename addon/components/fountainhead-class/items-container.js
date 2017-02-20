@@ -19,7 +19,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Array of *ALL* items for this class. Used to find the type when an item is
    * specified in a query param.
@@ -74,7 +73,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * The currently active tab. This is controlled by this component to allow
    * us to change the tab whenever a documentation item is clicked in the index
@@ -103,7 +101,6 @@ export default Component.extend({
 
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Internal method to handle selecting a tab panel and then scrolling to an
    * item in that panel.
@@ -141,7 +138,6 @@ export default Component.extend({
     // We can't scroll until after the next render has udpated the current tab
     scheduleOnce('afterRender', this, scrollTo);
   },
-
   /**
    * Handles finding the classitem model using the `item` query param value.
    * If a classitem is found, initiate a scroll.
@@ -171,7 +167,6 @@ export default Component.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * Handle resetting tabs container to the index panel any time that this
    * component's attrs update. The only props passed in to this component are
@@ -204,8 +199,6 @@ export default Component.extend({
       _name: name
     });
   },
-
-
   /**
    * Check for a passed `item` query param. When it exists call
    * {{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToQueryParamItem'}}

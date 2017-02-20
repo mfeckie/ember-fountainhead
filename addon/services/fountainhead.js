@@ -18,7 +18,6 @@ export default Service.extend(ActionHandler, {
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * All Fountainhead API requests are prefixed with this namespace. If you
    * export your docs JSON files to a non-default location, or your application
@@ -53,7 +52,6 @@ export default Service.extend(ActionHandler, {
 
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Fires request for documentation meta data and returns the promise. This
    * method is called in the `beforeModel` of either the `docs` or `guides`

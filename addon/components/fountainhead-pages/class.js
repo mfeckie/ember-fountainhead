@@ -11,7 +11,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Class model content.
    * @property class

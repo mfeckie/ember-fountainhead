@@ -13,7 +13,6 @@ export default Route.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * Fetches class' JSON at: `${this.get('fountainhead.apiNamespace')}/classes/${params.class_id}.json`
    * @method model

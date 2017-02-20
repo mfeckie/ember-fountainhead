@@ -65,7 +65,6 @@ export default Component.extend({
 
   // Ember Properties
   // ---------------------------------------------------------------------------
-
   /**
    * @property attributeBindings
    * @type {Array}
@@ -97,7 +96,6 @@ export default Component.extend({
 
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Allows for quick and easy dismissal of the alert. The alert is faded from
    * view, then totally removed from the DOM and the component instance is

@@ -13,7 +13,6 @@ export default Component.extend({
 
   // Passed Props
   // ---------------------------------------------------------------------------
-
   /**
    * The access property is set by using either of the tags:
    * - `@private`
@@ -85,7 +84,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * @property classNames
    * @type {Array.<string>}

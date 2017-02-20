@@ -34,7 +34,6 @@ export default Component.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
-
   /**
    * The id of the currently active tab in the scope of the
    * `fountainhead-tabs` component. This is provided privately in the
@@ -58,7 +57,6 @@ export default Component.extend({
 
   // Properties
   // ---------------------------------------------------------------------------
-
   /**
    * Aria role `tabpanel` is bound for A++ accessibility.
    * @property ariaRole
@@ -117,7 +115,6 @@ export default Component.extend({
 
   // Hooks
   // ---------------------------------------------------------------------------
-
   /**
    * Handle registering with the tabs container on int by firing `registerTab`
    * closure action with this tab's data.
