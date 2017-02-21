@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const fs = require('fs');
 const VersionChecker = require('ember-cli-version-checker');
 const Funnel = require('broccoli-funnel');
 const mergeTrees = require('broccoli-merge-trees');
@@ -132,7 +133,7 @@ module.exports = {
 
     // In dev include /guides to trigger live reload on change, not needed for prod
     // b/c guide contents are parsed as part of data generation
-    if (this.env !== 'production') {
+    if (this.env !== 'production' && fs.existsSync(path.resolve('guides'))) {
       trees.push(new Funnel('guides', {
         destDir: 'guides'
       }));
@@ -169,7 +170,7 @@ module.exports = {
    * @param {object} startOptions.app Express server instance run by emer-cli
    */
   serverMiddleware(startOptions) {
-    startOptions.app.use('/docs', express.static('docs'));
+    startOptions.app.use('/docs', express.static(path.resolve('docs')));
   },
   /**
    * Define cli commands in return object. Check out http://thejsguy.com/2016/07/10/creating-a-custom-ember-cli-command.html for a
