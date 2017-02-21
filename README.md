@@ -4,9 +4,9 @@
   </a>
 </h1>
 <p align="center">
-  <a href="https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop"><img src="https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop" alt="Build status"/></a>
-  <a href="https://emberobserver.com/badges/ember-fountainhead.svg"><img src="https://emberobserver.com/badges/ember-fountainhead.svg" alt="Ember Observer Score"/></a>
-  <a href="https://img.shields.io/badge/License-MIT-blue.svg"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Build status"/></a>
+  <a href="https://travis-ci.org/healthsparq/ember-fountainhead"><img src="https://travis-ci.org/healthsparq/ember-fountainhead.svg?branch=develop" alt="Build status"/></a>
+  <a href="https://emberobserver.com/addons/ember-fountainhead"><img src="https://emberobserver.com/badges/ember-fountainhead.svg" alt="Ember Observer Score"/></a>
+  <a href="https://github.com/healthsparq/ember-fountainhead/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Build status"/></a>
 </p>
 
 Ember Fountainhead is an addon for creating robust documentation for

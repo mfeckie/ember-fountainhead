@@ -1,5 +1,9 @@
 # Changelog
 
+# 3.0.1 (02-21-17)
+Fixed:
+- Check for existence of `/guides` dir before funneling to fix breaking builds
+
 # 3.0.0 🎉🎉🎉
 Ember Fountainhead v3 includes a feature we've been really excited about: GUIDES!
 API documentation is important, but this makes it easy to write general guides
