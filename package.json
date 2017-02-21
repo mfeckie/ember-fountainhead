@@ -1,6 +1,6 @@
 {
   "name": "ember-fountainhead",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Robust interactive documentation for your Ember application's source code",
   "directories": {
     "doc": "doc",
