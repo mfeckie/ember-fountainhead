@@ -1,6 +1,10 @@
 # Changelog
 
-# 3.0.1 (02-21-17)
+#### 3.0.2 (2-21-17)
+Fixed:
+- Dev middleware failing with proxy server. See package.json `ember-addon` config
+
+#### 3.0.1 (02-21-17)
 Fixed:
 - Check for existence of `/guides` dir before funneling to fix breaking builds
 

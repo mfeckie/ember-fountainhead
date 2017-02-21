@@ -33,6 +33,9 @@
   ],
   "homepage": "https://healthsparq.github.io/ember-fountainhead",
   "ember-addon": {
+    "before": [
+      "proxy-server-middleware"
+    ],
     "configPath": "tests/dummy/config"
   },
   "devDependencies": {

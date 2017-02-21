@@ -165,6 +165,13 @@ module.exports = {
    * Then we make the data files available for consumption in dev by mounting
    * middleware that sets the `/docs` dir as a static resource for the cli
    * express app.
+   *
+   * NOTE: In the `package.json` we configure this addon to run before the
+   * `proxy-server-middleware` addon. If this addon doesn't run first, any proxy
+   * server will hijack ALL ajax requests and this middleware never gets executed.
+   * If this stops working at some point, check that CLI didn't change the name
+   * of the proxy server addon:
+   * https://github.com/ember-cli/ember-cli/blob/master/lib/tasks/server/middleware/proxy-server/package.json
    * @method serverMiddleware
    * @param {object} startOptions     Set of configurations for ember-cli
    * @param {object} startOptions.app Express server instance run by emer-cli
