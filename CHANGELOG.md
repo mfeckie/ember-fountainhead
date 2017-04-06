@@ -1,5 +1,9 @@
 # Changelog
 
+#### 3.0.3 (03-06-17)
+Fixed:
+- Glimmer blocks at the end of a doc block will now correctly produce highlighted source examples and a rendered example as intended
+
 #### 3.0.2 (2-21-17)
 Fixed:
 - Dev middleware failing with proxy server. See package.json `ember-addon` config
