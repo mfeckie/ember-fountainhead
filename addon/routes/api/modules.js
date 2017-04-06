@@ -19,7 +19,6 @@ export default Route.extend({
    * @return {Promise} jQuery ajax promise
    */
   model(params) {
-    console.log('model');
     return $.ajax(`${this.get('fountainhead.apiNamespace')}/modules/${params.module_id}.json`);
   },
 
