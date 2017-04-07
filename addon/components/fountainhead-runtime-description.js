@@ -3,6 +3,8 @@ import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
 const { HTMLBars, getOwner } = Ember;
 
+const dataStripper = /(data=({.*}))\n/;
+
 /**
  * Generates a description during runtime by using HTMLBars to compile any
  * string to a partial. This allows us to create descriptions from JSON
@@ -158,10 +160,54 @@ export default Component.extend({
    * @event didReceiveAttrs
    */
   didReceiveAttrs() {
-    let description = this.get('description') || '';
-    this._generateDescription(description);
-  },
+    const description = this.getWithDefault('description', '');
+    this._addDataTagVariables(description);
 
+    const stripped = this._stripDataTags(description);
+    this._generateDescription(stripped);
+  },
+  /**
+   * Given a description string strips any
+   * data tags from the code example.
+   *
+   * @method _stripDataTags
+   * @return {String}
+   */
+  _stripDataTags(docString) {
+    return docString.replace(dataStripper, '');
+  },
+  /**
+   * Given a descriptions string, extracts data tags, parses JSON
+   * and adds the properties to this component, allowing them
+   * to be used in code examples.
+   *
+   * If we have a `glimmer` block which has `data={"colors": ["red", "green", "blue"]}`
+   * this will add a property `colors` to the component with the value `["red", "green", "blue"]`
+   *
+   * Presents users with an error message if the JSON cannot be parsed
+   *
+   * @method _addDataTagVariables
+   * @param {string} docString
+   */
+  _addDataTagVariables(docString) {
+    const dataTagMatches = dataStripper.exec(docString);
+    if (dataTagMatches) {
+      const [,,data] = dataTagMatches;
+
+      try {
+        const propertiesToAdd = JSON.parse(data);
+
+        Object.keys(propertiesToAdd).forEach(property => {
+          this.set(property, propertiesToAdd[property]);
+        });
+      }
+      catch(e) {
+        this.set('jsonParseError', true);
+        this.set('jsonString', data);
+      }
+
+    }
+  },
   // Actions
   // ---------------------------------------------------------------------------
   actions: {},
@@ -172,6 +218,12 @@ export default Component.extend({
     <div class='partial-wrapper'>
       {{#fountainhead-state as |state stateActions|}}
         {{partial partialName}}
+        {{#if jsonParseError}}
+          {{#fountainhead-alert brand='danger' classNames='compiler-error'}}
+            <p>There was an error parsing the JSON of your data example</p>
+            <p>Please check {{jsonString}}</p>
+          {{/fountainhead-alert}}
+        {{/if}}
       {{/fountainhead-state}}
 
       {{! Render parsing errors for debugging. Can be hidden with CSS if desired }}
