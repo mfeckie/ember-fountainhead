@@ -57,6 +57,22 @@ Will actually be parsed as:
 <span class="token punctuation">{</span><span class="token punctuation">{</span>some<span class="token operator">-</span>component example<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
 
+You can also add data when rendering you components, this is super useful for showing
+variations of a theme or components in different states.
+
+At the top of your `glimmer` add data using a JSON string
+e.g. `data={"things": ["Red", "Green", "Blue"]}`.  This will make every top level key available
+to your example and will be stripped from the displayed code.
+
+You can then use the properties in the template.
+
+```glimmer
+data={"colors": ["Red", "Green", "Blue"]}
+{{#each colors as |color|}}
+  <button>{{color}}</button>
+{{/each}}
+```
+
 ## Markdown in DocBlock Descriptions and Guides
 Fountainhead has full support for markdown in documentation blocks and guides.
 If you're not familiar with markdown, you can start with a tutorial at
