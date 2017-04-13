@@ -66,7 +66,7 @@ export default Service.extend(ActionHandler, {
   fetchMeta() {
     return $.get(`${this.get('apiNamespace')}/meta.json`).then(
       meta => this.set('meta', meta),
-      err => this.set('metaError', true)
+      error => this.set('metaError', true)
     );
   }
 });
