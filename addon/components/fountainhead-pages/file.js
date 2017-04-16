@@ -1,13 +1,13 @@
-import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
+import BasePage from './base-page';
 
 /**
  * Fountainhead `/doc/file` page component
  * @class FountainheadPages.File
  * @constructor
- * @extends Ember.Component
+ * @extends FountainheadPages.BasePage
  */
-export default Component.extend({
+export default BasePage.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -18,15 +18,6 @@ export default Component.extend({
    * @default ''
    */
   file: '',
-
-  // Properties
-  // ---------------------------------------------------------------------------
-  /**
-   * @property tagName
-   * @type {string}
-   * @default ''
-   */
-  tagName: '',
 
   // Layout
   // ---------------------------------------------------------------------------

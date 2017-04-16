@@ -1,6 +1,5 @@
-import Route from 'ember-route';
-import inject from 'ember-service/inject';
 import $ from 'jquery';
+import BaseRoute from '../base-route';
 
 /**
  * Route to be created for handling modules
@@ -8,9 +7,7 @@ import $ from 'jquery';
  * @constructor
  * @extends Ember.Route
  */
-export default Route.extend({
-  fountainhead: inject(),
-
+export default BaseRoute.extend({
   /**
    * Fetches modules's JSON at: `${this.get('fountainhead.apiNamespace')}/modules/${params.file_id}.json`
    * @method model
@@ -20,18 +17,5 @@ export default Route.extend({
    */
   model(params) {
     return $.ajax(`${this.get('fountainhead.apiNamespace')}/modules/${params.module_id}.json`);
-  },
-
-  // Actions
-  // ---------------------------------------------------------------------------
-  actions: {
-    /**
-     * Reset page scroll on any transition. Note that Fountainhead is inside of
-     * a fake page, so we scroll that instead of the body
-     * @event didTransition
-     */
-    didTransition() {
-      $('.fh-page-in-page-wrapper').scrollTop(0);
-    }
   }
 });

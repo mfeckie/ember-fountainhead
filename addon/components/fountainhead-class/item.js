@@ -28,28 +28,18 @@ export default Component.extend({
    */
   classNames: ['fh-classitem'],
 
-  // Hooks
-  // ---------------------------------------------------------------------------
-  /**
-   * Set the unique id that the `class-items-container` expects for each class
-   * item in init. Id is the `itemtype_name` and is used to scroll to the
-   * item when the name is clicked in the index list panel.
-   * @method init
-   */
-  init() {
-    this._super(...arguments);
-    // Set a unique anchor for this element using type and name
-    this.set('elementId', `${this.get('classItem.itemtype')}_${this.get('classItem.name')}`);
-  },
-
   // Layout
   // ---------------------------------------------------------------------------
   layout: hbs`
     {{! --------------------------------------------------------------------- }}
     {{! Item Header
     {{! --------------------------------------------------------------------- }}
-    <h4 class='fh-header'>
+    {{! Each property header is also a click to copy link, which has the property
+        name bound as the id, this is the target used for targeted route scrolling }}
+    {{#fountainhead-header tagName='h4' elementId=classItem.name}}
       {{classItem.name}}
+    {{/fountainhead-header}}
+    <h4 class='fh-header'>
       {{!-- <span class='item-type'>{{classItem.itemtype}}</span> --}}
       {{#if classItem.params}}
         <span class='header-params'>(

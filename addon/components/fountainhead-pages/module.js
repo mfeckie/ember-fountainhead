@@ -1,14 +1,13 @@
-import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
+import BasePage from './base-page';
 
 /**
  * Fountainhead `/doc/module` page component
- * There's nothing here yet.
  * @class FountainheadPages.Module
  * @constructor
- * @extends Ember.Component
+ * @extends FountainheadPages.BasePage
  */
-export default Component.extend({
+export default BasePage.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -20,15 +19,6 @@ export default Component.extend({
    */
   module: {},
 
-  // Properties
-  // ---------------------------------------------------------------------------
-  /**
-   * @property tagName
-   * @type {string}
-   * @default ''
-   */
-  tagName: '',
-
   // Hooks
   // ---------------------------------------------------------------------------
   /**
@@ -37,6 +27,8 @@ export default Component.extend({
    * @event didReceiveAttrs
    */
   didReceiveAttrs() {
+    this._super(...arguments);
+
     // Check if submodules is empty
     if (this.get('module.submodules')) {
       const keys = Object.keys(this.get('module.submodules'));

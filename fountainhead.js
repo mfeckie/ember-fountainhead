@@ -11,6 +11,7 @@ const common = {
     'guides/getting-started.md',
     'guides/configuration.md',
     'guides/writing-guides.md',
+    'guides/architecture/scroll-targeting.md',
     'guides/tools.md'
   ],
   output: {

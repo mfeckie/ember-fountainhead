@@ -9,7 +9,7 @@ should be able to generate documentation files and use Fountainhead without any
 configuration. When needed though, Fountainhead can be customized as desired using
 a `fountainhead.js` file.
 
-## <span class="mono">fountainhead.js</span>
+## fountainhead.js Configuration Options
 
 ##### fountainhead.js
 ```javascript
@@ -38,7 +38,11 @@ module.exports = {
   output: {
     filename: 'fountainhead-data.json',
     path: path.resolve('docs')
-  }
+  },
+  // Automatically set to consuming application's locationType, but can
+  // be explicitly specified (sets internal link id target types between
+  // query params and hash fragments)
+  locationType: locationType
 };
 ```
 {{#fountainhead-alert canDismiss=false brand='info'}}

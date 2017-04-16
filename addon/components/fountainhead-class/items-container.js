@@ -1,12 +1,11 @@
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
-import $ from 'jquery';
-import { scheduleOnce } from 'ember-runloop';
+import inject from 'ember-service/inject';
 
 /**
  * Tab container for the class' documentation items. Component handles running
  * a controlled instance of `fountainhead-tabs` by tracking `activeTab`
- * internally and passing `tabsChanged` to the `fountainhead-tabs` instance.
+ * internally and passing `tabChanged` to the `fountainhead-tabs` instance.
  *
  * The active tab is reset to the index panel anytime that the `name` (of the
  * class) changes.
@@ -16,6 +15,7 @@ import { scheduleOnce } from 'ember-runloop';
  * @extends Ember.Component
  */
 export default Component.extend({
+  fountainhead: inject(),
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -36,16 +36,14 @@ export default Component.extend({
    */
   event: [],
   /**
-   * Item query param passed down from controller. When this property is present,
-   * or changes handle scrolling to the item. When the specified doc class is
-   * the same but the item query param is different the model hooks will not be
-   * called, so we need to handle scrolling to the item when it changes.
-   * @property item
+   * Route scroll target passed in to allow automatic scrolling in
+   * {{c-l 'didReceiveAttrs'}} hook.
+   * @property fragmentId
+   * @passed
    * @type {?string}
    * @default null
-   * @passed
    */
-  item: null,
+  fragmentId: null,
   /**
    * This class' array of method documentation items.
    * @property method
@@ -55,7 +53,7 @@ export default Component.extend({
    */
   method: [],
   /**
-   * Name of the class. Is checked in `didUpdateAttrs` to know if the tabs
+   * Name of the class. Is checked in `didReceiveAttrs` to know if the tabs
    * should be reset to the index panel
    * @property name
    * @type {string}
@@ -102,52 +100,15 @@ export default Component.extend({
   // Methods
   // ---------------------------------------------------------------------------
   /**
-   * Internal method to handle selecting a tab panel and then scrolling to an
-   * item in that panel.
-   *
-   * Method will:
-   * - Change to the panel matching the doc item type
-   * - Scroll to that item using the itemtype and name to construct the DOM id
-   * @method _scrollToItem
-   * @protected
-   * @param {Object} classitem          Backing class item
-   * @param {string} classitem.itemtype Type for item of: `method`/`property`/`event`
-   * @param {string} classitem.name     Name of item
-   */
-  _scrollToItem({ itemtype, name }) {
-    /*
-     * Named function for scrolling to selected item after the tab change has
-     * been rendered. VERY IMPORTANT: Fountainhead is rendered inside of a
-     * fake wrapper page, so we have to scroll that wrapper page instead of
-     * the body. We also need to get the current scrollTop of that containing
-     * wrapper before adding the new scrollTop, b/c we're really just scrolling
-     * that div
-     */
-    function scrollTo() {
-      let scrollTop =
-        $('.fh-page-in-page-wrapper').scrollTop() // Current scrolltop
-        + $(`#${itemtype}_${name}`).offset().top // Offset to desired element
-        - 75; // Minus a little for an easier visual transition
-
-      $('.fh-page-in-page-wrapper').animate({ scrollTop }, 350);
-    }
-
-    // Change to the selected tab using the itemtype to build the tab's id
-    this.set('activeTab', `${itemtype}Panel`);
-
-    // We can't scroll until after the next render has udpated the current tab
-    scheduleOnce('afterRender', this, scrollTo);
-  },
-  /**
    * Handles finding the classitem model using the `item` query param value.
    * If a classitem is found, initiate a scroll.
-   * @method _scrollToQueryParamItem
+   * @method _selectTabForProperty
    * @protected
-   * @param {!string} item The item query param identifying which classitem to scroll to
+   * @param {!string} id The id identifying which property to scroll to
    */
-  _scrollToQueryParamItem(item) {
+  _selectTabForProperty(id) {
     // Find specific classitem data in complete classitems array
-    let targetItem = this.get('classitems').filter(classitem => classitem.name === item);
+    let targetItem = this.get('classitems').filter(classitem => classitem.name === id);
 
     // Only attempt to scroll to item if we found it
     if (targetItem.length) {
@@ -160,55 +121,27 @@ export default Component.extend({
        * `activeTab`. If these don't match the first render of the tabs is blank.
        */
       this.set('defaultTab', `${targetItem.itemtype}Panel`);
-      // The `targetItem` structure matches expected `itemtype` and `name` of `_scrollToItem`
-      this._scrollToItem(targetItem);
+      // Change to the selected tab using the itemtype
+      this.set('activeTab', `${targetItem.itemtype}Panel`);
     }
   },
 
   // Hooks
   // ---------------------------------------------------------------------------
   /**
-   * Handle resetting tabs container to the index panel any time that this
-   * component's attrs update. The only props passed in to this component are
-   * the class items for the container, so we know if they change in any way
-   * that this is the right time to update the tabs panel.
-   *
-   * NOTE: GUESS WHAT! This hook doens't only get called when passed props
-   * change! There is some crazy behavior where this hook will get called ONCE
-   * and only ONCE when an internal property changes after the props for this
-   * component has changed. Super weird. For now we're 'fixing' it by also
-   * passing in the class name and using that as a check to reset the `activeTab`
-   * @event didUpdateAttrs
+   * When component attributes change, either the backing data or the scroll target
+   * has changed. Use {{c-l 'fragmentId'}} to reset tabs to index panel if there
+   * is no scroll target, or select the correct tab for a scroll target.
+   * @event didReceiveAttrs
    */
-  didUpdateAttrs() {
-    let item = this.get('item'),
-        name = this.get('name'),
-        oldItem = this.get('_item'),
-        oldName = this.get('_name');
+  didReceiveAttrs() {
+    const fragmentId = this.get('fragmentId');
 
-    if (item && oldItem !== item) {
-      this._scrollToQueryParamItem(item);
-    } else if (oldName !== name) {
+    if (!fragmentId) {
+      this.set('defaultTab', 'indexPanel');
       this.set('activeTab', 'indexPanel');
-    }
-
-    // Store the new props into the private old props values so they can be
-    // use for comparison on the next attrs update
-    this.setProperties({
-      _item: item,
-      _name: name
-    });
-  },
-  /**
-   * Check for a passed `item` query param. When it exists call
-   * {{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToQueryParamItem'}}
-   * to scroll to that cross linked item.
-   * @method init
-   */
-  init() {
-    this._super(...arguments);
-    if (this.get('item')) {
-      this._scrollToQueryParamItem(this.get('item'));
+    } else {
+      this._selectTabForProperty(fragmentId);
     }
   },
 
@@ -216,30 +149,26 @@ export default Component.extend({
   // ---------------------------------------------------------------------------
   actions: {
     /**
-     * Action bound to each documentation item in the index panel. Clicking any
-     * item will trigger this with the documentation item as an argument. Use
-     * the passed doc item to internally call
-     * {{cross-link class='FountainheadClass.ItemsContainer' item='_scrollToItem'}}
-     * to scroll to clicked item.
-     * @method goToItem
-     * @action
-     * @param {Object} classitem          Backing classitem
-     * @param {string} classitem.itemtype Type for item of: `method`/`property`/`event`
-     * @param {string} classitem.name     Name for classitem
+     * Closure action passed to {{c-l class='FountainheadClass.PropertyLink'}} instances
+     * so that the tab for the property can be selected when a property is clicked
+     * before the selection bubbles up and the browser attempts to find the matching
+     * id for the property.
+     * @method selectTabForProperty
+     * @param {string} id Id of the property matches the name of the property
      */
-    goToItem({ itemtype, name }) {
-      this._scrollToItem({ itemtype, name });
+    selectTabForProperty(id) {
+      this._selectTabForProperty(id);
     },
     /**
      * Closure action passed into the tab component. This action is called
      * whenever a tab is clicked with the id of the tab. Use this to update the
      * controlling `activeTab` property for the tabs DDAU style.
-     * @method tabsChanged
+     * @method tabChanged
      * @action
      * @param {Object} tab           Backing object for a given tab
      * @param {string} tab.elementId The id of the tab, controls current tab displayed
      */
-    tabsChanged({ elementId }) {
+    tabChanged({ elementId }) {
       this.set('activeTab', elementId);
     }
   },
@@ -250,20 +179,21 @@ export default Component.extend({
     {{#fountainhead-tabs
       defaultTab=defaultTab
       activeId=activeTab
-      onChange=(action 'tabsChanged')
+      onChange=(action 'tabChanged')
       as |components|}}
       {{! --------------------------------------------------------------------- }}
       {{! Index Tab - Links to Items
       {{! --------------------------------------------------------------------- }}
       {{#components.content label='Index' elementId='indexPanel'}}
+        {{! TODO: Refactor this to a loop over method, props and events to cut out duplicated template code }}
         {{#if method.length}}
           <h4 class='fh-docs-category uppercase'>Methods</h4>
           <ul class='fh-index-list'>
             {{#each method as |method|}}
               <li class='fh-index-item'>
-                {{#fountainhead-button link=true click=(action 'goToItem' method)}}
-                  {{method.name}}
-                {{/fountainhead-button}}
+                {{fountainhead-class/property-link
+                  fragmentId=method.name
+                  selectTabForProperty=(action 'selectTabForProperty')}}
               </li>
             {{/each}}
           </ul>
@@ -274,9 +204,9 @@ export default Component.extend({
           <ul class='fh-index-list'>
             {{#each property as |property|}}
               <li class='fh-index-item'>
-                {{#fountainhead-button link=true click=(action 'goToItem' property)}}
-                  {{property.name}}
-                {{/fountainhead-button}}
+                {{fountainhead-class/property-link
+                  fragmentId=property.name
+                  selectTabForProperty=(action 'selectTabForProperty')}}
               </li>
             {{/each}}
           </ul>
@@ -287,9 +217,9 @@ export default Component.extend({
           <ul class='fh-index-list'>
             {{#each event as |event|}}
               <li class='fh-index-item'>
-                {{#fountainhead-button link=true click=(action 'goToItem' event)}}
-                  {{event.name}}
-                {{/fountainhead-button}}
+                {{fountainhead-class/property-link
+                  fragmentId=event.name
+                  selectTabForProperty=(action 'selectTabForProperty')}}
               </li>
             {{/each}}
           </ul>
@@ -301,17 +231,20 @@ export default Component.extend({
       {{! --------------------------------------------------------------------- }}
       {{#components.content label='Methods' hidden=(eq method.length 0) elementId='methodPanel'}}
         {{#each method as |method|}}
-          {{fountainhead-class/item classItem=method}}
+          {{fountainhead-class/item
+            classItem=method}}
         {{/each}}
       {{/components.content}}
       {{#components.content label='Properties' hidden=(eq property.length 0) elementId='propertyPanel'}}
         {{#each property as |property|}}
-          {{fountainhead-class/item classItem=property}}
+          {{fountainhead-class/item
+            classItem=property}}
         {{/each}}
       {{/components.content}}
       {{#components.content label='Events' hidden=(eq event.length 0) elementId='eventPanel'}}
         {{#each event as |event|}}
-          {{fountainhead-class/item classItem=event}}
+          {{fountainhead-class/item
+            classItem=event}}
         {{/each}}
       {{/components.content}}
     {{/fountainhead-tabs}}

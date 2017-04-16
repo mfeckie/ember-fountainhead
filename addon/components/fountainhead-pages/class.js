@@ -1,13 +1,13 @@
-import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
+import BasePage from './base-page';
 
 /**
  * Fountainhead `/api/class` page component.
  * @class FountainheadPages.Class
  * @constructor
- * @extends Ember.Component
+ * @extends FountainheadPages.BasePage
  */
-export default Component.extend({
+export default BasePage.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -18,25 +18,6 @@ export default Component.extend({
    * @passed
    */
   class: null,
-  /**
-   * Item query param passed down from controller. Passed to the
-   * {{cross-link class='FountainheadClass.ItemsContainer' text='FountainheadClass.ItemsContainer'}}
-   * component to scroll to linked item after load.
-   * @property item
-   * @type {?string}
-   * @default null
-   * @passed
-   */
-  item: null,
-
-  // Properties
-  // ---------------------------------------------------------------------------
-  /**
-   * @property tagName
-   * @type {string}
-   * @default ''
-   */
-  tagName: '',
 
   // Layout
   // ---------------------------------------------------------------------------
@@ -64,7 +45,7 @@ export default Component.extend({
         property=class.property
         method=class.method
         event=class.event
-        item=item
+        fragmentId=fragmentId
         name=class.name
         classitems=class.classitems}}
     {{/if}}

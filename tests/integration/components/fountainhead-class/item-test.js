@@ -8,5 +8,5 @@ moduleForComponent('fountainhead-class/item', 'Integration | Component | fountai
 test('it renders', function(assert) {
   this.render(hbs`{{fountainhead-class/item}}`);
 
-  assert.equal(this.$().text().trim().replace(/\s\s+/g, ''), '()');
+  assert.ok(this.$().text().includes('(   )'));
 });

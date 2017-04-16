@@ -1,6 +1,4 @@
-import Route from 'ember-route';
-import inject from 'ember-service/inject';
-import $ from 'jquery';
+import BaseRoute from './base-route';
 
 /**
  * The `/api` route is the parent route for module and class documentation.
@@ -8,9 +6,18 @@ import $ from 'jquery';
  * @constructor
  * @extends Ember.Route
  */
-export default Route.extend({
-  fountainhead: inject(),
+export default BaseRoute.extend({
 
+  // Hooks
+  // ---------------------------------------------------------------------------
+  /**
+   * When in Fountainhead we need to pass down id query param OR the hash depending
+   * on LocationType. Kick off hash tracking on activate.
+   * @method activate
+   */
+  activate() {
+    this.get('fountainhead').send('trackHash');
+  },
   /**
    * We check for and fetch meta data if needed in the parent routes of
    * Fountainhead. This lets consumers overwrite the `apiNamespace` if they
@@ -26,18 +33,5 @@ export default Route.extend({
     }
 
     return true;
-  },
-
-  // Actions
-  // ---------------------------------------------------------------------------
-  actions: {
-    /**
-     * Reset page scroll on any transition. Note that Fountainhead is inside of
-     * a fake page, so we scroll that instead of the body
-     * @event didTransition
-     */
-    didTransition() {
-      $('.fh-page-in-page-wrapper').scrollTop(0);
-    }
   }
 });

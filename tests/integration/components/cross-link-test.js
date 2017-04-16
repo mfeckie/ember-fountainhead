@@ -1,8 +1,25 @@
+import Object from 'ember-object';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
+// Component looks up router & current route in init to get a fallback model name,
+// Mock out objects so that the .get() calls don't blow up tests
+const Router = Object.extend({
+  currentRouteName: 'testing'
+});
+
+const TestRoute = Object.extend({
+  currentModel: {
+    name: 'TestModel'
+  }
+});
+
 moduleForComponent('cross-link', 'Integration | Component | cross link', {
-  integration: true
+  integration: true,
+  beforeEach() {
+    this.register('router:main', Router);
+    this.register('route:testing', TestRoute);
+  }
 });
 
 /*

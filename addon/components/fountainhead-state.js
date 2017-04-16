@@ -96,7 +96,6 @@ export default Component.extend({
      * @param {boolean} state State to set active to
      */
     toggleState() {
-      console.log('toggle state');
       this.toggleProperty('active');
     }
   },

@@ -31,9 +31,19 @@ try {
 module.exports = {
   name: 'ember-fountainhead',
 
+  // Properties
+  // ---------------------------------------------------------------------------
+  /**
+   * Fountainhead needs the consuming application's locationType for the doc meta.
+   * Is pulled in the {{c-l 'config'}} hook.
+   * @property locationType
+   * @type {string}
+   * @protected
+   */
+  locationType: null,
+
   // Methods
   // ---------------------------------------------------------------------------
-
   /**
    * Handle importing required assets on behalf of consuming application. The
    * template compiler is required for the runtime-description component and
@@ -61,7 +71,20 @@ module.exports = {
 
   // Addon Hooks
   // ---------------------------------------------------------------------------
-
+  /**
+   * Hash fragment in click to copy headers need to know if the consuming application
+   * is using hash or history routing. Although this can be explicitly set in the
+   * `fountainhead.js` config file, we try to automatically supply it by checking
+   * the `baseConfig` in this addon hook and passing the `locationType` to calls to
+   * generate docs, where it's added to the doc's meta.
+   * @method config
+   * @param {string} env
+   * @param {Object} baseConfig Consuming application's base configuration
+   */
+  config(env, baseConfig) {
+    if (env === 'test') { return; } // Ignore test env b/c it uses locationType 'none'
+    this.locationType = baseConfig.locationType;
+  },
   /**
    * Handle walking addon tree to find consuming application and setting project
    * configs on addon for reference.
@@ -99,7 +122,9 @@ module.exports = {
     // B/c the `preBuild` hook gets called AFTER `treeForPublic`,
     // we need to generate docs in the `included` hook for prod
     // builds. 😑
-    if (this.env === 'production') { generateDocs({ env: this.env }); }
+    if (this.env === 'production') {
+      generateDocs({ env: this.env, locationType: this.locationType });
+    }
   },
   /**
    * Generates fountainhead output before a build is run for live editing.
@@ -110,7 +135,7 @@ module.exports = {
    */
   preBuild() {
     if (this.env === 'development' && this.fountainheadConfiguration.liveEdit !== false) {
-      generateDocs({ env: this.env });
+      generateDocs({ env: this.env, locationType: this.locationType });
     }
   },
   /**

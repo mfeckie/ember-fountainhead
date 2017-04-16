@@ -1,0 +1,48 @@
+// Wrapping header element
+.fh-header {
+  position: relative;
+
+  // On hover of wrapping header, show the anchor click button
+  &:hover {
+    .fh-header-anchor {
+      opacity: 1;
+    }
+  }
+}
+
+// click-to-copy anchor button
+.fh-header-anchor {
+  position: absolute;
+  right: 100%;
+  opacity: 0;
+  margin-right: 8px;
+  transition: opacity 0.3s;
+
+  // Link button/anchor that appears on hover
+  .fh-button, a {
+    font-size: inherit; // Make the link icon match the header size
+    border: none;
+  }
+}
+
+// Successfully copied message
+.fh-header-copied {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  line-height: 12px;
+  right: 0;
+  bottom: 100%;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+// Hidden input that is used to copy to clipboard
+.fh-header-copy-target {
+  opacity: 0;
+  position: absolute;
+  right: 1000px;
+}

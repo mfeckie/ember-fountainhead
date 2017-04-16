@@ -1,1 +1,6 @@
-{{fountainhead-pages/module module=model}}
+{{! fragmentId used for targeted routing, is conroller query param 'id' when consumer
+    is using Hash Location, is url fragment tracked in Fountainhead service when
+    consumer is using History Location }}
+{{fountainhead-pages/module
+  fragmentId=(if fountainhead.meta.hashRouting id fountainhead.fragmentId)
+  module=model}}

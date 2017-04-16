@@ -5,7 +5,7 @@ import hbs from 'htmlbars-inline-precompile';
  * The logo at the top of the API navigation is a component so that you can
  * easily extend it for custom logos that can't be contained in a merge image.
  *
- * If {{c-l class='Fountainhead' item='meta'}} has a logo, that will be used
+ * If {{c-l 'meta' class='Fountainhead'}} has a logo, that will be used
  * otherwise we fall back to the Fountainhead logo.
  * @class APINavigation.Logo
  * @constructor

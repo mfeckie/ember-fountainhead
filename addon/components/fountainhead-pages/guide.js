@@ -1,16 +1,14 @@
-import Component from 'ember-component';
-import inject from 'ember-service/inject';
 import hbs from 'htmlbars-inline-precompile';
+import BasePage from './base-page';
 
 /**
  * Fountainhead `/guide` page component
  * @class FountainheadPages.Guide
  * @constructor
- * @extends Ember.Component
+ * @extends FountainheadPages.BasePage
  * @experimental
  */
-export default Component.extend({
-  fountainhead: inject(),
+export default BasePage.extend({
 
   // Passed Properties
   // ---------------------------------------------------------------------------
@@ -28,15 +26,6 @@ export default Component.extend({
    * @default ''
    */
   guide: null,
-
-  // Properties
-  // ---------------------------------------------------------------------------
-  /**
-   * @property tagName
-   * @type {string}
-   * @default ''
-   */
-  tagName: '',
 
   // Layout
   // ---------------------------------------------------------------------------

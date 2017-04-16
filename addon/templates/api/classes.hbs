@@ -1,7 +1,6 @@
-{{! --------------------------------------------------------------------- }}
-{{! Class page accepts query params 'item' from controller
-{{! ('item' is a doc item that should be scrolled to)
-{{! --------------------------------------------------------------------- }}
+{{! fragmentId used for targeted routing, is conroller query param 'id' when consumer
+    is using Hash Location, is url fragment tracked in Fountainhead service when
+    consumer is using History Location }}
 {{fountainhead-pages/class
   class=model
-  item=item}}
+  fragmentId=(if fountainhead.meta.hashRouting id fountainhead.fragmentId)}}

@@ -1,24 +1,7 @@
-import Controller from 'ember-controller';
-
 /**
- * Classes controller is required to pass `item` query param to the page
- * component.
- * @class API.Classes
+ * Instance of {{c-l class='BaseController'}} for `/api/classes`.
+ * @class Guides
  * @constructor
- * @extends Ember.Controller
+ * @extends BaseController
  */
-export default Controller.extend({
-  /**
-   * @property queryParams
-   * @type {Array}
-   * @default ['item']
-   */
-  queryParams: ['item'],
-  /**
-   * Item query param is available for scrolling to a doc item.
-   * @property item
-   * @type {?string}
-   * @default null
-   */
-  item: null
-});
+export { default } from '../base-controller';

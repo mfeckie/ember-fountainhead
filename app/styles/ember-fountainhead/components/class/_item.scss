@@ -8,6 +8,8 @@
   border-bottom: 1px solid $border-color;
 
   .fh-header {
+    // Property header is two fh-header elements next to each other
+    display: inline-block;
     margin-bottom: 0;
   }
 
