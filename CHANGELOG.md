@@ -1,5 +1,14 @@
 # Changelog
 
+#### 3.1.0 (4-16-17)
+Added:
+- Community contribution by [@mefeckie](https://github.com/mfeckie): Ability to
+  add data inside of markdown code blocks using `data={}` inline declaration!
+- Markdown headers and property headers are now automatically click to copy anchors,
+  making it easy to share specific documentation points.
+- History Location consumers are upgraded to hash fragments for documentation anchors
+  instead of query params.
+
 #### 3.0.3 (03-06-17)
 Fixed:
 - Glimmer blocks at the end of a doc block will now correctly produce highlighted source examples and a rendered example as intended
