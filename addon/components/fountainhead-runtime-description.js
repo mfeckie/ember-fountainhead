@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import Component from 'ember-component';
 import hbs from 'htmlbars-inline-precompile';
-const { HTMLBars, getOwner } = Ember;
+const { HTMLBars, Logger, getOwner } = Ember;
 
 const dataStripper = /(data=({.*}))\n/;
 
@@ -91,7 +91,7 @@ export default Component.extend({
     actionNames.forEach(action => {
       if (!this.get(`actions.${action}`)) {
         this.set(`actions.${action}`, function() {});
-        console.log(`Setting up a no-op for action name of ${action}`); //:brule:
+        Logger.info(`Setting up a no-op for action name of ${action}`); //:brule:
       }
     });
   },
@@ -139,7 +139,7 @@ export default Component.extend({
     this._super(...arguments);
 
     const actions = this.get('contextActions');
-    const yellAboutIt = (thang) => { console.log(`${thang} called`); };
+    const yellAboutIt = (thang) => { Logger.info(`${thang} called`); };
 
     for (let action in actions) {
 

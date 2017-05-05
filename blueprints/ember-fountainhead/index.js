@@ -1,3 +1,4 @@
+import { Logger } from 'ember';
 'use strict';
 /**
  * When an addon has an `index.js` file under `/blueprints/ADDON_NAME`, Ember
@@ -24,8 +25,7 @@ module.exports = {
    * @method afterInstall
    */
   afterInstall() {
-    console.log('Thanks for installing Ember Fountainhead');
-    console.log('Run \'ember docs\' to generate you documentation files');
-    // this.project.isEmberCLIAddon()
+    Logger.info('Thanks for installing Ember Fountainhead');
+    Logger.info('Run \'ember docs\' to generate you documentation files');
   }
 };

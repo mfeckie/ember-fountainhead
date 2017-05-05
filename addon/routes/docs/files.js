@@ -1,4 +1,5 @@
 import Route from 'ember-route';
+import { Logger } from 'ember';
 
 /**
  * Docs route for files
@@ -12,7 +13,7 @@ export default Route.extend({
     return { file_id: params.file_id };
   },
   redirect(model) {
-    console.log('The `/docs` route is deprecated and will be removed in Ember Fountainhead 4.0.0, please use `/api`');
+    Logger.warn('The `/docs` route is deprecated and will be removed in Ember Fountainhead 4.0.0, please use `/api`');
     this.transitionTo('api.files', model.file_id);
   }
 });

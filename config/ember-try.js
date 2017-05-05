@@ -1,4 +1,4 @@
-/*jshint node:true*/
+/* eslint-env node */
 module.exports = {
   scenarios: [
     {
@@ -45,7 +45,7 @@ module.exports = {
       },
       npm: {
         devDependencies: {
-          'ember-source': '^2.11.0'
+          'ember-source': null
         }
       }
     },
